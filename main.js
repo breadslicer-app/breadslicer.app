@@ -70,8 +70,7 @@
   var build = $("[data-build]"), buildCanvas = $("[data-build-canvas]"), flatCanvas = $("[data-build-flat]");
   var buildLayer = $("[data-build-layer]"), buildZ = $("[data-build-z]");
   var hero = $("#hero");
-  var buildState = { p: -1, target: 0, intro: 0, sheet: null, edges: null, shown: -1 };
-  var INTRO_P = 0.32, INTRO_MS = 1800;               // builds part of the way on its own
+  var buildState = { p: -1, target: 0, sheet: null, edges: null, shown: -1 };
   var canFilter = (function () { try { var c = doc.createElement("canvas").getContext("2d"); c.filter = "brightness(.5)"; return c.filter === "brightness(.5)"; } catch (e) { return false; } })();
 
   function sizeCanvas(c) {
@@ -263,10 +262,10 @@
     if (build) {
       var hr = hero.getBoundingClientRect();
       if (hr.bottom > 0 && hr.top < vh) {
-        // The intro builds the first part; scrolling builds the rest across
-        // the whole pin. The build glides toward where the scroll is, so a
-        // wheel step plays through every layer in between instead of jumping.
-        buildState.target = reduced ? 1 : buildState.intro + (1 - INTRO_P) * heroProgress();
+        // Scrolling builds it from the first layer to the last across the
+        // whole pin. The build glides toward where the scroll is, so a wheel
+        // step plays through every layer in between instead of jumping.
+        buildState.target = reduced ? 1 : heroProgress();
         if (buildState.p < 0 || reduced) buildState.p = buildState.target;
         else buildState.p += (buildState.target - buildState.p) * 0.12;
         if (Math.abs(buildState.target - buildState.p) > 0.0015) requestTick();
@@ -292,19 +291,6 @@
   win.addEventListener("scroll", requestTick, { passive: true });
   win.addEventListener("resize", requestTick);
   requestTick();
-
-  // Intro: build the first layers on load, so the page moves before anyone scrolls.
-  if (build && !reduced) {
-    var t0 = null;
-    var intro = function (t) {
-      if (t0 === null) t0 = t;
-      var k = clamp((t - t0) / INTRO_MS, 0, 1);
-      buildState.intro = INTRO_P * easeOut(k);
-      requestTick();
-      if (k < 1) requestAnimationFrame(intro);
-    };
-    setTimeout(function () { requestAnimationFrame(intro); }, 300);
-  }
 
   /* ---------- Demo: Transform drag ---------- */
   (function () {
