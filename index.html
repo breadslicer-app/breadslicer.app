@@ -109,24 +109,27 @@
           </div>
 
           <div class="hero-art">
-            <figure class="loaf" aria-labelledby="loaf-caption">
-              <div class="loaf-stage" data-loaf>
-                <img class="loaf-base" src="assets/loaf-hero-1024.webp" width="1024" height="1024"
-                     alt="The Breadslicer logo: a toasted loaf of bread with two slices cut from it."
-                     fetchpriority="high">
-                <div class="loaf-strips" aria-hidden="true"></div>
-                <div class="loaf-readout mono" aria-hidden="true"><span data-loaf-layer>layer 000</span><span data-loaf-height>0.050 mm</span></div>
+            <figure class="build" data-build aria-labelledby="build-caption">
+              <div class="build-stage">
+                <canvas class="build-canvas" data-build-canvas role="img"
+                        aria-label="A wolverine miniature with its supports, built up from its 913 real layers as the page scrolls."></canvas>
+                <div class="build-readout mono" aria-hidden="true">
+                  <span>layer <b data-build-layer>1</b> / 913</span>
+                  <span>z <b data-build-z>0.1</b> mm</span>
+                </div>
+                <div class="build-inset" aria-hidden="true">
+                  <canvas data-build-flat></canvas>
+                  <span class="mono">this layer</span>
+                </div>
               </div>
-              <figcaption id="loaf-caption" class="loaf-controls">
-                <label for="layer-height" class="mono small">Layer height</label>
-                <input id="layer-height" type="range" min="25" max="100" step="5" value="50" data-layer-height
-                       aria-valuetext="0.050 millimetres">
-                <output for="layer-height" class="mono small" data-layer-out>0.050 mm</output>
+              <figcaption id="build-caption" class="build-caption mono small">
+                <span>The real layers of a 91 mm miniature, sliced by Breadslicer.</span>
+                <span class="build-caption-dim">Scroll to build it.</span>
               </figcaption>
             </figure>
           </div>
         </div>
-        <p class="scroll-hint mono" aria-hidden="true">Scroll to slice</p>
+        <p class="scroll-hint mono" aria-hidden="true">Scroll to build</p>
       </div>
     </section>
 

@@ -63,41 +63,83 @@
     sections.forEach(function (s) { secIO.observe(s); });
   }
 
-  /* ---------- Hero loaf: strips ---------- */
-  var loaf = $("[data-loaf]"), strips = $(".loaf-strips"), heightInput = $("[data-layer-height]");
-  var layerOut = $("[data-layer-out]"), loafLayer = $("[data-loaf-layer]"), loafHeight = $("[data-loaf-height]");
+  /* ---------- Hero: the wolverine's real layers, stacked as you scroll ---------- */
+  // A strip of 96 layers (every ~10th of 913) from the real slice,
+  // white on transparent, 280px each, 12 per row.
+  var BUILD = { frames: 96, cols: 12, size: 280, total: 913, layerMm: 0.1, picks: [0,10,19,29,38,48,58,67,77,86,96,106,115,125,134,144,154,163,173,182,192,202,211,221,230,240,250,259,269,278,288,298,307,317,326,336,346,355,365,374,384,394,403,413,422,432,442,451,461,470,480,490,499,509,518,528,538,547,557,566,576,586,595,605,614,624,634,643,653,662,672,682,691,701,710,720,730,739,749,758,768,778,787,797,806,816,826,835,845,854,864,874,883,893,902,912] };
+  var build = $("[data-build]"), buildCanvas = $("[data-build-canvas]"), flatCanvas = $("[data-build-flat]");
+  var buildLayer = $("[data-build-layer]"), buildZ = $("[data-build-z]");
   var hero = $("#hero");
-  var loafState = { p: 0, mx: 0, mxTarget: 0, layers: 1200, count: 16, intro: 0 };
-  var INTRO_P = 0.45, INTRO_MS = 1100;           // the loaf cuts itself on load
+  var buildState = { p: -1, intro: 0, sheet: null, edges: null, shown: -1 };
+  var INTRO_P = 0.32, INTRO_MS = 1800;               // builds part of the way on its own
+  var canFilter = (function () { try { var c = doc.createElement("canvas").getContext("2d"); c.filter = "brightness(.5)"; return c.filter === "brightness(.5)"; } catch (e) { return false; } })();
 
-  function buildStrips(heightMicrons) {
-    if (!strips) return;
-    var count = clamp(Math.round(800 / heightMicrons), 8, 32); // 25µm -> 32 strips, 100µm -> 8
-    loafState.count = count;
-    loafState.layers = Math.round(60000 / heightMicrons);       // a ~60 mm loaf
-    var html = "", h = 100 / count;
-    for (var i = 0; i < count; i++) {
-      var dir = (i % 2 === 0) ? 1 : -1;
-      var amp = 6 + ((i * 7) % 11);               // 6..16 px, deterministic
-      var dx = dir * amp, dy = (i - count / 2) * 2.2, cx = dir * (4 + (i % 3) * 2);
-      html += '<i style="top:' + (i * h) + '%;height:' + (h + 0.08) + '%;background-position:0 ' + (i * h / (1 - h / 100 || 1)) + '%;--dx:' + dx + ';--dy:' + dy.toFixed(1) + ';--cx:' + cx + '"></i>';
-    }
-    strips.innerHTML = html;
-    if (loafHeight) loafHeight.textContent = (heightMicrons / 1000).toFixed(3) + " mm";
-    if (layerOut) layerOut.textContent = (heightMicrons / 1000).toFixed(3) + " mm";
-    if (heightInput) heightInput.setAttribute("aria-valuetext", (heightMicrons / 1000).toFixed(3) + " millimetres");
-    loaf.classList.toggle("is-sliced", reduced || loafState.p > 0.015);
+  function sizeCanvas(c) {
+    var r = c.getBoundingClientRect(), dpr = Math.min(win.devicePixelRatio || 1, 2);
+    var w = Math.max(1, Math.round(r.width * dpr)), h = Math.max(1, Math.round(r.height * dpr));
+    if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
+    return { w: w, h: h };
   }
-  if (loaf && heightInput) {
-    buildStrips(+heightInput.value);
-    heightInput.addEventListener("input", function () { buildStrips(+heightInput.value); });
-    if (finePointer && !reduced) {
-      loaf.addEventListener("pointermove", function (e) {
-        var r = loaf.getBoundingClientRect();
-        loafState.mxTarget = clamp(((e.clientX - r.left) / r.width - 0.5) * 2, -1, 1);
-      });
-      loaf.addEventListener("pointerleave", function () { loafState.mxTarget = 0; });
+  function frameXY(n) { return [(n % BUILD.cols) * BUILD.size, Math.floor(n / BUILD.cols) * BUILD.size]; }
+
+  function drawBuild(p) {
+    if (!buildState.sheet || !buildState.edges || !buildCanvas) return;
+    var top = Math.round(clamp(p, 0, 1) * (BUILD.frames - 1));
+    var d = sizeCanvas(buildCanvas), ctx = buildCanvas.getContext("2d");
+    var W = d.w, H = d.h, S = BUILD.size, sheet = buildState.sheet, edges = buildState.edges;
+    var fs = W * 0.62;                                // frame edge on screen
+    var dy = (fs * 0.9) / BUILD.frames;               // 91 mm tall over ~102 mm across
+    var baseY = H * 0.80;
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    // Each layer done: a dim fill and a light outline, so the stack reads as
+    // contour lines. The layer being built is amber; the ones to come, a ghost.
+    function put(src, n, alpha, filter) {
+      var xy = frameXY(n);
+      ctx.save();
+      ctx.translate(W / 2, baseY - n * dy);
+      ctx.scale(1, 0.5);
+      ctx.rotate(-0.62);
+      ctx.globalAlpha = alpha;
+      if (canFilter) ctx.filter = filter;
+      ctx.drawImage(src, xy[0], xy[1], S, S, -fs / 2, -fs / 2, fs, fs);
+      ctx.restore();
     }
+    for (var n = 0; n < BUILD.frames; n++) {
+      if (n > top) {
+        put(edges, n, 0.07, "none");
+      } else if (n === top) {
+        put(sheet, n, 0.9, "sepia(1) saturate(3.2) hue-rotate(-12deg) brightness(.9)");
+        put(edges, n, 1, "sepia(1) saturate(4) hue-rotate(-12deg) brightness(1.15)");
+      } else {
+        var k = n / Math.max(top, 1);
+        put(sheet, n, canFilter ? 1 : 0.25, "brightness(" + (0.14 + 0.16 * k).toFixed(3) + ")");
+        put(edges, n, canFilter ? 1 : 0.5 + 0.4 * k, "brightness(" + (0.42 + 0.5 * k).toFixed(3) + ")");
+      }
+    }
+    if (canFilter) ctx.filter = "none";
+
+    if (flatCanvas) {                                  // the layer itself, top down, crisp
+      var f = sizeCanvas(flatCanvas), fc = flatCanvas.getContext("2d"), t = frameXY(top);
+      fc.setTransform(1, 0, 0, 1, 0, 0);
+      fc.clearRect(0, 0, f.w, f.h);
+      fc.imageSmoothingEnabled = false;
+      fc.drawImage(sheet, t[0], t[1], S, S, 0, 0, f.w, f.h);
+    }
+    var layer = BUILD.picks[top] + 1;
+    if (buildLayer) buildLayer.textContent = String(layer);
+    if (buildZ) buildZ.textContent = (layer * BUILD.layerMm).toFixed(1);
+    buildState.shown = top;
+  }
+
+  if (build) {
+    [["sheet", "assets/layers/wolverine-layers.png"], ["edges", "assets/layers/wolverine-edges.png"]].forEach(function (s) {
+      var img = new Image();
+      img.decoding = "async";
+      img.onload = function () { buildState[s[0]] = img; buildState.p = -1; requestTick(); };
+      img.src = s[1];
+    });
+    win.addEventListener("resize", function () { buildState.p = -1; });
   }
 
   function heroProgress() {
@@ -216,18 +258,15 @@
       if (railProgress) railProgress.textContent = String(Math.round(pct * 100));
     }
 
-    if (loaf && !reduced) {
+    if (build) {
       var hr = hero.getBoundingClientRect();
       if (hr.bottom > 0 && hr.top < vh) {
-        var p = Math.max(easeOut(heroProgress()), loafState.intro);
-        loafState.mx += (loafState.mxTarget - loafState.mx) * 0.12;
-        if (Math.abs(p - loafState.p) > 0.0005 || Math.abs(loafState.mx - loafState.mxTarget) > 0.002) {
-          loafState.p = p;
-          loaf.style.setProperty("--p", p.toFixed(4));
-          loaf.style.setProperty("--mx", loafState.mx.toFixed(3));
-          loaf.classList.toggle("is-sliced", p > 0.015);
-          if (loafLayer) loafLayer.textContent = "layer " + String(Math.round(p * loafState.layers)).padStart(4, "0") + " / " + loafState.layers;
-          if (Math.abs(loafState.mx - loafState.mxTarget) > 0.002) requestTick();
+        // The intro builds the first part; scrolling builds the rest, with no
+        // stretch of scroll that does nothing.
+        var p = reduced ? 1 : buildState.intro + (1 - INTRO_P) * easeOut(heroProgress());
+        if (Math.abs(p - buildState.p) > 0.002) {
+          buildState.p = p;
+          drawBuild(p);
         }
       }
     }
@@ -248,20 +287,19 @@
   function requestTick() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
   win.addEventListener("scroll", requestTick, { passive: true });
   win.addEventListener("resize", requestTick);
-  if (loaf && !reduced) loaf.addEventListener("pointermove", requestTick, { passive: true });
   requestTick();
 
-  // Intro: cut the loaf partway on load, so the page moves before anyone scrolls.
-  if (loaf && !reduced) {
+  // Intro: build the first layers on load, so the page moves before anyone scrolls.
+  if (build && !reduced) {
     var t0 = null;
     var intro = function (t) {
       if (t0 === null) t0 = t;
       var k = clamp((t - t0) / INTRO_MS, 0, 1);
-      loafState.intro = INTRO_P * easeOut(k);
+      buildState.intro = INTRO_P * easeOut(k);
       requestTick();
       if (k < 1) requestAnimationFrame(intro);
     };
-    setTimeout(function () { requestAnimationFrame(intro); }, 350);
+    setTimeout(function () { requestAnimationFrame(intro); }, 300);
   }
 
   /* ---------- Demo: Transform drag ---------- */

@@ -237,38 +237,29 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
 .scroll-hint::after { content: ""; display: block; width: 1px; height: 28px; margin-top: 8px; background: linear-gradient(var(--accent), transparent); animation: hint 1.8s var(--ease) infinite; }
 @keyframes hint { 0% { transform: scaleY(0); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } 51% { transform-origin: bottom; } 100% { transform: scaleY(0); transform-origin: bottom; } }
 
-/* The loaf: one image, cut into strips that drift apart as you scroll. */
-.loaf { margin: 0; }
-.loaf-stage {
+/* The build: the miniature's real layers stacked as you scroll. */
+.build { margin: 0; }
+.build-stage {
   position: relative; aspect-ratio: 1; border-radius: 22px; overflow: hidden;
-  background: var(--surface-2);
-  box-shadow: 0 1px 0 rgba(236,238,239,.06) inset, 0 50px 90px -50px rgba(0,0,0,.85);
-  --p: 0; --mx: 0;
+  background: radial-gradient(70% 60% at 50% 62%, #232729, var(--surface) 75%);
+  border: 1px solid var(--line);
+  box-shadow: 0 1px 0 rgba(236,238,239,.05) inset, 0 50px 90px -50px rgba(0,0,0,.85);
 }
-.loaf-base { width: 100%; height: 100%; object-fit: cover; }
-.loaf-stage.is-sliced .loaf-base { opacity: 0; }
-.loaf-strips { position: absolute; inset: 0; opacity: 0; }
-.loaf-stage.is-sliced .loaf-strips { opacity: 1; }
-.loaf-strips > i {
-  position: absolute; left: 0; right: 0;
-  background-image: url("assets/loaf-hero-1024.webp"); background-size: 100% auto; background-repeat: no-repeat;
-  /* each strip: its own offset direction and amplitude (set inline), scaled by --p and the cursor */
-  transform: translate3d(calc((var(--p) * var(--dx) + var(--mx) * var(--cx)) * 1px), calc(var(--p) * var(--dy) * 1px), 0);
-  box-shadow: 0 1px 0 rgba(22,24,26, calc(var(--p) * .9));
-  will-change: transform;
+.build-canvas { width: 100%; height: 100%; }
+.build-readout {
+  position: absolute; left: 18px; top: 16px; display: grid; gap: 3px;
+  font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--text-dim);
 }
-.loaf-strips > i::after {
-  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1px;
-  background: var(--accent); opacity: calc(var(--p) * .3);
+.build-readout b { color: var(--cream); font-weight: 500; }
+.build-readout span:last-child b { color: var(--accent); }
+.build-inset {
+  position: absolute; right: 14px; bottom: 14px; width: 30%; aspect-ratio: 1;
+  border: 1px solid var(--line-strong); border-radius: 10px; background: #0d0e0f; overflow: hidden;
 }
-.loaf-readout {
-  position: absolute; right: 16px; top: 14px; display: grid; gap: 2px; text-align: right;
-  font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim);
-  opacity: calc(var(--p) * 1); transition: opacity .3s;
-}
-.loaf-readout span:last-child { color: var(--accent); }
-.loaf-controls { display: grid; grid-template-columns: auto 1fr auto; gap: 14px; align-items: center; margin-top: 16px; color: var(--text-dim); }
-.loaf-controls input { width: 100%; }
+.build-inset canvas { width: 100%; height: 100%; image-rendering: pixelated; }
+.build-inset span { position: absolute; left: 8px; top: 6px; font-size: .58rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
+.build-caption { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 14px; margin-top: 14px; color: var(--text-dim); }
+.build-caption-dim { color: var(--text-faint); }
 
 /* ---------- Ticker ---------- */
 .ticker { position: relative; margin: 0 calc(var(--edge) + var(--rail-w)) 0 var(--edge); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }
@@ -461,8 +452,6 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   .footer-grid { grid-template-columns: 1fr; }
   .cta-art { order: -1; }
   .cta-art img { width: min(60%, 260px); }
-  .loaf-controls { grid-template-columns: auto 1fr; }
-  .loaf-controls output { grid-column: 2; text-align: right; }
 }
 
 /* ---------- Motion fallback ---------- */
@@ -473,7 +462,6 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   .ticker-track { animation: none !important; flex-wrap: wrap; width: auto; }
   .ticker-track span:nth-child(n+13) { display: none; }
   .scroll-hint::after { display: none; }
-  .loaf-stage { --p: .55; }
   .story-step { opacity: 1; }
   .hero { height: auto; }
   .hero-pin { position: relative; height: auto; padding-top: 56px; padding-bottom: 56px; }
