@@ -226,18 +226,38 @@
       </div>
 
       <aside class="verify" aria-labelledby="verify-title">
-        <div>
-          <p class="kicker">Check it yourself</p>
-          <h3 id="verify-title">Same model, your machine.</h3>
-          <p>Download the wolverine exactly as it was posed for this run and time it on your own computer. Turn on <em>Diagnostic log</em> in Preferences and Breadslicer writes every step to <code>session.log</code>, so the numbers are there to read, not to trust. It is off by default: nothing is logged unless you ask.</p>
-          <a class="button button-ghost" href="https://github.com/breadslicer-app/breadslicer.app/releases/download/sample-wolverine/wolverine-breadslicer.zip" data-magnetic>Download the model <span class="button-sub">STL · 39 MB zip</span></a>
+        <p class="verify-kicker mono"><span class="verify-dot" aria-hidden="true"></span>Every number above is checkable</p>
+        <h3 id="verify-title" class="verify-title">Don’t take our word for it.<br><em>Time it yourself.</em></h3>
+        <p class="verify-lede">Benchmarks on a slicer’s own website are easy to fake. So here is the exact model from this run, and the app writes its own timings. Run it on your machine and compare.</p>
+
+        <ol class="verify-steps">
+          <li>
+            <span class="verify-n mono">01</span>
+            <h4>Get the same model</h4>
+            <p>The wolverine, posed exactly as in this run. Binary STL, 1.9 million triangles.</p>
+            <a class="button button-primary" href="https://github.com/breadslicer-app/breadslicer.app/releases/download/sample-wolverine/wolverine-breadslicer.zip" data-magnetic>Download the model <span class="button-sub">39 MB zip</span></a>
+          </li>
+          <li>
+            <span class="verify-n mono">02</span>
+            <h4>Turn on the log</h4>
+            <p><span class="mono small">Preferences → UI &amp; Theme →</span> <em>Diagnostic log</em>. It is off by default: nothing is recorded unless you ask.</p>
+          </li>
+          <li>
+            <span class="verify-n mono">03</span>
+            <h4>Read the clock</h4>
+            <p>Open, hollow, generate, slice, export. Then <em>Open logs folder</em>: <code>session.log</code> has the start and end of every step.</p>
+          </li>
+        </ol>
+
+        <div class="verify-foot">
+          <dl class="verify-rig mono">
+            <div><dt>Our machine</dt><dd>Ryzen 7 5800X · RTX 3090 · 32 GB · NVMe SSD</dd></div>
+            <div><dt>Printer</dt><dd>ELEGOO Saturn 3 Ultra · 0.1 mm layers</dd></div>
+            <div><dt>Supports</dt><dd>Detail preset, defaults</dd></div>
+            <div><dt>Build</dt><dd>Early access, 27 Oct 2026</dd></div>
+          </dl>
+          <p class="verify-promise">Slower on your machine? <strong>That’s a bug, and we want to hear about it.</strong></p>
         </div>
-        <dl class="verify-rig mono">
-          <div><dt>Measured on</dt><dd>Ryzen 7 5800X · RTX 3090 · 32 GB · NVMe SSD</dd></div>
-          <div><dt>Printer</dt><dd>ELEGOO Saturn 3 Ultra · 0.05 mm layers</dd></div>
-          <div><dt>Supports</dt><dd>Detail preset, defaults</dd></div>
-          <div><dt>Build</dt><dd>Breadslicer early access, 27 Oct 2026</dd></div>
-        </dl>
       </aside>
     </section>
 

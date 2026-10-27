@@ -334,14 +334,40 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
 .measure { margin: 18px 0 0 !important; padding-top: 14px; border-top: 1px dashed var(--line-strong); color: var(--text-dim); font-size: .95rem; }
 .measure-t { color: var(--accent); font-size: 1.05rem; margin-right: 4px; }
 
-.verify { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin: clamp(48px, 7vw, 96px) var(--gutter) 0; padding: clamp(24px, 3vw, 40px); border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
-.verify h3 { font-size: clamp(1.4rem, 2.2vw, 1.9rem); margin-bottom: 12px; }
-.verify p:not(.kicker) { color: var(--text-dim); }
+.verify {
+  position: relative; overflow: hidden;
+  margin: clamp(56px, 8vw, 112px) var(--gutter) 0; padding: clamp(28px, 4.5vw, 64px);
+  border: 1px solid rgba(var(--accent-rgb), .45); border-radius: 18px;
+  background:
+    radial-gradient(80% 120% at 100% 0%, rgba(var(--accent-rgb), .13), transparent 60%),
+    var(--surface);
+}
+.verify::after {
+  content: "?"; position: absolute; right: clamp(-10px, 2vw, 40px); top: clamp(-60px, -2vw, 0px);
+  font-family: var(--font-serif); font-style: italic; font-size: clamp(14rem, 26vw, 24rem); line-height: 1;
+  color: rgba(var(--accent-rgb), .07); pointer-events: none;
+}
+.verify > * { position: relative; z-index: 1; }
+.verify-kicker { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 18px; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.verify-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 0 rgba(var(--accent-rgb), .6); animation: verify-pulse 2s infinite; }
+@keyframes verify-pulse { 70% { box-shadow: 0 0 0 9px rgba(var(--accent-rgb), 0); } 100% { box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0); } }
+.verify-title { font-size: clamp(2.3rem, 5.4vw, 4.4rem); letter-spacing: -0.035em; line-height: 1.02; margin: 0 0 20px; max-width: 14em; }
+.verify-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; letter-spacing: 0; color: var(--accent); }
+.verify-lede { font-size: clamp(1.02rem, 1.3vw, 1.18rem); color: var(--text-dim); max-width: 40em; margin: 0 0 clamp(28px, 4vw, 44px); }
+.verify-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; counter-reset: none; }
+.verify-steps li { display: grid; align-content: start; gap: 8px; padding: 22px 20px 24px; border: 1px solid var(--line); border-radius: 12px; background: rgba(22, 24, 26, .55); }
+.verify-steps h4 { margin: 0; font-size: 1.12rem; font-weight: 500; color: var(--cream); letter-spacing: -0.01em; }
+.verify-steps p { margin: 0; color: var(--text-dim); font-size: .95rem; }
+.verify-steps em { font-style: normal; color: var(--cream); }
+.verify-steps .button { justify-self: start; margin-top: 10px; }
+.verify-n { font-size: .74rem; letter-spacing: .08em; color: var(--accent); }
 .verify code { font-family: var(--font-mono); font-size: .9em; color: var(--cream); background: var(--surface-3); padding: 1px 6px; border-radius: 4px; }
-.verify .button { margin-top: 8px; }
-.verify-rig { display: grid; gap: 14px; margin: 0; font-size: .8rem; }
-.verify-rig dt { font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
+.verify-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 20px 40px; margin-top: clamp(28px, 4vw, 40px); padding-top: 22px; border-top: 1px dashed var(--line-strong); }
+.verify-rig { display: flex; flex-wrap: wrap; gap: 14px 32px; margin: 0; font-size: .78rem; }
+.verify-rig dt { font-size: .64rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
 .verify-rig dd { margin: 4px 0 0; color: var(--cream); }
+.verify-promise { margin: 0; color: var(--text-dim); max-width: 22em; }
+.verify-promise strong { color: var(--cream); font-weight: 500; }
 
 /* ---------- Cells (hairline grid, cursor highlight) ---------- */
 .cells { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); margin: 0 var(--gutter); }
@@ -437,7 +463,8 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   .cta-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .runlog { display: none; }
-  .verify { grid-template-columns: 1fr; }
+  .verify-steps { grid-template-columns: minmax(0, 1fr); }
+  .verify-steps .button { justify-self: stretch; white-space: normal; }
 }
 @media (max-width: 720px) {
   body { font-size: 16px; }
