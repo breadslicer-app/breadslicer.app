@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Breadslicer — native resin slicer</title>
+  <meta name="description" content="Breadslicer is a native resin (MSLA) slicer written in Rust: Blender-style transforms, tree supports and voxel hollowing that keep up with you, and a crisp layer view. Early access.">
+  <meta name="theme-color" content="#16181a">
+  <link rel="canonical" href="https://breadslicer.app/">
+
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Breadslicer">
+  <meta property="og:title" content="Breadslicer — native resin slicer">
+  <meta property="og:description" content="A native resin (MSLA) slicer written in Rust. Supports, hollowing and slicing that keep up with you. Early access.">
+  <meta property="og:url" content="https://breadslicer.app/">
+  <meta property="og:image" content="https://breadslicer.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Breadslicer loaf logo next to the words Breadslicer, native resin slicer, slice by slice.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Breadslicer — native resin slicer">
+  <meta name="twitter:description" content="A native resin (MSLA) slicer written in Rust. Early access.">
+  <meta name="twitter:image" content="https://breadslicer.app/assets/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="sgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+        <path d="M24 0H0V24" fill="none" stroke="var(--line-faint)" stroke-width="1"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <!-- Page frame: hairline edges + right-hand rail (desktop) -->
+  <div class="frame-edges" aria-hidden="true"><span></span><span></span></div>
+
+  <aside class="rail" aria-hidden="true">
+    <div class="rail-ruler">
+      <span class="rail-progress mono"><b data-progress>0</b>%</span>
+      <i class="rail-cursor"></i>
+    </div>
+    <ol class="rail-index">
+      <li data-rail="top">Breadslicer</li>
+      <li data-rail="workflow">Workflow</li>
+      <li data-rail="labs">Hands on</li>
+      <li data-rail="native">Native</li>
+      <li data-rail="roadmap">Roadmap</li>
+      <li data-rail="download">Early access</li>
+    </ol>
+  </aside>
+
+  <header class="site-header" id="top">
+    <div class="nav-row">
+      <a class="brand" href="#top" aria-label="Breadslicer home">
+        <img class="mark" src="assets/loaf-96.png" width="30" height="30" alt="">
+        <span class="wordmark">Breadslicer</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#workflow">Workflow</a>
+        <a href="#labs">Hands on</a>
+        <a href="#native">Native</a>
+        <a href="#roadmap">Roadmap</a>
+        <a class="button button-small" href="#download" data-magnetic>Early access</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" data-section="top" aria-labelledby="hero-title">
+      <div class="hero-pin">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Native MSLA slicer · Early access</p>
+            <p class="hero-wordmark" aria-hidden="true"><span class="reveal-words">Breadslicer</span></p>
+            <h1 id="hero-title" class="reveal-words">A resin slicer that cuts <em>clean.</em></h1>
+            <p class="lede">
+              Written in Rust with its own GPU viewport. Tree supports and voxel
+              hollowing that run at full speed, a layer view you can actually read.
+              Nothing in a browser tab, nothing waiting on a spinner.
+            </p>
+            <div class="cta-row">
+              <a class="button button-primary" href="#download" data-magnetic>Get early access</a>
+              <a class="button button-ghost" href="#workflow" data-magnetic>See the workflow <span class="arrow" aria-hidden="true">→</span></a>
+            </div>
+            <dl class="hero-facts">
+              <div><dt>Runtime</dt><dd>Native Rust</dd></div>
+              <div><dt>Viewport</dt><dd>Own wgpu renderer</dd></div>
+              <div><dt>Footprint</dt><dd>~48 MB executable</dd></div>
+            </dl>
+          </div>
+
+          <div class="hero-art">
+            <figure class="loaf" aria-labelledby="loaf-caption">
+              <div class="loaf-stage" data-loaf>
+                <img class="loaf-base" src="assets/loaf-hero-1024.webp" width="1024" height="1024"
+                     alt="The Breadslicer logo: a toasted loaf of bread with two slices cut from it."
+                     fetchpriority="high">
+                <div class="loaf-strips" aria-hidden="true"></div>
+                <div class="loaf-readout mono" aria-hidden="true"><span data-loaf-layer>layer 000</span><span data-loaf-height>0.050 mm</span></div>
+              </div>
+              <figcaption id="loaf-caption" class="loaf-controls">
+                <label for="layer-height" class="mono small">Layer height</label>
+                <input id="layer-height" type="range" min="25" max="100" step="5" value="50" data-layer-height
+                       aria-valuetext="0.050 millimetres">
+                <output for="layer-height" class="mono small" data-layer-out>0.050 mm</output>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+        <p class="scroll-hint mono" aria-hidden="true">Scroll to slice</p>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>G / R / S gestures</span><span>Voxel hollowing</span><span>Trunks</span><span>Branches</span><span>Leaves</span><span>Braces</span><span>Rafts</span><span>Drain holes</span><span>32× layer view</span><span>Background pre-compute</span><span>One undo per click</span><span>Rust + Slint + wgpu</span>
+        <span>G / R / S gestures</span><span>Voxel hollowing</span><span>Trunks</span><span>Branches</span><span>Leaves</span><span>Braces</span><span>Rafts</span><span>Drain holes</span><span>32× layer view</span><span>Background pre-compute</span><span>One undo per click</span><span>Rust + Slint + wgpu</span>
+      </div>
+    </div>
+
+    <!-- ============ WORKFLOW (scroll-driven) ============ -->
+    <section class="section" id="workflow" data-section="workflow" aria-labelledby="workflow-title">
+      <div class="section-bar">
+        <span class="mono">01 / Workflow</span>
+        <span class="mono section-bar-right"><span data-step-label>Transform</span> · <span data-step-count>1</span> of 5</span>
+      </div>
+
+      <header class="section-head">
+        <h2 id="workflow-title">Five tabs, left to right. <em>Done.</em></h2>
+        <p class="section-lede">
+          The whole job lives in one tab bar, in the order you actually work. These
+          are real captures of the app, and every time on this page was measured on
+          one real run with the model below: scroll and the run plays back.
+        </p>
+      </header>
+
+      <div class="story" data-story>
+        <div class="story-stage">
+          <div class="stage" data-stage data-step="1">
+            <div class="stage-bar mono">
+              <span class="stage-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="stage-tabs"><b data-tab="1">Transform</b><b data-tab="2">Hollow</b><b data-tab="3">Supports</b><b data-tab="4">Slice</b><b data-tab="5">Export</b></span>
+              <span class="badge">Breadslicer</span>
+            </div>
+            <div class="stage-shots">
+              <img class="shot" data-shot="1" src="assets/shots/transform.webp" width="1600" height="900" alt="Breadslicer's Transform tab: a model on the build plate, moved with a live distance readout." fetchpriority="low">
+              <img class="shot" data-shot="2" src="assets/shots/hollow.webp" width="1600" height="900" alt="Breadslicer's Hollow tab: the model with its translucent cavity preview and the wall thickness controls." loading="lazy">
+              <img class="shot" data-shot="3" src="assets/shots/supports.webp" width="1600" height="900" alt="Breadslicer's Supports tab: tree supports generated under a miniature." loading="lazy">
+              <img class="shot" data-shot="4" src="assets/shots/slice.webp" width="1600" height="900" alt="Breadslicer's Slice tab: the model cut at a layer next to that layer's pixels, with time and resin estimates." loading="lazy">
+              <img class="shot" data-shot="5" src="assets/shots/export.webp" width="1600" height="900" alt="Breadslicer's Export tab: writing the print file for the selected printer." loading="lazy">
+            </div>
+          </div>
+          <div class="runlog" data-runlog aria-label="Measured timings of one real run">
+            <div class="runlog-head mono">
+              <span><i class="runlog-dot" aria-hidden="true"></i>One real run, measured</span>
+              <span>you waited <b data-waited>0.00</b> s</span>
+            </div>
+            <ol class="runlog-list mono">
+              <li data-log-step="1" data-wait="0.63"><span class="log-t">0.63 s</span><span class="log-what">Window ready</span></li>
+              <li data-log-step="1" data-wait="0.60"><span class="log-t">0.60 s</span><span class="log-what">Opened wolverine-breadslicer.stl</span><span class="log-note">92 MB · 1.9 M triangles</span></li>
+              <li data-log-step="2" data-wait="0.81"><span class="log-t">0.81 s</span><span class="log-what">Live cavity preview</span><span class="log-note">wall 2 mm</span></li>
+              <li data-log-step="2" data-wait="0" data-bg><span class="log-t">2.1 s</span><span class="log-what">Background: model scanned for supports</span><span class="log-note">while you look at the cavity</span></li>
+              <li data-log-step="2" data-wait="0" data-bg><span class="log-t">3.2 s</span><span class="log-what">Background: supports generated ahead</span><span class="log-note">ready before you ask</span></li>
+              <li data-log-step="3" data-wait="0.17"><span class="log-t">0.17 s</span><span class="log-what">Generate → 124 supports on screen</span><span class="log-note">taken from the run made ahead</span></li>
+              <li data-log-step="4" data-wait="0.79"><span class="log-t">0.79 s</span><span class="log-what">913 layers sliced</span><span class="log-note">1 h 40 m · 66.2 ml · 77.4 g</span></li>
+              <li data-log-step="5" data-wait="13.8"><span class="log-t">13.8 s</span><span class="log-what">Printer file written</span><span class="log-note">.ctb · 23.9 MB · Saturn 3 Ultra</span></li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="story-steps">
+          <article class="story-step" data-step-index="1" id="step-transform">
+            <p class="kicker">01 · Transform</p>
+            <h3>Move it like you mean it.</h3>
+            <p>Press <kbd>G</kbd>, <kbd>R</kbd> or <kbd>S</kbd> and drag. A live chip reads distance or degrees as you go, and axis guide lines keep you honest. Or type it in the numeric inspector: position, lift, rotation, size.</p>
+            <p class="measure"><span class="measure-t mono">0.60 s</span> to open a 92 MB, 1.9-million-triangle miniature</p>
+          </article>
+          <article class="story-step" data-step-index="2" id="step-hollow">
+            <p class="kicker">02 · Hollow</p>
+            <h3>Save resin without guessing.</h3>
+            <p>A translucent cavity preview that follows the wall slider live, a Recommended thickness one click away, fine ±0.1 and ±1 mm steps, and drain holes before or after.</p>
+            <p class="measure"><span class="measure-t mono">0.81 s</span> for the live cavity. Meanwhile the supports are being made in the background.</p>
+          </article>
+          <article class="story-step" data-step-index="3" id="step-supports">
+            <p class="kicker">03 · Supports</p>
+            <h3>Hold it up, by hand or in one click.</h3>
+            <p>Trunks, branches, leaves, braces and rafts, prepared in the background while you worked, so <em>Generate</em> is often instant. Add with <kbd>A</kbd>, remove with <kbd>X</kbd>, with a live preview before every click.</p>
+            <p class="measure"><span class="measure-t mono">0.17 s</span> from Generate to 124 supports on screen: they were ready before the click</p>
+          </article>
+          <article class="story-step" data-step-index="4" id="step-slice">
+            <p class="kicker">04 · Slice</p>
+            <h3>Read every layer before the printer does.</h3>
+            <p>Print time, resin and weight. Then a split view that zooms to 32× with crisp, honest pixels. Sealed cavities slice correctly: what you see is what gets exposed.</p>
+            <p class="measure"><span class="measure-t mono">0.79 s</span> to slice 913 layers</p>
+          </article>
+          <article class="story-step" data-step-index="5" id="step-export">
+            <p class="kicker">05 · Export</p>
+            <h3>Write the file. Go print.</h3>
+            <p>The file your printer reads, with a progress readout you can trust. The app stays responsive while it writes, and your project keeps its state, so a last-minute fix is one tab away.</p>
+            <p class="measure"><span class="measure-t mono">13.8 s</span> to write the 23.9 MB printer file</p>
+          </article>
+        </div>
+      </div>
+
+      <aside class="verify" aria-labelledby="verify-title">
+        <div>
+          <p class="kicker">Check it yourself</p>
+          <h3 id="verify-title">Same model, your machine.</h3>
+          <p>Download the wolverine exactly as it was posed for this run and time it on your own computer. Turn on <em>Diagnostic log</em> in Preferences and Breadslicer writes every step to <code>session.log</code>, so the numbers are there to read, not to trust. It is off by default: nothing is logged unless you ask.</p>
+          <a class="button button-ghost" href="https://github.com/breadslicer-app/breadslicer.app/releases/download/sample-wolverine/wolverine-breadslicer.zip" data-magnetic>Download the model <span class="button-sub">STL · 39 MB zip</span></a>
+        </div>
+        <dl class="verify-rig mono">
+          <div><dt>Measured on</dt><dd>Ryzen 7 5800X · RTX 3090 · 32 GB · NVMe SSD</dd></div>
+          <div><dt>Printer</dt><dd>ELEGOO Saturn 3 Ultra · 0.05 mm layers</dd></div>
+          <div><dt>Supports</dt><dd>Detail preset, defaults</dd></div>
+          <div><dt>Build</dt><dd>Breadslicer early access, 26 Oct 2026</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <!-- ============ HANDS ON (interactive demos) ============ -->
+    <section class="section" id="labs" data-section="labs" aria-labelledby="labs-title">
+      <div class="section-bar">
+        <span class="mono">02 / Hands on</span>
+        <span class="mono section-bar-right">Interactive schematics · not screenshots</span>
+      </div>
+      <header class="section-head">
+        <h2 id="labs-title">Try the ideas <em>before</em> the download.</h2>
+        <p class="section-lede">
+          Four small working models of what the tabs do. Schematic, not the real
+          renderer, but the behaviour is the point.
+        </p>
+      </header>
+
+      <div class="cells">
+        <!-- Transform: drag demo -->
+        <article class="cell" data-cell>
+          <div class="cell-head mono"><span>Transform · drag on X</span><span>01</span></div>
+          <div class="demo demo-transform" data-demo="transform">
+            <svg viewBox="0 0 480 300" role="img" aria-labelledby="dt-title" tabindex="0" data-dt-svg>
+              <title id="dt-title">Drag the model along X. Arrow keys also move it. The chip shows the live distance.</title>
+              <rect width="480" height="300" fill="var(--surface-2)"/>
+              <rect width="480" height="300" fill="url(#sgrid)"/>
+              <line x1="0" y1="206" x2="480" y2="206" stroke="var(--axis-x)" stroke-width="1.5" stroke-dasharray="6 6"/>
+              <line data-dt-origin x1="240" y1="20" x2="240" y2="280" stroke="var(--line-strong)" stroke-width="1" stroke-dasharray="2 6"/>
+              <g data-dt-model transform="translate(240 206)" style="cursor:grab">
+                <path d="M-48 0 L-30 -50 L-6 -72 L20 -60 L40 -32 L50 0 Z" fill="var(--model)" stroke="var(--model-edge)" stroke-width="1.5"/>
+                <path d="M-30 -50 L-6 -72 L20 -60 L-2 -40 Z" fill="var(--model-light)" opacity=".6"/>
+                <path d="M-48 0 L50 0 L54 7 L-52 7 Z" fill="var(--model-dark)"/>
+              </g>
+              <g data-dt-chip transform="translate(240 110)">
+                <rect x="-50" y="-14" width="100" height="28" rx="6" fill="var(--chip-bg)" stroke="var(--accent)"/>
+                <text data-dt-text x="0" y="5" text-anchor="middle" class="sch-mono" fill="var(--accent)">+0.00 mm</text>
+              </g>
+              <text x="16" y="282" class="sch-mono" fill="var(--text-dim)">G · drag · X locked</text>
+            </svg>
+          </div>
+          <div class="cell-body">
+            <h3>Gestures with a readout.</h3>
+            <p>Drag the model. The chip is the same idea as in the app: distance while you move, degrees while you rotate, and a guide line on the axis you're on.</p>
+          </div>
+        </article>
+
+        <!-- Supports: growing tree -->
+        <article class="cell" data-cell>
+          <div class="cell-head mono"><span>Supports · generate</span><span>02</span></div>
+          <div class="demo demo-supports" data-demo="supports">
+            <svg viewBox="0 0 480 300" role="img" aria-labelledby="ds-title">
+              <title id="ds-title">Press Generate to grow tree supports under the model. Preview add shows a green candidate; preview remove marks one in red.</title>
+              <rect width="480" height="300" fill="var(--surface-2)"/>
+              <rect width="480" height="300" fill="url(#sgrid)"/>
+              <rect class="ds-raft" x="90" y="246" width="300" height="8" rx="2" fill="var(--support)"/>
+              <g stroke="var(--support)" stroke-width="4.5" stroke-linecap="round" fill="none">
+                <path class="ds-grow" pathLength="1" d="M140 246 V 190"/><path class="ds-grow d1" pathLength="1" d="M140 190 L 166 150"/><path class="ds-grow d1" pathLength="1" d="M140 190 L 118 156"/>
+                <path class="ds-grow" pathLength="1" d="M240 246 V 178"/><path class="ds-grow d1" pathLength="1" d="M240 178 L 216 136"/><path class="ds-grow d1" pathLength="1" d="M240 178 L 266 130"/><path class="ds-grow d1" pathLength="1" d="M240 178 L 240 122"/>
+                <path class="ds-grow ds-removable" pathLength="1" d="M340 246 V 196"/><path class="ds-grow d1 ds-removable" pathLength="1" d="M340 196 L 318 158"/>
+              </g>
+              <g stroke="var(--support)" stroke-width="2.2" stroke-linecap="round" fill="none" opacity=".75">
+                <path class="ds-grow d2" pathLength="1" d="M140 190 L 240 178"/><path class="ds-grow d2 ds-removable" pathLength="1" d="M240 178 L 340 196"/>
+              </g>
+              <g class="ds-leaves" fill="var(--support-tip)">
+                <circle cx="166" cy="150" r="3.6"/><circle cx="118" cy="156" r="3.6"/><circle cx="216" cy="136" r="3.6"/><circle cx="266" cy="130" r="3.6"/><circle cx="240" cy="122" r="3.6"/><circle class="ds-removable" cx="318" cy="158" r="3.6"/>
+              </g>
+              <path d="M104 190 C 104 118, 170 66, 240 66 C 310 66, 378 118, 378 190 L 378 198 L 104 198 Z" fill="var(--model)" stroke="var(--model-edge)" stroke-width="1.5"/>
+              <g class="ds-add">
+                <path d="M402 246 V 196 L 388 164" stroke="var(--ok)" stroke-width="4.5" stroke-linecap="round" fill="none" stroke-dasharray="9 7"/>
+                <circle cx="388" cy="164" r="4.5" fill="var(--ok)"/>
+                <g transform="translate(412 170)"><rect width="56" height="24" rx="6" fill="var(--chip-bg)" stroke="var(--ok)"/><text x="28" y="16" text-anchor="middle" class="sch-mono" fill="var(--ok)">A add</text></g>
+              </g>
+              <g class="ds-remove-chip" transform="translate(300 100)"><rect width="76" height="24" rx="6" fill="var(--chip-bg)" stroke="var(--bad)"/><text x="38" y="16" text-anchor="middle" class="sch-mono" fill="var(--bad)">X remove</text></g>
+              <text x="16" y="282" class="sch-mono" fill="var(--text-dim)" data-ds-status>pre-computed in the background</text>
+            </svg>
+            <div class="demo-controls">
+              <button type="button" class="chip-btn" data-ds="generate">Generate</button>
+              <button type="button" class="chip-btn" data-ds="add" aria-pressed="false">Preview add <kbd>A</kbd></button>
+              <button type="button" class="chip-btn" data-ds="remove" aria-pressed="false">Preview remove <kbd>X</kbd></button>
+              <button type="button" class="chip-btn chip-btn-quiet" data-ds="reset">Reset</button>
+            </div>
+          </div>
+          <div class="cell-body">
+            <h3>Already generated by the time you ask.</h3>
+            <p>Supports are computed while you transform and hollow, so Generate is often instant. Hand-edit with live previews: green before you add, red before you remove, one undo per click.</p>
+          </div>
+        </article>
+
+        <!-- Hollow: wall slider -->
+        <article class="cell" data-cell>
+          <div class="cell-head mono"><span>Hollow · wall thickness</span><span>03</span></div>
+          <div class="demo demo-hollow" data-demo="hollow">
+            <svg viewBox="0 0 480 300" role="img" aria-labelledby="dh-title">
+              <title id="dh-title">Cross-section of a hollowed model. Move the wall slider to change the cavity; toggle drain holes.</title>
+              <rect width="480" height="300" fill="var(--surface-2)"/>
+              <rect width="480" height="300" fill="url(#sgrid)"/>
+              <g transform="translate(240 236)">
+                <path d="M-150 0 C -150 -84, -90 -150, 0 -152 C 90 -150, 150 -84, 150 0 Z" fill="var(--model)" stroke="var(--model-edge)" stroke-width="1.5"/>
+                <g data-dh-cavity>
+                  <path d="M-150 0 C -150 -84, -90 -150, 0 -152 C 90 -150, 150 -84, 150 0 Z" fill="var(--cavity)"/>
+                  <path d="M-150 0 C -150 -84, -90 -150, 0 -152 C 90 -150, 150 -84, 150 0" fill="none" stroke="var(--accent)" stroke-width="1" stroke-dasharray="3 4" vector-effect="non-scaling-stroke"/>
+                </g>
+                <g data-dh-holes>
+                  <rect x="66" y="-34" width="16" height="34" rx="2" fill="var(--surface-2)" stroke="var(--accent)" stroke-width="1.5"/>
+                  <rect x="-82" y="-34" width="16" height="34" rx="2" fill="var(--surface-2)" stroke="var(--accent)" stroke-width="1.5"/>
+                </g>
+                <line data-dh-wallmark x1="-150" y1="-60" x2="-130" y2="-60" stroke="var(--accent)" stroke-width="1.5"/>
+              </g>
+              <g transform="translate(16 36)"><rect width="104" height="26" rx="6" fill="var(--chip-bg)" stroke="var(--accent)"/><text data-dh-chip x="52" y="17" text-anchor="middle" class="sch-mono" fill="var(--accent)">wall 2.00 mm</text></g>
+              <text x="464" y="282" text-anchor="end" class="sch-mono" fill="var(--text-dim)" data-dh-saved>cavity 73 % of volume · illustrative</text>
+            </svg>
+            <div class="demo-controls">
+              <label class="mono small" for="dh-wall">Wall</label>
+              <button type="button" class="chip-btn chip-btn-quiet" data-dh-nudge="-1">−1</button>
+              <button type="button" class="chip-btn chip-btn-quiet" data-dh-nudge="-0.1">−0.1</button>
+              <input id="dh-wall" type="range" min="0.8" max="4" step="0.1" value="2" data-dh-wall aria-valuetext="2.0 millimetres">
+              <button type="button" class="chip-btn chip-btn-quiet" data-dh-nudge="0.1">+0.1</button>
+              <button type="button" class="chip-btn chip-btn-quiet" data-dh-nudge="1">+1</button>
+              <button type="button" class="chip-btn chip-btn-accent" data-dh-rec>Recommended</button>
+              <label class="chip-check mono small"><input type="checkbox" checked data-dh-drain> Drain holes</label>
+            </div>
+          </div>
+          <div class="cell-body">
+            <h3>Thin walls, no surprises.</h3>
+            <p>A voxel hollowing engine with a live translucent cavity preview, a Recommended wall one click away, fine ±0.1 and ±1 mm buttons, drain holes before or after. Sealed cavities slice correctly.</p>
+          </div>
+        </article>
+
+        <!-- Slice: layer view zoom -->
+        <article class="cell" data-cell>
+          <div class="cell-head mono"><span>Slice · layer view</span><span>04</span></div>
+          <div class="demo demo-slice" data-demo="slice">
+            <div class="slice-view">
+              <canvas data-sl-canvas width="480" height="300" role="img" aria-label="A single layer rendered as crisp pixels. Change the layer or zoom in up to 32 times."></canvas>
+              <span class="slice-zoom mono" data-sl-zoomlabel>1×</span>
+            </div>
+            <div class="demo-controls">
+              <label class="mono small" for="sl-layer">Layer</label>
+              <input id="sl-layer" type="range" min="1" max="1490" value="620" data-sl-layer>
+              <output class="mono small" data-sl-layerout for="sl-layer">620</output>
+              <label class="mono small" for="sl-zoom">Zoom</label>
+              <input id="sl-zoom" type="range" min="0" max="5" step="1" value="0" data-sl-zoom aria-valuetext="1 times">
+            </div>
+          </div>
+          <div class="cell-body">
+            <h3>Numbers first, then every pixel.</h3>
+            <p>Time, resin and weight estimates, then a split view that scrubs the model and the layer together. Zoom to 32× with no interpolation: a one-pixel island looks like a one-pixel island.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ NATIVE ============ -->
+    <section class="section" id="native" data-section="native" aria-labelledby="native-title">
+      <div class="section-bar">
+        <span class="mono">03 / Built native</span>
+        <span class="mono section-bar-right">Rust · Slint · wgpu</span>
+      </div>
+      <header class="section-head">
+        <h2 id="native-title">No browser <em>underneath.</em></h2>
+        <p class="section-lede">
+          Breadslicer is a Rust application with a Slint interface and its own wgpu
+          viewport. Not a web app wearing a window. It shows at startup, on disk,
+          and in how the viewport feels under your hand.
+        </p>
+      </header>
+
+      <div class="spec-grid">
+        <div class="spec" data-cell><span class="spec-value mono">Rust</span><span class="spec-label">Language, end to end. Memory-safe geometry, no garbage collector in the loop.</span></div>
+        <div class="spec" data-cell><span class="spec-value mono">Slint + wgpu</span><span class="spec-label">Native UI toolkit and a purpose-built GPU viewport. No Electron, no WebView.</span></div>
+        <div class="spec" data-cell><span class="spec-value mono">~48 MB</span><span class="spec-label">One executable. Light on disk, quick to start.</span></div>
+        <div class="spec" data-cell><span class="spec-value mono">Background jobs</span><span class="spec-label">Supports and hollowing run off the UI thread. Cancel, undo and stale-result handling are part of the design.</span></div>
+        <div class="spec" data-cell><span class="spec-value mono">Measured, not guessed</span><span class="spec-label">Every engine change is checked against reference scenes, byte for byte, before it ships.</span></div>
+        <div class="spec" data-cell><span class="spec-value mono">AGPL-3.0</span><span class="spec-label">Free software. The source opens with the first public build.</span></div>
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP ============ -->
+    <section class="section" id="roadmap" data-section="roadmap" aria-labelledby="roadmap-title">
+      <div class="section-bar">
+        <span class="mono">04 / Roadmap</span>
+        <span class="mono section-bar-right">No dates, no promises we can't slice</span>
+      </div>
+      <header class="section-head">
+        <h2 id="roadmap-title">What's in the <em>oven.</em></h2>
+      </header>
+      <ol class="roadmap">
+        <li data-cell><span class="tag">Coming</span><div><h3>Guided resin calibration</h3><p>A walk-through that gets exposure right for a new resin without a spreadsheet.</p></div></li>
+        <li data-cell><span class="tag">Coming</span><div><h3>Structural support checks</h3><p>Force-based analysis that flags supports likely to fail before the print does.</p></div></li>
+        <li data-cell><span class="tag">Coming</span><div><h3>Split pre-supported STLs into bodies</h3><p>Pull a pre-supported file apart into model and supports so each can be edited on its own.</p></div></li>
+        <li data-cell><span class="tag">Coming</span><div><h3>Community bug reporting via Discord</h3><p>Report from inside the app, with the context attached, straight to the people who fix it.</p></div></li>
+      </ol>
+    </section>
+
+    <!-- ============ DOWNLOAD ============ -->
+    <section class="section section-cta" id="download" data-section="download" aria-labelledby="download-title">
+      <div class="section-bar">
+        <span class="mono">05 / Early access</span>
+        <span class="mono section-bar-right">Small batches while the edges get sanded</span>
+      </div>
+      <div class="cta-grid">
+        <div>
+          <h2 id="download-title">First slices, <em>soon.</em></h2>
+          <p class="section-lede">Breadslicer is in early access. Builds are being handed out in small batches. The download will appear here, and so will the Discord.</p>
+          <div class="cta-row">
+            <a class="button button-primary is-soon" href="#download" aria-describedby="download-note" data-magnetic>Download <span class="button-sub">Coming soon</span></a>
+            <a class="button button-ghost is-soon" href="#download" aria-describedby="download-note" data-magnetic>Join the Discord <span class="button-sub">Coming soon</span></a>
+          </div>
+          <p id="download-note" class="small muted">No sign-up form yet. When early access opens, this page is where it opens.</p>
+        </div>
+        <div class="cta-art" aria-hidden="true" data-parallax="0.12">
+          <img src="assets/loaf-640.webp" width="640" height="640" alt="" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="wordmark">Breadslicer</span>
+        <span class="muted small">Native resin slicer · breadslicer.app</span>
+      </div>
+      <nav class="footer-col" aria-label="Product">
+        <span class="mono footer-h">Product</span>
+        <a href="#workflow">Workflow</a><a href="#labs">Hands on</a><a href="#native">Built native</a><a href="#roadmap">Roadmap</a>
+      </nav>
+      <nav class="footer-col" aria-label="Community">
+        <span class="mono footer-h">Community</span>
+        <span class="muted">Discord · coming soon</span><span class="muted">Source · coming soon</span>
+      </nav>
+      <p class="footer-legal small muted">
+        Free software under the AGPL-3.0. © 2026 SynrgStudio.
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
