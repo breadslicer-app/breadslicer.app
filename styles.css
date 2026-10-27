@@ -386,6 +386,12 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
 .slice-view canvas { width: 100%; aspect-ratio: 8 / 5; image-rendering: pixelated; image-rendering: crisp-edges; }
 .slice-zoom { position: absolute; right: 14px; bottom: 14px; padding: 4px 9px; border-radius: 6px; border: 1px solid var(--line-strong); background: var(--chip-bg); color: var(--cream); font-size: .76rem; }
 
+/* Close-ups: real recordings, played while on screen */
+.clip-frame { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--surface); }
+.clip { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s var(--ease); }
+.clip.is-on { opacity: 1; }
+.clip-badge { position: absolute; right: 12px; bottom: 12px; padding: 4px 9px; border-radius: 999px; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; color: var(--text-dim); background: var(--chip-bg); border: 1px solid var(--line); }
+
 /* ---------- Spec grid ---------- */
 .spec-grid { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0 var(--gutter); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .spec { padding: 32px 26px; display: grid; gap: 10px; align-content: start; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); overflow: hidden; }

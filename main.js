@@ -292,6 +292,31 @@
   win.addEventListener("resize", requestTick);
   requestTick();
 
+  /* ---------- Close-ups: play while on screen; sets of clips take turns ---------- */
+  $$("[data-clipset]").forEach(function (set) {
+    var clips = $$("[data-clip]", set), at = 0;
+    if (clips.length > 1) {
+      clips.forEach(function (v) { v.loop = false; });
+      clips.forEach(function (v, i) {
+        v.addEventListener("ended", function () {
+          v.classList.remove("is-on");
+          at = (i + 1) % clips.length;
+          clips[at].classList.add("is-on");
+          clips[at].currentTime = 0;
+          clips[at].play().catch(function () {});
+        });
+      });
+    }
+    if (reduced || !("IntersectionObserver" in win)) return;      // posters only
+    new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var v = clips[at];
+        if (en.isIntersecting) { v.play().catch(function () {}); }
+        else clips.forEach(function (c) { c.pause(); });
+      });
+    }, { threshold: 0.35 }).observe(set);
+  });
+
   /* ---------- Demo: Transform drag ---------- */
   (function () {
     var root = $('[data-demo="transform"]'); if (!root) return;
