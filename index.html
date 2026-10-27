@@ -329,22 +329,71 @@
         <span class="mono">03 / Built native</span>
         <span class="mono section-bar-right">Rust · Slint · wgpu</span>
       </div>
-      <header class="section-head">
-        <h2 id="native-title">No browser <em>underneath.</em></h2>
-        <p class="section-lede">
-          Breadslicer is a Rust application with a Slint interface and its own wgpu
-          viewport. Not a web app wearing a window. It shows at startup, on disk,
-          and in how the viewport feels under your hand.
-        </p>
-      </header>
 
-      <div class="spec-grid">
-        <div class="spec" data-cell><span class="spec-value mono">Rust</span><span class="spec-label">Language, end to end. Memory-safe geometry, no garbage collector in the loop.</span></div>
-        <div class="spec" data-cell><span class="spec-value mono">Slint + wgpu</span><span class="spec-label">Native UI toolkit and a purpose-built GPU viewport. No Electron, no WebView.</span></div>
-        <div class="spec" data-cell><span class="spec-value mono">~48 MB</span><span class="spec-label">One executable. Light on disk, quick to start.</span></div>
-        <div class="spec" data-cell><span class="spec-value mono">Background jobs</span><span class="spec-label">Supports and hollowing run off the UI thread. Cancel, undo and stale-result handling are part of the design.</span></div>
-        <div class="spec" data-cell><span class="spec-value mono">Measured, not guessed</span><span class="spec-label">Every engine change is checked against reference scenes, byte for byte, before it ships.</span></div>
-        <div class="spec" data-cell><span class="spec-value mono">AGPL-3.0</span><span class="spec-label">Free software. The source opens with the first public build.</span></div>
+      <div class="why">
+        <p class="why-kicker mono"><span class="why-dot" aria-hidden="true"></span>Why native</p>
+        <h2 id="native-title" class="why-title">Because waiting is<br><em>not a feature.</em></h2>
+        <p class="why-lede">
+          Most desktop apps today are a website in a window: a whole browser engine shipped
+          inside, sitting between you and your model. Every click goes through it. We wrote
+          Breadslicer from scratch in Rust, with its own GPU renderer, so nothing sits in between.
+          You feel it in the first second, and in every second after.
+        </p>
+
+        <div class="why-stats">
+          <article class="why-stat">
+            <span class="why-num mono">0.56<small>s</small></span>
+            <h3>From click to a working window.</h3>
+            <p>Then 0.39 s to open a 92 MB, 1.9-million-triangle miniature. No splash screen to watch.</p>
+          </article>
+          <article class="why-stat">
+            <span class="why-num mono">16<small>cores</small></span>
+            <h3>Your whole machine, not one thread of it.</h3>
+            <p>On our 16-core test machine, 991 layers are encoded at once and written in 0.12 s. Supports are prepared on the spare cores while you look at the cavity.</p>
+          </article>
+          <article class="why-stat">
+            <span class="why-num mono">47<small>MB</small></span>
+            <h3>One file. No browser inside.</h3>
+            <p>A single executable that talks to the GPU through DirectX 12, Vulkan or Metal, directly.</p>
+          </article>
+        </div>
+
+        <div class="why-versus" role="table" aria-label="A website in a window compared with Breadslicer">
+          <div class="why-row why-head" role="row">
+            <span role="columnheader"></span>
+            <span role="columnheader" class="mono">A website in a window</span>
+            <span role="columnheader" class="mono">Breadslicer</span>
+          </div>
+          <div class="why-row" role="row">
+            <span role="rowheader">What ships</span>
+            <span role="cell">Your app plus a full browser engine</span>
+            <span role="cell">One 47 MB executable</span>
+          </div>
+          <div class="why-row" role="row">
+            <span role="rowheader">Path to the screen</span>
+            <span role="cell">Script, then browser, then compositor, then GPU</span>
+            <span role="cell">Rust, then your GPU</span>
+          </div>
+          <div class="why-row" role="row">
+            <span role="rowheader">Heavy work</span>
+            <span role="cell">Competes with the interface</span>
+            <span role="cell">Runs on the other cores; the interface never waits</span>
+          </div>
+          <div class="why-row" role="row">
+            <span role="rowheader">Memory safety</span>
+            <span role="cell">A garbage collector pausing when it likes</span>
+            <span role="cell">Checked at compile time, no collector in the loop</span>
+          </div>
+        </div>
+
+        <ul class="why-chips mono" aria-label="Built with">
+          <li>Rust, end to end</li>
+          <li>Slint native UI</li>
+          <li>Own wgpu renderer</li>
+          <li>Cancel, undo and stale-result safe background jobs</li>
+          <li>Byte-for-byte reference checks</li>
+          <li>AGPL-3.0 free software</li>
+        </ul>
       </div>
     </section>
 

@@ -425,6 +425,34 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
 .spec-value { font-size: 1.3rem; color: var(--cream); letter-spacing: -0.01em; }
 .spec-label { color: var(--text-dim); font-size: .94rem; line-height: 1.5; }
 
+/* ---------- Why native ---------- */
+.why { padding: 0 var(--gutter); }
+.why-kicker { display: inline-flex; align-items: center; gap: 10px; margin: 0 0 18px; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
+.why-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px rgba(var(--accent-rgb), .18); }
+.why-title { font-size: clamp(2.5rem, 6.4vw, 5.6rem); letter-spacing: -0.04em; line-height: .98; margin: 0 0 24px; }
+.why-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; letter-spacing: 0; color: var(--accent); }
+.why-lede { font-size: clamp(1.05rem, 1.4vw, 1.25rem); color: var(--text-dim); max-width: 42em; margin: 0 0 clamp(36px, 5vw, 64px); }
+.why-stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.why-stat { position: relative; overflow: hidden; display: grid; align-content: start; gap: 10px; padding: clamp(22px, 2.6vw, 34px); border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.why-stat::before { content: ""; position: absolute; inset: 0 0 auto 0; height: 2px; background: linear-gradient(90deg, var(--accent), transparent 70%); opacity: .8; }
+.why-num { font-size: clamp(3rem, 6vw, 5rem); line-height: 1; letter-spacing: -0.04em; color: var(--cream); font-weight: 500; }
+.why-num small { font-size: .32em; letter-spacing: .02em; margin-left: .25em; color: var(--accent); font-weight: 400; }
+.why-stat h3 { font-size: clamp(1.1rem, 1.5vw, 1.3rem); margin: 6px 0 0; }
+.why-stat p { margin: 0; color: var(--text-dim); font-size: .96rem; }
+
+.why-versus { margin-top: clamp(36px, 5vw, 64px); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.why-row { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.1fr) minmax(0, 1.1fr); }
+.why-row > span { padding: 16px 22px; border-top: 1px solid var(--line); color: var(--text-dim); }
+.why-row > span:first-child { display: flex; align-items: center; color: var(--text-faint); font-family: var(--font-mono); font-size: .74rem; letter-spacing: .06em; text-transform: uppercase; }
+.why-row > span:last-child { color: var(--cream); background: rgba(var(--accent-rgb), .07); border-left: 1px solid rgba(var(--accent-rgb), .3); }
+.why-head > span { border-top: 0; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
+.why-head > span:last-child { color: var(--accent); }
+.why-row > span:nth-child(2) { text-decoration: line-through; text-decoration-color: rgba(237, 119, 119, .55); text-decoration-thickness: 1.5px; }
+.why-head > span:nth-child(2) { text-decoration: none; }
+
+.why-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: clamp(28px, 4vw, 44px); }
+.why-chips li { padding: 7px 12px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: .74rem; color: var(--text-dim); }
+
 /* ---------- Roadmap ---------- */
 .roadmap { display: grid; margin: 0 var(--gutter); border-top: 1px solid var(--line); }
 .roadmap li { display: grid; grid-template-columns: 120px 1fr; gap: 24px; align-items: start; padding: 28px 18px; border-bottom: 1px solid var(--line); overflow: hidden; }
@@ -464,6 +492,12 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .runlog { display: none; }
   .verify-steps { grid-template-columns: minmax(0, 1fr); }
+  .why-stats { grid-template-columns: minmax(0, 1fr); }
+  .why-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .why-row > span:first-child { grid-column: 1 / -1; padding-bottom: 0; border-bottom: 0; }
+  .why-row > span:nth-child(2) { border-top: 0; }
+  .why-row > span:last-child { border-top: 0; }
+  .why-head > span:first-child { display: none; }
   .verify-steps .button { justify-self: stretch; white-space: normal; }
 }
 @media (max-width: 720px) {
