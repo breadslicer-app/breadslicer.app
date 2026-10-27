@@ -70,7 +70,7 @@
   var build = $("[data-build]"), buildCanvas = $("[data-build-canvas]"), flatCanvas = $("[data-build-flat]");
   var buildLayer = $("[data-build-layer]"), buildZ = $("[data-build-z]");
   var hero = $("#hero");
-  var buildState = { p: -1, intro: 0, sheet: null, edges: null, shown: -1 };
+  var buildState = { p: -1, target: 0, intro: 0, sheet: null, edges: null, shown: -1 };
   var INTRO_P = 0.32, INTRO_MS = 1800;               // builds part of the way on its own
   var canFilter = (function () { try { var c = doc.createElement("canvas").getContext("2d"); c.filter = "brightness(.5)"; return c.filter === "brightness(.5)"; } catch (e) { return false; } })();
 
@@ -85,6 +85,8 @@
   function drawBuild(p) {
     if (!buildState.sheet || !buildState.edges || !buildCanvas) return;
     var top = Math.round(clamp(p, 0, 1) * (BUILD.frames - 1));
+    if (top === buildState.shown && !buildState.force) return;
+    buildState.force = false;
     var d = sizeCanvas(buildCanvas), ctx = buildCanvas.getContext("2d");
     var W = d.w, H = d.h, S = BUILD.size, sheet = buildState.sheet, edges = buildState.edges;
     var fs = W * 0.62;                                // frame edge on screen
@@ -136,16 +138,16 @@
     [["sheet", "assets/layers/wolverine-layers.png"], ["edges", "assets/layers/wolverine-edges.png"]].forEach(function (s) {
       var img = new Image();
       img.decoding = "async";
-      img.onload = function () { buildState[s[0]] = img; buildState.p = -1; requestTick(); };
+      img.onload = function () { buildState[s[0]] = img; buildState.force = true; requestTick(); };
       img.src = s[1];
     });
-    win.addEventListener("resize", function () { buildState.p = -1; });
+    win.addEventListener("resize", function () { buildState.force = true; });
   }
 
   function heroProgress() {
     var vh = win.innerHeight, r = hero.getBoundingClientRect();
-    if (r.height > vh * 1.2) {                          // pinned hero: done well before the pin ends
-      return clamp(-r.top / ((r.height - vh) * 0.7), 0, 1);
+    if (r.height > vh * 1.2) {                          // pinned hero: the build spans the whole pin
+      return clamp(-r.top / (r.height - vh), 0, 1);
     }
     var center = r.top + r.height / 2;                  // unpinned (mobile): progress as it passes the middle
     return clamp(1 - (center - vh * 0.25) / (vh * 0.9), 0, 1);
@@ -261,13 +263,15 @@
     if (build) {
       var hr = hero.getBoundingClientRect();
       if (hr.bottom > 0 && hr.top < vh) {
-        // The intro builds the first part; scrolling builds the rest, with no
-        // stretch of scroll that does nothing.
-        var p = reduced ? 1 : buildState.intro + (1 - INTRO_P) * easeOut(heroProgress());
-        if (Math.abs(p - buildState.p) > 0.002) {
-          buildState.p = p;
-          drawBuild(p);
-        }
+        // The intro builds the first part; scrolling builds the rest across
+        // the whole pin. The build glides toward where the scroll is, so a
+        // wheel step plays through every layer in between instead of jumping.
+        buildState.target = reduced ? 1 : buildState.intro + (1 - INTRO_P) * heroProgress();
+        if (buildState.p < 0 || reduced) buildState.p = buildState.target;
+        else buildState.p += (buildState.target - buildState.p) * 0.12;
+        if (Math.abs(buildState.target - buildState.p) > 0.0015) requestTick();
+        else buildState.p = buildState.target;
+        drawBuild(buildState.p);
       }
     }
 

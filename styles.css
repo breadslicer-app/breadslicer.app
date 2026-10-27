@@ -222,7 +222,7 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
 .section-head { max-width: 50rem; padding: 0 var(--gutter); margin-bottom: clamp(40px, 6vw, 72px); }
 
 /* ---------- Hero ---------- */
-.hero { position: relative; height: 135vh; padding: 0 calc(var(--edge) + var(--rail-w)) 0 var(--edge); }
+.hero { position: relative; height: 240vh; padding: 0 calc(var(--edge) + var(--rail-w)) 0 var(--edge); }
 .hero-pin { position: sticky; top: 0; height: 100vh; display: grid; align-items: center; padding: 64px var(--gutter) 0; overflow: hidden; }
 .hero-pin::before {
   content: ""; position: absolute; inset: 0; pointer-events: none;
