@@ -217,3 +217,12 @@ details.board-col[open] summary h2::after { content: "−"; }
 
 .data-table.perf { table-layout: fixed; min-width: 900px; }
 .data-table.perf td.num { white-space: normal; }
+
+/* Six links plus the button need more room than the one-page menu did. */
+@media (max-width: 940px) {
+  .nav-toggle { display: block; }
+  .site-nav { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; align-items: stretch; gap: 2px; padding: 12px var(--edge) 18px; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .site-nav.is-open { display: flex; }
+  .site-nav a:not(.button) { padding: 12px; font-size: .9rem; }
+  .site-nav .button { margin: 10px 0 0; }
+}
