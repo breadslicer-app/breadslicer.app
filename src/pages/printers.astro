@@ -1,0 +1,64 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+import data from "../data/printers.json";
+import { formatDate } from "../lib/format";
+
+const brands = new Set(data.printers.map((p) => p.brand).filter((b) => b !== "Generic"));
+---
+<Base title="Supported printers and formats" description="Every resin printer profile in Breadslicer, its panel, and the print files Breadslicer writes for it.">
+  <PageHead eyebrow="Printers and formats" lede={`${data.count} printer profiles from ${brands.size} brands. Breadslicer writes the print file for ${data.exporting} of them today; the others can be prepared and sliced, but their print file is not written yet.`}>
+    Your printer, <em>pixel for pixel.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Printers">
+    <div class="wrap">
+      <div class="two-col" style="margin-bottom:clamp(40px,6vw,64px)">
+        <div class="prose">
+          <h2 style="margin-top:0;padding-top:0;border-top:0">How formats are checked</h2>
+          <p>A print file is a container of layer images plus the numbers the printer needs: exposure, lift, timing. A wrong byte can stop a print halfway, so every format we write is checked the same way: we slice test models, write the file, and read it back with <a href="https://github.com/sn4k3/UVtools" rel="noopener">UVtools</a>, an open-source tool that reads and writes resin print files. Every layer must match ours <strong>pixel by pixel</strong>, and the header values must read back as we wrote them.</p>
+          <p>The panel size, mirroring and build height of each printer come from UVtools' printer catalog. We do not own most of these machines, so the first print on each one deserves a careful look: text not mirrored, model where you placed it, exposure as expected. If something is off, <a href="/community/#report">tell us</a>.</p>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <caption>Print files Breadslicer writes</caption>
+            <thead><tr><th>Format</th><th>Versions</th></tr></thead>
+            <tbody>
+              <tr><td class="num">.ctb</td><td class="dim">v2, v3, v4, v5, v5 encrypted</td></tr>
+              <tr><td class="num">.goo</td><td class="dim">v3.0</td></tr>
+              <tr><td class="num">.cxdlp</td><td class="dim">v2, v3</td></tr>
+              <tr><td class="num">Anycubic ZIP</td><td class="dim">.pwsz, .pm7, .pm7m, .pm4u, .pp1, .pp1m</td></tr>
+              <tr><td class="num">Anycubic binary</td><td class="dim">21 variants: .pwmx, .pwma, .pwmb, .pm3, .pm3m, .pm3r, .pm4n, .pm5, .pm5s, .pws, …</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="toolbar">
+        <input class="search" type="search" placeholder="Search a printer, a brand or a format" aria-label="Search printers" data-filter="#printer-table" data-filter-only="#exports-only" data-filter-count="#printer-count" />
+        <label class="check"><input type="checkbox" id="exports-only" /> Only printers we write a file for</label>
+        <span class="count mono"><span id="printer-count">{data.count}</span> shown</span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="printer-table">
+          <thead>
+            <tr><th>Brand</th><th>Printer</th><th>Panel</th><th>Pixel</th><th>Build volume</th><th>Print file</th></tr>
+          </thead>
+          <tbody>
+            {data.printers.map((p) => (
+              <tr data-exports={p.exports ? "" : undefined}>
+                <td class="dim">{p.brand}</td>
+                <td>{p.name}</td>
+                <td class="num">{p.resolution ? `${p.resolution[0]} × ${p.resolution[1]}` : "—"}</td>
+                <td class="num dim">{p.pixel_um ? (p.pixel_um[0] === p.pixel_um[1] ? `${p.pixel_um[0]} µm` : `${p.pixel_um[0]} × ${p.pixel_um[1]} µm`) : "—"}</td>
+                <td class="num dim">{p.volume_mm ? `${p.volume_mm[0]} × ${p.volume_mm[1]} × ${p.volume_mm[2]} mm` : "—"}</td>
+                <td>{p.formats.map((f) => <span class={f.writable ? "pill pill-ok" : "pill pill-muted"} title={f.writable ? "Breadslicer writes this file" : "Not written yet"}>{f.label}</span>)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted" style="margin-top:16px"><span class="pill pill-ok">green</span> Breadslicer writes this file. <span class="pill pill-muted">dashed</span> The printer takes a format we do not write yet. Profiles as of {formatDate(data.generated)}.</p>
+    </div>
+  </section>
+</Base>

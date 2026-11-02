@@ -1,4 +1,4 @@
-/* Breadslicer site. Vanilla, no dependencies.
+/* Breadslicer home page. Vanilla, no dependencies (site.js runs the header).
    Everything scroll-driven runs through one rAF loop; demos only respond to input. */
 (function () {
   "use strict";
@@ -9,21 +9,6 @@
   var $ = function (sel, root) { return (root || doc).querySelector(sel); };
   var $$ = function (sel, root) { return Array.prototype.slice.call((root || doc).querySelectorAll(sel)); };
   var clamp = function (v, a, b) { return v < a ? a : v > b ? b : v; };
-
-  /* ---------- Header + mobile nav ---------- */
-  var header = $(".site-header"), toggle = $(".nav-toggle"), nav = $("#site-nav");
-  function closeNav() { toggle.setAttribute("aria-expanded", "false"); nav.classList.remove("is-open"); }
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var open = toggle.getAttribute("aria-expanded") === "true";
-      toggle.setAttribute("aria-expanded", String(!open));
-      nav.classList.toggle("is-open", !open);
-    });
-    nav.addEventListener("click", function (e) { if (e.target.closest("a")) closeNav(); });
-    doc.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && nav.classList.contains("is-open")) { closeNav(); toggle.focus(); }
-    });
-  }
 
   /* ---------- Word reveal ---------- */
   $$(".reveal-words").forEach(function (el) {
@@ -221,36 +206,12 @@
     });
   });
 
-  /* ---------- Cursor highlight on cells, magnetic buttons ---------- */
-  if (finePointer) {
-    doc.addEventListener("pointermove", function (e) {
-      var cell = e.target.closest("[data-cell]");
-      if (cell) {
-        var r = cell.getBoundingClientRect();
-        cell.style.setProperty("--mx", (e.clientX - r.left) + "px");
-        cell.style.setProperty("--my", (e.clientY - r.top) + "px");
-      }
-    }, { passive: true });
-
-    if (!reduced) {
-      $$("[data-magnetic]").forEach(function (btn) {
-        btn.addEventListener("pointermove", function (e) {
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width / 2)) * 0.22, dy = (e.clientY - (r.top + r.height / 2)) * 0.22;
-          btn.style.transform = "translate(" + dx.toFixed(1) + "px," + dy.toFixed(1) + "px)";
-        });
-        btn.addEventListener("pointerleave", function () { btn.style.transform = ""; });
-      });
-    }
-  }
-
   /* ---------- One scroll loop ---------- */
   var parallax = $$("[data-parallax]");
   var ticking = false, lastY = -1;
   function frame() {
     ticking = false;
     var y = win.scrollY, vh = win.innerHeight, docH = doc.documentElement.scrollHeight - vh;
-    header.classList.toggle("is-scrolled", y > 8);
 
     if (railCursor && docH > 0) {
       var pct = clamp(y / docH, 0, 1);

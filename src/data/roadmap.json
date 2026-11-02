@@ -1,0 +1,2738 @@
+{
+ "generated": "2026-11-02T21:38:38Z",
+ "columns": [
+  "In progress",
+  "Next",
+  "Quick wins",
+  "Backlog",
+  "Later",
+  "Done"
+ ],
+ "counts": {
+  "In progress": 6,
+  "Next": 12,
+  "Quick wins": 1,
+  "Backlog": 129,
+  "Later": 12,
+  "Done": 123
+ },
+ "items": [
+  {
+   "title": "Manual support editor in the viewport",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "3D hollowing and own drain holes milestone",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Numeric transforms, constraints and snapping",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Precise placement: center, drop, align and bounds",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Supports tab with speculative computation and staged caching",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "UI redesign: Transform → Hollow / Supports → Slice → Export",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Gizmo visual aids: degrees, distances and axis line",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Full supports panel, lift and Damian's presets",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Layer view with zoom and pan",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "breadslicer-app/breadslicer repo, GitHub issues and microPRs",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: project",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Supports move with their model in X/Y",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": "2026-10-29"
+  },
+  {
+   "title": "Supports cannot be transformed on their own; only deleted",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": "2026-10-29"
+  },
+  {
+   "title": "Moving a model in Z, rotating or scaling it regenerates its supports",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-29"
+  },
+  {
+   "title": "Generating supports again replaces the existing ones",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "Pre-supported STLs: split bodies into objects",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: geometry",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Choose the Anycubic path and evaluate existing solutions",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: printing",
+    "roadmap"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Verifiable output for the chosen Anycubic printer",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: printing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Printer formats ported from UVtools",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Progressive physical validation with Damian",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: printing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Autosave, session recovery and project versions",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: persistence",
+    "roadmap"
+   ],
+   "closed": "2026-10-29"
+  },
+  {
+   "title": "Portable build and reproducible development releases",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: delivery",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Testers: Discord bot, triaged issues and PR-based fixes",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: community",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Optional interaction log and \"Export diagnostics\"",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: quality",
+    "roadmap"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Assisted orientation and auto-arrange",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "Live overhang map in the viewport",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "In-house test coupon suite: supports, structures and strength",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: quality",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Guided resin calibrator (working curve, detail, base, XY)",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: profiles",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Explore approximate FEA for supports",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: ideas",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Performance profiles: cap the frame rate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: performance",
+    "roadmap"
+   ],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "Copy and paste that keeps hollowing, supports and drains",
+   "state": "open",
+   "column": "Quick wins",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Resin price, cost per print and per model",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Specify the first vertical milestone for manual supports",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Persistent parametric model and support geometry",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Own presets: geometry, packs and bracing kept separate",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: presets",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support paths and volumetric collisions",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Editable minis, parenting and bracing",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Island pipeline and autosupport with editable results",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Comprehensive editor polish milestone",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: ui",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Multi-selection and group operations",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Scene hierarchy and object properties",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Robust import, units and repair",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Validity of persisted slices and AA on reopen",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Own profiles and import/export with provenance",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Validate CPU slicing on geometric edge cases",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Consistency across the layer viewer, raster and export",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Validate existing writers and update their catalog",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: printing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Common contract for jobs, cancellation and stale results",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: architecture",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Derived caches keyed by content, revision and transforms",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: architecture",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Specify the 3D hollow contract and thickness policy",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Library preflight for offset, booleans and distance",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: geometry",
+    "roadmap"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "One cavity field: the preview and the hollow come from the same exact distance field",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Physical thickness under transforms and scaling",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Persistence of hollow parameters and derived data",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Drain hole editor and geometric cutting",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Parametric hollow blockers and plugs",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Disconnected cavities, trapped resin and suction cups",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: analysis",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Island detection from layer continuity",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: analysis",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Automatic contact distribution with exclusions",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Automatic graph construction and local repair",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "CSG, instancing and printable bake policy",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Exporting parts, supports and assemblies",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Geometric quality and printability of supports",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: quality",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Real-world benchmarks for loading, editing and memory",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: performance",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Raster, AA, pixel pitch and orientation validation",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "CLI as a reproducible harness with GUI parity",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: tooling",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Resin usage and print time with calibration",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Paths, data isolation and migrations",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: persistence",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Localization, numbers, units and our own messages",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: ui",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Accessibility, focus and shortcut discoverability",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: ui",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Maintaining the index, evidence and board with each delivery",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: docs",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Selective upstream tracking without losing our own version",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: maintenance",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Reproducible diagnostics and crash reports",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: quality",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Recovery from failures, cancellation and concurrent shutdown",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: quality",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Splitting components, cutting and geometry editing",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "GPU, DPI and native input compatibility",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: platform",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Experimental calibration of contacts and material",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Re-place orphaned members of a trimmed host",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine: list of pending improvements",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "breadslicer.app: DNS, email and project page",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: community",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Time estimate with acceleration (trapezoidal) and two-stage lift",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Manufacturer file formats: own readers and writers",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Lifts and wait-before-cure driven by estimated force",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Layer timeline: area, perimeter, estimated force and time per layer",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Calculators built into the workflow",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "roadmap",
+    "area: ux"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Exposure fade from bottom to normal layers",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Anti-blooming: dim the interior of large solid areas",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Automatic XY and elephant-foot compensation from calibration",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Smart raft: relief channels, peel tabs and drain holes",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "More hollow infill patterns: gyroid and honeycomb",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Analysis, exposure and output toolkit (UVtools-inspired, own implementation)",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: analysis",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Internal supports inside hollow cavities",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Assembly keys when cutting a model",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Brush to edit the hollow cavity",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Open breadslicer:// links in the running window",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: platform",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Resin volume from the sliced layers",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Formats: Goo v5 and multi-object 3MF (Production Extension)",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "roadmap",
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Review: keep findings live after edits (incremental recompute)",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Review: more one-click fixes (rotate, drill, cups, supports)",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Review: force-based margins for islands and suction cups",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Hollow: trap and suction cup warnings in the Hollow tab",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support display modes: full, contacts only, and more",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Raft types",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Automatic support display by camera height",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Slice tab: no selection, no outlines through the model",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Review: highlight the exact island a finding points to",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Fix All finishes the job in one press",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "A window of its own to pick printers and resins, decoupled from Preferences",
+   "state": "open",
+   "column": "Later",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Multiple build plates and a job queue",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "area: editor",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Adaptive layers and per-region profiles",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Sending to the printer and network connectivity",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "area: printing",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Investigate moving the support pipeline to the GPU",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "area: performance",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Evaluate GPU only for measured bottlenecks",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "area: ideas",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Evaluate 2D hollowing as a separate feature",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "area: hollow",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Linux/macOS compatibility and cross-platform packaging",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "area: delivery",
+    "roadmap"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support pipeline benchmarks on real scenes",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: performance",
+    "roadmap"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Patreon and Ko-fi links in the top bar",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": ".bread remembers hollowed models and their drains",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "A hollow without drain holes says so, and leads to the Hollow tab's hole tool",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "Fix All in the Review card",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "In the Slice tab only the review list scrolls",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "The menu button flashes white on Windows",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Own project format: .bread",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: persistence"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Redesign the build plate; front tab names the printer",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Popups centred on the window, dismissable, with Don't show again",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Resin traps by size: leave, fill on reslice, or drain",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: analysis"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Warn when the raft interferes with a model on the plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Stream layers to disk while exporting",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: slicing",
+    "roadmap"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Output checks: plate edges, maximum height, empty layers, floating parts",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: analysis",
+    "roadmap"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Warn about features thinner than a pixel",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: analysis",
+    "roadmap"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Review panel: pre-flight checks that jump to the problem",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: analysis",
+    "roadmap"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Islands with margin: supported fraction + union-find across layers",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: analysis"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Resin traps and suction cups: 2-pass air map",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: analysis"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Full UVtools report: what to reuse (license) and what to surpass",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: research",
+    "roadmap"
+   ],
+   "closed": "2026-10-26"
+  },
+  {
+   "title": "Rebrand to Breadslicer: visible name and data migration",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: brand",
+    "roadmap"
+   ],
+   "closed": "2026-10-27"
+  },
+  {
+   "title": "Anycubic's published resin settings as material profiles",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: profiles"
+   ],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "Creality's published resin settings as material profiles",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: profiles"
+   ],
+   "closed": "2026-10-28"
+  },
+  {
+   "title": "Printer profiles from UVtools' printer catalog",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: profiles"
+   ],
+   "closed": "2026-10-29"
+  },
+  {
+   "title": "Phrozen's published resin settings as material profiles",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Uniformation's published resin settings as material profiles",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Prusa's published resin settings as material profiles",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Creality's newer printers' resin settings (X1, X1 Neo, Sky 2025)",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Resin brands that publish settings for many printers",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Paint faces and select coplanar faces to place supports on a mm grid",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support line tool: place a row of supports along the surface between two clicks",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Lasso tool to cut regions out of the hollow cavity",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Arrange all: pack every object on the plate by its real footprint",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": "2026-10-29"
+  },
+  {
+   "title": "Auto-orient core: staged search with physical cost terms",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: geometry"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Auto-orient tool in Transform",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: ui"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Surface paint infrastructure",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Protect-detail brush in the orient tool",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Auto-orient: suction cups, model-to-model supports and peel in N",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: geometry"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Supports honor painted detail",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Say so when generating again replaced the supports",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Anycubic binary-family profiles: mirror X and panel orientation from UVtools data",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: printing"
+   ],
+   "closed": "2026-10-29"
+  },
+  {
+   "title": "One support set and raft per model",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-10-29"
+  },
+  {
+   "title": "A different raft for each model",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Use the bread-format crate next to the current one",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Move .bread open and save to the bread-format crate",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Save a thumbnail in .bread files",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Save support previews in .bread files",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Installer: Explorer thumbnails and the new file description",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: platform",
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "A .bread mesh with long runs of identical vertices does not open again",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "microPR",
+    "area: file formats"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Gizmo plane handles: move in two axes at once",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Redesign the gizmo so it looks good",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Press and drag an unselected model to move it on the plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Save supports and hollows with their model and original mesh",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Find the source-tree profiles at run time, not at compile time",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: tooling",
+    "area: profiles",
+    "microPR"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Printer images for every printer",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Group transforms: one shared pivot (R) or each object's own (R R)",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Remember the camera projection between sessions",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor",
+    "microPR"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Saving with supports keeps the whole support mesh",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: file formats"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Orient all selected models at once",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Calibrate auto-orient weights against Damian's manual orientations",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Starting the diagnostic log can lose the previous session's log",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: quality"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Overlapping parts of one shell are not printed",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: slicing"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Slicing quick wins: empty top layer, plane test at height, CLI --aa help",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: slicing",
+    "microPR"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Apply the material's scale compensation when slicing",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: slicing",
+    "microPR"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Know model and support leaves in the slicing core",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: slicing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Z print-through compensation for downward-facing surfaces",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: slicing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "LCD uniformity map",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "enhancement",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support job: reuse the pipeline's BVH and skip its unused raft and tessellation",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: performance",
+    "area: supports",
+    "microPR"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Plan the models of a plate in parallel",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: performance",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Fewer router column maps: quantize trunk diameters",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: performance",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support scorecard on a local corpus",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: quality",
+    "area: supports"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Don't support what rests on the model; hand thin gaps to Review",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Re-place culled supports and report what could not be supported",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Merge island clusters and redundant tips",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Keep brace and leaf ends inside their trunk",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Release film and tilt in printer settings",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: profiles",
+    "microPR"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Peel force per layer (area, shape, suction cups)",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Load per support tip: rigid-body share per body and layer",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Beam frame solver for support trees (faer)",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support graph from the engine session for the frame solver",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Run the beam frame on critical layers in the background",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Stress view in the Supports tab",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis",
+    "area: ui"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Calibrate peel and tip strength from test coupons",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis",
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Physics-based member limit and \"Reinforce weak spots\"",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Repair corpus and a \"sliceable\" metric",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: quality",
+    "area: geometry"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Global face orientation in Repair",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: geometry"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Repair: remove duplicate and degenerate faces",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: geometry"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Repair: resolve non-manifold edges",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: geometry"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Repair: weld open boundaries and fill holes",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: geometry"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Repair outcome the user can act on",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: geometry",
+    "area: ux"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Rebuild as solid (voxel/SDF) as a last resort",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "enhancement",
+    "area: geometry"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Open 3MF files whose extra parts have no content type",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "microPR",
+    "area: file formats"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Drop exact duplicate faces on import",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "microPR",
+    "area: file formats"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Split into bodies",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor",
+    "area: geometry"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Recognize pre-supported files on import",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports",
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Imported supports follow their model; remove or replace them",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Select and remove single imported supports",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: editor",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Convert imported supports into editable supports",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Fused pre-supported files",
+   "state": "open",
+   "column": "Later",
+   "labels": [
+    "enhancement",
+    "area: research"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Hollow resolution bound by memory, not a fixed 192",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: hollow",
+    "microPR"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "A drain that misses the cavity must not drill through the model",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: hollow",
+    "microPR"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Exact wall distance in the hollow engine",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: hollow"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Clamped cavity smoothing",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: hollow"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Viewport: stop transforming every vertex on every frame",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: performance",
+    "microPR"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Viewport: upload only new meshes after a structural edit, off the UI thread, and share buffers between copies",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: performance"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Memory budgets: undo history, smooth-shading cache and editable support sessions",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: performance"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Review: reuse per-layer results when re-slicing",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: quality",
+    "area: performance"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Research: every computation that could run on the GPU",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: research",
+    "area: performance"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Anycubic ZIP files carry the M7 Pro firmware timing constants for every printer",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "bug",
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Calculators: light-off delay, mm to px, optimal tilt",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: ui"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Focused gizmo style as an option in Preferences",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor",
+    "area: ui"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Snap with Ctrl and fine control with Shift while transforming",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Gizmo size preference",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: editor",
+    "area: ui"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Exported parts land on the plate turned half a turn",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: printing",
+    "area: file formats"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Generating supports with the same result changes nothing",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Viewport: dragging a model uses its convex hull for the world box",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: performance"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Reopened projects check the scale compensation of their saved slice",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: slicing"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Saving a profile refreshes the Slice panel's Export state",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: slicing"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "The slicer validates meshes with the shared sliceable check",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: slicing"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Repair on an empty mesh says it has no faces",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: geometry"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Editing a resin does not mark the held slice as stale",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: slicing"
+   ],
+   "closed": "2026-10-30"
+  },
+  {
+   "title": "Show import warnings in the app",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: ux"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Drain tool marks where a drain will not reach the cavity",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: hollow"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Translate the Hollow tab",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: ui"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Support engine compares sessions without run ids",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Printer froze on the last, empty layer of the first print",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: printing",
+    "area: file formats"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "The slicer accepts two solids that touch along an edge",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: slicing"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Drain auto depth: just enough to go through the wall",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Drain tool: manual depth",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Drain tool: tapered (cone) drains",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Drain tool: hole as plug",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Hollow with infill fails when a drain reaches the cavity",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: hollow"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Translate the note under a disabled Export",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Saving a printer profile refreshes the default plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Translate the Transform, Supports and Slice panels",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "A drain whose cutter corner hits a face diagonal comes out blocked",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Fix the two long-standing test failures (profile_catalog aff, bundled_profiles CRLF)",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Support engine analytics: real rejection reasons and coverage after discards",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Drain holes cut through infill: remove the pillars and lattice inside the drain",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Clean the Clippy errors in the GUI crate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Orbit around the selection or the point under the cursor",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Orbit with the numpad (4/6 left-right, 8/2 up-down) around the pivot",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "Show the orbit pivot marker on the viewport edge when the pivot is off screen",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": "2026-10-31"
+  },
+  {
+   "title": "R without an axis from the Top view turns about a slightly tilted axis",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Pasting objects is slow",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Slicing progress shows four times the real layer count",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Fill bed: fill the plate with copies of the selected model",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "App startup got slower (one to two seconds)",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Zone-based support presets matching Damian's tuned minis and figures setups",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Split the GUI crate to cut rebuild times",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Editor for zone support presets",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Seam where a filled cavity meets the model in the slice view",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Quick release profile for hand-test builds",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: quality"
+   ],
+   "closed": "2026-11-01"
+  },
+  {
+   "title": "Granular support editing: select and move any part of a support",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Start dialog: recent projects, reopen last file, open or import",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Import a model into the current scene (several different models on one plate)",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Message cards in the start dialog's style",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Generate supports for every selected model",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Remember \"Lift 5 mm\" and lift models on the plate automatically",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Fix all froze the app for 3-4 s with ~250 items",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Importing several models shows the first one alone, the rest a second later",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Mesh repair report: open by default, larger text, clearer layout",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Size panel: world and model sizes side by side when the model is rotated",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Build the pick structure of an imported model off the UI thread",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Show the start dialog again when the scene becomes empty",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Minimal islands are a note, not a support",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Over-cure from the layer below counts as support for islands",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Don't split tiny pieces at a weak joint into islands",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Support a growing island on the same face up to 2 layers higher",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Ignore-small-islands height counts layers like its number says",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  }
+ ]
+}

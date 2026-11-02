@@ -1,0 +1,72 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+import roadmap from "../data/roadmap.json";
+import { formatDate } from "../lib/format";
+
+type Item = (typeof roadmap.items)[number];
+const by = (col: string) => roadmap.items.filter((i) => i.column === col);
+const tags = (i: Item) => [
+  ...(i.labels.includes("bug") ? ["bug"] : []),
+  ...i.labels.filter((l) => l.startsWith("area: ")).map((l) => l.slice(6)),
+];
+const done = by("Done").sort((a, b) => (b.closed ?? "").localeCompare(a.closed ?? ""));
+const updated = roadmap.generated.slice(0, 10);
+const columns: { col: string; blurb: string }[] = [
+  { col: "In progress", blurb: "Being built right now." },
+  { col: "Next", blurb: "Up after the current work." },
+  { col: "Quick wins", blurb: "Small fixes, taken between bigger jobs." },
+];
+---
+<Base title="Roadmap" description="Breadslicer's real work board: what is being built, what is next, and what is done.">
+  <PageHead eyebrow="Roadmap" lede="This is our actual work board, with the titles exactly as we write them for ourselves. Nothing is curated for the website: if it is on the board, it is here. No dates, because a slicer is done when it prints right.">
+    The real board, <em>as it is.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Board">
+    <div class="wrap">
+      <div class="stats">
+        <div><b>{roadmap.counts["In progress"]}</b><span>in progress</span></div>
+        <div><b>{roadmap.counts["Next"] + roadmap.counts["Quick wins"]}</b><span>up next</span></div>
+        <div><b>{roadmap.counts["Backlog"] + roadmap.counts["Later"]}</b><span>in the backlog</span></div>
+        <div><b>{roadmap.counts["Done"]}</b><span>done</span></div>
+      </div>
+
+      <div class="board">
+        {columns.map(({ col, blurb }) => (
+          <section class="board-col" data-col={col} aria-label={col}>
+            <h2><span><span class="dot" aria-hidden="true"></span>{col}</span><span class="mono">{by(col).length}</span></h2>
+            <ul class="board-list">
+              {by(col).length === 0 && <li class="muted">{blurb} Nothing here right now.</li>}
+              {by(col).map((i) => (
+                <li>{i.title}<span class="tags">{tags(i).map((t) => <span class={t === "bug" ? "pill pill-accent" : "pill"}>{t}</span>)}</span></li>
+              ))}
+            </ul>
+          </section>
+        ))}
+      </div>
+
+      {["Backlog", "Later"].map((col) => (
+        <details class="board-col board-wide">
+          <summary><h2><span>{col}</span><span class="mono">{by(col).length}</span></h2></summary>
+          <ul class="board-list">
+            {by(col).map((i) => (
+              <li>{i.title}<span class="tags">{tags(i).map((t) => <span class={t === "bug" ? "pill pill-accent" : "pill"}>{t}</span>)}</span></li>
+            ))}
+          </ul>
+        </details>
+      ))}
+
+      <details class="board-col board-wide" open>
+        <summary><h2><span>Done</span><span class="mono">{done.length}</span></h2></summary>
+        <ul class="board-list">
+          {done.map((i) => (
+            <li>{i.closed && <time class="done-date" datetime={i.closed}>{formatDate(i.closed)}</time>}{i.title}</li>
+          ))}
+        </ul>
+      </details>
+
+      <p class="small muted" style="margin-top:22px">Board read on {formatDate(updated)}. Only titles, columns, labels and closing dates are published; issue descriptions and discussion stay private.</p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,52 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+
+// One 1.9 M-triangle miniature, saved four ways (our measurement).
+const sizes = [
+  { name: "STL", mb: 94.9 },
+  { name: "OBJ", mb: 73.1 },
+  { name: "STL in a .zip", mb: 41.2 },
+  { name: ".bread", mb: 8.5, bread: true },
+];
+const max = Math.max(...sizes.map((s) => s.mb));
+---
+<Base title="The .bread format" description="The .bread project format: the whole scene, lossless meshes, editable supports, in a fraction of the size.">
+  <PageHead eyebrow=".bread" lede="Breadslicer's project file. One file keeps the whole scene, its meshes packed without losing a single bit, and its supports as supports.">
+    A project file that is <em>small and exact.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="About .bread">
+    <div class="wrap two-col">
+      <div class="prose">
+        <h2 style="margin-top:0;padding-top:0;border-top:0">What it keeps</h2>
+        <ul>
+          <li><strong>The scene:</strong> every model and its position, rotation and scale.</li>
+          <li><strong>Meshes, losslessly:</strong> reopened, a model has exactly the triangles it was saved with.</li>
+          <li><strong>Supports as data:</strong> trunks, branches and tips are stored as what they are, so they reopen editable instead of as one frozen mesh.</li>
+          <li><strong>Hollowing and drains:</strong> the settings, the drains and the original model, so a hollow can be changed later.</li>
+          <li><strong>Printer and resin:</strong> the profiles the scene was prepared for.</li>
+        </ul>
+        <p>A <code>.bread</code> file never holds sliced layers or caches: those are rebuilt when you slice. Every block in it carries a checksum, so a damaged file is reported instead of opened wrong.</p>
+        <h2>An open format</h2>
+        <p>We are writing <code>.bread</code> up as an open 3D format with its own specification, so other tools can read and write it. The specification will be published here when it is ready.</p>
+        <p><a class="button button-ghost is-soon" href="#" aria-disabled="true">Specification <span class="button-sub">Coming soon</span></a></p>
+      </div>
+      <div>
+        <div class="table-wrap" style="padding:22px">
+          <p class="mono small muted" style="margin:0 0 16px;text-transform:uppercase;letter-spacing:.08em">One 1.9 M-triangle miniature, saved four ways</p>
+          <div class="size-bars">
+            {sizes.map((s) => (
+              <div class={s.bread ? "size-bar is-bread" : "size-bar"}>
+                <span>{s.name}</span>
+                <span class="bar" style={`width:${((s.mb / max) * 100).toFixed(1)}%`}></span>
+                <span class="v">{s.mb} MB</span>
+              </div>
+            ))}
+          </div>
+          <p class="small muted" style="margin:18px 0 0">Our measurement, same model and same triangles in every file. The .bread file opens to the exact same mesh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

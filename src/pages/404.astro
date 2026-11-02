@@ -1,0 +1,10 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+---
+<Base title="Page not found">
+  <PageHead eyebrow="404" lede="This slice is empty. The page may have moved when the site grew from one page to several.">
+    Nothing on <em>this layer.</em>
+    <p slot="after" class="cta-row"><a class="button button-primary" href="/" data-magnetic>Back to the start</a><a class="button button-ghost" href="/features/" data-magnetic>See the features</a></p>
+  </PageHead>
+</Base>

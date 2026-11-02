@@ -1,0 +1,65 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+import perf from "../data/performance.json";
+import { formatDate } from "../lib/format";
+
+type Row = {
+  what: string; before: string | null; after: string; method: string; build: string;
+  version: string; date: string; machine: string; notes?: string;
+};
+const machines = perf.machines as Record<string, string>;
+const comparison = perf.comparison;
+---
+<Base title="Performance" description="Breadslicer's own timings, with the method, build, date and machine for every number.">
+  <PageHead eyebrow="Performance" lede="Our own measurements, each with how it was taken, on which build, on which day and on which machine. Where we did not record something, the table says so. Nothing here is rounded in our favour.">
+    Measured, <em>not promised.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Measurements">
+    <div class="wrap">
+      <div class="callout narrow" style="margin-bottom:clamp(36px,5vw,56px)">
+        <p><strong>Test machine:</strong> {machines.dev}. <strong>“Release”</strong> is the optimised build that people download; rows marked <em>not recorded</em> were measured during development without noting the build profile, so treat them as indicative. The app records its own timings: see <a class="link" href="/#workflow">time it yourself</a>.</p>
+      </div>
+
+      {perf.groups.map((g) => (
+        <div style="margin-bottom:clamp(44px,6vw,72px)" id={g.id}>
+          <h2 style="font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:10px">{g.title}</h2>
+          <p class="muted" style="max-width:40em;margin-bottom:22px">{g.lede}</p>
+          <div class="table-wrap">
+            <table class="data-table perf">
+              <colgroup><col style="width:24%" /><col style="width:9%" /><col style="width:11%" /><col style="width:22%" /><col style="width:11%" /><col style="width:12%" /><col style="width:11%" /></colgroup>
+              <thead>
+                <tr><th>What</th><th>Before</th><th>Now</th><th>Method</th><th>Build</th><th>Version · date</th><th>Machine</th></tr>
+              </thead>
+              <tbody>
+                {(g.rows as Row[]).map((r) => (
+                  <tr>
+                    <td>{r.what}{r.notes && <span class="note">{r.notes}</span>}</td>
+                    <td class="num dim">{r.before ?? "—"}</td>
+                    <td class="num after">{r.after}</td>
+                    <td class="dim">{r.method}</td>
+                    <td>{r.build === "Release" ? <span class="pill pill-ok">Release</span> : <span class="pill pill-muted">Not recorded</span>}</td>
+                    <td class="dim" style="white-space:nowrap">{r.version}<br />{formatDate(r.date)}</td>
+                    <td class="dim">{r.machine === "dev" ? "Our test PC" : r.machine}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ))}
+
+      {comparison.enabled && (
+        <div id="comparison">
+          <h2>Side by side</h2>
+          {/* Filled from performance.json → comparison once the method is published. */}
+        </div>
+      )}
+
+      <div class="callout narrow">
+        <p><strong>Slower on your machine?</strong> That is a bug, and we want to hear about it. Use <span class="menu-path">Help › Export Diagnostics…</span> and see <a class="link" href="/community/#report">how to report it</a>.</p>
+      </div>
+    </div>
+  </section>
+</Base>

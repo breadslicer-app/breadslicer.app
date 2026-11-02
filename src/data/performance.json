@@ -1,0 +1,60 @@
+{
+ "_note": "Only our own measurements, copied from the development notes. Never round up, never fill a gap: unknown fields say so. 'build' is the compiler profile: 'Release' is the optimised build people get.",
+ "machines": {
+  "dev": "Ryzen 7 5800X · 32 GB · RTX 3090 · NVMe SSD, Windows 11"
+ },
+ "groups": [
+  {
+   "id": "responsiveness",
+   "title": "The window never waits",
+   "lede": "How long the interface was blocked, before and after the change that fixed it. Lower is better.",
+   "rows": [
+    { "what": "Fix all on a scene with 43 findings: window frozen", "before": "3.94 s", "after": "29 ms", "method": "Fix all on a real saved scene, timed in an optimised build", "build": "Release", "version": "Dev build", "date": "2026-11-02", "machine": "dev", "notes": "Whole job 3.94 s → 2.12 s; the result is identical bit for bit." },
+    { "what": "First click on a freshly imported 1.9 M-triangle miniature", "before": "18–45 ms", "after": "0.2–0.3 ms", "method": "Time from click to selection, first click after import", "build": "Release", "version": "Dev build", "date": "2026-11-02", "machine": "dev" },
+    { "what": "Importing 4 models: window blocked", "before": "350–435 ms", "after": "< 20 ms", "method": "Timing test that imports the same 4 files, repeated", "build": "Not recorded", "version": "Dev build", "date": "2026-11-02", "machine": "dev" },
+    { "what": "Paste a copy of a 1.9 M-triangle miniature", "before": "73–218 ms", "after": "~3 ms", "method": "Each Ctrl+V timed on the same model; the new time no longer varies", "build": "Not recorded", "version": "Dev build", "date": "2026-11-01", "machine": "dev", "notes": "Undo of a paste: 83–108 ms → 0.1 ms." },
+    { "what": "Add one support by hand on a large scene", "before": "810 ms", "after": "79 ms", "method": "One click with the Add tool, timed from click to the support on screen", "build": "Not recorded", "version": "Dev build", "date": "2026-11-01", "machine": "dev", "notes": "The click now runs off the interface thread, so the window stays live meanwhile." }
+   ]
+  },
+  {
+   "id": "throughput",
+   "title": "Big jobs",
+   "lede": "Wall-clock time for whole operations. Lower is better.",
+   "rows": [
+    { "what": "Import 4 models into an empty scene", "before": "7.8–9.2 s", "after": "3.3–3.5 s", "method": "Same 4 files, read in parallel in one job", "build": "Not recorded", "version": "Dev build", "date": "2026-11-02", "machine": "dev", "notes": "Into a scene that already has models: 8.1–9.5 s → 2.6–2.8 s." },
+    { "what": "Open a 92 MB, 1.9 M-triangle STL", "before": null, "after": "0.39 s", "method": "Start and end of the step in the app's diagnostic log", "build": "Release", "version": "Early access build", "date": "2026-10-27", "machine": "dev" },
+    { "what": "Slice 991 layers of that miniature with supports", "before": null, "after": "0.66 s", "method": "Diagnostic log, ELEGOO Saturn 3 Ultra at 0.1 mm layers", "build": "Release", "version": "Early access build", "date": "2026-10-27", "machine": "dev" },
+    { "what": "Write the 26.9 MB printer file", "before": null, "after": "0.12 s", "method": "Diagnostic log, .ctb for the Saturn 3 Ultra", "build": "Release", "version": "Early access build", "date": "2026-10-27", "machine": "dev" },
+    { "what": "Hollow a 91 mm miniature (wall 2 mm)", "before": "823–877 ms", "after": "519–526 ms", "method": "Benchmark of the hollowing engine, two interleaved runs", "build": "Not recorded", "version": "Dev build", "date": "2026-10-30", "machine": "dev", "notes": "Live cavity preview 300–325 → 182–190 ms; dragging the wall slider 156–165 → 63–68 ms." },
+    { "what": "Repair broken models", "before": null, "after": "0.86 s per million faces", "method": "Median over the broken meshes of our repair test set", "build": "Release", "version": "Dev build", "date": "2026-10-31", "machine": "dev", "notes": "Median per file 0.59 s; the slowest, 2.5 M faces, 7.2 s." },
+    { "what": "Auto-orient a 1.9 M-triangle miniature", "before": null, "after": "Quick 0.51 s · Full 3.05 s", "method": "The app's worker, timed by a test; other builds were compiling on the machine", "build": "Release", "version": "Dev build", "date": "2026-10-30", "machine": "dev", "notes": "Analysis done once when the tool opens: 0.33 s." },
+    { "what": "Fill bed with copies of a small model", "before": null, "after": "45 copies in 0.09 s", "method": "Fill bed timed in the app", "build": "Not recorded", "version": "Dev build", "date": "2026-11-01", "machine": "dev", "notes": "A 1.9 M-triangle miniature: 11 copies in 0.49 s." }
+   ]
+  },
+  {
+   "id": "viewport",
+   "title": "Viewport",
+   "lede": "Frame times while the camera moves. Higher frames per second is better.",
+   "rows": [
+    { "what": "Built-in performance test, heavy scene", "before": "55 fps", "after": "446 fps", "method": "Preferences › UI & Theme › Test performance, run by hand on the same scene", "build": "Release", "version": "Dev build", "date": "2026-10-30", "machine": "dev" },
+    { "what": "8 copies of a 1.9 M-triangle miniature, camera turning", "before": "71 ms / frame", "after": "1.6 ms / frame", "method": "Viewport benchmark at 1080p; other work running on the machine", "build": "Not recorded", "version": "Dev build", "date": "2026-10-30", "machine": "dev", "notes": "16 copies: 140 → 2.6 ms per frame." },
+    { "what": "Dragging a model: bounding box per frame", "before": "2.54 ms", "after": "0.018–0.028 ms", "method": "Viewport benchmark; the box comes from the model's convex hull and is identical to the full walk", "build": "Not recorded", "version": "Dev build", "date": "2026-10-31", "machine": "dev" }
+   ]
+  },
+  {
+   "id": "startup",
+   "title": "Start-up",
+   "lede": "From launching the program to a visible window.",
+   "rows": [
+    { "what": "Window visible, second launch", "before": "732 ms", "after": "622 ms", "method": "Phase marks recorded by the app (also in Export Diagnostics)", "build": "Not recorded", "version": "Dev build", "date": "2026-11-01", "machine": "dev" },
+    { "what": "Window visible, first launch of a new build", "before": "1657 ms", "after": "1348 ms", "method": "Same phase marks; includes the antivirus scan of a new executable", "build": "Not recorded", "version": "Dev build", "date": "2026-11-01", "machine": "dev", "notes": "A signed release build is expected to skip most of that scan; not measured yet." }
+   ]
+  }
+ ],
+ "comparison": {
+  "enabled": false,
+  "_note": "Off until we publish our method and measure other programs' public versions ourselves. Fill 'programs' and 'rows' then, and set enabled to true.",
+  "programs": [],
+  "rows": []
+ }
+}

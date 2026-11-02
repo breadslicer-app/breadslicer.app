@@ -1,0 +1,55 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+import { slugify } from "../lib/format";
+
+const features = (await getCollection("features")).sort((a, b) => a.data.order - b.data.order);
+const rendered = await Promise.all(features.map(async (f) => ({ f, Content: (await render(f)).Content })));
+---
+<Base title="Features" description="Every tool in Breadslicer: supports by hand or in one click, exact hollowing, drains, repair, auto-orient, arrange and fill bed, review and Fix all, autosave and the .bread project format.">
+  <PageHead eyebrow="Features" lede="Everything you need between a downloaded model and a print, in five tabs, left to right. The recordings below are the app itself, not mockups.">
+    Every tool, <em>up close.</em>
+    <nav slot="after" class="feature-index" aria-label="Tools on this page">
+      {features.map((f) => <a href={`#${slugify(f.data.kicker.split("·")[0])}`}>{f.data.kicker.split("·")[0].trim()}</a>)}
+    </nav>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Tools">
+    {rendered.map(({ f, Content }) => (
+      <article class="feature" id={slugify(f.data.kicker.split("·")[0])} data-cell>
+        <div class="feature-media">
+          {f.data.clip ? (
+            <div class="clip-frame">
+              <video class="clip" data-autoplay muted playsinline loop preload="none" poster={`/assets/clips/${f.data.clip}.webp`} width="960" height="720" aria-label={f.data.alt}>
+                <source src={`/assets/clips/${f.data.clip}.mp4`} type="video/mp4" />
+              </video>
+              <span class="clip-badge mono">recorded in Breadslicer</span>
+            </div>
+          ) : f.data.shot ? (
+            <div class="shot-frame">
+              <img src={`/assets/shots/${f.data.shot}`} width="1600" height="900" alt={f.data.alt ?? ""} loading="lazy" />
+            </div>
+          ) : (
+            <dl class="feature-facts">
+              {f.data.facts.map((x) => <div><dt>{x.k}</dt><dd>{x.v}</dd></div>)}
+            </dl>
+          )}
+        </div>
+        <div>
+          <p class="kicker">{f.data.kicker}</p>
+          <h2>{f.data.title}</h2>
+          <div class="prose"><Content /></div>
+          {(f.data.clip || f.data.shot) && f.data.facts.length > 0 && (
+            <dl class="feature-facts" style="margin-top:24px">
+              {f.data.facts.map((x) => <div><dt>{x.k}</dt><dd>{x.v}</dd></div>)}
+            </dl>
+          )}
+          {f.data.keys.length > 0 && (
+            <p class="feature-keys" aria-label="Keys">{f.data.keys.map((k) => <kbd>{k}</kbd>)}</p>
+          )}
+        </div>
+      </article>
+    ))}
+  </section>
+</Base>

@@ -1,0 +1,38 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+import changelog from "../data/changelog.json";
+import { formatDate, slugify } from "../lib/format";
+
+const days = new Map<string, typeof changelog.entries>();
+for (const e of changelog.entries) {
+  if (!days.has(e.date)) days.set(e.date, []);
+  days.get(e.date)!.push(e);
+}
+---
+<Base title="Changelog" description="What changed in Breadslicer, day by day, in plain words.">
+  <PageHead eyebrow="Changelog" lede="What changed, day by day, in the development builds of the early access. Newest first.">
+    Fresh out of <em>the oven.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Changes">
+    <div class="wrap">
+      <div class="changelog">
+        {[...days].map(([date, entries]) => (
+          <section class="changelog-day" aria-label={formatDate(date)}>
+            <h2><time datetime={date}>{formatDate(date)}</time></h2>
+            <div class="changelog-items">
+              {entries.map((e) => (
+                <article id={slugify(e.title)}>
+                  <span class="pill">{e.area}</span>
+                  <h3>{e.title}</h3>
+                  <p>{e.text}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

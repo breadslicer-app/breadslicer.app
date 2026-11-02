@@ -1,0 +1,39 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PageHead from "../../components/PageHead.astro";
+import { formatDate } from "../../lib/format";
+
+export async function getStaticPaths() {
+  const reports = await getCollection("reports");
+  return reports.map((report) => ({ params: { slug: report.id }, props: { report } }));
+}
+
+const { report } = Astro.props;
+const { Content, headings } = await render(report);
+const toc = headings.filter((h) => h.depth === 2);
+---
+<Base title={report.data.title} description={report.data.summary}>
+  <PageHead eyebrow={report.data.draft ? "Technical report · Draft" : "Technical report"} lede={report.data.summary}>
+    {report.data.title}
+  </PageHead>
+
+  {report.data.draft && (
+    <div class="callout draft-banner narrow">
+      <p><strong>Draft.</strong> This report is still being written and checked. Numbers may be updated.</p>
+    </div>
+  )}
+
+  <section class="section section-plain" aria-label="Report">
+    <div class="article">
+      <article class="prose"><Content /></article>
+      <aside class="article-aside">
+        <div><span class="label">Published</span><br />{formatDate(report.data.date)}</div>
+        <nav class="toc" aria-label="On this page">
+          {toc.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
+        </nav>
+        <a class="link" href="/reports/">All reports</a>
+      </aside>
+    </div>
+  </section>
+</Base>

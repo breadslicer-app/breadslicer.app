@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PageHead from "../../components/PageHead.astro";
+import { formatDate } from "../../lib/format";
+
+const reports = (await getCollection("reports")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Base title="Technical reports" description="How Breadslicer's tools work, measured: method, numbers and limits.">
+  <PageHead eyebrow="Technical reports" lede="Longer write-ups of how a tool works and how we measured it: the method, the numbers and where it stops. Written by the people who built it.">
+    How it works, <em>and how we know.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Reports">
+    <div class="wrap cards">
+      {reports.map((r) => (
+        <a class="card" href={`/reports/${r.id}/`} data-cell>
+          <span class="meta">
+            {r.data.draft && <span class="badge-draft">Draft</span>}
+            <time datetime={r.data.date.toISOString().slice(0, 10)}>{formatDate(r.data.date)}</time>
+            {r.data.tags.map((t) => <span>{t}</span>)}
+          </span>
+          <h2>{r.data.title}</h2>
+          <p>{r.data.summary}</p>
+          <span class="more">Read the report →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>

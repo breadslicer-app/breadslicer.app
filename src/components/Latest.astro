@@ -1,0 +1,20 @@
+---
+import changelog from "../data/changelog.json";
+import { formatDate, slugify } from "../lib/format";
+
+const latest = changelog.entries.slice(0, 3);
+---
+<aside class="latest" aria-labelledby="latest-label">
+  <div class="latest-inner">
+    <p class="latest-label mono" id="latest-label"><span class="eyebrow-dot" aria-hidden="true"></span>Latest</p>
+    <div class="latest-list">
+      {latest.map((e) => (
+        <a href={`/changelog/#${slugify(e.title)}`}>
+          <span class="d">{formatDate(e.date)} · {e.area}</span>
+          <span class="t">{e.title}</span>
+        </a>
+      ))}
+    </div>
+    <a class="latest-all" href="/changelog/">All changes →</a>
+  </div>
+</aside>

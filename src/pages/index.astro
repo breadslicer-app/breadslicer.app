@@ -1,88 +1,32 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Breadslicer — native resin slicer</title>
-  <meta name="description" content="Breadslicer is a native resin (MSLA) slicer written in Rust: Blender-style transforms, tree supports and voxel hollowing that keep up with you, and a crisp layer view. Early access.">
-  <meta name="theme-color" content="#16181a">
-  <link rel="canonical" href="https://breadslicer.app/">
+---
+import Base from "../layouts/Base.astro";
+import Latest from "../components/Latest.astro";
+import roadmap from "../data/roadmap.json";
 
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Breadslicer">
-  <meta property="og:title" content="Breadslicer — native resin slicer">
-  <meta property="og:description" content="A native resin (MSLA) slicer written in Rust. Supports, hollowing and slicing that keep up with you. Early access.">
-  <meta property="og:url" content="https://breadslicer.app/">
-  <meta property="og:image" content="https://breadslicer.app/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The Breadslicer loaf logo next to the words Breadslicer, native resin slicer, slice by slice.">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Breadslicer — native resin slicer">
-  <meta name="twitter:description" content="A native resin (MSLA) slicer written in Rust. Early access.">
-  <meta name="twitter:image" content="https://breadslicer.app/assets/og-image.png">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-    <defs>
-      <pattern id="sgrid" width="24" height="24" patternUnits="userSpaceOnUse">
-        <path d="M24 0H0V24" fill="none" stroke="var(--line-faint)" stroke-width="1"/>
-      </pattern>
-    </defs>
-  </svg>
-
-  <!-- Page frame: hairline edges + right-hand rail (desktop) -->
-  <div class="frame-edges" aria-hidden="true"><span></span><span></span></div>
-
+// The roadmap section shows what is being worked on now, straight from the board.
+const now = [
+  ...roadmap.items.filter((i) => i.column === "In progress"),
+  ...roadmap.items.filter((i) => i.column === "Next"),
+].slice(0, 6);
+---
+<Base bodyClass="home">
+  <Fragment slot="rail">
   <aside class="rail" aria-hidden="true">
-    <div class="rail-ruler">
-      <span class="rail-progress mono"><b data-progress>0</b>%</span>
-      <i class="rail-cursor"></i>
-    </div>
-    <ol class="rail-index">
-      <li data-rail="top">Breadslicer</li>
-      <li data-rail="workflow">Workflow</li>
-      <li data-rail="labs">Close-ups</li>
-      <li data-rail="native">Native</li>
-      <li data-rail="roadmap">Roadmap</li>
-      <li data-rail="download">Early access</li>
-    </ol>
-  </aside>
+      <div class="rail-ruler">
+        <span class="rail-progress mono"><b data-progress>0</b>%</span>
+        <i class="rail-cursor"></i>
+      </div>
+      <ol class="rail-index">
+        <li data-rail="top">Breadslicer</li>
+        <li data-rail="workflow">Workflow</li>
+        <li data-rail="labs">Close-ups</li>
+        <li data-rail="native">Native</li>
+        <li data-rail="roadmap">Roadmap</li>
+        <li data-rail="download">Early access</li>
+      </ol>
+    </aside>
+  </Fragment>
 
-  <header class="site-header" id="top">
-    <div class="nav-row">
-      <a class="brand" href="#top" aria-label="Breadslicer home">
-        <img class="mark" src="assets/loaf-96.png" width="30" height="30" alt="">
-        <span class="wordmark">Breadslicer</span>
-      </a>
-
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="Primary">
-        <a href="#workflow">Workflow</a>
-        <a href="#labs">Close-ups</a>
-        <a href="#native">Native</a>
-        <a href="#roadmap">Roadmap</a>
-        <a class="button button-small" href="#download" data-magnetic>Early access</a>
-      </nav>
-    </div>
-  </header>
-
-  <main id="main">
 
     <!-- ============ HERO ============ -->
     <section class="hero" id="hero" data-section="top" aria-labelledby="hero-title">
@@ -141,6 +85,8 @@
       </div>
     </div>
 
+    <Latest />
+
     <!-- ============ WORKFLOW (scroll-driven) ============ -->
     <section class="section" id="workflow" data-section="workflow" aria-labelledby="workflow-title">
       <div class="section-bar">
@@ -166,11 +112,11 @@
               <span class="badge">Breadslicer</span>
             </div>
             <div class="stage-shots">
-              <img class="shot" data-shot="1" src="assets/shots/transform.webp" width="1600" height="900" alt="Breadslicer's Transform tab: a model on the build plate, moved with a live distance readout." fetchpriority="low">
-              <img class="shot" data-shot="2" src="assets/shots/hollow.webp" width="1600" height="900" alt="Breadslicer's Hollow tab: the model with its translucent cavity preview and the wall thickness controls." loading="lazy">
-              <img class="shot" data-shot="3" src="assets/shots/supports.webp" width="1600" height="900" alt="Breadslicer's Supports tab: tree supports generated under a miniature." loading="lazy">
-              <img class="shot" data-shot="4" src="assets/shots/slice.webp" width="1600" height="900" alt="Breadslicer's Slice tab: the model cut at a layer next to that layer's pixels, with time and resin estimates." loading="lazy">
-              <img class="shot" data-shot="5" src="assets/shots/export.webp" width="1600" height="900" alt="Breadslicer's Export tab: writing the print file for the selected printer." loading="lazy">
+              <img class="shot" data-shot="1" src="/assets/shots/transform.webp" width="1600" height="900" alt="Breadslicer's Transform tab: a model on the build plate, moved with a live distance readout." fetchpriority="low">
+              <img class="shot" data-shot="2" src="/assets/shots/hollow.webp" width="1600" height="900" alt="Breadslicer's Hollow tab: the model with its translucent cavity preview and the wall thickness controls." loading="lazy">
+              <img class="shot" data-shot="3" src="/assets/shots/supports.webp" width="1600" height="900" alt="Breadslicer's Supports tab: tree supports generated under a miniature." loading="lazy">
+              <img class="shot" data-shot="4" src="/assets/shots/slice.webp" width="1600" height="900" alt="Breadslicer's Slice tab: the model cut at a layer next to that layer's pixels, with time and resin estimates." loading="lazy">
+              <img class="shot" data-shot="5" src="/assets/shots/export.webp" width="1600" height="900" alt="Breadslicer's Export tab: writing the print file for the selected printer." loading="lazy">
             </div>
           </div>
           <div class="runlog" data-runlog aria-label="Measured timings of one real run">
@@ -240,12 +186,12 @@
           <li>
             <span class="verify-n mono">02</span>
             <h4>Turn on the log</h4>
-            <p><span class="mono small">Preferences → UI &amp; Theme →</span> <em>Diagnostic log</em>. It is off by default: nothing is recorded unless you ask.</p>
+            <p><span class="mono small">Preferences → Privacy →</span> <em>Save a diagnostic log until Breadslicer closes</em>. It is off by default, turns itself off next time, and never leaves your computer.</p>
           </li>
           <li>
             <span class="verify-n mono">03</span>
             <h4>Read the clock</h4>
-            <p>Open, hollow, generate, slice, export. Then <em>Open logs folder</em>: <code>session.log</code> has the start and end of every step.</p>
+            <p>Open, hollow, generate, slice, export. Then <em>Open logs folder</em> on the same page: <code>session.log</code> has the start and end of every step.</p>
           </li>
         </ol>
 
@@ -279,7 +225,7 @@
         <article class="cell" data-cell>
           <div class="cell-head mono"><span>Transform · G, R, S on X, Y, Z</span><span>01</span></div>
           <div class="clip-frame" data-clipset>
-              <video class="clip is-on" data-clip muted playsinline loop preload="none" poster="assets/clips/transform.webp" width="960" height="720"><source src="assets/clips/transform.mp4" type="video/mp4"></video>
+              <video class="clip is-on" data-clip muted playsinline loop preload="none" poster="/assets/clips/transform.webp" width="960" height="720"><source src="/assets/clips/transform.mp4" type="video/mp4"></video>
             <span class="clip-badge mono">recorded in Breadslicer</span>
           </div>
           <div class="cell-body">
@@ -290,7 +236,7 @@
         <article class="cell" data-cell>
           <div class="cell-head mono"><span>Supports · A to add, X to remove</span><span>02</span></div>
           <div class="clip-frame" data-clipset>
-              <video class="clip is-on" data-clip muted playsinline loop preload="none" poster="assets/clips/supports.webp" width="960" height="720"><source src="assets/clips/supports.mp4" type="video/mp4"></video>
+              <video class="clip is-on" data-clip muted playsinline loop preload="none" poster="/assets/clips/supports.webp" width="960" height="720"><source src="/assets/clips/supports.mp4" type="video/mp4"></video>
             <span class="clip-badge mono">recorded in Breadslicer</span>
           </div>
           <div class="cell-body">
@@ -301,7 +247,7 @@
         <article class="cell" data-cell>
           <div class="cell-head mono"><span>Hollow · wall thickness</span><span>03</span></div>
           <div class="clip-frame" data-clipset>
-              <video class="clip is-on" data-clip muted playsinline loop preload="none" poster="assets/clips/hollow.webp" width="960" height="720"><source src="assets/clips/hollow.mp4" type="video/mp4"></video>
+              <video class="clip is-on" data-clip muted playsinline loop preload="none" poster="/assets/clips/hollow.webp" width="960" height="720"><source src="/assets/clips/hollow.mp4" type="video/mp4"></video>
             <span class="clip-badge mono">recorded in Breadslicer</span>
           </div>
           <div class="cell-body">
@@ -312,7 +258,7 @@
         <article class="cell" data-cell>
           <div class="cell-head mono"><span>Slice · one real layer, 1× to 32×</span><span>04</span></div>
           <div class="clip-frame" data-clipset>
-              <video class="clip is-on" data-clip muted playsinline loop preload="none" poster="assets/clips/zoom.webp" width="960" height="960"><source src="assets/clips/zoom.mp4" type="video/mp4"></video>
+              <video class="clip is-on" data-clip muted playsinline loop preload="none" poster="/assets/clips/zoom.webp" width="960" height="960"><source src="/assets/clips/zoom.mp4" type="video/mp4"></video>
             <span class="clip-badge mono">real layer · sliced by Breadslicer</span>
           </div>
           <div class="cell-body">
@@ -401,17 +347,17 @@
     <section class="section" id="roadmap" data-section="roadmap" aria-labelledby="roadmap-title">
       <div class="section-bar">
         <span class="mono">04 / Roadmap</span>
-        <span class="mono section-bar-right">No dates, no promises we can't slice</span>
+        <span class="mono section-bar-right">Straight from our board, no dates</span>
       </div>
       <header class="section-head">
         <h2 id="roadmap-title">What's in the <em>oven.</em></h2>
       </header>
       <ol class="roadmap">
-        <li data-cell><span class="tag">Coming</span><div><h3>Guided resin calibration</h3><p>A walk-through that gets exposure right for a new resin without a spreadsheet.</p></div></li>
-        <li data-cell><span class="tag">Coming</span><div><h3>Structural support checks</h3><p>Force-based analysis that flags supports likely to fail before the print does.</p></div></li>
-        <li data-cell><span class="tag">Coming</span><div><h3>Split pre-supported STLs into bodies</h3><p>Pull a pre-supported file apart into model and supports so each can be edited on its own.</p></div></li>
-        <li data-cell><span class="tag">Coming</span><div><h3>Community bug reporting via Discord</h3><p>Report from inside the app, with the context attached, straight to the people who fix it.</p></div></li>
+        {now.map((item) => (
+          <li data-cell><span class="tag">{item.column}</span><div><h3>{item.title}</h3><p>{item.labels.filter((l) => l.startsWith("area: ")).map((l) => l.slice(6)).join(" · ") || " "}</p></div></li>
+        ))}
       </ol>
+      <p class="wrap" style="margin-top:24px"><a class="button button-ghost" href="/roadmap/" data-magnetic>The whole board, as it is <span class="arrow" aria-hidden="true">→</span></a></p>
     </section>
 
     <!-- ============ DOWNLOAD ============ -->
@@ -423,40 +369,18 @@
       <div class="cta-grid">
         <div>
           <h2 id="download-title">First slices, <em>soon.</em></h2>
-          <p class="section-lede">Breadslicer is in early access. Builds are being handed out in small batches. The download will appear here, and so will the Discord.</p>
+          <p class="section-lede">Breadslicer is in early access. Builds are being handed out in small batches. The download will appear here.</p>
           <div class="cta-row">
             <a class="button button-primary is-soon" href="#download" aria-describedby="download-note" data-magnetic>Download <span class="button-sub">Coming soon</span></a>
-            <a class="button button-ghost is-soon" href="#download" aria-describedby="download-note" data-magnetic>Join the Discord <span class="button-sub">Coming soon</span></a>
+            <a class="button button-ghost" href="/community/" data-magnetic>Community &amp; support <span class="arrow" aria-hidden="true">→</span></a>
           </div>
           <p id="download-note" class="small muted">No sign-up form yet. When early access opens, this page is where it opens.</p>
         </div>
         <div class="cta-art" aria-hidden="true" data-parallax="0.12">
-          <img src="assets/loaf-640.webp" width="640" height="640" alt="" loading="lazy">
+          <img src="/assets/loaf-640.webp" width="640" height="640" alt="" loading="lazy">
         </div>
       </div>
     </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="wordmark">Breadslicer</span>
-        <span class="muted small">Native resin slicer · breadslicer.app</span>
-      </div>
-      <nav class="footer-col" aria-label="Product">
-        <span class="mono footer-h">Product</span>
-        <a href="#workflow">Workflow</a><a href="#labs">Close-ups</a><a href="#native">Built native</a><a href="#roadmap">Roadmap</a>
-      </nav>
-      <nav class="footer-col" aria-label="Community">
-        <span class="mono footer-h">Community</span>
-        <span class="muted">Discord · coming soon</span><span class="muted">Source · coming soon</span>
-      </nav>
-      <p class="footer-legal small muted">
-        Free software under the AGPL-3.0. © 2026 SynrgStudio.
-      </p>
-    </div>
-  </footer>
-
-  <script src="main.js" defer></script>
-</body>
-</html>
+  
+  <script is:inline slot="scripts" src="/main.js" defer></script>
+</Base>

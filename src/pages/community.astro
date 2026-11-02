@@ -1,0 +1,60 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+---
+<Base title="Community and support" description="Join the Breadslicer community, support the project, and report a bug with Export Diagnostics.">
+  <PageHead eyebrow="Community" lede="Breadslicer is free software made by a small studio. Here is where to talk to us, how to help, and how to report a problem so it gets fixed fast.">
+    Slice <em>together.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Community">
+    <div class="wrap cards" style="margin-bottom:clamp(56px,8vw,96px)">
+      <div class="card" data-cell>
+        <span class="meta">Discord</span>
+        <h2>SynrgStudio Discord</h2>
+        <p>One server for Breadslicer: news, help, bug reports and ideas, and a corner in Spanish. Show your prints there too.</p>
+        <span class="more muted">Invite link coming soon</span>
+      </div>
+      <a class="card" href="https://www.patreon.com/cw/synrgstudio" rel="noopener" data-cell>
+        <span class="meta">Patreon</span>
+        <h2>Support on Patreon</h2>
+        <p>Back the project with a monthly contribution.</p>
+        <span class="more">patreon.com/cw/synrgstudio →</span>
+      </a>
+      <a class="card" href="https://ko-fi.com/synrg" rel="noopener" data-cell>
+        <span class="meta">Ko-fi</span>
+        <h2>Buy us a coffee</h2>
+        <p>A one-off tip, any amount.</p>
+        <span class="more">ko-fi.com/synrg →</span>
+      </a>
+    </div>
+
+    <div class="wrap two-col" id="report">
+      <div>
+        <p class="kicker">Report a bug</p>
+        <h2 style="font-size:clamp(1.8rem,3.4vw,2.8rem);margin-bottom:18px">Something wrong? <em>Tell us.</em></h2>
+        <p class="muted" style="max-width:32em">A good report gets fixed in days. The app can collect what we need for you, and it never sends anything by itself: the file stays on your computer until you choose to share it.</p>
+      </div>
+      <ol class="steps">
+        <li>
+          <div>
+            <h3>Export diagnostics</h3>
+            <p>Use <span class="menu-path">Help › Export Diagnostics…</span>. It saves a <code>.zip</code> with what the app did in this session (steps, times and errors), your graphics card and screens, and your preferences. Your user name and folders are replaced in every file. Models are only included if you tick <em>Include the scene's models (.bread)</em>.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>For a problem that is hard to catch</h3>
+            <p>Turn on <span class="menu-path">Preferences › Privacy › Save a diagnostic log until Breadslicer closes</span>, do what causes the problem, then export diagnostics. The log turns itself off the next time you open Breadslicer.</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3>Post it</h3>
+            <p>In the bugs forum on our Discord: what you did, what you expected, what happened, a screenshot if it is visual, and the <code>.zip</code>. Which printer and resin, if it is about a print.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+</Base>

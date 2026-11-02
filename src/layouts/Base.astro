@@ -1,0 +1,129 @@
+---
+import "../styles/global.css";
+import "../styles/pages.css";
+import { nav, useTranslations } from "../i18n/ui";
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Extra class on <body>, e.g. "home". */
+  bodyClass?: string;
+}
+
+const lang = Astro.currentLocale ?? "en";
+const t = useTranslations(lang);
+const { title, description = t("site.description"), bodyClass } = Astro.props;
+const fullTitle = title ? `${title} · Breadslicer` : "Breadslicer — native resin slicer";
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const here = Astro.url.pathname.replace(/\/?$/, "/");
+const isHome = here === "/";
+const brandHref = isHome ? "#top" : "/";
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <meta name="theme-color" content="#16181a">
+  <link rel="canonical" href={canonical}>
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="sitemap" href="/sitemap-index.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Breadslicer">
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  <meta property="og:image" content="https://breadslicer.app/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Breadslicer loaf logo next to the words Breadslicer, native resin slicer, slice by slice.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={fullTitle}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content="https://breadslicer.app/assets/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap">
+  <slot name="head" />
+</head>
+<body class={bodyClass}>
+  <a class="skip-link" href="#main">{t("skip")}</a>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="sgrid" width="24" height="24" patternUnits="userSpaceOnUse">
+        <path d="M24 0H0V24" fill="none" stroke="var(--line-faint)" stroke-width="1"/>
+      </pattern>
+    </defs>
+  </svg>
+
+  <div class="frame-edges" aria-hidden="true"><span></span><span></span></div>
+  <slot name="rail" />
+
+  <header class="site-header" id="top">
+    <div class="nav-row">
+      <a class="brand" href={brandHref} aria-label="Breadslicer home">
+        <img class="mark" src="/assets/loaf-96.png" width="30" height="30" alt="">
+        <span class="wordmark">Breadslicer</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">{t("menu")}</span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        {nav.map((item) => (
+          <a href={item.href} aria-current={here.startsWith(item.href) ? "page" : undefined}>{t(item.key)}</a>
+        ))}
+        <a class="button button-small" href="/#download" data-magnetic>{t("nav.cta")}</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid footer-grid-4">
+      <div class="footer-brand">
+        <span class="wordmark">Breadslicer</span>
+        <span class="muted small">{t("site.tagline")} · breadslicer.app</span>
+      </div>
+      <nav class="footer-col" aria-label={t("footer.product")}>
+        <span class="mono footer-h">{t("footer.product")}</span>
+        <a href="/features/">{t("nav.features")}</a>
+        <a href="/performance/">{t("nav.performance")}</a>
+        <a href="/printers/">{t("nav.printers")}</a>
+        <a href="/bread-format/">{t("nav.bread")}</a>
+      </nav>
+      <nav class="footer-col" aria-label={t("footer.project")}>
+        <span class="mono footer-h">{t("footer.project")}</span>
+        <a href="/roadmap/">{t("nav.roadmap")}</a>
+        <a href="/changelog/">{t("nav.changelog")}</a>
+        <a href="/reports/">{t("nav.reports")}</a>
+      </nav>
+      <nav class="footer-col" aria-label={t("footer.community")}>
+        <span class="mono footer-h">{t("footer.community")}</span>
+        <a href="/community/">Discord &amp; support</a>
+        <a href="https://www.patreon.com/cw/synrgstudio" rel="noopener">Patreon</a>
+        <a href="https://ko-fi.com/synrg" rel="noopener">Ko-fi</a>
+      </nav>
+      <p class="footer-legal small muted">
+        {t("footer.legal")}
+      </p>
+    </div>
+  </footer>
+
+  <script is:inline src="/site.js" defer></script>
+  <slot name="scripts" />
+</body>
+</html>

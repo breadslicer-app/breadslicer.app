@@ -1,0 +1,3968 @@
+{
+ "generated": "2026-11-02",
+ "count": 157,
+ "exporting": 98,
+ "printers": [
+  {
+   "brand": "Anet",
+   "name": "N4",
+   "family": "N4",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    135
+   ],
+   "formats": [
+    {
+     "label": "n4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Anet",
+   "name": "N7",
+   "family": "N7",
+   "resolution": [
+    2560,
+    1600
+   ],
+   "pixel_um": [
+    75,
+    75
+   ],
+   "volume_mm": [
+    192,
+    120,
+    300
+   ],
+   "formats": [
+    {
+     "label": "n7",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon",
+   "family": "Photon",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    155
+   ],
+   "formats": [
+    {
+     "label": "photon v2",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon D2",
+   "family": "Photon",
+   "resolution": [
+    2560,
+    1440
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    130.6,
+    73.4,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".dl2p",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon M3",
+   "family": "Photon M",
+   "resolution": [
+    4096,
+    2560
+   ],
+   "pixel_um": [
+    40,
+    40
+   ],
+   "volume_mm": [
+    163.8,
+    102.4,
+    180
+   ],
+   "formats": [
+    {
+     "label": ".pm3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon M3 Max",
+   "family": "Photon M",
+   "resolution": [
+    6480,
+    3600
+   ],
+   "pixel_um": [
+    46,
+    46
+   ],
+   "volume_mm": [
+    298.1,
+    165.6,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".pm3m",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon M3 Premium",
+   "family": "Photon M",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    28.5,
+    28.5
+   ],
+   "volume_mm": [
+    218.9,
+    123.1,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".pm3r",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono",
+   "family": "Photon Mono",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".pwmo",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono 2",
+   "family": "Photon Mono",
+   "resolution": [
+    4096,
+    2560
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    143.4,
+    89.6,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".pm3n",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono 4",
+   "family": "Photon Mono",
+   "resolution": [
+    9024,
+    5120
+   ],
+   "pixel_um": [
+    17,
+    17
+   ],
+   "volume_mm": [
+    153.4,
+    87,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".pm4n",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono 4 Ultra",
+   "family": "Photon Mono",
+   "resolution": [
+    9024,
+    5120
+   ],
+   "pixel_um": [
+    17,
+    17
+   ],
+   "volume_mm": [
+    153.4,
+    87,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".pm4u",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono 4K",
+   "family": "Photon Mono",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    134.4,
+    84,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".pwma",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono M5",
+   "family": "Photon Mono M",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".pm5",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono M5s",
+   "family": "Photon Mono M",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".pm5s",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono M5s Pro",
+   "family": "Photon Mono M",
+   "resolution": [
+    13312,
+    5120
+   ],
+   "pixel_um": [
+    16.8,
+    24.8
+   ],
+   "volume_mm": [
+    223.6,
+    127,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".m5sp",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono M7",
+   "family": "Photon Mono M",
+   "resolution": [
+    13312,
+    5120
+   ],
+   "pixel_um": [
+    16.8,
+    24.8
+   ],
+   "volume_mm": [
+    223.6,
+    127,
+    230
+   ],
+   "formats": [
+    {
+     "label": ".pm7",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono M7 Max",
+   "family": "Photon Mono M",
+   "resolution": [
+    6480,
+    3600
+   ],
+   "pixel_um": [
+    46,
+    46
+   ],
+   "volume_mm": [
+    298.1,
+    165.6,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".pm7m",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono M7 Pro",
+   "family": "Photon Mono M",
+   "resolution": [
+    13312,
+    5120
+   ],
+   "pixel_um": [
+    16.8,
+    24.8
+   ],
+   "volume_mm": [
+    223.6,
+    127,
+    230
+   ],
+   "formats": [
+    {
+     "label": ".pwsz",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono SE",
+   "family": "Photon Mono",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    160
+   ],
+   "formats": [
+    {
+     "label": ".pwms",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono SQ",
+   "family": "Photon Mono",
+   "resolution": [
+    2400,
+    2560
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    120,
+    128,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".pmsq",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono X",
+   "family": "Photon Mono X",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    245
+   ],
+   "formats": [
+    {
+     "label": ".pwmx",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono X 6K / M3 Plus",
+   "family": "Photon Mono X",
+   "resolution": [
+    5760,
+    3600
+   ],
+   "pixel_um": [
+    34.4,
+    34.4
+   ],
+   "volume_mm": [
+    198.2,
+    123.8,
+    245
+   ],
+   "formats": [
+    {
+     "label": ".pwmb",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono X 6Ks",
+   "family": "Photon Mono X",
+   "resolution": [
+    5760,
+    3600
+   ],
+   "pixel_um": [
+    34,
+    34
+   ],
+   "volume_mm": [
+    195.8,
+    122.4,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".px6s",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Mono X2",
+   "family": "Photon Mono X",
+   "resolution": [
+    4096,
+    2560
+   ],
+   "pixel_um": [
+    48,
+    48
+   ],
+   "volume_mm": [
+    196.6,
+    122.9,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".pmx2",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon P1",
+   "family": "Photon P",
+   "resolution": [
+    13312,
+    5120
+   ],
+   "pixel_um": [
+    16.8,
+    24.8
+   ],
+   "volume_mm": [
+    223.6,
+    127,
+    230
+   ],
+   "formats": [
+    {
+     "label": ".pp1",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon P1 Max",
+   "family": "Photon P",
+   "resolution": [
+    11520,
+    8640
+   ],
+   "pixel_um": [
+    24.8,
+    24.8
+   ],
+   "volume_mm": [
+    285.7,
+    214.3,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".pp1m",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon S",
+   "family": "Photon",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".pws",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Ultra",
+   "family": "Photon",
+   "resolution": [
+    1280,
+    720
+   ],
+   "pixel_um": [
+    80,
+    80
+   ],
+   "volume_mm": [
+    102.4,
+    57.6,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".dlp",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon X",
+   "family": "Photon",
+   "resolution": [
+    2560,
+    1600
+   ],
+   "pixel_um": [
+    75,
+    75
+   ],
+   "volume_mm": [
+    192,
+    120,
+    245
+   ],
+   "formats": [
+    {
+     "label": ".pwx",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon Zero",
+   "family": "Photon",
+   "resolution": [
+    480,
+    854
+   ],
+   "pixel_um": [
+    115.4,
+    115.5
+   ],
+   "volume_mm": [
+    55.4,
+    98.6,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".pw0",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Concepts3D",
+   "name": "Athena 8K",
+   "family": "Athena",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    28.5,
+    28.5
+   ],
+   "volume_mm": [
+    218.9,
+    123.1,
+    245
+   ],
+   "formats": [
+    {
+     "label": "nanodlp",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Concepts3D",
+   "name": "Athena 12K",
+   "family": "Athena",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    245
+   ],
+   "formats": [
+    {
+     "label": "nanodlp",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
+   "name": "CT-005 Pro",
+   "family": "CT",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "CT-133 Pro",
+   "family": "CT",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    76.5,
+    76.5
+   ],
+   "volume_mm": [
+    293.8,
+    165.2,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot Lite",
+   "family": "Halot",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot Mage",
+   "family": "Halot",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    29.7,
+    29.7
+   ],
+   "volume_mm": [
+    228.1,
+    128.3,
+    230
+   ],
+   "formats": [
+    {
+     "label": "cxdlpv4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot Mage Pro",
+   "family": "Halot",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    29.7,
+    29.7
+   ],
+   "volume_mm": [
+    228.1,
+    128.3,
+    230
+   ],
+   "formats": [
+    {
+     "label": "cxdlpv4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot Max",
+   "family": "Halot",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    76.5,
+    76.5
+   ],
+   "volume_mm": [
+    293.8,
+    165.2,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot One",
+   "family": "Halot",
+   "resolution": [
+    2560,
+    1620
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    128,
+    81,
+    160
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v2",
+     "writable": true
+    },
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot One Plus",
+   "family": "Halot",
+   "resolution": [
+    4320,
+    2560
+   ],
+   "pixel_um": [
+    40,
+    40
+   ],
+   "volume_mm": [
+    172.8,
+    102.4,
+    160
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v2",
+     "writable": true
+    },
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot One Pro",
+   "family": "Halot",
+   "resolution": [
+    2560,
+    2400
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    130.6,
+    122.4,
+    160
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v2",
+     "writable": true
+    },
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot Ray",
+   "family": "Halot",
+   "resolution": [
+    5760,
+    3600
+   ],
+   "pixel_um": [
+    34.4,
+    34.4
+   ],
+   "volume_mm": [
+    198.1,
+    123.8,
+    210
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot Sky",
+   "family": "Halot",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot Sky Plus",
+   "family": "Halot",
+   "resolution": [
+    5760,
+    3600
+   ],
+   "pixel_um": [
+    34.4,
+    34.4
+   ],
+   "volume_mm": [
+    198.1,
+    123.8,
+    210
+   ],
+   "formats": [
+    {
+     "label": ".cxdlp v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot X1",
+   "family": "Halot",
+   "resolution": [
+    15120,
+    6230
+   ],
+   "pixel_um": [
+    14,
+    19
+   ],
+   "volume_mm": [
+    211.7,
+    118.4,
+    200
+   ],
+   "formats": [
+    {
+     "label": "cxdlpv4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
+   "name": "LD-002H",
+   "family": "LD",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    160
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "LD-002R",
+   "family": "LD",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    160
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Creality",
+   "name": "LD-006",
+   "family": "LD",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    245
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Jupiter",
+   "family": "Jupiter",
+   "resolution": [
+    5448,
+    3064
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    277.8,
+    156.3,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    },
+    {
+     "label": ".ctb v5",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Jupiter 2",
+   "family": "Jupiter",
+   "resolution": [
+    15120,
+    6230
+   ],
+   "pixel_um": [
+    20,
+    26
+   ],
+   "volume_mm": [
+    302.4,
+    162,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".goo v5.1",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Jupiter SE",
+   "family": "Jupiter",
+   "resolution": [
+    5448,
+    3064
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    277.8,
+    156.3,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars",
+   "family": "Mars",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 2",
+   "family": "Mars",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".ctb v4",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 2 Pro",
+   "family": "Mars",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    160
+   ],
+   "formats": [
+    {
+     "label": ".ctb v4",
+     "writable": true
+    },
+    {
+     "label": ".ctb v2",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 3",
+   "family": "Mars",
+   "resolution": [
+    4098,
+    2560
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    143.4,
+    89.6,
+    175
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 3 Pro",
+   "family": "Mars",
+   "resolution": [
+    4098,
+    2560
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    143.4,
+    89.6,
+    175
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 4",
+   "family": "Mars",
+   "resolution": [
+    8520,
+    4320
+   ],
+   "pixel_um": [
+    18,
+    18
+   ],
+   "volume_mm": [
+    153.4,
+    77.8,
+    175
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 4 DLP",
+   "family": "Mars",
+   "resolution": [
+    2560,
+    1440
+   ],
+   "pixel_um": [
+    51.9,
+    51.9
+   ],
+   "volume_mm": [
+    132.8,
+    74.7,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 4 Max",
+   "family": "Mars",
+   "resolution": [
+    5760,
+    3600
+   ],
+   "pixel_um": [
+    34,
+    34
+   ],
+   "volume_mm": [
+    195.8,
+    122.4,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 4 Ultra",
+   "family": "Mars",
+   "resolution": [
+    8520,
+    4320
+   ],
+   "pixel_um": [
+    18,
+    18
+   ],
+   "volume_mm": [
+    153.4,
+    77.8,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    },
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 5",
+   "family": "Mars",
+   "resolution": [
+    4098,
+    2560
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    143.4,
+    89.6,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars 5 Ultra",
+   "family": "Mars",
+   "resolution": [
+    8520,
+    4320
+   ],
+   "pixel_um": [
+    18,
+    18
+   ],
+   "volume_mm": [
+    153.4,
+    77.8,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    },
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars C",
+   "family": "Mars",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn",
+   "family": "Saturn",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn 2",
+   "family": "Saturn",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    28.5,
+    28.5
+   ],
+   "volume_mm": [
+    218.9,
+    123.1,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn 2 14K",
+   "family": "Saturn",
+   "resolution": [
+    13320,
+    5120
+   ],
+   "pixel_um": [
+    16.8,
+    24.8
+   ],
+   "volume_mm": [
+    223.8,
+    127,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn 3",
+   "family": "Saturn",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    },
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn 3 Ultra",
+   "family": "Saturn",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    260
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    },
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn 4",
+   "family": "Saturn",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    220
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn 4 Ultra",
+   "family": "Saturn",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    220
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn 4 Ultra 16K",
+   "family": "Saturn",
+   "resolution": [
+    15120,
+    6230
+   ],
+   "pixel_um": [
+    14,
+    19
+   ],
+   "volume_mm": [
+    211.7,
+    118.4,
+    220
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn 8K",
+   "family": "Saturn",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    28.5,
+    28.5
+   ],
+   "volume_mm": [
+    218.9,
+    123.1,
+    210
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Saturn S",
+   "family": "Saturn",
+   "resolution": [
+    4098,
+    2560
+   ],
+   "pixel_um": [
+    48,
+    48
+   ],
+   "volume_mm": [
+    196.7,
+    122.9,
+    210
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Emake3D",
+   "name": "Galaxy 1",
+   "family": "Galaxy",
+   "resolution": [
+    8000,
+    4000
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    400,
+    200,
+    400
+   ],
+   "formats": [
+    {
+     "label": "qdt",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "EPAX",
+   "name": "DX1 PRO",
+   "family": "DX",
+   "resolution": [
+    4098,
+    2560
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    143.4,
+    89.6,
+    155
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "DX10 Pro 5K",
+   "family": "DX",
+   "resolution": [
+    4920,
+    2880
+   ],
+   "pixel_um": [
+    45,
+    45
+   ],
+   "volume_mm": [
+    221.4,
+    129.6,
+    120
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "DX10 Pro 8K",
+   "family": "DX",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    28.5,
+    28.5
+   ],
+   "volume_mm": [
+    218.9,
+    123.1,
+    120
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "E6 Mono",
+   "family": "E6",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    81,
+    128,
+    155
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "E10 5K",
+   "family": "E10",
+   "resolution": [
+    4920,
+    2880
+   ],
+   "pixel_um": [
+    45,
+    45
+   ],
+   "volume_mm": [
+    221.4,
+    129.6,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "E10 8K",
+   "family": "E10",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    28.5,
+    28.5
+   ],
+   "volume_mm": [
+    218.9,
+    123.1,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "E10 Mono",
+   "family": "E10",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X1",
+   "family": "X1",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    155
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X1 4KS",
+   "family": "X1",
+   "resolution": [
+    4098,
+    2560
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    143.4,
+    89.6,
+    155
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X1K 2K Mono",
+   "family": "X1K",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    155
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X10",
+   "family": "X10",
+   "resolution": [
+    1600,
+    2560
+   ],
+   "pixel_um": [
+    84.6,
+    84.6
+   ],
+   "volume_mm": [
+    135.4,
+    216.6,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X10 4K Mono",
+   "family": "X10",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X10 5K",
+   "family": "X10",
+   "resolution": [
+    4920,
+    2880
+   ],
+   "pixel_um": [
+    45,
+    45
+   ],
+   "volume_mm": [
+    221.4,
+    129.6,
+    250
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X133 4K Mono",
+   "family": "X133",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    76.5,
+    76.5
+   ],
+   "volume_mm": [
+    293.8,
+    165.2,
+    400
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X133 6K",
+   "family": "X133",
+   "resolution": [
+    5760,
+    3240
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    288,
+    162,
+    400
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "EPAX",
+   "name": "X156 4K Color",
+   "family": "X156",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    90,
+    90
+   ],
+   "volume_mm": [
+    345.6,
+    194.4,
+    400
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "FlashForge",
+   "name": "Explorer MAX",
+   "family": "Explorer",
+   "resolution": [
+    2560,
+    1600
+   ],
+   "pixel_um": [
+    75,
+    75
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "FlashForge",
+   "name": "Focus 8.9",
+   "family": "Focus",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "FlashForge",
+   "name": "Focus 13.3",
+   "family": "Focus",
+   "resolution": [
+    3842,
+    2171
+   ],
+   "pixel_um": [
+    76,
+    76
+   ],
+   "volume_mm": [
+    292,
+    165,
+    400
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "FlashForge",
+   "name": "Foto 6.0",
+   "family": "Foto",
+   "resolution": [
+    2600,
+    1560
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    130,
+    78,
+    155
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "FlashForge",
+   "name": "Foto 8.9",
+   "family": "Foto",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "FlashForge",
+   "name": "Foto 8.9S",
+   "family": "Foto",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "FlashForge",
+   "name": "Foto 13.3",
+   "family": "Foto",
+   "resolution": [
+    3842,
+    2171
+   ],
+   "pixel_um": [
+    76,
+    76
+   ],
+   "volume_mm": [
+    292,
+    165,
+    400
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "FlashForge",
+   "name": "Hunter",
+   "family": "Hunter",
+   "resolution": [
+    1920,
+    1080
+   ],
+   "pixel_um": [
+    62.5,
+    62.5
+   ],
+   "volume_mm": [
+    120,
+    67.5,
+    150
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Generic",
+   "name": "Generic Machine",
+   "family": "Generic Machine",
+   "resolution": [
+    2560,
+    1620
+   ],
+   "pixel_um": [
+    55.9,
+    54.9
+   ],
+   "volume_mm": [
+    143,
+    89,
+    175
+   ],
+   "formats": [
+    {
+     "label": "lumen v1",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Kelant",
+   "name": "S400",
+   "family": "S400",
+   "resolution": [
+    2560,
+    1600
+   ],
+   "pixel_um": [
+    75,
+    75
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Longer",
+   "name": "Orange 4K",
+   "family": "Orange",
+   "resolution": [
+    3840,
+    6480
+   ],
+   "pixel_um": [
+    31.5,
+    10.5
+   ],
+   "volume_mm": [
+    121,
+    68,
+    190
+   ],
+   "formats": [
+    {
+     "label": "lgs4k",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Longer",
+   "name": "Orange 10",
+   "family": "Orange",
+   "resolution": [
+    480,
+    854
+   ],
+   "pixel_um": [
+    115.5,
+    115.5
+   ],
+   "volume_mm": [
+    55.4,
+    98.6,
+    140
+   ],
+   "formats": [
+    {
+     "label": "lgs",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Longer",
+   "name": "Orange 30",
+   "family": "Orange",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    170
+   ],
+   "formats": [
+    {
+     "label": "lgs30",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Longer",
+   "name": "Orange 120",
+   "family": "Orange",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    150
+   ],
+   "formats": [
+    {
+     "label": "lgs120",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Bene4",
+   "family": "Bene",
+   "resolution": [
+    1352,
+    2512
+   ],
+   "pixel_um": [
+    51.8,
+    51.8
+   ],
+   "volume_mm": [
+    70,
+    130,
+    150
+   ],
+   "formats": [
+    {
+     "label": "cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Bene4 Mono",
+   "family": "Bene",
+   "resolution": [
+    1566,
+    2549
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    79.9,
+    130,
+    150
+   ],
+   "formats": [
+    {
+     "label": "rgb.cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Bene5",
+   "family": "Bene",
+   "resolution": [
+    1566,
+    2549
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    79.9,
+    130,
+    150
+   ],
+   "formats": [
+    {
+     "label": "rgb.cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Bene6",
+   "family": "Bene",
+   "resolution": [
+    4098,
+    2560
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    143.4,
+    89.6,
+    180
+   ],
+   "formats": [
+    {
+     "label": "cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Elfin",
+   "family": "Elfin",
+   "resolution": [
+    1410,
+    2531
+   ],
+   "pixel_um": [
+    51.8,
+    51.8
+   ],
+   "volume_mm": [
+    73,
+    131,
+    150
+   ],
+   "formats": [
+    {
+     "label": "cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Elfin2",
+   "family": "Elfin",
+   "resolution": [
+    1352,
+    2512
+   ],
+   "pixel_um": [
+    51.8,
+    51.8
+   ],
+   "volume_mm": [
+    70,
+    130,
+    150
+   ],
+   "formats": [
+    {
+     "label": "cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Elfin2 Mono SE",
+   "family": "Elfin",
+   "resolution": [
+    1470,
+    2549
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    75,
+    130,
+    150
+   ],
+   "formats": [
+    {
+     "label": "rgb.cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Elfin3 Mini",
+   "family": "Elfin",
+   "resolution": [
+    1079,
+    1904
+   ],
+   "pixel_um": [
+    63,
+    63
+   ],
+   "volume_mm": [
+    68,
+    120,
+    150
+   ],
+   "formats": [
+    {
+     "label": "cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Whale",
+   "family": "Whale",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    250
+   ],
+   "formats": [
+    {
+     "label": "rgb.cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Whale2",
+   "family": "Whale",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    250
+   ],
+   "formats": [
+    {
+     "label": "rgb.cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Nova3D",
+   "name": "Whale3 Pro",
+   "family": "Whale",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    29.7,
+    29.7
+   ],
+   "volume_mm": [
+    228.1,
+    128.3,
+    260
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Peopoly",
+   "name": "Phenom",
+   "family": "Phenom",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    72,
+    72
+   ],
+   "volume_mm": [
+    276.5,
+    155.5,
+    400
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Peopoly",
+   "name": "Phenom Forge",
+   "family": "Phenom",
+   "resolution": [
+    5760,
+    3240
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    288,
+    162,
+    350
+   ],
+   "formats": [
+    {
+     "label": "osf",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Peopoly",
+   "name": "Phenom L",
+   "family": "Phenom",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    90,
+    90
+   ],
+   "volume_mm": [
+    345.6,
+    194.4,
+    400
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Peopoly",
+   "name": "Phenom Noir",
+   "family": "Phenom",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    76.5,
+    76.5
+   ],
+   "volume_mm": [
+    293.8,
+    165.2,
+    400
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Peopoly",
+   "name": "Phenom XXL",
+   "family": "Phenom",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    137,
+    137
+   ],
+   "volume_mm": [
+    526.1,
+    295.9,
+    550
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Peopoly",
+   "name": "Phenom XXL V2",
+   "family": "Phenom",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    137,
+    137
+   ],
+   "volume_mm": [
+    526.1,
+    295.9,
+    550
+   ],
+   "formats": [
+    {
+     "label": "osf",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Shuffle",
+   "family": "Shuffle",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47,
+    47
+   ],
+   "volume_mm": [
+    67.7,
+    120.3,
+    200
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Shuffle 4K",
+   "family": "Shuffle",
+   "resolution": [
+    2160,
+    3840
+   ],
+   "pixel_um": [
+    31.5,
+    31.5
+   ],
+   "volume_mm": [
+    68,
+    121,
+    170
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Shuffle 16",
+   "family": "Shuffle",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    88,
+    88
+   ],
+   "volume_mm": [
+    337.9,
+    190.1,
+    400
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Shuffle Lite",
+   "family": "Shuffle",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    170
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Shuffle XL",
+   "family": "Shuffle",
+   "resolution": [
+    2560,
+    1600
+   ],
+   "pixel_um": [
+    75,
+    75
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Shuffle XL Lite",
+   "family": "Shuffle",
+   "resolution": [
+    2560,
+    1600
+   ],
+   "pixel_um": [
+    75,
+    75
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic",
+   "family": "Sonic",
+   "resolution": [
+    1080,
+    1920
+   ],
+   "pixel_um": [
+    63,
+    63
+   ],
+   "volume_mm": [
+    68,
+    121,
+    170
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic 4K",
+   "family": "Sonic",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    134.4,
+    75.6,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mega 8K",
+   "family": "Sonic",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    43,
+    43
+   ],
+   "volume_mm": [
+    330.2,
+    185.8,
+    400
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mighty 4K",
+   "family": "Sonic",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    52,
+    52
+   ],
+   "volume_mm": [
+    199.7,
+    124.8,
+    220
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mighty 8K",
+   "family": "Sonic",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    28.5,
+    28.5
+   ],
+   "volume_mm": [
+    218.9,
+    123.1,
+    235
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mighty Revo",
+   "family": "Sonic",
+   "resolution": [
+    13320,
+    5120
+   ],
+   "pixel_um": [
+    16.8,
+    24.8
+   ],
+   "volume_mm": [
+    223.8,
+    127,
+    235
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mini",
+   "family": "Sonic",
+   "resolution": [
+    1080,
+    1920
+   ],
+   "pixel_um": [
+    63,
+    63
+   ],
+   "volume_mm": [
+    68,
+    121,
+    130
+   ],
+   "formats": [
+    {
+     "label": "phz",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mini 4K",
+   "family": "Sonic",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    35,
+    35
+   ],
+   "volume_mm": [
+    134.4,
+    75.6,
+    130
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mini 8K",
+   "family": "Sonic",
+   "resolution": [
+    7500,
+    3240
+   ],
+   "pixel_um": [
+    22,
+    22
+   ],
+   "volume_mm": [
+    165,
+    71.3,
+    180
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mini 8K S",
+   "family": "Sonic",
+   "resolution": [
+    7536,
+    3240
+   ],
+   "pixel_um": [
+    22,
+    22
+   ],
+   "volume_mm": [
+    165.8,
+    71.3,
+    170
+   ],
+   "formats": [
+    {
+     "label": ".goo v3.0",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Transform",
+   "family": "Transform",
+   "resolution": [
+    3840,
+    2160
+   ],
+   "pixel_um": [
+    76,
+    76
+   ],
+   "volume_mm": [
+    291.8,
+    164.2,
+    400
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Prusa",
+   "name": "SL1",
+   "family": "SL",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    150
+   ],
+   "formats": [
+    {
+     "label": "sl1 sl1",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Prusa",
+   "name": "SL1S SPEED",
+   "family": "SL",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    81,
+    128,
+    150
+   ],
+   "formats": [
+    {
+     "label": "sl1 sl1s",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "QIDI",
+   "name": "I-Box Mono",
+   "family": "I-Box",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "QIDI",
+   "name": "S-Box",
+   "family": "S-Box",
+   "resolution": [
+    1600,
+    2560
+   ],
+   "pixel_um": [
+    84.6,
+    84.6
+   ],
+   "volume_mm": [
+    135.4,
+    216.6,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "QIDI",
+   "name": "Shadow5.5",
+   "family": "Shadow",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "QIDI",
+   "name": "Shadow6.0 Pro",
+   "family": "Shadow",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    51.8,
+    51.8
+   ],
+   "volume_mm": [
+    74.5,
+    132.5,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "UniFormation",
+   "name": "GKone",
+   "family": "GKone",
+   "resolution": [
+    4920,
+    2880
+   ],
+   "pixel_um": [
+    45,
+    45
+   ],
+   "volume_mm": [
+    221.4,
+    129.6,
+    245
+   ],
+   "formats": [
+    {
+     "label": "jxs",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "UniFormation",
+   "name": "GKtwo",
+   "family": "GKtwo",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    29.7,
+    29.7
+   ],
+   "volume_mm": [
+    228.1,
+    128.3,
+    245
+   ],
+   "formats": [
+    {
+     "label": "gktwo.ctb v4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Uniz",
+   "name": "IBEE",
+   "family": "IBEE",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    220
+   ],
+   "formats": [
+    {
+     "label": "zcode",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Uniz",
+   "name": "IBEE (Klipper)",
+   "family": "IBEE",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    220
+   ],
+   "formats": [
+    {
+     "label": "zip klipper",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Voxelab",
+   "name": "Ceres 8.9",
+   "family": "Ceres",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "fdg",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Voxelab",
+   "name": "Polaris 5.5",
+   "family": "Polaris",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    155
+   ],
+   "formats": [
+    {
+     "label": "fdg",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Voxelab",
+   "name": "Proxima 6",
+   "family": "Proxima",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    155
+   ],
+   "formats": [
+    {
+     "label": "fdg",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Voxelab",
+   "name": "Proxima 6 (SVGX)",
+   "family": "Proxima",
+   "resolution": [
+    2560,
+    1620
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    130.6,
+    82.6,
+    155
+   ],
+   "formats": [
+    {
+     "label": "svgx",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Wanhao",
+   "name": "CGR Mini Mono",
+   "family": "CGR",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    200
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Wanhao",
+   "name": "CGR Mono",
+   "family": "CGR",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    118.5,
+    46.9
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Wanhao",
+   "name": "D7",
+   "family": "D7",
+   "resolution": [
+    2560,
+    1440
+   ],
+   "pixel_um": [
+    47.3,
+    47.6
+   ],
+   "volume_mm": [
+    121,
+    68.5,
+    180
+   ],
+   "formats": [
+    {
+     "label": "xml.cws",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Wanhao",
+   "name": "D8",
+   "family": "D8",
+   "resolution": [
+    2560,
+    1600
+   ],
+   "pixel_um": [
+    75,
+    75
+   ],
+   "volume_mm": [
+    192,
+    120,
+    180
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Zortrax",
+   "name": "Inkspire",
+   "family": "Inkspire",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    51.9,
+    51.9
+   ],
+   "volume_mm": [
+    74.7,
+    132.9,
+    175
+   ],
+   "formats": [
+    {
+     "label": "zcodex",
+     "writable": false
+    }
+   ],
+   "exports": false
+  }
+ ]
+}
