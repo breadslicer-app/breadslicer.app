@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T14:16:50Z",
+ "generated": "2026-11-03T21:04:06Z",
  "columns": [
   "In progress",
   "Next",
@@ -11,10 +11,10 @@
  "counts": {
   "In progress": 0,
   "Next": 11,
-  "Quick wins": 1,
+  "Quick wins": 0,
   "Backlog": 128,
   "Later": 12,
-  "Done": 135
+  "Done": 138
  },
  "items": [
   {
@@ -302,13 +302,13 @@
   },
   {
    "title": "Copy and paste that keeps hollowing, supports and drains",
-   "state": "open",
-   "column": "Quick wins",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: editor",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "Resin price, cost per print and per model",
@@ -2760,6 +2760,25 @@
    "state": "closed",
    "column": "Done",
    "labels": [],
+   "closed": "2026-11-03"
+  },
+  {
+   "title": "Open command-line files in one scene and hand them to the running app",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": "2026-11-03"
+  },
+  {
+   "title": "Command-line files: file names and spread on the plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: editor"
+   ],
    "closed": "2026-11-03"
   }
  ]
