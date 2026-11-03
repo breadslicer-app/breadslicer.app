@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T21:38:38Z",
+ "generated": "2026-11-03T14:16:50Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,23 +9,23 @@
   "Done"
  ],
  "counts": {
-  "In progress": 6,
-  "Next": 12,
+  "In progress": 0,
+  "Next": 11,
   "Quick wins": 1,
-  "Backlog": 129,
+  "Backlog": 128,
   "Later": 12,
-  "Done": 123
+  "Done": 135
  },
  "items": [
   {
    "title": "Manual support editor in the viewport",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "3D hollowing and own drain holes milestone",
@@ -1050,10 +1050,10 @@
   },
   {
    "title": "Fix All finishes the job in one press",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "A window of its own to pick printers and resins, decoupled from Preferences",
@@ -2680,10 +2680,10 @@
   },
   {
    "title": "Size panel: world and model sizes side by side when the model is rotated",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "Build the pick structure of an imported model off the UI thread",
@@ -2701,38 +2701,66 @@
   },
   {
    "title": "Minimal islands are a note, not a support",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "Over-cure from the layer below counts as support for islands",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "Don't split tiny pieces at a weak joint into islands",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "Support a growing island on the same face up to 2 layers higher",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "Ignore-small-islands height counts layers like its number says",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-03"
+  },
+  {
+   "title": "Slicing-failed card offers Repair and slices again",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-02"
+  },
+  {
+   "title": "Supports-out-of-date card offers Regenerate and Recalculate keeping hand edits",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-03"
+  },
+  {
+   "title": "Highlight the exact piece of a review finding when it is clicked",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-03"
+  },
+  {
+   "title": "Faster edit-build-test cycle and smaller build folders",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-03"
   }
  ]
 }
