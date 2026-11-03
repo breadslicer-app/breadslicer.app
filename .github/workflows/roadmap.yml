@@ -1,4 +1,4 @@
-# Refreshes src/data/roadmap.json from the project board once a day.
+# Refreshes src/data/roadmap.json from the project board every hour.
 #
 # Does nothing until the repository secret ROADMAP_TOKEN exists. That secret is
 # a fine-grained personal access token with read-only access (see README,
@@ -9,7 +9,7 @@ name: Refresh roadmap
 
 on:
   schedule:
-    - cron: "17 6 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:

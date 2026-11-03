@@ -66,7 +66,7 @@ descriptions, comments, numbers or people. Issues labelled `private`, and titles
 blocked word, are left out. The blocked words are stored hashed in the script; add one with
 `node scripts/export-roadmap.mjs --hash <word>` and paste the result into `BLOCKED_WORD_HASHES`.
 
-The workflow `.github/workflows/roadmap.yml` can do this once a day by itself. It does nothing
+The workflow `.github/workflows/roadmap.yml` can do this every hour by itself. It does nothing
 until the repository has a secret named `ROADMAP_TOKEN`:
 
 1. GitHub › Settings › Developer settings › Personal access tokens › **Fine-grained tokens** ›
