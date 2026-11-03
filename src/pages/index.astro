@@ -42,13 +42,13 @@ const now = [
               Nothing in a browser tab, nothing waiting on a spinner.
             </p>
             <div class="cta-row">
-              <a class="button button-primary" href="#download" data-magnetic>Get early access</a>
+              <a class="button button-primary" href="https://discord.gg/RHq6DXMcC" rel="noopener" data-magnetic>Get early access</a>
               <a class="button button-ghost" href="#workflow" data-magnetic>See the workflow <span class="arrow" aria-hidden="true">→</span></a>
             </div>
             <dl class="hero-facts">
               <div><dt>Runtime</dt><dd>Native Rust</dd></div>
               <div><dt>Viewport</dt><dd>Own wgpu renderer</dd></div>
-              <div><dt>Footprint</dt><dd>~48 MB executable</dd></div>
+              <div><dt>Footprint</dt><dd>~65 MB executable</dd></div>
             </dl>
           </div>
 
@@ -175,6 +175,7 @@ const now = [
         <p class="verify-kicker mono"><span class="verify-dot" aria-hidden="true"></span>Every number above is checkable</p>
         <h3 id="verify-title" class="verify-title">Don’t take our word for it.<br><em>Time it yourself.</em></h3>
         <p class="verify-lede">Benchmarks on a slicer’s own website are easy to fake. So here is the exact model from this run, and the app writes its own timings. Run it on your machine and compare.</p>
+        <p class="cta-row"><a class="button button-ghost" href="https://discord.gg/RHq6DXMcC" rel="noopener" data-magnetic>Get a build on Discord <span class="arrow" aria-hidden="true">→</span></a></p>
 
         <ol class="verify-steps">
           <li>
@@ -230,7 +231,7 @@ const now = [
           </div>
           <div class="cell-body">
             <h3>Gestures with a readout.</h3>
-            <p>Move with <kbd>G</kbd>, rotate with <kbd>R</kbd>, scale with <kbd>S</kbd>, and lock any of them to <kbd>X</kbd>, <kbd>Y</kbd> or <kbd>Z</kbd>. A chip reads the distance, degrees or scale as you go, and the plate turns red the moment the model leaves it.</p>
+            <p>Move with <kbd>G</kbd>, rotate with <kbd>R</kbd>, scale with <kbd>S</kbd>, and lock any of them to <kbd>X</kbd>, <kbd>Y</kbd> or <kbd>Z</kbd>. A chip reads the distance, degrees or scale as you go, and whatever leaves the plate turns amber the moment it does.</p>
           </div>
         </article>
         <article class="cell" data-cell>
@@ -281,8 +282,8 @@ const now = [
         <h2 id="native-title" class="why-title">Because waiting is<br><em>not a feature.</em></h2>
         <p class="why-lede">
           Most desktop apps today are a website in a window: a whole browser engine shipped
-          inside, sitting between you and your model. Every click goes through it. We wrote
-          Breadslicer from scratch in Rust, with its own GPU renderer, so nothing sits in between.
+          inside, sitting between you and your model. Every click goes through it. Breadslicer is
+          written in Rust, with its own GPU renderer, so nothing sits in between.
           You feel it in the first second, and in every second after.
         </p>
 
@@ -293,14 +294,14 @@ const now = [
             <p>Then 0.39 s to open a 92 MB, 1.9-million-triangle miniature. No splash screen to watch.</p>
           </article>
           <article class="why-stat">
-            <span class="why-num mono">16<small>cores</small></span>
+            <span class="why-num mono">16<small>threads</small></span>
             <h3>Your whole machine, not one thread of it.</h3>
-            <p>On our 16-core test machine, 991 layers are encoded at once and written in 0.12 s. Supports are prepared on the spare cores while you look at the cavity.</p>
+            <p>On our 8-core, 16-thread test machine, 991 layers are encoded at once and written in 0.12 s. Supports are prepared on the spare cores while you look at the cavity.</p>
           </article>
           <article class="why-stat">
-            <span class="why-num mono">47<small>MB</small></span>
-            <h3>One file. No browser inside.</h3>
-            <p>A single executable that talks to the GPU through DirectX 12, Vulkan or Metal, directly.</p>
+            <span class="why-num mono">65<small>MB</small></span>
+            <h3>No browser inside.</h3>
+            <p>One executable and its printer profiles, talking to the GPU through DirectX 12 or Vulkan, directly.</p>
           </article>
         </div>
 
@@ -313,7 +314,7 @@ const now = [
           <div class="why-row" role="row">
             <span role="rowheader">What ships</span>
             <span role="cell">Your app plus a full browser engine</span>
-            <span role="cell">One 47 MB executable</span>
+            <span role="cell">One 65 MB executable and its profiles</span>
           </div>
           <div class="why-row" role="row">
             <span role="rowheader">Path to the screen</span>
@@ -369,12 +370,12 @@ const now = [
       <div class="cta-grid">
         <div>
           <h2 id="download-title">First slices, <em>soon.</em></h2>
-          <p class="section-lede">Breadslicer is in early access. Builds are being handed out in small batches. The download will appear here.</p>
+          <p class="section-lede">Breadslicer is in early access. Builds are being handed out in small batches on our Discord. The download will appear here.</p>
           <div class="cta-row">
-            <a class="button button-primary is-soon" href="#download" aria-describedby="download-note" data-magnetic>Download <span class="button-sub">Coming soon</span></a>
+            <a class="button button-primary" href="https://discord.gg/RHq6DXMcC" rel="noopener" aria-describedby="download-note" data-magnetic>Join the Discord <span class="button-sub">Early access</span></a>
             <a class="button button-ghost" href="/community/" data-magnetic>Community &amp; support <span class="arrow" aria-hidden="true">→</span></a>
           </div>
-          <p id="download-note" class="small muted">No sign-up form yet. When early access opens, this page is where it opens.</p>
+          <p id="download-note" class="small muted">No sign-up form. Ask on Discord; when public downloads open, this page is where they open.</p>
         </div>
         <div class="cta-art" aria-hidden="true" data-parallax="0.12">
           <img src="/assets/loaf-640.webp" width="640" height="640" alt="" loading="lazy">

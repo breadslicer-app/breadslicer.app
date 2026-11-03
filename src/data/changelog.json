@@ -1,6 +1,10 @@
 {
  "_note": "Newest first. Dates are when the change landed in the development build. Plain wording for people who print, not for developers.",
  "entries": [
+  { "date": "2026-11-03", "area": "Import", "title": "Open files into the running app", "text": "Launch Breadslicer with several model files and they arrive in one scene, each with its file name. With the app already open, new files go to the window you used last instead of starting a second copy." },
+  { "date": "2026-11-03", "area": "Editor", "title": "Copy and paste keeps your prep", "text": "A pasted object brings its hollow and drains, its own editable supports with your hand edits, and its height. One undo takes it all back." },
+  { "date": "2026-11-03", "area": "Supports", "title": "Add braces by hand", "text": "A new Brace tool (C) joins two supports with two clicks, with a green or red preview that says why. Remove takes out a single brace, and every brace is one undo." },
+  { "date": "2026-11-03", "area": "Transform", "title": "World and model size side by side", "text": "When a model is tilted, the Size card shows its size in the world next to its own size. Both can be edited." },
   { "date": "2026-11-02", "area": "Editor", "title": "The first click on an imported model is instant", "text": "Everything needed to pick a model with the mouse is now prepared while the file loads, so the first click no longer stalls on big miniatures." },
   { "date": "2026-11-02", "area": "Editor", "title": "The start screen comes back on an empty scene", "text": "Delete the last object or close the scene and the start screen returns, with your recent files. Ctrl+Z brings everything back." },
   { "date": "2026-11-02", "area": "Review", "title": "Fix all works in the background", "text": "Fix all no longer freezes the window on scenes with hundreds of findings. It shows its progress and can be cancelled; the result is the same as before." },

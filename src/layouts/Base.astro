@@ -83,7 +83,7 @@ const brandHref = isHome ? "#top" : "/";
         {nav.map((item) => (
           <a href={item.href} aria-current={here.startsWith(item.href) ? "page" : undefined}>{t(item.key)}</a>
         ))}
-        <a class="button button-small" href="/#download" data-magnetic>{t("nav.cta")}</a>
+        <a class="button button-small" href="https://discord.gg/RHq6DXMcC" rel="noopener" data-magnetic>{t("nav.cta")}</a>
       </nav>
     </div>
   </header>
@@ -118,7 +118,7 @@ const brandHref = isHome ? "#top" : "/";
         <a href="https://ko-fi.com/synrg" rel="noopener">Ko-fi</a>
       </nav>
       <p class="footer-legal small muted">
-        {t("footer.legal")}
+        {t("footer.legal")} <a href="https://github.com/breadslicer-app/breadslicer" rel="noopener">{t("footer.credits")}</a>
       </p>
     </div>
   </footer>

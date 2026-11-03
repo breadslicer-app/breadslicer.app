@@ -28,6 +28,7 @@ export const ui = {
     "footer.project": "Project",
     "footer.community": "Community",
     "footer.legal": "Free software under the AGPL-3.0. © 2026 SynrgStudio.",
+    "footer.credits": "Credits and attribution are on GitHub.",
     "footer.validation": "Printer files are checked by reading them back with UVtools, an open-source resin file tool.",
     "draft": "Draft",
     "updated": "Updated",
