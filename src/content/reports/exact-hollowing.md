@@ -2,7 +2,7 @@
 title: "Exact hollowing: the preview is the result"
 summary: Why the cavity Breadslicer shows and the cavity it makes used to differ by millimetres, and the three changes that made them the same mesh.
 date: 2026-11-02
-draft: true
+draft: false
 tags: [hollow, geometry, method]
 ---
 
@@ -61,4 +61,4 @@ Two interleaved runs per figure, on our development machine (Ryzen 7 5800X, 32 G
 - **Memory.** The grid is capped by memory (1 GiB), not by a fixed size. On a very large model the voxel grows to fit, and the summary says so.
 - **Thin parts stay solid.** Where the model is thinner than twice the wall, there is no cavity to make, and none is shown.
 
-*This report is a draft. Numbers come from our own measurements of development builds and will be updated when a public build ships.*
+*Numbers come from our own measurements of development builds and will be updated when a public build ships.*

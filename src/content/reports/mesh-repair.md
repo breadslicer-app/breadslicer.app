@@ -2,7 +2,7 @@
 title: Mesh repair that makes broken models printable
 summary: How Repair turns models a slicer cannot cut into models that slice, what it refuses to do, and how we measure it on 170 meshes.
 date: 2026-11-02
-draft: true
+draft: false
 tags: [repair, geometry, method]
 ---
 
@@ -64,4 +64,4 @@ Since the slicer learned to separate touching solids on its own, 7 real meshes a
 
 Repair now shows what it did, object by object, with progress and Cancel, and marks what it could not fix on the model. For models that are beyond repair, rebuilding the surface (clearly labelled as such, because it moves the surface) is on the [roadmap](/roadmap/) for later.
 
-*This report is a draft. Numbers come from our own measurements of development builds and will be updated when a public build ships.*
+*Numbers come from our own measurements of development builds and will be updated when a public build ships.*
