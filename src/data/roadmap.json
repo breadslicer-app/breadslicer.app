@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T23:17:03Z",
+ "generated": "2026-11-03T23:20:50Z",
  "columns": [
   "In progress",
   "Next",
@@ -12,9 +12,9 @@
   "In progress": 3,
   "Next": 13,
   "Quick wins": 8,
-  "Backlog": 110,
+  "Backlog": 100,
   "Later": 12,
-  "Done": 143
+  "Done": 146
  },
  "items": [
   {
@@ -1171,23 +1171,23 @@
   },
   {
    "title": "Supports tab with speculative computation and staged caching",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "UI redesign: Transform → Hollow / Supports → Slice → Export",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: editor",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "Full supports panel, lift and tuned presets",
@@ -1211,23 +1211,13 @@
   },
   {
    "title": "breadslicer-app/breadslicer repo, GitHub issues and microPRs",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: project",
     "roadmap"
    ],
-   "closed": null
-  },
-  {
-   "title": "Specify the first vertical milestone for manual supports",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: supports",
-    "roadmap"
-   ],
-   "closed": null
+   "closed": "2026-11-03"
   },
   {
    "title": "Maintaining the index, evidence and board with each delivery",
@@ -1314,66 +1304,6 @@
    "column": "Backlog",
    "labels": [
     "area: analysis",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Persistent parametric model and support geometry",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: supports",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Support paths and volumetric collisions",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: supports",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Editable minis, parenting and bracing",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: supports",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Island pipeline and autosupport with editable results",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: supports",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Automatic contact distribution with exclusions",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: supports",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Automatic graph construction and local repair",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: supports",
     "roadmap"
    ],
    "closed": null
