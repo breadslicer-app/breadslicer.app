@@ -18,15 +18,16 @@ const toc = headings.filter((h) => h.depth === 2);
     {report.data.title}
   </PageHead>
 
-  {report.data.draft && (
-    <div class="callout draft-banner narrow">
-      <p><strong>Draft.</strong> This report is still being written and checked. Numbers may be updated.</p>
-    </div>
-  )}
-
   <section class="section section-plain" aria-label="Report">
     <div class="article">
-      <article class="prose"><Content /></article>
+      <div class="article-main">
+        {report.data.draft && (
+          <div class="callout draft-banner">
+            <p><strong>Draft.</strong> This report is still being written and checked. Numbers may be updated.</p>
+          </div>
+        )}
+        <article class="prose"><Content /></article>
+      </div>
       <aside class="article-aside">
         <div><span class="label">Published</span><br />{formatDate(report.data.date)}</div>
         <nav class="toc" aria-label="On this page">
@@ -36,4 +37,29 @@ const toc = headings.filter((h) => h.depth === 2);
       </aside>
     </div>
   </section>
+  <script>
+    // Light up the table-of-contents entry of the section being read.
+    const links = [...document.querySelectorAll<HTMLAnchorElement>(".toc a")];
+    const sections = links
+      .map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))))
+      .filter((el): el is HTMLElement => el !== null);
+    let queued = false;
+    function update() {
+      queued = false;
+      const line = window.innerHeight * 0.3;
+      let current = -1;
+      sections.forEach((el, i) => {
+        if (el.getBoundingClientRect().top <= line) current = i;
+      });
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom && sections.length) current = sections.length - 1;
+      links.forEach((link, i) => link.classList.toggle("is-active", i === current));
+    }
+    function queue() {
+      if (!queued) { queued = true; requestAnimationFrame(update); }
+    }
+    window.addEventListener("scroll", queue, { passive: true });
+    window.addEventListener("resize", queue);
+    update();
+  </script>
 </Base>

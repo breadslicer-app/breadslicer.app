@@ -130,9 +130,11 @@ a.card:hover { border-color: rgba(var(--accent-rgb), .55); }
 .article-aside { position: sticky; top: 96px; display: grid; gap: 14px; font-size: .88rem; color: var(--text-dim); }
 .article-aside .label { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
 .toc { display: grid; gap: 6px; padding-left: 12px; border-left: 1px solid var(--line); }
-.toc a { color: var(--text-dim); }
+.toc a { color: var(--text-dim); margin-left: -13px; padding-left: 12px; border-left: 1px solid transparent; transition: color .25s ease, border-color .25s ease; }
 .toc a:hover { color: var(--cream); }
-.draft-banner { margin: 0 var(--gutter) clamp(28px, 4vw, 44px); }
+.toc a.is-active { color: var(--cream); border-left-color: var(--accent); }
+.article-main { min-width: 0; }
+.draft-banner { margin: 0 0 clamp(28px, 4vw, 44px); }
 @media (max-width: 960px) {
   .article { grid-template-columns: minmax(0, 1fr); }
   .article-aside { position: static; order: -1; }
