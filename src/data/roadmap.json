@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T01:26:26Z",
+ "generated": "2026-11-04T09:22:37Z",
  "columns": [
   "In progress",
   "Next",
@@ -10,11 +10,11 @@
  ],
  "counts": {
   "In progress": 2,
-  "Next": 15,
+  "Next": 17,
   "Quick wins": 9,
   "Backlog": 99,
   "Later": 12,
-  "Done": 147
+  "Done": 151
  },
  "items": [
   {
@@ -29,42 +29,102 @@
   },
   {
    "title": "Surface paint infrastructure",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-04"
   },
   {
    "title": "Protect-detail brush in the orient tool",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-04"
   },
   {
-   "title": "G from the Top view also moves the model in Z",
-   "state": "open",
-   "column": "Next",
+   "title": "G and R with no axis match the aligned view exactly",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-04"
   },
   {
    "title": "Layer view with zoom and pan",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: slicing",
     "roadmap"
+   ],
+   "closed": "2026-11-04"
+  },
+  {
+   "title": "Large hollowed scenes: measure and speed up supports, Slice, Fix all and saving",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: performance"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Fix all never fills a hollow: warn about suction cups, don't repair them",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Save as 3MF aborts the app on a large slice",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "bug",
+    "area: persistence"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Review: one sweep per layer, the model plus support tips",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: performance"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Fix all works on the list, with one quick Review at the end",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: performance"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Layer view: real printer pixels",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: slicing"
    ],
    "closed": null
   },
