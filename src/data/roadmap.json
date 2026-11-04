@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T23:20:50Z",
+ "generated": "2026-11-04T01:26:26Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,23 +9,23 @@
   "Done"
  ],
  "counts": {
-  "In progress": 3,
-  "Next": 13,
-  "Quick wins": 8,
-  "Backlog": 100,
+  "In progress": 2,
+  "Next": 15,
+  "Quick wins": 9,
+  "Backlog": 99,
   "Later": 12,
-  "Done": 146
+  "Done": 147
  },
  "items": [
   {
    "title": "Live overhang map in the viewport",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: editor",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-04"
   },
   {
    "title": "Surface paint infrastructure",
@@ -44,6 +44,27 @@
    "labels": [
     "enhancement",
     "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "G from the Top view also moves the model in Z",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "bug",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Layer view with zoom and pan",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "bug",
+    "area: slicing",
+    "roadmap"
    ],
    "closed": null
   },
@@ -1195,16 +1216,6 @@
    "column": "Backlog",
    "labels": [
     "area: supports",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Layer view with zoom and pan",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: slicing",
     "roadmap"
    ],
    "closed": null
@@ -2710,6 +2721,15 @@
     "area: editor"
    ],
    "closed": "2026-11-03"
+  },
+  {
+   "title": "Orient ignores the overhang angle of zone presets",
+   "state": "open",
+   "column": "Quick wins",
+   "labels": [
+    "bug"
+   ],
+   "closed": null
   }
  ]
 }
