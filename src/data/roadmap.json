@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T09:22:37Z",
+ "generated": "2026-11-04T23:44:00Z",
  "columns": [
   "In progress",
   "Next",
@@ -10,9 +10,9 @@
  ],
  "counts": {
   "In progress": 2,
-  "Next": 17,
-  "Quick wins": 9,
-  "Backlog": 99,
+  "Next": 20,
+  "Quick wins": 10,
+  "Backlog": 100,
   "Later": 12,
   "Done": 151
  },
@@ -2788,6 +2788,56 @@
    "column": "Quick wins",
    "labels": [
     "bug"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Resin volume counts overlapping supports twice",
+   "state": "open",
+   "column": "Quick wins",
+   "labels": [
+    "bug",
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Smaller raft footprint and a line raft in the presets",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Optional grid for support trunks with a configurable spacing",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "After Slice, offer to add supports to the unsupported islands",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Review re-checks only what changed after Fix all",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: performance"
    ],
    "closed": null
   }
