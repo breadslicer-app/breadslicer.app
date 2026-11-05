@@ -1,0 +1,89 @@
+---
+import Base from "../layouts/Base.astro";
+import PageHead from "../components/PageHead.astro";
+
+const repo = "https://github.com/breadslicer-app/breadslicer";
+---
+<Base title="Credits and licenses" description="Breadslicer is free software under the AGPL-3.0. The projects it is built on, what each one contributed, and how to get the source code.">
+  <PageHead eyebrow="Credits" lede="Breadslicer is free software. It is built on other free software, and this page says which, what each project contributed, and under which license. The same notices ship inside the source code and every build.">
+    Built on <em>free software.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="License">
+    <div class="wrap two-col">
+      <div class="prose">
+        <h2 style="margin-top:0;padding-top:0;border-top:0">The license</h2>
+        <p>Breadslicer is licensed under the <strong>GNU Affero General Public License, version 3</strong> (AGPL-3.0). You can use it, study it, change it and share it, and anyone who receives a build of it is entitled to the complete source code under the same terms.</p>
+        <p>The source code is public on GitHub: <a href={repo} rel="noopener">github.com/breadslicer-app/breadslicer</a>. Every build we distribute names the commit it was made from (<span class="menu-path">Help › Export Diagnostics…</span> shows it), and the repository carries the full license text, the <code>NOTICE</code> files and every third-party notice.</p>
+        <p>Some libraries written for Breadslicer are licensed more permissively (Apache-2.0 or MIT) so they can be reused in other projects; each crate states its own license in its <code>Cargo.toml</code>.</p>
+        <h2>Lineage</h2>
+        <p>Breadslicer started as a fork of <strong>SoulCrafted Slicer</strong>, and its support and hollowing engines were ported from <strong>DragonFruit</strong>. From there it grew its own review, repair, orientation, arrangement, manual-support editing, hollowing and project format. We are grateful to the projects below: without them Breadslicer would not exist.</p>
+      </div>
+      <div class="prose">
+        <h2 style="margin-top:0;padding-top:0;border-top:0">Get the source</h2>
+        <ul>
+          <li><a href={repo} rel="noopener">Browse or clone the repository</a> on GitHub.</li>
+          <li>The <code>NOTICE</code> at the root lists every third-party project; each ported crate has its own <code>NOTICE</code> with the exact files, versions and commits it was ported from.</li>
+          <li>Printer files written by Breadslicer are checked by reading them back with UVtools.</li>
+        </ul>
+        <p class="muted small">If you received a Breadslicer build and cannot reach the source, write to us on <a href="/community/">Discord</a> and we will send it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-plain" aria-label="Projects Breadslicer is built on">
+    <div class="wrap">
+      <p class="kicker">Projects Breadslicer is built on</p>
+      <div class="prose" style="max-width:none">
+        <table>
+          <thead>
+            <tr><th>Project</th><th>What it contributed</th><th>License</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>SoulCrafted Slicer</strong><br><span class="muted small">MyMiniFactory Ltd, CTRLback SCCL</span><br><a href="https://codeberg.org/SoulCrafted/Slicer" rel="noopener">codeberg.org/SoulCrafted/Slicer</a></td>
+              <td>The codebase Breadslicer is forked from: the application shell, the slicing core and several of its libraries.</td>
+              <td>AGPL-3.0, with libraries under Apache-2.0</td>
+            </tr>
+            <tr>
+              <td><strong>DragonFruit</strong><br><span class="muted small">Open Resin Alliance and contributors</span><br><a href="https://github.com/Open-Resin-Alliance/DragonFruit" rel="noopener">github.com/Open-Resin-Alliance/DragonFruit</a></td>
+              <td>The support system (a file-by-file port to Rust) and the voxel hollowing engine (ported from its MIT mesh crates). The first Anycubic and ELEGOO printer profiles and their product images came from its printer plugins.</td>
+              <td>Support system AGPL-3.0-or-later; mesh crates MIT</td>
+            </tr>
+            <tr>
+              <td><strong>UVtools</strong><br><span class="muted small">PTRTECH, Tiago Conceição (sn4k3) and contributors</span><br><a href="https://github.com/sn4k3/UVtools" rel="noopener">github.com/sn4k3/UVtools</a></td>
+              <td>The Creality CXDLP, ChiTuBox CTB (versions 2 to 4), Anycubic ZIP and Anycubic binary printer-file writers, ported to Rust from v7.1.1. The bundled printer profiles are converted from the PrusaSlicer profiles UVtools ships. UVtools also reads our files back to validate them.</td>
+              <td>AGPL-3.0-or-later</td>
+            </tr>
+            <tr>
+              <td><strong>three.js</strong> and <strong>three-mesh-bvh</strong><br><span class="muted small">three.js authors; Garrett Johnson</span></td>
+              <td>The subset of their math and bounding-volume code the ported support system relies on, transliterated to Rust so results match.</td>
+              <td>MIT</td>
+            </tr>
+            <tr>
+              <td><strong>fdlibm</strong><br><span class="muted small">Sun Microsystems</span></td>
+              <td>sin and cos as JavaScript engines compute them, so the ported support system places supports identically.</td>
+              <td>Sun permission notice</td>
+            </tr>
+            <tr>
+              <td><strong>meshoptimizer</strong><br><span class="muted small">Arseny Kapoulkine</span></td>
+              <td>Lossless mesh encoding inside the <a href="/bread-format/"><code>.bread</code></a> project format.</td>
+              <td>MIT</td>
+            </tr>
+            <tr>
+              <td><strong>Zstandard</strong><br><span class="muted small">Meta Platforms</span></td>
+              <td>Compression of every block of a <code>.bread</code> file.</td>
+              <td>BSD</td>
+            </tr>
+            <tr>
+              <td><strong>Slint</strong>, <strong>wgpu</strong> and the Rust ecosystem</td>
+              <td>The user interface toolkit, the 3D viewport, and the many crates listed in <code>Cargo.lock</code>.</td>
+              <td>Each under its own license, recorded in the repository</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="muted small" style="margin-top:18px">Printer and resin settings bundled with Breadslicer come from the public tables the manufacturers publish (Anycubic, ELEGOO, Creality) and from the UVtools printer catalogue, and are attributed to them in the profile files. Breadslicer contains no code from any closed-source slicer.</p>
+      </div>
+    </div>
+  </section>
+</Base>
