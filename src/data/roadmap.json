@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T23:44:00Z",
+ "generated": "2026-11-05T06:54:50Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,10 +9,10 @@
   "Done"
  ],
  "counts": {
-  "In progress": 2,
-  "Next": 20,
+  "In progress": 8,
+  "Next": 16,
   "Quick wins": 10,
-  "Backlog": 100,
+  "Backlog": 104,
   "Later": 12,
   "Done": 151
  },
@@ -91,7 +91,7 @@
   {
    "title": "Save as 3MF aborts the app on a large slice",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "bug",
     "area: persistence"
@@ -101,7 +101,7 @@
   {
    "title": "Review: one sweep per layer, the model plus support tips",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: performance"
@@ -111,7 +111,7 @@
   {
    "title": "Fix all works on the list, with one quick Review at the end",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: performance"
@@ -2824,7 +2824,7 @@
   {
    "title": "After Slice, offer to add supports to the unsupported islands",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -2838,6 +2838,63 @@
    "labels": [
     "enhancement",
     "area: performance"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Hide \"Save as 3MF\" for now; projects are .bread",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Cut along a stroke drawn over the model",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "idea"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Lasso cut: draw a closed curve on the surface and cut that region",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "idea"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Magnet slots instead of pins on a cut",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "idea"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Suggest where to cut a model from its creases and contours",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: geometry",
+    "idea"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Adding supports needs no generated set first: Fix all asks for a preset, hand-placed tips start their own set",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: supports"
    ],
    "closed": null
   }
