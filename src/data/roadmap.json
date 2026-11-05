@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T15:32:33Z",
+ "generated": "2026-11-05T22:04:48Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 9,
-  "Next": 16,
-  "Quick wins": 10,
-  "Backlog": 104,
+  "In progress": 2,
+  "Next": 18,
+  "Quick wins": 12,
+  "Backlog": 110,
   "Later": 12,
-  "Done": 151
+  "Done": 158
  },
  "items": [
   {
@@ -80,43 +80,43 @@
   },
   {
    "title": "Fix all never fills a hollow: warn about suction cups, don't repair them",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-05"
   },
   {
    "title": "Save as 3MF aborts the app on a large slice",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: persistence"
    ],
-   "closed": null
+   "closed": "2026-11-05"
   },
   {
    "title": "Review: one sweep per layer, the model plus support tips",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: performance"
    ],
-   "closed": null
+   "closed": "2026-11-05"
   },
   {
    "title": "Fix all works on the list, with one quick Review at the end",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: performance"
    ],
-   "closed": null
+   "closed": "2026-11-05"
   },
   {
    "title": "Layer view: real printer pixels",
@@ -2823,13 +2823,13 @@
   },
   {
    "title": "After Slice, offer to add supports to the unsupported islands",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-05"
   },
   {
    "title": "Review re-checks only what changed after Fix all",
@@ -2843,10 +2843,10 @@
   },
   {
    "title": "Hide \"Save as 3MF\" for now; projects are .bread",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-05"
   },
   {
    "title": "Cut along a stroke drawn over the model",
@@ -2890,13 +2890,13 @@
   },
   {
    "title": "Adding supports needs no generated set first: Fix all asks for a preset, hand-placed tips start their own set",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-05"
   },
   {
    "title": "A better, faster support engine of our own",
@@ -2904,6 +2904,97 @@
    "column": "In progress",
    "labels": [
     "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Hollow records its engine version and stretch",
+   "state": "open",
+   "column": "Quick wins",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Drill a drain on the current mesh, without hollowing again",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Hollow: clear errors, no lost clicks",
+   "state": "open",
+   "column": "Quick wins",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Edit drains: remove or move one",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Faster hollow session, same result",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Guaranteed wall: never thinner than asked",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Hollow: overlapping parts and buried faces",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Hollow: minimum cavity width",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Drain tool: a colour map of where a drain would work best",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Review: offer to delete a small island no support can reach",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: analysis"
    ],
    "closed": null
   }
