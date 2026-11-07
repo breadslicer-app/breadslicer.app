@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-05T22:04:48Z",
+ "generated": "2026-11-07T02:53:05Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,10 +9,10 @@
   "Done"
  ],
  "counts": {
-  "In progress": 2,
-  "Next": 18,
+  "In progress": 3,
+  "Next": 23,
   "Quick wins": 12,
-  "Backlog": 110,
+  "Backlog": 116,
   "Later": 12,
   "Done": 158
  },
@@ -2995,6 +2995,114 @@
    "labels": [
     "enhancement",
     "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 0: measure first",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 1: trunks on a grid",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 2: contacts",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 3: the tip and its pieces",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 4: bracing and safety",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 5: first print",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 6: islands",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 7: figures and large scenes",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 8: presets and raft",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 9: editing tools",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 10: physics",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Support engine phase 11: pre-supported and internal",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: supports"
    ],
    "closed": null
   }
