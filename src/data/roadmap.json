@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-07T20:56:16Z",
+ "generated": "2026-11-08T00:42:55Z",
  "columns": [
   "In progress",
   "Next",
@@ -14,7 +14,7 @@
   "Quick wins": 13,
   "Backlog": 117,
   "Later": 12,
-  "Done": 158
+  "Done": 159
  },
  "items": [
   {
@@ -3126,6 +3126,16 @@
     "area: supports"
    ],
    "closed": null
+  },
+  {
+   "title": "Repair leaves the supports of the repaired model out of date without saying so",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
+   "closed": "2026-11-07"
   }
  ]
 }
