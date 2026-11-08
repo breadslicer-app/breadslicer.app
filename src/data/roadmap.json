@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T07:26:22Z",
+ "generated": "2026-11-08T15:18:24Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,9 +9,9 @@
   "Done"
  ],
  "counts": {
-  "In progress": 4,
+  "In progress": 5,
   "Next": 22,
-  "Quick wins": 13,
+  "Quick wins": 12,
   "Backlog": 117,
   "Later": 12,
   "Done": 161
@@ -3119,7 +3119,7 @@
   {
    "title": "Fix All and the Yes answer freeze the window on a plate of several models",
    "state": "open",
-   "column": "Quick wins",
+   "column": "In progress",
    "labels": [
     "bug",
     "area: performance",
