@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T00:42:55Z",
+ "generated": "2026-11-08T07:26:22Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 3,
-  "Next": 23,
+  "In progress": 4,
+  "Next": 22,
   "Quick wins": 13,
   "Backlog": 117,
   "Later": 12,
-  "Done": 159
+  "Done": 161
  },
  "items": [
   {
@@ -3000,17 +3000,17 @@
   },
   {
    "title": "Support engine phase 0: measure first",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-08"
   },
   {
    "title": "Support engine phase 1: trunks on a grid",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -3136,6 +3136,24 @@
     "area: supports"
    ],
    "closed": "2026-11-07"
+  },
+  {
+   "title": "Support test plate to choose tip sizes and cone lengths",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-11-08"
+  },
+  {
+   "title": "Plate and raft fade out when the camera is under the plate",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
   }
  ]
 }
