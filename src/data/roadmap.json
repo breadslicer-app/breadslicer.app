@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T15:18:24Z",
+ "generated": "2026-11-08T20:31:38Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 5,
+  "In progress": 3,
   "Next": 22,
   "Quick wins": 12,
   "Backlog": 117,
   "Later": 12,
-  "Done": 161
+  "Done": 164
  },
  "items": [
   {
@@ -3009,12 +3009,12 @@
   },
   {
    "title": "Support engine phase 1: trunks on a grid",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-08"
   },
   {
    "title": "Support engine phase 2: contacts",
@@ -3118,14 +3118,14 @@
   },
   {
    "title": "Fix All and the Yes answer freeze the window on a plate of several models",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: performance",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-08"
   },
   {
    "title": "Repair leaves the supports of the repaired model out of date without saying so",
@@ -3148,6 +3148,15 @@
   },
   {
    "title": "Plate and raft fade out when the camera is under the plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-11-08"
+  },
+  {
+   "title": "Overhang map in the Supports and Slice tabs",
    "state": "open",
    "column": "In progress",
    "labels": [
