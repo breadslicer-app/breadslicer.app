@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T20:31:38Z",
+ "generated": "2026-11-09T00:56:56Z",
  "columns": [
   "In progress",
   "Next",
@@ -14,7 +14,7 @@
   "Quick wins": 12,
   "Backlog": 117,
   "Later": 12,
-  "Done": 164
+  "Done": 167
  },
  "items": [
   {
@@ -3157,6 +3157,35 @@
   },
   {
    "title": "Overhang map in the Supports and Slice tabs",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-11-08"
+  },
+  {
+   "title": "The view flips upside down when orbiting to the bottom",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: editor"
+   ],
+   "closed": "2026-11-08"
+  },
+  {
+   "title": "The slice view leaves specks of the part above the layer",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: editor"
+   ],
+   "closed": "2026-11-08"
+  },
+  {
+   "title": "Supports tab offers only the zone presets, Minis 30 mm+ by default",
    "state": "open",
    "column": "In progress",
    "labels": [
