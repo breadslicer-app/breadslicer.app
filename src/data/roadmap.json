@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T00:56:56Z",
+ "generated": "2026-11-09T08:02:02Z",
  "columns": [
   "In progress",
   "Next",
@@ -14,7 +14,7 @@
   "Quick wins": 12,
   "Backlog": 117,
   "Later": 12,
-  "Done": 167
+  "Done": 171
  },
  "items": [
   {
@@ -3186,6 +3186,43 @@
   },
   {
    "title": "Supports tab offers only the zone presets, Minis 30 mm+ by default",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-11-09"
+  },
+  {
+   "title": "Add support by hand reads the surface a tip covers, not the facet under the cursor",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
+   "closed": "2026-11-09"
+  },
+  {
+   "title": "Supports tab box to keep the raft shown from under the plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-11-09"
+  },
+  {
+   "title": "Supports drawn as dotted lines from under the plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": "2026-11-09"
+  },
+  {
+   "title": "The overhang map reads the surface around each point, not each facet",
    "state": "open",
    "column": "In progress",
    "labels": [
