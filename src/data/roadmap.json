@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T08:02:02Z",
+ "generated": "2026-11-09T18:51:32Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,9 +9,9 @@
   "Done"
  ],
  "counts": {
-  "In progress": 3,
-  "Next": 22,
-  "Quick wins": 12,
+  "In progress": 7,
+  "Next": 19,
+  "Quick wins": 11,
   "Backlog": 117,
   "Later": 12,
   "Done": 171
@@ -131,7 +131,7 @@
   {
    "title": "Recognize pre-supported files on import",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports",
@@ -142,7 +142,7 @@
   {
    "title": "Imported supports follow their model; remove or replace them",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -152,7 +152,7 @@
   {
    "title": "Select and remove single imported supports",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: editor",
@@ -2785,7 +2785,7 @@
   {
    "title": "Orient ignores the overhang angle of zone presets",
    "state": "open",
-   "column": "Quick wins",
+   "column": "In progress",
    "labels": [
     "bug"
    ],
