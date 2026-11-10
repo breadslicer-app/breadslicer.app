@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T18:51:32Z",
+ "generated": "2026-11-10T02:11:32Z",
  "columns": [
   "In progress",
   "Next",
@@ -14,7 +14,7 @@
   "Quick wins": 11,
   "Backlog": 117,
   "Later": 12,
-  "Done": 171
+  "Done": 173
  },
  "items": [
   {
@@ -3223,12 +3223,32 @@
   },
   {
    "title": "The overhang map reads the surface around each point, not each facet",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
+   "closed": "2026-11-09"
+  },
+  {
+   "title": "Too many tips on a small curled overhang (fingertips)",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
    "closed": null
+  },
+  {
+   "title": "Walk the layers with the keyboard in the Slice tab",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: ux"
+   ],
+   "closed": "2026-11-10"
   }
  ]
 }
