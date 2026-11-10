@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T02:11:32Z",
+ "generated": "2026-11-10T17:54:39Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 7,
-  "Next": 19,
+  "In progress": 4,
+  "Next": 20,
   "Quick wins": 11,
   "Backlog": 117,
   "Later": 12,
-  "Done": 173
+  "Done": 178
  },
  "items": [
   {
@@ -130,35 +130,35 @@
   },
   {
    "title": "Recognize pre-supported files on import",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports",
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-10"
   },
   {
    "title": "Imported supports follow their model; remove or replace them",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-10"
   },
   {
    "title": "Select and remove single imported supports",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-10"
   },
   {
    "title": "Convert imported supports into editable supports",
@@ -2784,12 +2784,12 @@
   },
   {
    "title": "Orient ignores the overhang angle of zone presets",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug"
    ],
-   "closed": null
+   "closed": "2026-11-10"
   },
   {
    "title": "Resin volume counts overlapping supports twice",
@@ -3232,13 +3232,13 @@
   },
   {
    "title": "Too many tips on a small curled overhang (fingertips)",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-10"
   },
   {
    "title": "Walk the layers with the keyboard in the Slice tab",
@@ -3249,6 +3249,34 @@
     "area: ux"
    ],
    "closed": "2026-11-10"
+  },
+  {
+   "title": "Large support sets are sliced with three- and six-sided shafts",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "UI first set: inventory and visual direction",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": null
+  },
+  {
+   "title": "UI kit in the chosen direction: theme, shared controls",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": null
   }
  ]
 }
