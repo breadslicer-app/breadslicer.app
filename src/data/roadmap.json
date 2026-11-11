@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T17:54:39Z",
+ "generated": "2026-11-11T06:33:41Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 4,
+  "In progress": 2,
   "Next": 20,
   "Quick wins": 11,
   "Backlog": 117,
   "Later": 12,
-  "Done": 178
+  "Done": 182
  },
  "items": [
   {
@@ -511,13 +511,13 @@
   },
   {
    "title": "Lasso tool to cut regions out of the hollow cavity",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: hollow"
    ],
-   "closed": null
+   "closed": "2026-11-11"
   },
   {
    "title": "More hollow infill patterns: gyroid and honeycomb",
@@ -3262,21 +3262,39 @@
   },
   {
    "title": "UI first set: inventory and visual direction",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: ui"
+   ],
+   "closed": "2026-11-11"
+  },
+  {
+   "title": "UI kit in the chosen direction: theme, shared controls",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": "2026-11-11"
+  },
+  {
+   "title": "Save meshes as MESH v2 through the bread-format crate",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: file formats"
    ],
    "closed": null
   },
   {
-   "title": "UI kit in the chosen direction: theme, shared controls",
-   "state": "open",
-   "column": "In progress",
+   "title": "Undo the drains and solid areas placed before hollowing",
+   "state": "closed",
+   "column": "Done",
    "labels": [
-    "area: ui"
+    "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-11"
   }
  ]
 }
