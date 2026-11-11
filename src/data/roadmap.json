@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T06:33:41Z",
+ "generated": "2026-11-11T15:18:46Z",
  "columns": [
   "In progress",
   "Next",
@@ -11,10 +11,10 @@
  "counts": {
   "In progress": 2,
   "Next": 20,
-  "Quick wins": 11,
-  "Backlog": 117,
+  "Quick wins": 10,
+  "Backlog": 111,
   "Later": 12,
-  "Done": 182
+  "Done": 189
  },
  "items": [
   {
@@ -271,7 +271,7 @@
   {
    "title": "Resin price, cost per print and per model",
    "state": "open",
-   "column": "Quick wins",
+   "column": "Done",
    "labels": [
     "area: profiles",
     "roadmap"
@@ -433,7 +433,7 @@
   {
    "title": "Smart raft: relief channels, peel tabs and drain holes",
    "state": "open",
-   "column": "Backlog",
+   "column": "Done",
    "labels": [
     "area: supports",
     "roadmap"
@@ -542,7 +542,7 @@
   {
    "title": "Exposure fade from bottom to normal layers",
    "state": "open",
-   "column": "Backlog",
+   "column": "Done",
    "labels": [
     "area: slicing",
     "roadmap"
@@ -884,30 +884,30 @@
   },
   {
    "title": "Use the bread-format crate next to the current one",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-11"
   },
   {
    "title": "Save supports and hollows with their model and original mesh",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-11"
   },
   {
    "title": "Move .bread open and save to the bread-format crate",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-11"
   },
   {
    "title": "Save a thumbnail in .bread files",
@@ -3280,12 +3280,12 @@
   },
   {
    "title": "Save meshes as MESH v2 through the bread-format crate",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-11"
   },
   {
    "title": "Undo the drains and solid areas placed before hollowing",
