@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T15:18:46Z",
+ "generated": "2026-11-11T22:43:48Z",
  "columns": [
   "In progress",
   "Next",
@@ -12,9 +12,9 @@
   "In progress": 2,
   "Next": 20,
   "Quick wins": 10,
-  "Backlog": 111,
+  "Backlog": 110,
   "Later": 12,
-  "Done": 189
+  "Done": 193
  },
  "items": [
   {
@@ -1044,13 +1044,13 @@
   },
   {
    "title": "Splitting components, cutting and geometry editing",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: geometry",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-11"
   },
   {
    "title": "Assembly keys when cutting a model",
@@ -3293,6 +3293,36 @@
    "column": "Done",
    "labels": [
     "area: editor"
+   ],
+   "closed": "2026-11-11"
+  },
+  {
+   "title": "Drop to plate does nothing with several objects selected",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: editor"
+   ],
+   "closed": "2026-11-11"
+  },
+  {
+   "title": "Small feet on the line raft instead of the root disks",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": "2026-11-11"
+  },
+  {
+   "title": "A new raft redraws the supports already made",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: supports"
    ],
    "closed": "2026-11-11"
   }
