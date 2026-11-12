@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T03:50:56Z",
+ "generated": "2026-11-12T12:48:41Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 10,
+  "In progress": 4,
   "Next": 20,
   "Quick wins": 10,
   "Backlog": 110,
   "Later": 12,
-  "Done": 193
+  "Done": 204
  },
  "items": [
   {
@@ -3329,7 +3329,7 @@
   {
    "title": "Interface and scene colours: light indicators, amber for the selection, a scene that separates model and supports",
    "state": "closed",
-   "column": "In progress",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: ui"
@@ -3339,7 +3339,7 @@
   {
    "title": "Show where supports are recommended while placing them by hand",
    "state": "closed",
-   "column": "In progress",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
@@ -3349,7 +3349,7 @@
   {
    "title": "Analyze islands from the Supports tab",
    "state": "closed",
-   "column": "In progress",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
@@ -3359,7 +3359,7 @@
   {
    "title": "Supports never ask to be made again",
    "state": "closed",
-   "column": "In progress",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
@@ -3369,7 +3369,7 @@
   {
    "title": "One question for several pre-supported files",
    "state": "closed",
-   "column": "In progress",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
@@ -3379,7 +3379,7 @@
   {
    "title": "Pre-supported import leaves branches of a bent trunk and loose balls with the model",
    "state": "closed",
-   "column": "In progress",
+   "column": "Done",
    "labels": [
     "bug"
    ],
@@ -3388,7 +3388,7 @@
   {
    "title": "Supports made for several models leave feet with nothing above them on the raft",
    "state": "closed",
-   "column": "In progress",
+   "column": "Done",
    "labels": [
     "bug"
    ],
@@ -3396,10 +3396,55 @@
   },
   {
    "title": "Line raft on a grid comes out open and the slicer refuses its supports",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Go to an island left in the Supports tab",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "The question on files with supports comes faster",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Paint the islands on the model instead of a ring",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Several plates in one scene",
    "state": "open",
    "column": "In progress",
    "labels": [
-    "bug"
+    "enhancement"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Plates in the scene: add, remove and pick one",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement"
    ],
    "closed": null
   }
