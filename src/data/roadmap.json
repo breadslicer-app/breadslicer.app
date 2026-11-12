@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T12:48:41Z",
+ "generated": "2026-11-12T20:51:39Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 4,
-  "Next": 20,
+  "In progress": 3,
+  "Next": 23,
   "Quick wins": 10,
   "Backlog": 110,
   "Later": 12,
-  "Done": 204
+  "Done": 210
  },
  "items": [
   {
@@ -3441,8 +3441,80 @@
   },
   {
    "title": "Plates in the scene: add, remove and pick one",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Slice, review and export one plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Fill plate on the active plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Send models to another plate, export every plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Shift on the plus tool duplicates the plate",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Alt-drag duplicates the model",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Arrange all adds plates for what does not fit",
    "state": "open",
-   "column": "In progress",
+   "column": "Next",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Research denser packing for Arrange",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Pack the plate under one raft for all",
+   "state": "open",
+   "column": "Next",
    "labels": [
     "enhancement"
    ],
