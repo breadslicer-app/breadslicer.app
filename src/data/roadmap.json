@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T22:43:48Z",
+ "generated": "2026-11-12T03:50:56Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,7 +9,7 @@
   "Done"
  ],
  "counts": {
-  "In progress": 2,
+  "In progress": 10,
   "Next": 20,
   "Quick wins": 10,
   "Backlog": 110,
@@ -3325,6 +3325,83 @@
     "area: supports"
    ],
    "closed": "2026-11-11"
+  },
+  {
+   "title": "Interface and scene colours: light indicators, amber for the selection, a scene that separates model and supports",
+   "state": "closed",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: ui"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Show where supports are recommended while placing them by hand",
+   "state": "closed",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Analyze islands from the Supports tab",
+   "state": "closed",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Supports never ask to be made again",
+   "state": "closed",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "One question for several pre-supported files",
+   "state": "closed",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Pre-supported import leaves branches of a bent trunk and loose balls with the model",
+   "state": "closed",
+   "column": "In progress",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Supports made for several models leave feet with nothing above them on the raft",
+   "state": "closed",
+   "column": "In progress",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Line raft on a grid comes out open and the slicer refuses its supports",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug"
+   ],
+   "closed": null
   }
  ]
 }
