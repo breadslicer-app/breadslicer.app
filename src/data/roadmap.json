@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T17:47:52Z",
+ "generated": "2026-11-13T23:37:22Z",
  "columns": [
   "In progress",
   "Next",
@@ -10,11 +10,11 @@
  ],
  "counts": {
   "In progress": 4,
-  "Next": 22,
+  "Next": 21,
   "Quick wins": 10,
   "Backlog": 111,
   "Later": 12,
-  "Done": 216
+  "Done": 217
  },
  "items": [
   {
@@ -3514,7 +3514,7 @@
   {
    "title": "Pack the plate under one raft for all",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement"
    ],
@@ -3549,13 +3549,13 @@
   },
   {
    "title": "Copies of a model share their supports while nothing changes",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-13"
   },
   {
    "title": "Progress as a technical ruler over a dimmed scene",
