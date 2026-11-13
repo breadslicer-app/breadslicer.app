@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T09:37:34Z",
+ "generated": "2026-11-13T17:47:52Z",
  "columns": [
   "In progress",
   "Next",
@@ -14,7 +14,7 @@
   "Quick wins": 10,
   "Backlog": 111,
   "Later": 12,
-  "Done": 215
+  "Done": 216
  },
  "items": [
   {
@@ -3548,9 +3548,9 @@
    "closed": "2026-11-13"
   },
   {
-   "title": "Turned support sessions share the model mesh instead of baking a copy",
+   "title": "Copies of a model share their supports while nothing changes",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -3568,11 +3568,20 @@
   },
   {
    "title": "Supports tab: see and edit the shape of a support",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
+   ],
+   "closed": "2026-11-13"
+  },
+  {
+   "title": "Select placed supports and edit them from the Manual supports page",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement"
    ],
    "closed": null
   }
