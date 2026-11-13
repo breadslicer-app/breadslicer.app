@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T20:51:39Z",
+ "generated": "2026-11-13T01:52:41Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 3,
-  "Next": 23,
+  "In progress": 4,
+  "Next": 21,
   "Quick wins": 10,
   "Backlog": 110,
   "Later": 12,
-  "Done": 210
+  "Done": 214
  },
  "items": [
   {
@@ -3432,12 +3432,12 @@
   },
   {
    "title": "Several plates in one scene",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-12"
   },
   {
    "title": "Plates in the scene: add, remove and pick one",
@@ -3495,17 +3495,17 @@
   },
   {
    "title": "Arrange all adds plates for what does not fit",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-12"
   },
   {
    "title": "Research denser packing for Arrange",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement"
    ],
@@ -3517,6 +3517,33 @@
    "column": "Next",
    "labels": [
     "enhancement"
+   ],
+   "closed": null
+  },
+  {
+   "title": "An imported model goes to the first plate with room, a new plate if none",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Object list: five rows, then it scrolls; the card folds",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: ui"
+   ],
+   "closed": "2026-11-12"
+  },
+  {
+   "title": "Arrange: keep the footprints between runs, worked out in the background",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "area: editor"
    ],
    "closed": null
   }
