@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T01:52:41Z",
+ "generated": "2026-11-13T09:37:34Z",
  "columns": [
   "In progress",
   "Next",
@@ -10,11 +10,11 @@
  ],
  "counts": {
   "In progress": 4,
-  "Next": 21,
+  "Next": 22,
   "Quick wins": 10,
-  "Backlog": 110,
+  "Backlog": 111,
   "Later": 12,
-  "Done": 214
+  "Done": 215
  },
  "items": [
   {
@@ -3540,10 +3540,39 @@
   },
   {
    "title": "Arrange: keep the footprints between runs, worked out in the background",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": "2026-11-13"
+  },
+  {
+   "title": "Turned support sessions share the model mesh instead of baking a copy",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Progress as a technical ruler over a dimmed scene",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Supports tab: see and edit the shape of a support",
    "state": "open",
    "column": "In progress",
    "labels": [
-    "area: editor"
+    "enhancement",
+    "area: supports"
    ],
    "closed": null
   }
