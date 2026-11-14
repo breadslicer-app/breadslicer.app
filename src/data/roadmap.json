@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T19:13:25Z",
+ "generated": "2026-11-14T23:02:02Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 9,
+  "In progress": 4,
   "Next": 20,
   "Quick wins": 7,
   "Backlog": 106,
   "Later": 12,
-  "Done": 223
+  "Done": 229
  },
  "items": [
   {
@@ -460,14 +460,14 @@
   },
   {
    "title": "Review: reuse per-layer results when re-slicing",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: quality",
     "area: performance"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Physical thickness under transforms and scaling",
@@ -802,13 +802,13 @@
   },
   {
    "title": "Viewport: upload only new meshes after a structural edit, off the UI thread, and share buffers between copies",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: performance"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Memory budgets: undo history, smooth-shading cache and editable support sessions",
@@ -822,14 +822,14 @@
   },
   {
    "title": "Plan the models of a plate in parallel",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: performance",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Fewer router column maps: quantize trunk diameters",
@@ -2833,13 +2833,13 @@
   },
   {
    "title": "Review re-checks only what changed after Fix all",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: performance"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Hide \"Save as 3MF\" for now; projects are .bread",
@@ -2945,12 +2945,12 @@
   },
   {
    "title": "Faster hollow session, same result",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: hollow"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Guaranteed wall: never thinner than asked",
@@ -3596,10 +3596,19 @@
   },
   {
    "title": "Fill bed packs a tilted model worse when it leans the other way",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-14"
+  },
+  {
+   "title": "Scene panel on the left, one place per setting",
    "state": "open",
    "column": "In progress",
    "labels": [
-    "bug"
+    "enhancement"
    ],
    "closed": null
   }
