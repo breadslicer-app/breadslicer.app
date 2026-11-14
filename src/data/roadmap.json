@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T06:32:40Z",
+ "generated": "2026-11-14T14:13:01Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 4,
+  "In progress": 8,
   "Next": 20,
-  "Quick wins": 9,
-  "Backlog": 111,
+  "Quick wins": 7,
+  "Backlog": 106,
   "Later": 12,
-  "Done": 220
+  "Done": 223
  },
  "items": [
   {
@@ -261,12 +261,12 @@
   },
   {
    "title": "Slice tab: no selection, no outlines through the model",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Resin price, cost per print and per model",
@@ -300,13 +300,13 @@
   },
   {
    "title": "Resin volume from the sliced layers",
-   "state": "open",
-   "column": "Quick wins",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: slicing",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Calculators: light-off delay, mm to px, optimal tilt",
@@ -461,7 +461,7 @@
   {
    "title": "Review: reuse per-layer results when re-slicing",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: quality",
@@ -803,7 +803,7 @@
   {
    "title": "Viewport: upload only new meshes after a structural edit, off the UI thread, and share buffers between copies",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: performance"
@@ -823,7 +823,7 @@
   {
    "title": "Plan the models of a plate in parallel",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: performance",
@@ -2793,13 +2793,13 @@
   },
   {
    "title": "Resin volume counts overlapping supports twice",
-   "state": "open",
-   "column": "Quick wins",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Smaller raft footprint and a line raft in the presets",
@@ -2834,7 +2834,7 @@
   {
    "title": "Review re-checks only what changed after Fix all",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: performance"
@@ -2946,7 +2946,7 @@
   {
    "title": "Faster hollow session, same result",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: hollow"
    ],
