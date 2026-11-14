@@ -12,7 +12,7 @@ export const ui = {
     "site.name": "Breadslicer",
     "site.tagline": "Native resin slicer",
     "site.description":
-      "Breadslicer is a native resin (MSLA) slicer written in Rust: supports, hollowing, repair and slicing that keep up with you. Early access.",
+      "Breadslicer is a native resin (MSLA) slicer written in Rust: supports, hollowing, repair and slicing that keep up with you. In development.",
     "skip": "Skip to content",
     "menu": "Menu",
     "nav.features": "Features",
