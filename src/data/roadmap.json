@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T23:37:22Z",
+ "generated": "2026-11-14T06:32:40Z",
  "columns": [
   "In progress",
   "Next",
@@ -10,11 +10,11 @@
  ],
  "counts": {
   "In progress": 4,
-  "Next": 21,
-  "Quick wins": 10,
+  "Next": 20,
+  "Quick wins": 9,
   "Backlog": 111,
   "Later": 12,
-  "Done": 217
+  "Done": 220
  },
  "items": [
   {
@@ -262,7 +262,7 @@
   {
    "title": "Slice tab: no selection, no outlines through the model",
    "state": "open",
-   "column": "Quick wins",
+   "column": "In progress",
    "labels": [
     "area: ui"
    ],
@@ -2803,13 +2803,13 @@
   },
   {
    "title": "Smaller raft footprint and a line raft in the presets",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "Optional grid for support trunks with a configurable spacing",
@@ -3513,12 +3513,12 @@
   },
   {
    "title": "Pack the plate under one raft for all",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-14"
   },
   {
    "title": "An imported model goes to the first plate with room, a new plate if none",
@@ -3584,6 +3584,15 @@
     "enhancement"
    ],
    "closed": null
+  },
+  {
+   "title": "A check box flips on the first click",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-14"
   }
  ]
 }
