@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-14T23:02:02Z",
+ "generated": "2026-11-15T11:02:01Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 4,
-  "Next": 20,
+  "In progress": 3,
+  "Next": 19,
   "Quick wins": 7,
   "Backlog": 106,
   "Later": 12,
-  "Done": 229
+  "Done": 232
  },
  "items": [
   {
@@ -120,13 +120,13 @@
   },
   {
    "title": "Layer view: real printer pixels",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: slicing"
    ],
-   "closed": null
+   "closed": "2026-11-15"
   },
   {
    "title": "Recognize pre-supported files on import",
@@ -3605,12 +3605,21 @@
   },
   {
    "title": "Scene panel on the left, one place per setting",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-15"
+  },
+  {
+   "title": "Call the view chip Scene settings",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-15"
   }
  ]
 }
