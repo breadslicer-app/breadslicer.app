@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T11:02:01Z",
+ "generated": "2026-11-16T02:47:30Z",
  "columns": [
   "In progress",
   "Next",
@@ -12,9 +12,9 @@
   "In progress": 3,
   "Next": 19,
   "Quick wins": 7,
-  "Backlog": 106,
+  "Backlog": 109,
   "Later": 12,
-  "Done": 232
+  "Done": 231
  },
  "items": [
   {
@@ -271,7 +271,7 @@
   {
    "title": "Resin price, cost per print and per model",
    "state": "open",
-   "column": "Done",
+   "column": "Backlog",
    "labels": [
     "area: profiles",
     "roadmap"
@@ -433,7 +433,7 @@
   {
    "title": "Smart raft: relief channels, peel tabs and drain holes",
    "state": "open",
-   "column": "Done",
+   "column": "Backlog",
    "labels": [
     "area: supports",
     "roadmap"
@@ -542,7 +542,7 @@
   {
    "title": "Exposure fade from bottom to normal layers",
    "state": "open",
-   "column": "Done",
+   "column": "Backlog",
    "labels": [
     "area: slicing",
     "roadmap"
@@ -3620,6 +3620,26 @@
     "enhancement"
    ],
    "closed": "2026-11-15"
+  },
+  {
+   "title": "Ctrl+1 to Ctrl+4 open the workflow tabs",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-15"
+  },
+  {
+   "title": "Announce releases and issue updates on Discord",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement",
+    "area: community",
+    "microPR"
+   ],
+   "closed": "2026-10-28"
   }
  ]
 }
