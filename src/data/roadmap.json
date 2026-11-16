@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T02:47:30Z",
+ "generated": "2026-11-16T11:31:50Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 3,
-  "Next": 19,
-  "Quick wins": 7,
-  "Backlog": 109,
+  "In progress": 6,
+  "Next": 18,
+  "Quick wins": 4,
+  "Backlog": 101,
   "Later": 12,
-  "Done": 231
+  "Done": 241
  },
  "items": [
   {
@@ -290,7 +290,7 @@
   {
    "title": "Release film and tilt in printer settings",
    "state": "open",
-   "column": "Quick wins",
+   "column": "Backlog",
    "labels": [
     "enhancement",
     "area: profiles",
@@ -330,13 +330,13 @@
   },
   {
    "title": "Keep brace and leaf ends inside their trunk",
-   "state": "open",
-   "column": "Quick wins",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "A window of its own to pick printers and resins, decoupled from Preferences",
@@ -348,7 +348,7 @@
   {
    "title": "Re-place culled supports and report what could not be supported",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "bug",
     "area: supports"
@@ -591,23 +591,23 @@
   },
   {
    "title": "Validity of persisted slices and AA on reopen",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: slicing",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "Validate CPU slicing on geometric edge cases",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: slicing",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "Consistency across the layer viewer, raster and export",
@@ -621,23 +621,23 @@
   },
   {
    "title": "Raster, AA, pixel pitch and orientation validation",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: slicing",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "Validate existing writers and update their catalog",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: printing",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "Time estimate with acceleration (trapezoidal) and two-stage lift",
@@ -813,7 +813,7 @@
   {
    "title": "Memory budgets: undo history, smooth-shading cache and editable support sessions",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: performance"
@@ -833,14 +833,14 @@
   },
   {
    "title": "Fewer router column maps: quantize trunk diameters",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: performance",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "Derived caches keyed by content, revision and transforms",
@@ -1205,7 +1205,7 @@
   {
    "title": "Re-place orphaned members of a trimmed host",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports",
     "roadmap"
@@ -2909,12 +2909,12 @@
   },
   {
    "title": "Hollow records its engine version and stretch",
-   "state": "open",
-   "column": "Quick wins",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: hollow"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "Drill a drain on the current mesh, without hollowing again",
@@ -2963,21 +2963,21 @@
   },
   {
    "title": "Hollow: overlapping parts and buried faces",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: hollow"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "Hollow: minimum cavity width",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: hollow"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "Drain tool: a colour map of where a drain would work best",
@@ -3252,13 +3252,13 @@
   },
   {
    "title": "Large support sets are sliced with three- and six-sided shafts",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-16"
   },
   {
    "title": "UI first set: inventory and visual direction",
@@ -3640,6 +3640,15 @@
     "microPR"
    ],
    "closed": "2026-10-28"
+  },
+  {
+   "title": "Braces that go into the model between their ends",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "bug"
+   ],
+   "closed": null
   }
  ]
 }
