@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-16T11:31:50Z",
+ "generated": "2026-11-17T04:33:10Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 6,
+  "In progress": 10,
   "Next": 18,
   "Quick wins": 4,
-  "Backlog": 101,
+  "Backlog": 100,
   "Later": 12,
-  "Done": 241
+  "Done": 242
  },
  "items": [
   {
@@ -940,7 +940,7 @@
   {
    "title": "Phrozen's published resin settings as material profiles",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: profiles"
    ],
@@ -3647,6 +3647,45 @@
    "column": "Backlog",
    "labels": [
     "bug"
+   ],
+   "closed": null
+  },
+  {
+   "title": "First pre-release, 0.4.0-alpha.1",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "roadmap"
+   ],
+   "closed": "2026-11-16"
+  },
+  {
+   "title": "Add a printer by hand",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Skeleton + islands support preset (test)",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Generate finds the islands and supports them at the end",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
    ],
    "closed": null
   }
