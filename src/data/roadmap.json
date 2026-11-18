@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T14:06:19Z",
+ "generated": "2026-11-18T22:00:27Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 7,
-  "Next": 17,
-  "Quick wins": 4,
-  "Backlog": 100,
+  "In progress": 6,
+  "Next": 16,
+  "Quick wins": 3,
+  "Backlog": 86,
   "Later": 12,
-  "Done": 262
+  "Done": 274
  },
  "items": [
   {
@@ -70,13 +70,13 @@
   },
   {
    "title": "Large hollowed scenes: measure and speed up supports, Slice, Fix all and saving",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: performance"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Fix all never fills a hollow: warn about suction cups, don't repair them",
@@ -270,13 +270,13 @@
   },
   {
    "title": "Resin price, cost per print and per model",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: profiles",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Hollow: trap and suction cup warnings in the Hollow tab",
@@ -310,13 +310,13 @@
   },
   {
    "title": "Calculators: light-off delay, mm to px, optimal tilt",
-   "state": "open",
-   "column": "Quick wins",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Anycubic ZIP files carry the M7 Pro firmware timing constants for every printer",
@@ -470,16 +470,6 @@
    "closed": "2026-11-14"
   },
   {
-   "title": "Physical thickness under transforms and scaling",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: hollow",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
    "title": "Persistence of hollow parameters and derived data",
    "state": "open",
    "column": "Backlog",
@@ -500,16 +490,6 @@
    "closed": null
   },
   {
-   "title": "Brush to edit the hollow cavity",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: hollow",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
    "title": "Lasso tool to cut regions out of the hollow cavity",
    "state": "closed",
    "column": "Done",
@@ -518,26 +498,6 @@
     "area: hollow"
    ],
    "closed": "2026-11-11"
-  },
-  {
-   "title": "More hollow infill patterns: gyroid and honeycomb",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: hollow",
-    "roadmap"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Internal supports inside hollow cavities",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: supports",
-    "roadmap"
-   ],
-   "closed": null
   },
   {
    "title": "Exposure fade from bottom to normal layers",
@@ -580,16 +540,6 @@
    "closed": null
   },
   {
-   "title": "Z print-through compensation for downward-facing surfaces",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "enhancement",
-    "area: slicing"
-   ],
-   "closed": null
-  },
-  {
    "title": "Validity of persisted slices and AA on reopen",
    "state": "closed",
    "column": "Done",
@@ -608,16 +558,6 @@
     "roadmap"
    ],
    "closed": "2026-11-16"
-  },
-  {
-   "title": "Consistency across the layer viewer, raster and export",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: slicing",
-    "roadmap"
-   ],
-   "closed": null
   },
   {
    "title": "Raster, AA, pixel pitch and orientation validation",
@@ -650,13 +590,13 @@
   },
   {
    "title": "Resin usage and print time with calibration",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: profiles",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Layer timeline: area, perimeter, estimated force and time per layer",
@@ -975,12 +915,12 @@
   },
   {
    "title": "Resin brands that publish settings for many printers",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: profiles"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Printer images for every printer",
@@ -994,13 +934,13 @@
   },
   {
    "title": "Own profiles and import/export with provenance",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: profiles",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Own presets: geometry, packs and bracing kept separate",
@@ -1164,13 +1104,13 @@
   },
   {
    "title": "Calculators built into the workflow",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "roadmap",
     "area: ux"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Analysis, exposure and output toolkit (UVtools-inspired, own implementation)",
@@ -1184,13 +1124,13 @@
   },
   {
    "title": "Support engine: list of pending improvements",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Geometric quality and printability of supports",
@@ -1371,13 +1311,13 @@
   },
   {
    "title": "Island detection from layer continuity",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: analysis",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "3D hollowing and own drain holes milestone",
@@ -2813,13 +2753,13 @@
   },
   {
    "title": "Optional grid for support trunks with a configurable spacing",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "After Slice, offer to add supports to the unsupported islands",
@@ -2951,15 +2891,6 @@
     "area: hollow"
    ],
    "closed": "2026-11-14"
-  },
-  {
-   "title": "Guaranteed wall: never thinner than asked",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: hollow"
-   ],
-   "closed": null
   },
   {
    "title": "Hollow: overlapping parts and buried faces",
@@ -3642,15 +3573,6 @@
    "closed": "2026-10-28"
   },
   {
-   "title": "Braces that go into the model between their ends",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "bug"
-   ],
-   "closed": null
-  },
-  {
    "title": "First pre-release, 0.4.0-alpha.1",
    "state": "closed",
    "column": "Done",
@@ -3851,6 +3773,27 @@
     "bug",
     "area: editor"
    ],
+   "closed": "2026-11-18"
+  },
+  {
+   "title": "Guided print-time calibration with a test cylinder",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Offer only the resins set for the chosen printer",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-18"
+  },
+  {
+   "title": "Supports or models past the plate: tell after Generate, refuse to slice",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
    "closed": "2026-11-18"
   }
  ]
