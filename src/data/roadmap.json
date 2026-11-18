@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T04:27:46Z",
+ "generated": "2026-11-18T14:06:19Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 22,
-  "Next": 21,
+  "In progress": 7,
+  "Next": 17,
   "Quick wins": 4,
-  "Backlog": 101,
+  "Backlog": 100,
   "Later": 12,
-  "Done": 242
+  "Done": 262
  },
  "items": [
   {
@@ -340,10 +340,10 @@
   },
   {
    "title": "A window of its own to pick printers and resins, decoupled from Preferences",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Re-place culled supports and report what could not be supported",
@@ -2936,12 +2936,12 @@
   },
   {
    "title": "Edit drains: remove or move one",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: hollow"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Faster hollow session, same result",
@@ -3504,12 +3504,12 @@
   },
   {
    "title": "Research denser packing for Arrange",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Pack the plate under one raft for all",
@@ -3661,13 +3661,13 @@
   },
   {
    "title": "Add a printer by hand",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: profiles"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Skeleton + islands support preset (test)",
@@ -3681,13 +3681,13 @@
   },
   {
    "title": "Generate finds the islands and supports them at the end",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Keep the META chunk of .bread files",
@@ -3700,158 +3700,158 @@
   },
   {
    "title": "First-run setup: pick a printer, a resin and a control layout",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: ux"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Control layouts: navigate like other slicers",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Slice plates with mesh errors instead of refusing them",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: slicing"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Layer slider on every tab",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Select all, deselect and invert with the keyboard",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor",
     "microPR"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Duplicate the selection with one shortcut",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor",
     "microPR"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Alt-dragging the gizmo's Z arrow leaves a floating copy",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Lift 5 mm on by default",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports",
     "microPR"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Plate trash hint stays after removing the plate",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: editor",
     "microPR"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Preferences window stays open after the main window closes",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: editor",
     "microPR"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Shift-click selects a range in the object list",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "G: move on the plate by default, G again confirms, axis lock in plain sight",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Arrange all leaves models in the air and through the walls",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "Drag on empty space draws a selection box",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   },
   {
    "title": "The print setup keeps the old printer after Preferences picks another",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-18"
   }
  ]
 }
