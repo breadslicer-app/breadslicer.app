@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-17T04:33:10Z",
+ "generated": "2026-11-18T04:27:46Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,10 +9,10 @@
   "Done"
  ],
  "counts": {
-  "In progress": 10,
-  "Next": 18,
+  "In progress": 22,
+  "Next": 21,
   "Quick wins": 4,
-  "Backlog": 100,
+  "Backlog": 101,
   "Later": 12,
   "Done": 242
  },
@@ -341,7 +341,7 @@
   {
    "title": "A window of its own to pick printers and resins, decoupled from Preferences",
    "state": "open",
-   "column": "Backlog",
+   "column": "Next",
    "labels": [],
    "closed": null
   },
@@ -3686,6 +3686,170 @@
    "labels": [
     "enhancement",
     "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Keep the META chunk of .bread files",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "First-run setup: pick a printer, a resin and a control layout",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: ux"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Control layouts: navigate like other slicers",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Slice plates with mesh errors instead of refusing them",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: slicing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Layer slider on every tab",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Select all, deselect and invert with the keyboard",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor",
+    "microPR"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Duplicate the selection with one shortcut",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor",
+    "microPR"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Alt-dragging the gizmo's Z arrow leaves a floating copy",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Lift 5 mm on by default",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports",
+    "microPR"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Plate trash hint stays after removing the plate",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: editor",
+    "microPR"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Preferences window stays open after the main window closes",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: editor",
+    "microPR"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Shift-click selects a range in the object list",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "G: move on the plate by default, G again confirms, axis lock in plain sight",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Arrange all leaves models in the air and through the walls",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Drag on empty space draws a selection box",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "The print setup keeps the old printer after Preferences picks another",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: editor"
    ],
    "closed": null
   }
