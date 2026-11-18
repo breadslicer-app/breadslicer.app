@@ -14,6 +14,22 @@ const reports = defineCollection({
   }),
 });
 
+// Blog: one post per release, plus technical notes and mini-papers. The id is the `slug` in the front matter.
+const blog = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/blog" }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    date: z.coerce.date(),
+    draft: z.boolean().default(false),
+    tags: z.array(z.string()).default([]),
+    /** release: what a build brings · paper: method and measurements · note: a shorter story. */
+    kind: z.enum(["release", "paper", "note"]),
+    /** Release posts only. */
+    version: z.string().optional(),
+  }),
+});
+
 // Features page: one Markdown file per tool, shown in `order`.
 const features = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/features" }),
@@ -32,4 +48,4 @@ const features = defineCollection({
   }),
 });
 
-export const collections = { reports, features };
+export const collections = { reports, blog, features };

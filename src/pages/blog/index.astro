@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PageHead from "../../components/PageHead.astro";
+import { formatDate } from "../../lib/format";
+import { getPosts, kindLine, KIND } from "../../lib/blog";
+
+const posts = await getPosts();
+const reports = (await getCollection("reports", (r) => !r.data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+const kinds = (Object.keys(KIND) as (keyof typeof KIND)[]).filter((k) => posts.some((p) => p.data.kind === k));
+---
+<Base title="Blog" description="Breadslicer's blog: a post for every release, and notes and mini-papers on how the slicer works, with our own measurements.">
+  <PageHead eyebrow="Blog" lede="A post for every release, and the story behind the work: notes, and mini-papers with the method and the numbers. Everything measured on our own machine.">
+    From <em>the bakery.</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Posts">
+    <div class="wrap">
+      <div class="blog-filter" role="group" aria-label="Show">
+        <button type="button" class="pill is-on" data-kind="all" aria-pressed="true">All · {posts.length}</button>
+        {kinds.map((k) => (
+          <button type="button" class="pill" data-kind={k} aria-pressed="false">{KIND[k].plural} · {posts.filter((p) => p.data.kind === k).length}</button>
+        ))}
+      </div>
+      <div class="cards blog-cards">
+        {posts.map((p) => (
+          <a class={`card card-${p.data.kind}`} href={`/blog/${p.id}/`} data-kind={p.data.kind} data-cell>
+            <span class="meta">
+              <span class="kind">{kindLine(p)}</span>
+              <time datetime={p.data.date.toISOString().slice(0, 10)}>{formatDate(p.data.date)}</time>
+            </span>
+            <h2>{p.data.title}</h2>
+            <p>{p.data.summary}</p>
+            <span class="more">Read it →</span>
+          </a>
+        ))}
+      </div>
+
+      <div class="blog-reports">
+        <p class="kicker">Technical reports</p>
+        <p class="muted">The longer write-ups: how a tool works, how we measured it, and where it stops.</p>
+        <div class="cards">
+          {reports.map((r) => (
+            <a class="card" href={`/reports/${r.id}/`} data-cell>
+              <span class="meta"><span class="kind">Report</span><time datetime={r.data.date.toISOString().slice(0, 10)}>{formatDate(r.data.date)}</time></span>
+              <h2>{r.data.title}</h2>
+              <p>{r.data.summary}</p>
+              <span class="more">Read the report →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <p class="small muted blog-feed">Follow it with a feed reader: <a class="link" href="/blog/rss.xml">/blog/rss.xml</a></p>
+    </div>
+  </section>
+  <script>
+    // Show one kind of post. Without this script every post is shown.
+    const buttons = [...document.querySelectorAll<HTMLButtonElement>(".blog-filter button")];
+    const cards = [...document.querySelectorAll<HTMLElement>(".blog-cards .card")];
+    buttons.forEach((b) =>
+      b.addEventListener("click", () => {
+        const k = b.dataset.kind;
+        buttons.forEach((x) => {
+          x.classList.toggle("is-on", x === b);
+          x.setAttribute("aria-pressed", String(x === b));
+        });
+        cards.forEach((c) => (c.hidden = k !== "all" && c.dataset.kind !== k));
+      }),
+    );
+  </script>
+</Base>

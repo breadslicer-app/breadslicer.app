@@ -29,6 +29,8 @@ npm run preview   # serves dist/ as it will be published
 | Styles | `src/styles/global.css` (the original look), `src/styles/pages.css` (inner pages) |
 | Features page, one file per tool | `src/content/features/*.md` |
 | Technical reports | `src/content/reports/*.md` (`draft: true` shows a Draft badge) |
+| Blog | `src/content/blog/*.md`: `kind` is `release`, `paper` or `note`; the URL is the `slug`; `draft: true` posts are not built. Images in `public/blog/`. Feed at `/blog/rss.xml` |
+| The build the site offers | `src/data/release.json` (version, zip, size, release post): update it with every release |
 | Changelog | `src/data/changelog.json` (newest first; the home page shows the first 3) |
 | Performance tables | `src/data/performance.json` |
 | Printers and formats | `src/data/printers.json` (generated, see below) |

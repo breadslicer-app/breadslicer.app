@@ -2,6 +2,7 @@
 import Base from "../layouts/Base.astro";
 import Latest from "../components/Latest.astro";
 import roadmap from "../data/roadmap.json";
+import release from "../data/release.json";
 
 // The roadmap section shows what is being worked on now, straight from the board.
 const now = [
@@ -22,7 +23,7 @@ const now = [
         <li data-rail="labs">Close-ups</li>
         <li data-rail="native">Native</li>
         <li data-rail="roadmap">Roadmap</li>
-        <li data-rail="download">Pre-release</li>
+        <li data-rail="download">Download</li>
       </ol>
     </aside>
   </Fragment>
@@ -33,7 +34,7 @@ const now = [
       <div class="hero-pin">
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Native MSLA slicer · In development</p>
+            <p class="eyebrow"><span class="eyebrow-dot" aria-hidden="true"></span>Native MSLA slicer · {release.version}</p>
             <p class="hero-wordmark" aria-hidden="true"><span class="reveal-words">Breadslicer</span></p>
             <h1 id="hero-title" class="reveal-words">A resin slicer that cuts <em>clean.</em></h1>
             <p class="lede">
@@ -42,7 +43,7 @@ const now = [
               Nothing in a browser tab, nothing waiting on a spinner.
             </p>
             <div class="cta-row">
-              <a class="button button-primary" href="#download" data-magnetic>Get early access</a>
+              <a class="button button-primary" href="#download" data-magnetic>Download the alpha</a>
               <a class="button button-ghost" href="#workflow" data-magnetic>See the workflow <span class="arrow" aria-hidden="true">→</span></a>
             </div>
             <dl class="hero-facts">
@@ -175,7 +176,7 @@ const now = [
         <p class="verify-kicker mono"><span class="verify-dot" aria-hidden="true"></span>Every number above is checkable</p>
         <h3 id="verify-title" class="verify-title">Don’t take our word for it.<br><em>Time it yourself.</em></h3>
         <p class="verify-lede">Benchmarks on a slicer’s own website are easy to fake. So here is the exact model from this run, and the app writes its own timings. Run it on your machine and compare.</p>
-        <p class="small muted">There is no build to download yet: the pre-release will come first <a href="#download">on our Discord</a>. The model and the steps are here for when it does.</p>
+        <p class="cta-row"><a class="button button-ghost" href="#download" data-magnetic>Get the alpha <span class="arrow" aria-hidden="true">→</span></a></p>
 
         <ol class="verify-steps">
           <li>
@@ -364,18 +365,18 @@ const now = [
     <!-- ============ DOWNLOAD ============ -->
     <section class="section section-cta" id="download" data-section="download" aria-labelledby="download-title">
       <div class="section-bar">
-        <span class="mono">05 / Pre-release</span>
-        <span class="mono section-bar-right">First on Discord, then here</span>
+        <span class="mono">05 / Download</span>
+        <span class="mono section-bar-right">Alpha · {release.platform} · free software</span>
       </div>
       <div class="cta-grid">
         <div>
-          <h2 id="download-title">First slices, <em>soon.</em></h2>
-          <p class="section-lede">There is no build to download yet. The first one, a pre-release, will be handed out on our Discord before anywhere else, while the edges get sanded. Public downloads will come later, on this page.</p>
+          <h2 id="download-title">First slices, <em>now.</em></h2>
+          <p class="section-lede">Breadslicer {release.version} is out: the first build anyone can download, for {release.platform}. It is an alpha. It works, we print with it, and it will still surprise you somewhere.</p>
           <div class="cta-row">
-            <a class="button button-primary" href="https://discord.gg/RHq6DXMcC" rel="noopener" aria-describedby="download-note" data-magnetic>Join the Discord <span class="button-sub">Pre-release</span></a>
-            <a class="button button-ghost" href="/community/" data-magnetic>Community &amp; support <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="button button-primary" href={release.zip} aria-describedby="download-note" data-magnetic>Download for {release.platform} <span class="button-sub">{release.size} zip</span></a>
+            <a class="button button-ghost" href={release.post} data-magnetic>What’s in it <span class="arrow" aria-hidden="true">→</span></a>
           </div>
-          <p id="download-note" class="small muted">No sign-up form. Join the Discord and you will hear first when the pre-release is out.</p>
+          <p id="download-note" class="small muted">Unzip it anywhere and run <code>breadslicer.exe</code>: nothing to install. The exe is not signed yet, so Windows may stop it: <em>More info</em>, then <em>Run anyway</em>. Read <a class="link" href={`${release.post}#before-you-print`}>Before you print</a> first. Every build and its source are on <a class="link" href={release.all} rel="noopener">GitHub</a>; help and news on our <a class="link" href="/community/">Discord</a>.</p>
         </div>
         <div class="cta-art" aria-hidden="true" data-parallax="0.12">
           <img src="/assets/loaf-640.webp" width="640" height="640" alt="" loading="lazy">

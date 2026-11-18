@@ -1,0 +1,72 @@
+---
+import { render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PageHead from "../../components/PageHead.astro";
+import { formatDate } from "../../lib/format";
+import { AUTHOR, getPosts, kindLine, type Post } from "../../lib/blog";
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post, i) => ({
+    params: { slug: post.id },
+    props: { post, newer: posts[i - 1], older: posts[i + 1] },
+  }));
+}
+
+const { post, newer, older } = Astro.props as { post: Post; newer?: Post; older?: Post };
+const { Content, headings } = await render(post);
+const toc = headings.filter((h) => h.depth === 2);
+const iso = post.data.date.toISOString().slice(0, 10);
+---
+<Base title={post.data.title} description={post.data.summary}>
+  <PageHead eyebrow={`Blog · ${kindLine(post)}`} lede={post.data.summary}>
+    {post.data.title}
+  </PageHead>
+
+  <section class="section section-plain" aria-label="Post">
+    <div class="article">
+      <div class="article-main">
+        <article class="prose post"><Content /></article>
+        <nav class="post-nav" aria-label="More posts">
+          {older ? <a href={`/blog/${older.id}/`}><span class="label">Older</span>{older.data.title}</a> : <span></span>}
+          {newer && <a class="newer" href={`/blog/${newer.id}/`}><span class="label">Newer</span>{newer.data.title}</a>}
+        </nav>
+      </div>
+      <aside class="article-aside">
+        <div><span class="label">Published</span><br /><time datetime={iso}>{formatDate(post.data.date)}</time> · {AUTHOR}</div>
+        <div><span class="label">Kind</span><br />{kindLine(post)}</div>
+        {toc.length > 0 && (
+          <nav class="toc" aria-label="On this page">
+            {toc.map((h) => <a href={`#${h.slug}`}>{h.text}</a>)}
+          </nav>
+        )}
+        <a class="link" href="/blog/">All posts</a>
+      </aside>
+    </div>
+  </section>
+  <script>
+    // Light up the table-of-contents entry of the section being read.
+    const links = [...document.querySelectorAll<HTMLAnchorElement>(".toc a")];
+    const sections = links
+      .map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))))
+      .filter((el): el is HTMLElement => el !== null);
+    let queued = false;
+    function update() {
+      queued = false;
+      const line = window.innerHeight * 0.3;
+      let current = -1;
+      sections.forEach((el, i) => {
+        if (el.getBoundingClientRect().top <= line) current = i;
+      });
+      const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+      if (atBottom && sections.length) current = sections.length - 1;
+      links.forEach((link, i) => link.classList.toggle("is-active", i === current));
+    }
+    function queue() {
+      if (!queued) { queued = true; requestAnimationFrame(update); }
+    }
+    window.addEventListener("scroll", queue, { passive: true });
+    window.addEventListener("resize", queue);
+    update();
+  </script>
+</Base>

@@ -228,3 +228,29 @@ details.board-col[open] summary h2::after { content: "−"; }
   .site-nav a:not(.button) { padding: 12px; font-size: .9rem; }
   .site-nav .button { margin: 10px 0 0; }
 }
+
+/* ---------- Blog ---------- */
+.blog-filter { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.blog-filter .pill { margin: 0; padding: 6px 12px; font-size: .72rem; background: none; cursor: pointer; transition: color .2s ease, border-color .2s ease; }
+.blog-filter .pill:hover { color: var(--cream); }
+.blog-filter .pill.is-on { color: var(--accent); border-color: rgba(var(--accent-rgb), .6); }
+.card .meta .kind { color: var(--text-dim); }
+.card-release { border-color: rgba(var(--accent-rgb), .45); }
+.card-release .meta .kind { color: var(--accent); }
+.card[hidden] { display: none; }
+.blog-reports { margin-top: clamp(56px, 8vw, 96px); padding-top: clamp(28px, 4vw, 44px); border-top: 1px solid var(--line); }
+.blog-reports > .muted { margin: 0 0 22px; max-width: 36em; }
+.blog-feed { margin-top: 36px; }
+.prose figure { margin: 2em 0; display: grid; gap: 10px; }
+.prose figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+.prose figure.duo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.prose figure.duo figcaption { grid-column: 1 / -1; }
+.prose figure.narrow img { max-width: 330px; }
+.prose figcaption { font-family: var(--font-mono); font-size: .72rem; letter-spacing: .02em; color: var(--text-faint); }
+@media (max-width: 560px) { .prose figure.duo { grid-template-columns: minmax(0, 1fr); } }
+.post-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: clamp(48px, 6vw, 72px); padding-top: 24px; border-top: 1px solid var(--line); max-width: 44rem; }
+.post-nav a { display: grid; gap: 4px; color: var(--cream); font-size: .95rem; }
+.post-nav a:hover { color: var(--accent); }
+.post-nav .newer { text-align: right; }
+.post-nav .label { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
+@media (max-width: 560px) { .post-nav { grid-template-columns: minmax(0, 1fr); } .post-nav .newer { text-align: left; } }
