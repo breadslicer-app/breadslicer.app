@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T13:18:33Z",
+ "generated": "2026-11-19T22:12:22Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,10 +9,10 @@
   "Done"
  ],
  "counts": {
-  "In progress": 0,
-  "Next": 3,
+  "In progress": 15,
+  "Next": 1,
   "Quick wins": 0,
-  "Backlog": 66,
+  "Backlog": 53,
   "Later": 9,
   "Done": 309
  },
@@ -173,7 +173,7 @@
   {
    "title": "Don't support what rests on the model; hand thin gaps to Review",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "bug",
     "area: supports"
@@ -338,7 +338,7 @@
   {
    "title": "Re-place culled supports and report what could not be supported",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "bug",
     "area: supports"
@@ -348,7 +348,7 @@
   {
    "title": "Merge island clusters and redundant tips",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -405,7 +405,7 @@
   {
    "title": "Raft types",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -414,7 +414,7 @@
   {
    "title": "A different raft for each model",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -423,7 +423,7 @@
   {
    "title": "Smart raft: relief channels, peel tabs and drain holes",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports",
     "roadmap"
@@ -1047,7 +1047,7 @@
   {
    "title": "Re-place orphaned members of a trimmed host",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports",
     "roadmap"
@@ -2683,7 +2683,7 @@
   {
    "title": "A better, faster support engine of our own",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -2792,7 +2792,7 @@
   {
    "title": "Support engine phase 2: contacts",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -2801,7 +2801,7 @@
   {
    "title": "Support engine phase 3: the tip and its pieces",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -2810,7 +2810,7 @@
   {
    "title": "Support engine phase 4: bracing and safety",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -2846,7 +2846,7 @@
   {
    "title": "Support engine phase 8: presets and raft",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -2855,7 +2855,7 @@
   {
    "title": "Model groups: place, support and raft several models as one unit",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -3611,14 +3611,14 @@
   {
    "title": "Profiles for network printers: names, printer and resin of their own",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [],
    "closed": null
   },
   {
    "title": "Supports inside a hollow are placed one stick per point, unbraced",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
