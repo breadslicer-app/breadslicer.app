@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T22:00:27Z",
+ "generated": "2026-11-19T03:34:58Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,8 +9,8 @@
   "Done"
  ],
  "counts": {
-  "In progress": 6,
-  "Next": 16,
+  "In progress": 8,
+  "Next": 18,
   "Quick wins": 3,
   "Backlog": 86,
   "Later": 12,
@@ -3795,6 +3795,38 @@
    "column": "Done",
    "labels": [],
    "closed": "2026-11-18"
+  },
+  {
+   "title": "Send prints to Elegoo printers over Wi-Fi (SDCP)",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Profiles for network printers: names, printer and resin of their own",
+   "state": "open",
+   "column": "Next",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Supports inside a hollow are placed one stick per point, unbraced",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Show the printer's camera",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "area: printing"
+   ],
+   "closed": null
   }
  ]
 }
