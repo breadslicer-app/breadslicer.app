@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T03:24:09Z",
+ "generated": "2026-11-20T12:59:37Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,10 +9,10 @@
   "Done"
  ],
  "counts": {
-  "In progress": 22,
+  "In progress": 34,
   "Next": 1,
   "Quick wins": 0,
-  "Backlog": 52,
+  "Backlog": 40,
   "Later": 9,
   "Done": 309
  },
@@ -163,7 +163,7 @@
   {
    "title": "Convert imported supports into editable supports",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -183,7 +183,7 @@
   {
    "title": "Supports honor painted detail",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -203,7 +203,7 @@
   {
    "title": "Portable build and reproducible development releases",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: delivery",
     "roadmap"
@@ -223,7 +223,7 @@
   {
    "title": "Granular support editing: select and move any part of a support",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -358,7 +358,7 @@
   {
    "title": "Editor for zone support presets",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -367,7 +367,7 @@
   {
    "title": "Support line tool: place a row of supports along the surface between two clicks",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -377,7 +377,7 @@
   {
    "title": "Paint faces and select coplanar faces to place supports on a mm grid",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
@@ -387,7 +387,7 @@
   {
    "title": "Support display modes: full, contacts only, and more",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: supports"
    ],
@@ -794,7 +794,7 @@
   {
    "title": "Save a thumbnail in .bread files",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: file formats"
    ],
@@ -802,12 +802,12 @@
   },
   {
    "title": "Save support previews in .bread files",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "In progress",
    "labels": [
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Installer: Explorer thumbnails and the new file description",
@@ -957,7 +957,7 @@
   {
    "title": "Exporting parts, supports and assemblies",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: geometry",
     "roadmap"
@@ -3325,7 +3325,7 @@
   {
    "title": "Select placed supports and edit them from the Manual supports page",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement"
    ],
