@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T22:12:22Z",
+ "generated": "2026-11-20T03:24:09Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,10 +9,10 @@
   "Done"
  ],
  "counts": {
-  "In progress": 15,
+  "In progress": 22,
   "Next": 1,
   "Quick wins": 0,
-  "Backlog": 53,
+  "Backlog": 52,
   "Later": 9,
   "Done": 309
  },
@@ -897,7 +897,7 @@
   {
    "title": "Orient all selected models at once",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: editor"
@@ -3674,6 +3674,56 @@
    "column": "Done",
    "labels": [],
    "closed": "2026-11-19"
+  },
+  {
+   "title": "STL files with NaN facet normals refuse to open",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Mirror the selected models along X or Y",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Models past every plate are listed and sliced as the first plate's",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug"
+   ],
+   "closed": null
+  },
+  {
+   "title": "The title keeps naming a file whose models were all deleted",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Cut leaves imported supports of a cut-off piece floating",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
+  },
+  {
+   "title": "Measure tool",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
   }
  ]
 }
