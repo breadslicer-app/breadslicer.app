@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T12:59:37Z",
+ "generated": "2026-11-20T21:11:31Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,11 +9,11 @@
   "Done"
  ],
  "counts": {
-  "In progress": 34,
-  "Next": 1,
+  "In progress": 39,
+  "Next": 0,
   "Quick wins": 0,
   "Backlog": 40,
-  "Later": 9,
+  "Later": 4,
   "Done": 309
  },
  "items": [
@@ -840,7 +840,7 @@
   {
    "title": "Prusa's published resin settings as material profiles",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: profiles"
    ],
@@ -987,7 +987,7 @@
   {
    "title": "Accessibility, focus and shortcut discoverability",
    "state": "open",
-   "column": "Later",
+   "column": "In progress",
    "labels": [
     "area: ui",
     "roadmap"
@@ -1225,7 +1225,7 @@
   {
    "title": "Open breadslicer:// links in the running window",
    "state": "open",
-   "column": "Later",
+   "column": "In progress",
    "labels": [
     "area: platform",
     "roadmap"
@@ -1235,7 +1235,7 @@
   {
    "title": "Linux/macOS compatibility and cross-platform packaging",
    "state": "open",
-   "column": "Next",
+   "column": "Backlog",
    "labels": [
     "area: delivery",
     "roadmap"
@@ -1255,7 +1255,7 @@
   {
    "title": "Adaptive layers and per-region profiles",
    "state": "open",
-   "column": "Later",
+   "column": "In progress",
    "labels": [
     "area: slicing",
     "roadmap"
@@ -1269,16 +1269,6 @@
    "labels": [
     "enhancement",
     "area: profiles"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Rebuild as solid (voxel/SDF) as a last resort",
-   "state": "open",
-   "column": "Later",
-   "labels": [
-    "enhancement",
-    "area: geometry"
    ],
    "closed": null
   },
@@ -3306,7 +3296,7 @@
   {
    "title": "Progress as a technical ruler over a dimmed scene",
    "state": "open",
-   "column": "Later",
+   "column": "In progress",
    "labels": [
     "enhancement"
    ],
