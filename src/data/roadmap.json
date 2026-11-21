@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-20T21:11:31Z",
+ "generated": "2026-11-21T02:22:48Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 39,
+  "In progress": 17,
   "Next": 0,
   "Quick wins": 0,
-  "Backlog": 40,
-  "Later": 4,
-  "Done": 309
+  "Backlog": 23,
+  "Later": 3,
+  "Done": 358
  },
  "items": [
   {
@@ -172,33 +172,33 @@
   },
   {
    "title": "Don't support what rests on the model; hand thin gaps to Review",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Supports honor painted detail",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Auto-orient: suction cups, model-to-model supports and peel in N",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: geometry"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Portable build and reproducible development releases",
@@ -337,13 +337,13 @@
   },
   {
    "title": "Re-place culled supports and report what could not be supported",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Merge island clusters and redundant tips",
@@ -357,41 +357,41 @@
   },
   {
    "title": "Editor for zone support presets",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Support line tool: place a row of supports along the surface between two clicks",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Paint faces and select coplanar faces to place supports on a mm grid",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Support display modes: full, contacts only, and more",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Automatic support display by camera height",
@@ -404,40 +404,40 @@
   },
   {
    "title": "Raft types",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "A different raft for each model",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Smart raft: relief channels, peel tabs and drain holes",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Review: more one-click fixes (rotate, drill, cups, supports)",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Review: reuse per-layer results when re-slicing",
@@ -572,13 +572,13 @@
   },
   {
    "title": "Layer timeline: area, perimeter, estimated force and time per layer",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: slicing",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Experimental calibration of contacts and material",
@@ -602,23 +602,23 @@
   },
   {
    "title": "Peel force per layer (area, shape, suction cups)",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Load per support tip: rigid-body share per body and layer",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Beam frame solver for support trees (faer)",
@@ -695,12 +695,12 @@
   },
   {
    "title": "Review: force-based margins for islands and suction cups",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Viewport: upload only new meshes after a structural edit, off the UI thread, and share buffers between copies",
@@ -793,12 +793,12 @@
   },
   {
    "title": "Save a thumbnail in .bread files",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Save support previews in .bread files",
@@ -821,12 +821,12 @@
   },
   {
    "title": "Phrozen's published resin settings as material profiles",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: profiles"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Uniformation's published resin settings as material profiles",
@@ -839,21 +839,21 @@
   },
   {
    "title": "Prusa's published resin settings as material profiles",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: profiles"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Creality's newer printers' resin settings (X1, X1 Neo, Sky 2025)",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: profiles"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Resin brands that publish settings for many printers",
@@ -896,13 +896,13 @@
   },
   {
    "title": "Orient all selected models at once",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Calibrate auto-orient weights against hand-picked orientations",
@@ -936,13 +936,13 @@
   },
   {
    "title": "Assembly keys when cutting a model",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: geometry",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Formats: Goo v5 and multi-object 3MF (Production Extension)",
@@ -956,23 +956,23 @@
   },
   {
    "title": "Exporting parts, supports and assemblies",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: geometry",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Scene hierarchy and object properties",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: editor",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Localization, numbers, units and our own messages",
@@ -986,13 +986,13 @@
   },
   {
    "title": "Accessibility, focus and shortcut discoverability",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: ui",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "CLI as a reproducible harness with GUI parity",
@@ -1046,13 +1046,13 @@
   },
   {
    "title": "Re-place orphaned members of a trimmed host",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Verifiable output for the chosen Anycubic printer",
@@ -1163,23 +1163,23 @@
   },
   {
    "title": "Numeric transforms, constraints and snapping",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: editor",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Precise placement: center, drop, align and bounds",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: editor",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Disconnected cavities, trapped resin and suction cups",
@@ -1224,13 +1224,13 @@
   },
   {
    "title": "Open breadslicer:// links in the running window",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: platform",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Linux/macOS compatibility and cross-platform packaging",
@@ -1269,16 +1269,6 @@
    "labels": [
     "enhancement",
     "area: profiles"
-   ],
-   "closed": null
-  },
-  {
-   "title": "Fused pre-supported files",
-   "state": "open",
-   "column": "Later",
-   "labels": [
-    "enhancement",
-    "area: research"
    ],
    "closed": null
   },
@@ -2622,43 +2612,43 @@
   },
   {
    "title": "Cut along a stroke drawn over the model",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: geometry",
     "idea"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Lasso cut: draw a closed curve on the surface and cut that region",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: geometry",
     "idea"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Magnet slots instead of pins on a cut",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: geometry",
     "idea"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Suggest where to cut a model from its creases and contours",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: geometry",
     "idea"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Adding supports needs no generated set first: Fix all asks for a preset, hand-placed tips start their own set",
@@ -2753,13 +2743,13 @@
   },
   {
    "title": "Review: offer to delete a small island no support can reach",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Support engine phase 0: measure first",
@@ -2781,30 +2771,30 @@
   },
   {
    "title": "Support engine phase 2: contacts",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Support engine phase 3: the tip and its pieces",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Support engine phase 4: bracing and safety",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Support engine phase 5: first print",
@@ -2835,22 +2825,22 @@
   },
   {
    "title": "Support engine phase 8: presets and raft",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Model groups: place, support and raft several models as one unit",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Fix All and the Yes answer freeze the window on a plate of several models",
@@ -3295,12 +3285,12 @@
   },
   {
    "title": "Progress as a technical ruler over a dimmed scene",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Supports tab: see and edit the shape of a support",
@@ -3314,12 +3304,12 @@
   },
   {
    "title": "Select placed supports and edit them from the Manual supports page",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "A check box flips on the first click",
@@ -3607,12 +3597,12 @@
   },
   {
    "title": "Supports inside a hollow are placed one stick per point, unbraced",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Show the printer's camera",
@@ -3667,53 +3657,150 @@
   },
   {
    "title": "STL files with NaN facet normals refuse to open",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Mirror the selected models along X or Y",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "Models past every plate are listed and sliced as the first plate's",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug"
    ],
-   "closed": null
+   "closed": "2026-11-20"
   },
   {
    "title": "The title keeps naming a file whose models were all deleted",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-20"
+  },
+  {
+   "title": "Cut leaves imported supports of a cut-off piece floating",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-20"
+  },
+  {
+   "title": "Measure tool",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-20"
+  },
+  {
+   "title": "BS: The keyboard shortcuts card lets the 3D view zoom behind it",
    "state": "open",
    "column": "In progress",
    "labels": [
-    "bug"
+    "bug",
+    "area: ui"
    ],
    "closed": null
   },
   {
-   "title": "Cut leaves imported supports of a cut-off piece floating",
+   "title": "BS: Measure tool styled like the rest of the app",
    "state": "open",
    "column": "In progress",
-   "labels": [],
+   "labels": [
+    "enhancement",
+    "area: ui"
+   ],
    "closed": null
   },
   {
-   "title": "Measure tool",
+   "title": "BS: Tools close and clear themselves when the scene changes",
    "state": "open",
    "column": "In progress",
-   "labels": [],
+   "labels": [
+    "bug",
+    "area: ui"
+   ],
    "closed": null
+  },
+  {
+   "title": "BS: Lay on face shows which faces can be picked",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "BS: Say that dragging one model of a group moves it alone",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "BS: Stroke cut becomes a cutting surface the person can adjust",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: geometry"
+   ],
+   "closed": null
+  },
+  {
+   "title": "BS: Cutting a model with Breadslicer supports leaves the pieces without supports",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "BS: Drain arrows in the Hollow tab use the app's icons",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: ui"
+   ],
+   "closed": null
+  },
+  {
+   "title": "BS: Line and Area supports take the picked preset, and their preview points are round",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Update the zip crate to 9.1 and check ZIP header consistency",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-20"
   }
  ]
 }
