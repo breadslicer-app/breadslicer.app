@@ -3,11 +3,28 @@ import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import PageHead from "../../components/PageHead.astro";
 import { formatDate } from "../../lib/format";
-import { getPosts, kindLine, KIND } from "../../lib/blog";
+import { getPosts, kindLine, KIND, type Post } from "../../lib/blog";
+import release from "../../data/release.json";
 
 const posts = await getPosts();
 const reports = (await getCollection("reports", (r) => !r.data.draft)).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 const kinds = (Object.keys(KIND) as (keyof typeof KIND)[]).filter((k) => posts.some((p) => p.data.kind === k));
+
+// The timeline: one stop per day, newest on top, with a month heading where the month changes.
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+type Day = { iso: string; day: number; month: number; year: number; posts: Post[]; monthStart: boolean };
+const days: Day[] = [];
+for (const p of posts) {
+  const iso = p.data.date.toISOString().slice(0, 10);
+  const last = days[days.length - 1];
+  if (last?.iso === iso) last.posts.push(p);
+  else {
+    const [year, month, day] = iso.split("-").map(Number);
+    days.push({ iso, day, month: month - 1, year, posts: [p], monthStart: !last || last.month !== month - 1 || last.year !== year });
+  }
+}
+const hasNext = posts.some((p) => p.data.next);
 ---
 <Base title="Blog" description="Breadslicer's blog: a post for every release, and notes and mini-papers on how the slicer works, with our own measurements.">
   <PageHead eyebrow="Blog" lede="A post for every release, and the story behind the work: notes, and mini-papers with the method and the numbers. Measured on our own machine, unless a post says otherwise.">
@@ -22,20 +39,48 @@ const kinds = (Object.keys(KIND) as (keyof typeof KIND)[]).filter((k) => posts.s
           <button type="button" class="pill" data-kind={k} aria-pressed="false">{KIND[k].plural} · {posts.filter((p) => p.data.kind === k).length}</button>
         ))}
       </div>
-      <div class="cards blog-cards">
-        {posts.map((p) => (
-          <a class={`card card-${p.data.kind}`} href={`/blog/${p.id}/`} data-kind={p.data.kind} data-cell>
-            <span class="meta">
-              <span class="kind">{kindLine(p)}</span>
-              {p.data.next && <span class="badge-draft">Next build</span>}
-              <time datetime={p.data.date.toISOString().slice(0, 10)}>{formatDate(p.data.date)}</time>
-            </span>
-            <h2>{p.data.title}</h2>
-            <p>{p.data.summary}</p>
-            <span class="more">Read it →</span>
-          </a>
-        ))}
+
+      <div class="timeline">
+        <div class="tl-now" aria-hidden="true"><span class="tl-now-dot"></span><span class="tl-label">{hasNext ? "Now · on the bench" : "Now"}</span></div>
+        <ol class="tl-days">
+          {days.map((d) => {
+            const next = d.posts.some((p) => p.data.next);
+            const rel = d.posts.find((p) => p.data.kind === "release");
+            return (
+              <>
+                {d.monthStart && (
+                  <li class="tl-month" aria-hidden="true"><span>{MONTHS[d.month]} {d.year}</span></li>
+                )}
+                <li class:list={["tl-day", { "is-next": next, "is-release": rel }]}>
+                  <div class="tl-date">
+                    <time datetime={d.iso}><span class="tl-d">{d.day}</span><span class="tl-m">{SHORT[d.month]}</span></time>
+                    {rel && <span class="tl-flag">{rel.data.version ?? "Release"}</span>}
+                  </div>
+                  <span class="tl-node" aria-hidden="true"></span>
+                  <div class="tl-posts">
+                    {d.posts.map((p) => (
+                      <a class={`tl-post tl-${p.data.kind}`} href={`/blog/${p.id}/`} data-kind={p.data.kind} data-cell>
+                        <span class="meta">
+                          <span class="kind">{kindLine(p)}</span>
+                          {p.data.next && <span class="badge-draft">Next build</span>}
+                          <time class="tl-inline-date" datetime={d.iso}>{formatDate(p.data.date)}</time>
+                        </span>
+                        <h2>{p.data.title}</h2>
+                        <p>{p.data.summary}</p>
+                        <span class="more">Read it <span aria-hidden="true">→</span></span>
+                      </a>
+                    ))}
+                  </div>
+                </li>
+              </>
+            );
+          })}
+        </ol>
+        <div class="tl-start" aria-hidden="true"><span class="tl-node"></span><span class="tl-label">The first post</span></div>
       </div>
+      {hasNext && (
+        <p class="small muted tl-key"><span class="tl-key-dot" aria-hidden="true"></span> A hollow dot: in the development builds, not yet in the download ({release.version}).</p>
+      )}
 
       <div class="blog-reports">
         <p class="kicker">Technical reports</p>
@@ -58,7 +103,9 @@ const kinds = (Object.keys(KIND) as (keyof typeof KIND)[]).filter((k) => posts.s
   <script>
     // Show one kind of post. Without this script every post is shown.
     const buttons = [...document.querySelectorAll<HTMLButtonElement>(".blog-filter button")];
-    const cards = [...document.querySelectorAll<HTMLElement>(".blog-cards .card")];
+    const posts = [...document.querySelectorAll<HTMLElement>(".tl-post")];
+    const days = [...document.querySelectorAll<HTMLElement>(".tl-day")];
+    const months = [...document.querySelectorAll<HTMLElement>(".tl-month")];
     buttons.forEach((b) =>
       b.addEventListener("click", () => {
         const k = b.dataset.kind;
@@ -66,8 +113,46 @@ const kinds = (Object.keys(KIND) as (keyof typeof KIND)[]).filter((k) => posts.s
           x.classList.toggle("is-on", x === b);
           x.setAttribute("aria-pressed", String(x === b));
         });
-        cards.forEach((c) => (c.hidden = k !== "all" && c.dataset.kind !== k));
+        posts.forEach((c) => (c.hidden = k !== "all" && c.dataset.kind !== k));
+        days.forEach((d) => (d.hidden = !d.querySelector(".tl-post:not([hidden])")));
+        // A month heading stays when a day under it is still shown.
+        months.forEach((m) => {
+          let el = m.nextElementSibling as HTMLElement | null;
+          let shown = false;
+          while (el && !el.classList.contains("tl-month")) {
+            if (!el.hidden) shown = true;
+            el = el.nextElementSibling as HTMLElement | null;
+          }
+          m.hidden = !shown;
+        });
+        fill();
       }),
     );
+
+    // The spine fills in as you read down it; each day eases in once.
+    const tl = document.querySelector<HTMLElement>(".timeline");
+    function fill() {
+      if (!tl) return;
+      const r = tl.getBoundingClientRect();
+      const f = Math.min(1, Math.max(0, (window.innerHeight * 0.55 - r.top) / r.height));
+      tl.style.setProperty("--fill", f.toFixed(4));
+    }
+    let queued = false;
+    const queue = () => {
+      if (!queued) { queued = true; requestAnimationFrame(() => { queued = false; fill(); }); }
+    };
+    window.addEventListener("scroll", queue, { passive: true });
+    window.addEventListener("resize", queue);
+    fill();
+    if (tl && "IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      tl.classList.add("is-animated");
+      const io = new IntersectionObserver(
+        (entries) => entries.forEach((e) => {
+          if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
+        }),
+        { rootMargin: "0px 0px -8% 0px" },
+      );
+      days.forEach((d) => io.observe(d));
+    }
   </script>
 </Base>
