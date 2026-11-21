@@ -244,6 +244,47 @@
      "version": "Dev build",
      "date": "2026-11-13",
      "machine": "dev"
+    },
+    {
+     "what": "Send one file to an Elegoo Mars 5 Ultra over Wi-Fi",
+     "before": "11 min",
+     "after": "16 s",
+     "method": "Timed by the tester, on their own printer and network",
+     "build": "Not recorded",
+     "version": "Test builds 20261118m–o",
+     "date": "2026-11-18",
+     "machine": "A tester's Elegoo Mars 5 Ultra, over their own Wi-Fi",
+     "notes": "11 min was a bug: each 1 MiB piece waited out a 20 s timeout. With it fixed, 3.5 min (about 160 KB/s); with every piece in order over one connection, 16 s at 1.61 MB/s."
+    },
+    {
+     "what": "Fill the bed with a pre-supported miniature, Photon Mono M7 Pro",
+     "before": "18 copies",
+     "after": "20 copies",
+     "method": "Fill bed on the same plate; the new separator pass takes 1.7 s",
+     "build": "Not recorded",
+     "version": "Test build 20261118c",
+     "date": "2026-11-18",
+     "machine": "dev"
+    },
+    {
+     "what": "Arrange all, 40 copies of the same miniature",
+     "before": "3 plates",
+     "after": "2 plates",
+     "method": "Arrange all on the same scene",
+     "build": "Not recorded",
+     "version": "Test build 20261118c",
+     "date": "2026-11-18",
+     "machine": "dev"
+    },
+    {
+     "what": "Densest-lattice search on a filled plate under one raft for all",
+     "before": "13.2 s",
+     "after": "1.7 s",
+     "method": "The search timed in the app, same copies",
+     "build": "Not recorded",
+     "version": "Test build 20261118d",
+     "date": "2026-11-18",
+     "machine": "dev"
     }
    ]
   },

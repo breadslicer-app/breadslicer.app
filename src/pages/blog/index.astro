@@ -10,7 +10,7 @@ const reports = (await getCollection("reports", (r) => !r.data.draft)).sort((a, 
 const kinds = (Object.keys(KIND) as (keyof typeof KIND)[]).filter((k) => posts.some((p) => p.data.kind === k));
 ---
 <Base title="Blog" description="Breadslicer's blog: a post for every release, and notes and mini-papers on how the slicer works, with our own measurements.">
-  <PageHead eyebrow="Blog" lede="A post for every release, and the story behind the work: notes, and mini-papers with the method and the numbers. Everything measured on our own machine.">
+  <PageHead eyebrow="Blog" lede="A post for every release, and the story behind the work: notes, and mini-papers with the method and the numbers. Measured on our own machine, unless a post says otherwise.">
     From <em>the bakery.</em>
   </PageHead>
 
@@ -27,6 +27,7 @@ const kinds = (Object.keys(KIND) as (keyof typeof KIND)[]).filter((k) => posts.s
           <a class={`card card-${p.data.kind}`} href={`/blog/${p.id}/`} data-kind={p.data.kind} data-cell>
             <span class="meta">
               <span class="kind">{kindLine(p)}</span>
+              {p.data.next && <span class="badge-draft">Next build</span>}
               <time datetime={p.data.date.toISOString().slice(0, 10)}>{formatDate(p.data.date)}</time>
             </span>
             <h2>{p.data.title}</h2>

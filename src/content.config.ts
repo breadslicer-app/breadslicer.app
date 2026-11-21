@@ -27,6 +27,8 @@ const blog = defineCollection({
     kind: z.enum(["release", "paper", "note"]),
     /** Release posts only. */
     version: z.string().optional(),
+    /** On main and in test builds, not yet in a release: the post says so. */
+    next: z.boolean().default(false),
   }),
 });
 

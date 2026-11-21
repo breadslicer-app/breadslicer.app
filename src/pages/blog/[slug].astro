@@ -4,6 +4,7 @@ import Base from "../../layouts/Base.astro";
 import PageHead from "../../components/PageHead.astro";
 import { formatDate } from "../../lib/format";
 import { AUTHOR, getPosts, kindLine, type Post } from "../../lib/blog";
+import release from "../../data/release.json";
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -26,6 +27,11 @@ const iso = post.data.date.toISOString().slice(0, 10);
   <section class="section section-plain" aria-label="Post">
     <div class="article">
       <div class="article-main">
+        {post.data.next && (
+          <div class="callout draft-banner">
+            <p><strong>In the next build.</strong> What this post describes is in Breadslicer's development builds, not in the current download, {release.version}. It comes with the next release.</p>
+          </div>
+        )}
         <article class="prose post"><Content /></article>
         <nav class="post-nav" aria-label="More posts">
           {older ? <a href={`/blog/${older.id}/`}><span class="label">Older</span>{older.data.title}</a> : <span></span>}

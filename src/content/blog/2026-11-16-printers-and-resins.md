@@ -32,10 +32,7 @@ Each resin is credited to its maker in the app. We do not mix in numbers from an
 
 ## Your own settings
 
-Most people who print a lot already have settings they trust, tuned over months in another program. **File › Import printer settings** reads the files those programs export for you to share or back up:
-
-- a Lychee Slicer printer export (`.lyp`);
-- a Photon Workshop settings file (`.pwsp`), from which we take your own resins only.
+Most people who print a lot already have settings they trust, tuned over months in another program. **File › Import printer settings** reads the printer and settings files two other resin slicers export for you to share or back up, and takes your own resins from them.
 
 Each resin becomes a profile in your library, calibrated for the matching Breadslicer printer (same panel and same plate). Nothing of those programs is bundled; we only read the files you choose to open.
 

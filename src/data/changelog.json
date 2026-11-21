@@ -2,10 +2,580 @@
  "_note": "Newest first. Dates are when the change landed in the development build. Plain wording for people who print, not for developers.",
  "entries": [
   {
+   "date": "2026-11-21",
+   "area": "Editor",
+   "title": "Adjust a stroke cut before cutting",
+   "text": "A stroke or lasso cut stays on the model as a cutting surface with the plane's gizmo: move its points, move it, tilt it, from any side. A right click mid-drag puts it back."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Printers",
+   "title": "Network printers in Preferences",
+   "text": "Preferences has a Network printers page: every printer Send to printer has found, the saved ones first, to rename, set up or forget. Changes show at once in the Send card and the camera wall."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Project",
+   "title": "Supports and rafts known by what they are",
+   "text": "Projects tell supports and rafts from models by a role saved in the file, not by their names, so a model that happens to be called \"Supports\" stays a model. Older projects open as before."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Project",
+   "title": "File metadata kept",
+   "text": "The title, designer, license and other metadata a .bread file carries are kept when you save it again. Entries about a part you deleted are dropped."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Printers",
+   "title": "A photo for every printer",
+   "text": "Every printer in the list has its photo now."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Printers",
+   "title": "Creality CT-005 Pro removed",
+   "text": "It was listed as a resin printer, but it is the inner name of a filament printer."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Supports",
+   "title": "Nothing below the plate",
+   "text": "A brace starting on the plate could leave a ring a hair below it, which striped the plate. Everything below the plate is set on it."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Editor",
+   "title": "Measure from any tab",
+   "text": "Q turns Measure on and off in every tab."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Editor",
+   "title": "See where a stroke cut goes through",
+   "text": "Before cutting, the part of a stroke or lasso cut that runs inside the model shows in green."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Supports",
+   "title": "Line and Area use the preset's sizes",
+   "text": "The Line and Area tools always place supports of the preset in use. Add keeps the hand size you picked."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Interface",
+   "title": "Shortcuts card holds the view",
+   "text": "With the shortcuts card open, nothing behind it zooms or moves, and F1 closes it again."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Editor",
+   "title": "Tools close with their model",
+   "text": "A tool closes and clears itself when the model it works on is deleted or another project opens."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Transform",
+   "title": "Lay on face shows the face",
+   "text": "The flat face under the cursor lights up before you click it."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Editor",
+   "title": "Cut pieces get their supports",
+   "text": "Cutting a model with Breadslicer supports gives the pieces new supports in the same Undo step."
+  },
+  {
+   "date": "2026-11-21",
+   "area": "Editor",
+   "title": "Moving one member of a group",
+   "text": "Dragging one model of a group moves it alone, and the app says so."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Select placed supports",
+   "text": "The Select tool (E) picks a placed support: change its tip, trunk and foot widths in place, split it onto its own trunk or hang it from the nearest one."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Drag a trunk or an elbow",
+   "text": "With Select, drag a support's trunk across the plate or move one of its elbows; what hangs from it is routed again."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Line tool",
+   "text": "Two clicks on the model place a row of supports along the surface between them (N)."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Area tool",
+   "text": "Paint a patch of the model to fill it with supports (P); Shift+click fills the faces around the click."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Support view modes",
+   "text": "Scene settings draws supports in full, as their contacts only, or see-through."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Edit presets by zone",
+   "text": "The presets that size supports by zone can be edited: sizes per zone, bracing patterns, small islands, how far to look for the plate."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Painted detail avoided",
+   "text": "Tips planned on faces painted as detail move half a spacing away or take a finer size."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "No supports where the model holds itself",
+   "text": "A point with model just two layers below it gets no support."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Supports kept when a trunk goes",
+   "text": "Supports that hung from a trunk removed in the final check are placed again from their own tip."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "A raft per model",
+   "text": "Each model can have its own raft: type, thickness, or none."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Solid rafts with pads, holes and tabs",
+   "text": "A solid raft can stand on pads instead of one slab, have holes, and carry peel tabs at its sharpest corners."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Supports only from the plate",
+   "text": "A preset option for models that should carry no support on their own surface."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Drains stay clear",
+   "text": "No tip goes inside a drain's channel, and a raft that covers a drain hole is drawn with a warning."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Supports",
+   "title": "Room for a tip",
+   "text": "A tip with no room for a straight approach may come in at 45°, so fewer islands are left without support."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Arrange",
+   "title": "Model groups",
+   "text": "Ctrl+G groups models: they are picked, moved, arranged and supported as one, under one raft."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Editor",
+   "title": "Cut along a stroke",
+   "text": "Draw a line across a model and cut it along that line."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Editor",
+   "title": "Lasso cut",
+   "text": "Draw a closed curve on a model to cut that region out."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Editor",
+   "title": "Pins and magnet slots",
+   "text": "A cut can add pins to line the pieces up, or slots for magnets."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Editor",
+   "title": "Suggested cuts",
+   "text": "Breadslicer proposes where to cut a model, from its creases and narrow necks."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Transform",
+   "title": "Lay on face",
+   "text": "Click a flat face and the model turns to stand on it."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Transform",
+   "title": "Type numbers while you move",
+   "text": "While moving, turning or scaling with G, R or S, you can type the amount. Scale can be set per axis."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Editor",
+   "title": "Hide and lock models",
+   "text": "A hidden model is not drawn and not sliced; a locked one cannot be picked in the view. Both are saved in the project."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Transform",
+   "title": "Orient several models",
+   "text": "Auto-orient works on every selected model at once; Full also weighs suction cups and peel force."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Editor",
+   "title": "Mirror",
+   "text": "Right-click > Mirror flips the selection along X or Y, supports included."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Editor",
+   "title": "Measure tool",
+   "text": "Click two points for their distance and its X, Y and Z parts; Shift+click adds a leg and a total."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Review",
+   "title": "Peel force per layer",
+   "text": "The Slice tab estimates how hard each layer pulls on the film, and charts area, perimeter, force and time per layer."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Review",
+   "title": "Tips asked to carry too much",
+   "text": "The review finds tips that carry more of a layer's pull than their size can."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Review",
+   "title": "Delete a tiny island",
+   "text": "An island too small for any support can be erased from the layers, if you choose to."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Review",
+   "title": "Turn a model to drop its suction cups",
+   "text": "A review fix turns the model so its suction cups go away, next to the one that drills a drain."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Interface",
+   "title": "One progress bar",
+   "text": "Every long job shows its progress in one ruler at the bottom of the view, with Cancel."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Interface",
+   "title": "Keyboard shortcuts card",
+   "text": "F1 or Help opens a card with every shortcut."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Interface",
+   "title": "Links open in Breadslicer",
+   "text": "breadslicer:// links open a file, the diagnostics or the preferences in the running window. They never download anything."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Project",
+   "title": "Pictures in Explorer",
+   "text": "Projects saved by hand carry a picture of the scene, shown in Windows Explorer."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Project",
+   "title": "Export the selection",
+   "text": "File > Export selection writes the picked models alone; hidden models are left out of every export."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Slicing",
+   "title": "Prusa SL1 and SL1S",
+   "text": "Breadslicer writes .sl1 and .sl1s files, with 370 resins from Prusa's settings."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Slicing",
+   "title": "Adaptive layers",
+   "text": "Layer height can follow the model's shape, for CTB v3 and newer files."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Printers",
+   "title": "Phrozen and Creality settings",
+   "text": "Resin settings for the Phrozen Shuffle and Transform, and for the Creality Halot X1 Neo and X1 Max."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Import",
+   "title": "STL with broken facet normals",
+   "text": "An STL whose facet normals are not numbers opens, taking each normal from its triangle."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Import",
+   "title": "Pre-supported models cut cleanly",
+   "text": "Cutting a pre-supported model keeps each support with the piece it holds and takes the rest away."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Project",
+   "title": "Title follows the scene",
+   "text": "Deleting every model of a file and importing others no longer leaves the old file's name in the title."
+  },
+  {
+   "date": "2026-11-20",
+   "area": "Arrange",
+   "title": "Models past every plate",
+   "text": "A model past every plate is listed under Off the plates and is never sliced as part of the first one."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Printing",
+   "title": "Send to Elegoo printers over Wi-Fi",
+   "text": "Printers that speak SDCP get a Send card in the Slice tab: find them on the network, name the file, send, or send and start."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Printing",
+   "title": "Fast sends",
+   "text": "Pieces go in order over one connection. A tester's first send took 11 minutes; now it takes 16 seconds."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Printing",
+   "title": "Printer camera",
+   "text": "See a network printer's camera in the Send card, and enlarge it to the whole window."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Printing",
+   "title": "Camera wall",
+   "text": "All cameras shows every network printer at once, with its name and state."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Printing",
+   "title": "Your printers, your names",
+   "text": "Give each network printer a name, the printer profile it is, the resin it is kept for and a note. A warning shows if the plate was sliced for another printer."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Printers",
+   "title": "Tilting vats",
+   "text": "Printers that tilt their vat get no extra lift after the base layers, as the machines expect."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Hollow",
+   "title": "Drains in a finished hollow",
+   "text": "A model that is already hollow gets each drain drilled into the cavity it has, without hollowing again."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Hollow",
+   "title": "Clearer Hollow",
+   "text": "A model that cannot be sliced is repaired first, a model with no room says so, and clicks made while it works are kept."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Hollow",
+   "title": "Where a drain works best",
+   "text": "A colour map on the model shows where a drain would work best, without placing any."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Supports",
+   "title": "Lighter supports inside a cavity",
+   "text": "Supports inside a closed cavity take a wider tip and stand further apart: fewer of them, and less resin trapped inside."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Review",
+   "title": "Review over the view",
+   "text": "In the Slice tab the review floats over the view and grows with the window."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Review",
+   "title": "Fix all ends with a fresh slice",
+   "text": "When Fix all ends, the plate is sliced again so the list matches the scene."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Slicing",
+   "title": "Layer slider cuts live",
+   "text": "Outside a current slice, the layer slider cuts the models live at the height you pick."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Import",
+   "title": "Models named after their file",
+   "text": "A model is named after its file, whatever name the file gives it inside."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Slicing",
+   "title": "Transition layers",
+   "text": "The exposure steps down over the resin's transition layers; formats that cannot store the ramp say so."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Interface",
+   "title": "Decimal comma",
+   "text": "In Spanish, every number you type takes a decimal comma."
+  },
+  {
+   "date": "2026-11-19",
+   "area": "Editor",
+   "title": "Faster opening",
+   "text": "Opening a project no longer prepares the support editing caches up front; they are ready when you enter Supports."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Supports",
+   "title": "Generate supports the islands",
+   "text": "Generate also finds the islands and supports them, then runs Fix all, with no question."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Arrange",
+   "title": "Denser Arrange and Fill bed",
+   "text": "A last pass pushes in what did not fit and moves the neighbours aside: two more copies per plate on a pre-supported miniature."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Printers",
+   "title": "Printer and resin card",
+   "text": "Pick printer and resin in a card over the main window, with a form for every setting."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Interface",
+   "title": "First-run setup",
+   "text": "The first time, Breadslicer asks your printer, your resin and how you like the mouse."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Interface",
+   "title": "Control layouts",
+   "text": "Navigate like a classic resin slicer (the default), like three common CAD and 3D modelling programs, or with Breadslicer's own layout."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Printers",
+   "title": "Add a printer by hand",
+   "text": "Start from a copy of the closest printer and give it its screen and plate."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Printers",
+   "title": "Resins for your printer",
+   "text": "Only resins with settings for the printer you picked are offered."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Printers",
+   "title": "Liqcreate resins",
+   "text": "58 Liqcreate resins with their settings for 86 printers."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Printers",
+   "title": "Phrozen resins",
+   "text": "80 resins for Phrozen printers from Phrozen's published settings, including BASF Forward AM and Loctite."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Import",
+   "title": "More settings to import",
+   "text": "Import more of the machine and resin settings other slicers export."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Slicing",
+   "title": "Cost per print",
+   "text": "Give a resin its price and the Cost card shows what the plate and each model cost."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Slicing",
+   "title": "Print time you can trust",
+   "text": "Tell Breadslicer how long your prints took and the estimate calibrates itself, with a margin."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Printers",
+   "title": "Where a profile came from",
+   "text": "Every profile says what it was made from, imported from, and when."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Slicing",
+   "title": "Parts past the plate",
+   "text": "After Generate a card lists anything past the plate, and Slice refuses until it is back in."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Slicing",
+   "title": "Slice despite mesh errors",
+   "text": "A plate with mesh errors is sliced from a repaired copy instead of refused, and the app says so."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Interface",
+   "title": "Layer slider in every tab",
+   "text": "The layer slider is in every tab, not only in Slice."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Hollow",
+   "title": "Edit drains one by one",
+   "text": "Pick a drain to move it, resize it with its plug, or remove it."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Editor",
+   "title": "Select, deselect, invert",
+   "text": "Keyboard shortcuts select everything, nothing, or the opposite."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Editor",
+   "title": "Duplicate in one step",
+   "text": "One shortcut duplicates the selection."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Editor",
+   "title": "G moves on the plate",
+   "text": "G moves on the plate by default and G again confirms; the axis lock shows plainly."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Editor",
+   "title": "Box select on empty space",
+   "text": "A drag on empty space draws a selection box; Shift+click picks a range in the object list."
+  },
+  {
+   "date": "2026-11-18",
+   "area": "Supports",
+   "title": "Lift on by default",
+   "text": "Lift 5 mm when the model rests on the plate is on by default."
+  },
+  {
    "date": "2026-11-16",
    "area": "Printers",
    "title": "Import your own printer settings",
-   "text": "File › Import printer settings reads the resins you exported from Lychee Slicer (.lyp) or Photon Workshop (.pwsp) and adds each one to your library, calibrated for the matching printer."
+   "text": "File › Import printer settings reads the resins you exported from other resin slicers and adds each one to your library, calibrated for the matching printer."
   },
   {
    "date": "2026-11-16",
