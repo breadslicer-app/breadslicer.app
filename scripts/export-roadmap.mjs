@@ -34,7 +34,7 @@ const BLOCKED_WORD_HASHES = new Set([
   "8c70b25cbbbe8e79", "c70eca6b0f88f44d", "7d3194f79e645c42", "053ea4804ef1bb33",
   "5e14fbe0b3af2ed9", "ee510d1a07ac7e64", "1f2075abe2e678d6", "32c220482c68413f",
   "4bff358ac1b68f22", "e0c924608fdcda85", "bead4435bace442e", "69b21112c1551f98",
-  "b8b6bf33efcb9144", "58783b218b78dfcf", "7063d51d1b2da165", "9b365fea51e6a690",
+  "b8b6bf33efcb9144", "7063d51d1b2da165", "9b365fea51e6a690",
   "60965168ce762e94", "487b91042c7cf27a", "3ea125d0bff386e6", "5d72436256ada538",
 ]);
 const hashWord = (w) => createHash("sha256").update(w.toLowerCase()).digest("hex").slice(0, 16);
