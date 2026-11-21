@@ -141,7 +141,7 @@
   /* ---------- Story: stage follows the active step ---------- */
   var stage = $("[data-stage]"), stepLabel = $("[data-step-label]"), stepCount = $("[data-step-count]");
   var steps = $$(".story-step");
-  var stepNames = ["Transform", "Hollow", "Supports", "Slice", "Export"];
+  var stepNames = ["Prepare", "Hollow", "Supports", "Slice"];
   function setStep(n) {
     if (!stage || stage.getAttribute("data-step") === String(n)) return;
     stage.setAttribute("data-step", String(n));

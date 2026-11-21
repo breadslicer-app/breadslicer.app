@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-02",
- "count": 157,
- "exporting": 98,
+ "generated": "2026-11-21",
+ "count": 178,
+ "exporting": 109,
  "printers": [
   {
    "brand": "Anet",
@@ -64,6 +64,31 @@
    "pixel_um": [
     47.3,
     47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    155
+   ],
+   "formats": [
+    {
+     "label": "photon v2",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Anycubic",
+   "name": "Photon (mono screen)",
+   "family": "Photon",
+   "resolution": [
+    1080,
+    1920
+   ],
+   "pixel_um": [
+    63,
+    63
    ],
    "volume_mm": [
     68,
@@ -680,6 +705,31 @@
   },
   {
    "brand": "Anycubic",
+   "name": "Photon S Upgrade",
+   "family": "Photon",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    165
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Anycubic",
    "name": "Photon Ultra",
    "family": "Photon",
    "resolution": [
@@ -805,31 +855,6 @@
   },
   {
    "brand": "Creality",
-   "name": "CT-005 Pro",
-   "family": "CT",
-   "resolution": [
-    3840,
-    2400
-   ],
-   "pixel_um": [
-    50,
-    50
-   ],
-   "volume_mm": [
-    192,
-    120,
-    250
-   ],
-   "formats": [
-    {
-     "label": ".cxdlp v3",
-     "writable": true
-    }
-   ],
-   "exports": true
-  },
-  {
-   "brand": "Creality",
    "name": "CT-133 Pro",
    "family": "CT",
    "resolution": [
@@ -918,6 +943,31 @@
    "volume_mm": [
     228.1,
     128.3,
+    230
+   ],
+   "formats": [
+    {
+     "label": "cxdlpv4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot Mage S",
+   "family": "Halot",
+   "resolution": [
+    13320,
+    5120
+   ],
+   "pixel_um": [
+    16.8,
+    24.8
+   ],
+   "volume_mm": [
+    223.8,
+    127,
     230
    ],
    "formats": [
@@ -1042,6 +1092,56 @@
   },
   {
    "brand": "Creality",
+   "name": "Halot Play",
+   "family": "Halot",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    50,
+    50
+   ],
+   "volume_mm": [
+    192,
+    120,
+    200
+   ],
+   "formats": [
+    {
+     "label": "cxdlpv4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot R6",
+   "family": "Halot",
+   "resolution": [
+    1620,
+    2560
+   ],
+   "pixel_um": [
+    51,
+    51
+   ],
+   "volume_mm": [
+    82.6,
+    130.6,
+    160
+   ],
+   "formats": [
+    {
+     "label": "cxdlpv4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
    "name": "Halot Ray",
    "family": "Halot",
    "resolution": [
@@ -1131,6 +1231,56 @@
     211.7,
     118.4,
     200
+   ],
+   "formats": [
+    {
+     "label": "cxdlpv4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot X1 Max",
+   "family": "Halot",
+   "resolution": [
+    15120,
+    6230
+   ],
+   "pixel_um": [
+    20,
+    26
+   ],
+   "volume_mm": [
+    302.4,
+    162,
+    350
+   ],
+   "formats": [
+    {
+     "label": "cxdlpv4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Creality",
+   "name": "Halot X1 Neo",
+   "family": "Halot",
+   "resolution": [
+    8520,
+    4320
+   ],
+   "pixel_um": [
+    18,
+    18
+   ],
+   "volume_mm": [
+    153.4,
+    77.8,
+    160
    ],
    "formats": [
     {
@@ -1314,6 +1464,56 @@
    "formats": [
     {
      "label": ".ctb v5",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars (mono screen)",
+   "family": "Mars",
+   "resolution": [
+    1080,
+    1920
+   ],
+   "pixel_um": [
+    63,
+    63
+   ],
+   "volume_mm": [
+    68,
+    121,
+    155
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars (RGB screen V2)",
+   "family": "Mars",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    155
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
      "writable": true
     }
    ],
@@ -1592,6 +1792,56 @@
    "pixel_um": [
     47.3,
     47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars Pro",
+   "family": "Mars",
+   "resolution": [
+    1440,
+    2560
+   ],
+   "pixel_um": [
+    47.3,
+    47.3
+   ],
+   "volume_mm": [
+    68,
+    121,
+    150
+   ],
+   "formats": [
+    {
+     "label": ".ctb v3",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "ELEGOO",
+   "name": "Mars Pro FHD",
+   "family": "Mars",
+   "resolution": [
+    1080,
+    1920
+   ],
+   "pixel_um": [
+    63,
+    63
    ],
    "volume_mm": [
     68,
@@ -3291,6 +3541,56 @@
   },
   {
    "brand": "Phrozen",
+   "name": "Sonic Mega 8K S",
+   "family": "Sonic",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    43,
+    43
+   ],
+   "volume_mm": [
+    330.2,
+    185.8,
+    300
+   ],
+   "formats": [
+    {
+     "label": "prz",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mega 8K V2",
+   "family": "Sonic",
+   "resolution": [
+    7680,
+    4320
+   ],
+   "pixel_um": [
+    43,
+    43
+   ],
+   "volume_mm": [
+    330.2,
+    185.8,
+    400
+   ],
+   "formats": [
+    {
+     "label": "prz",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
    "name": "Sonic Mighty 4K",
    "family": "Sonic",
    "resolution": [
@@ -3341,6 +3641,31 @@
   },
   {
    "brand": "Phrozen",
+   "name": "Sonic Mighty 12K Upgrade",
+   "family": "Sonic",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    235
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "Phrozen",
    "name": "Sonic Mighty Revo",
    "family": "Sonic",
    "resolution": [
@@ -3363,6 +3688,56 @@
     }
    ],
    "exports": true
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mighty Revo 16K",
+   "family": "Sonic",
+   "resolution": [
+    15120,
+    6230
+   ],
+   "pixel_um": [
+    14,
+    19
+   ],
+   "volume_mm": [
+    211.7,
+    118.4,
+    235
+   ],
+   "formats": [
+    {
+     "label": "prz",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
+   "name": "Sonic Mighty Revo 16K Max",
+   "family": "Sonic",
+   "resolution": [
+    15104,
+    6230
+   ],
+   "pixel_um": [
+    20,
+    26
+   ],
+   "volume_mm": [
+    302.4,
+    162,
+    300
+   ],
+   "formats": [
+    {
+     "label": "prz",
+     "writable": false
+    }
+   ],
+   "exports": false
   },
   {
    "brand": "Phrozen",
@@ -3466,6 +3841,31 @@
   },
   {
    "brand": "Phrozen",
+   "name": "Sonic XL 4K 2022",
+   "family": "Sonic",
+   "resolution": [
+    3840,
+    2400
+   ],
+   "pixel_um": [
+    52,
+    52
+   ],
+   "volume_mm": [
+    199.7,
+    124.8,
+    200
+   ],
+   "formats": [
+    {
+     "label": "zip",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "Phrozen",
    "name": "Transform",
    "family": "Transform",
    "resolution": [
@@ -3508,11 +3908,11 @@
    ],
    "formats": [
     {
-     "label": "sl1 sl1",
-     "writable": false
+     "label": ".sl1",
+     "writable": true
     }
    ],
-   "exports": false
+   "exports": true
   },
   {
    "brand": "Prusa",
@@ -3533,11 +3933,11 @@
    ],
    "formats": [
     {
-     "label": "sl1 sl1s",
-     "writable": false
+     "label": ".sl1s",
+     "writable": true
     }
    ],
-   "exports": false
+   "exports": true
   },
   {
    "brand": "QIDI",
@@ -3641,6 +4041,81 @@
   },
   {
    "brand": "UniFormation",
+   "name": "GK3",
+   "family": "GK3",
+   "resolution": [
+    15120,
+    6230
+   ],
+   "pixel_um": [
+    14,
+    19
+   ],
+   "volume_mm": [
+    211.7,
+    118.4,
+    240
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "UniFormation",
+   "name": "GK3 Pro",
+   "family": "GK3",
+   "resolution": [
+    15120,
+    6230
+   ],
+   "pixel_um": [
+    14,
+    19
+   ],
+   "volume_mm": [
+    211.7,
+    118.4,
+    240
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "UniFormation",
+   "name": "GK3 Ultra",
+   "family": "GK3",
+   "resolution": [
+    15120,
+    6230
+   ],
+   "pixel_um": [
+    20,
+    26
+   ],
+   "volume_mm": [
+    302.4,
+    162,
+    300
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
+  },
+  {
+   "brand": "UniFormation",
    "name": "GKone",
    "family": "GKone",
    "resolution": [
@@ -3688,6 +4163,56 @@
     }
    ],
    "exports": false
+  },
+  {
+   "brand": "UniFormation",
+   "name": "GKtwo 12K Upgrade",
+   "family": "GKtwo",
+   "resolution": [
+    11520,
+    5120
+   ],
+   "pixel_um": [
+    19,
+    24
+   ],
+   "volume_mm": [
+    218.9,
+    122.9,
+    245
+   ],
+   "formats": [
+    {
+     "label": "gktwo.ctb v4",
+     "writable": false
+    }
+   ],
+   "exports": false
+  },
+  {
+   "brand": "UniFormation",
+   "name": "S10",
+   "family": "S10",
+   "resolution": [
+    15360,
+    6540
+   ],
+   "pixel_um": [
+    14.5,
+    19.3
+   ],
+   "volume_mm": [
+    223,
+    125.9,
+    200
+   ],
+   "formats": [
+    {
+     "label": ".ctb v5 (encrypted)",
+     "writable": true
+    }
+   ],
+   "exports": true
   },
   {
    "brand": "Uniz",

@@ -49,7 +49,7 @@ const now = [
             <dl class="hero-facts">
               <div><dt>Runtime</dt><dd>Native Rust</dd></div>
               <div><dt>Viewport</dt><dd>Own wgpu renderer</dd></div>
-              <div><dt>Footprint</dt><dd>~65 MB executable</dd></div>
+              <div><dt>Footprint</dt><dd>74 MB executable</dd></div>
             </dl>
           </div>
 
@@ -92,15 +92,16 @@ const now = [
     <section class="section" id="workflow" data-section="workflow" aria-labelledby="workflow-title">
       <div class="section-bar">
         <span class="mono">01 / Workflow</span>
-        <span class="mono section-bar-right"><span data-step-label>Transform</span> · <span data-step-count>1</span> of 5</span>
+        <span class="mono section-bar-right"><span data-step-label>Prepare</span> · <span data-step-count>1</span> of 4</span>
       </div>
 
       <header class="section-head">
-        <h2 id="workflow-title">Five tabs, left to right. <em>Done.</em></h2>
+        <h2 id="workflow-title">Four tabs, left to right. <em>Done.</em></h2>
         <p class="section-lede">
           The whole job lives in one tab bar, in the order you actually work. These
-          are real captures of the app, and every time on this page was measured on
-          one real run with the model below: scroll and the run plays back.
+          are real captures of the app, from that run on 27 Oct, when Export was still a tab of
+          its own; it now lives inside Slice. Every time on this page was measured on that one
+          real run with the model below: scroll and the run plays back.
         </p>
       </header>
 
@@ -109,7 +110,7 @@ const now = [
           <div class="stage" data-stage data-step="1">
             <div class="stage-bar mono">
               <span class="stage-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span class="stage-tabs"><b data-tab="1">Transform</b><b data-tab="2">Hollow</b><b data-tab="3">Supports</b><b data-tab="4">Slice</b><b data-tab="5">Export</b></span>
+              <span class="stage-tabs"><b data-tab="1">Prepare</b><b data-tab="2">Hollow</b><b data-tab="3">Supports</b><b data-tab="4">Slice</b></span>
               <span class="badge">Breadslicer</span>
             </div>
             <div class="stage-shots">
@@ -117,7 +118,6 @@ const now = [
               <img class="shot" data-shot="2" src="/assets/shots/hollow.webp" width="1600" height="900" alt="Breadslicer's Hollow tab: the model with its translucent cavity preview and the wall thickness controls." loading="lazy">
               <img class="shot" data-shot="3" src="/assets/shots/supports.webp" width="1600" height="900" alt="Breadslicer's Supports tab: tree supports generated under a miniature." loading="lazy">
               <img class="shot" data-shot="4" src="/assets/shots/slice.webp" width="1600" height="900" alt="Breadslicer's Slice tab: the model cut at a layer next to that layer's pixels, with time and resin estimates." loading="lazy">
-              <img class="shot" data-shot="5" src="/assets/shots/export.webp" width="1600" height="900" alt="Breadslicer's Export tab: writing the print file for the selected printer." loading="lazy">
             </div>
           </div>
           <div class="runlog" data-runlog aria-label="Measured timings of one real run">
@@ -133,14 +133,14 @@ const now = [
               <li data-log-step="2" data-wait="0" data-bg><span class="log-t">3.2 s</span><span class="log-what">Background: supports generated ahead</span><span class="log-note">ready before you ask</span></li>
               <li data-log-step="3" data-wait="0.15"><span class="log-t">0.15 s</span><span class="log-what">Generate → supports on screen</span><span class="log-note">taken from the run made ahead</span></li>
               <li data-log-step="4" data-wait="0.66"><span class="log-t">0.66 s</span><span class="log-what">991 layers sliced</span><span class="log-note">1 h 49 m · 62.6 ml · 81.3 g</span></li>
-              <li data-log-step="5" data-wait="0.12"><span class="log-t">0.12 s</span><span class="log-what">Printer file written</span><span class="log-note">.ctb · 26.9 MB · Saturn 3 Ultra</span></li>
+              <li data-log-step="4" data-wait="0.12"><span class="log-t">0.12 s</span><span class="log-what">Printer file written</span><span class="log-note">.ctb · 26.9 MB · Saturn 3 Ultra</span></li>
             </ol>
           </div>
         </div>
 
         <div class="story-steps">
           <article class="story-step" data-step-index="1" id="step-transform">
-            <p class="kicker">01 · Transform</p>
+            <p class="kicker">01 · Prepare</p>
             <h3>Move it like you mean it.</h3>
             <p>Press <kbd>G</kbd>, <kbd>R</kbd> or <kbd>S</kbd> and drag. A live chip reads distance or degrees as you go, and axis guide lines keep you honest. Or type it in the numeric inspector: position, lift, rotation, size.</p>
             <p class="measure"><span class="measure-t mono">0.39 s</span> to open a 92 MB, 1.9-million-triangle miniature</p>
@@ -160,14 +160,8 @@ const now = [
           <article class="story-step" data-step-index="4" id="step-slice">
             <p class="kicker">04 · Slice</p>
             <h3>Read every layer before the printer does.</h3>
-            <p>Print time, resin and weight. Then a split view that zooms to 32× with crisp, honest pixels. Sealed cavities slice correctly: what you see is what gets exposed.</p>
-            <p class="measure"><span class="measure-t mono">0.66 s</span> to slice 991 layers</p>
-          </article>
-          <article class="story-step" data-step-index="5" id="step-export">
-            <p class="kicker">05 · Export</p>
-            <h3>Write the file. Go print.</h3>
-            <p>The file your printer reads, written before you can blink: every layer is encoded on every core, and the bytes are the same as a careful one-layer-at-a-time write. Your project keeps its state, so a last-minute fix is one tab away.</p>
-            <p class="measure"><span class="measure-t mono">0.12 s</span> to write the 26.9 MB printer file, every layer encoded on every core</p>
+            <p>Print time, resin and weight. Then a split view that zooms to 32× with crisp, honest pixels. Sealed cavities slice correctly: what you see is what gets exposed. <strong>Export</strong> writes the file your printer reads, every layer encoded on every core.</p>
+            <p class="measure"><span class="measure-t mono">0.66 s</span> to slice 991 layers, and <span class="measure-t mono">0.12 s</span> to write the 26.9 MB printer file</p>
           </article>
         </div>
       </div>
@@ -315,7 +309,7 @@ const now = [
           <div class="why-row" role="row">
             <span role="rowheader">What ships</span>
             <span role="cell">Your app plus a full browser engine</span>
-            <span role="cell">One 65 MB executable and its profiles</span>
+            <span role="cell">One 74 MB executable and its profiles</span>
           </div>
           <div class="why-row" role="row">
             <span role="rowheader">Path to the screen</span>

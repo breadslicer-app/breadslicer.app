@@ -26,11 +26,15 @@ const max = Math.max(...sizes.map((s) => s.mb));
           <li><strong>Supports as data:</strong> trunks, branches and tips are stored as what they are, so they reopen editable instead of as one frozen mesh.</li>
           <li><strong>Hollowing and drains:</strong> the settings, the drains and the original model, so a hollow can be changed later.</li>
           <li><strong>Printer and resin:</strong> the profiles the scene was prepared for.</li>
+          <li><strong>Roles:</strong> which parts are supports and which a raft, so no program has to guess from names.</li>
+          <li><strong>Metadata:</strong> title, description, designer, copyright, license, source and a lasting id per part.</li>
+          <li><strong>A thumbnail:</strong> a picture of the scene that file browsers can show.</li>
         </ul>
         <p>A <code>.bread</code> file never holds sliced layers or caches: those are rebuilt when you slice. Every block in it carries a checksum, so a damaged file is reported instead of opened wrong.</p>
         <h2>An open format</h2>
-        <p>We are writing <code>.bread</code> up as an open 3D format with its own specification, so other tools can read and write it. The specification will be published here when it is ready.</p>
-        <p><a class="button button-ghost is-soon" href="#" aria-disabled="true">Specification <span class="button-sub">Coming soon</span></a></p>
+        <p><code>.bread</code> is an open 3D format with its own specification, frozen at version 2, so other tools can read and write it. The reference implementation is a Rust crate on crates.io, and the same code runs in JavaScript from npm; a viewer opens <code>.bread</code> files in any browser.</p>
+        <p>Supports stored as data are not a promise: <a href="https://synrgs.tech/ecosystem/" rel="noopener">synrgs.tech/ecosystem</a> opens a real Breadslicer project in the browser and rebuilds every support from the file, piece by piece.</p>
+        <p class="cta-row"><a class="button button-ghost" href="https://bread.synrgs.tech/spec/" rel="noopener" data-magnetic>Specification <span class="button-sub">version 2</span></a><a class="button button-ghost" href="https://bread.synrgs.tech/" rel="noopener" data-magnetic>bread.synrgs.tech <span class="arrow" aria-hidden="true">→</span></a></p>
       </div>
       <div>
         <div class="table-wrap" style="padding:22px">

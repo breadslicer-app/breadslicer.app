@@ -9,3 +9,5 @@ facts:
 ---
 
 Auto-orient weighs overhangs, unsupported islands, the peel force on every layer, suction cups and height, then offers the best poses it found. Hover one to preview it on the model and apply it in one undo step. If the current pose is already the best, it says so and changes nothing.
+
+<span class="badge-next">Next build</span> It can orient every selected model at once.

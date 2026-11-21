@@ -9,3 +9,5 @@ facts:
 ---
 
 A `.bread` project keeps the whole scene: models, positions, supports, hollowing and drains, printer and resin. Meshes are packed without loss, and supports are stored as what they are, so they reopen editable. [More about .bread](/bread-format/).
+
+<span class="badge-next">Next build</span> Saved projects show a picture of the scene in Windows Explorer, and keep whatever title, designer and license the file came with.

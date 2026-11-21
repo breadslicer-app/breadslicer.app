@@ -11,3 +11,5 @@ facts:
 Click where a drain should go. Before you click, the marker turns red where the hole would not reach the cavity. The depth is automatic, just past the wall, or a number you choose, and it is trimmed if it would come out on the other side.
 
 A drain removes every infill pillar or lattice bar it touches, so nothing is left floating in the channel. Each hole can be a cone, and can come with a plug a tenth of a millimetre narrower, printed next to the model.
+
+<span class="badge-next">Next build</span> A model that is already hollow, from Breadslicer or from another program, gets its drains drilled into the cavity it has, without hollowing again. Pick a drain to move, resize or remove it. A colour map can show where a drain would work best.

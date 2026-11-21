@@ -254,3 +254,6 @@ details.board-col[open] summary h2::after { content: "−"; }
 .post-nav .newer { text-align: right; }
 .post-nav .label { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); }
 @media (max-width: 560px) { .post-nav { grid-template-columns: minmax(0, 1fr); } .post-nav .newer { text-align: left; } }
+
+/* Lo que está en las builds de desarrollo y llega en la próxima release */
+.badge-next { display: inline-block; vertical-align: 2px; margin-right: 6px; font-family: var(--font-mono); font-size: .62rem; letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); background: var(--accent); border-radius: 999px; padding: 2px 8px; }

@@ -11,3 +11,5 @@ facts:
 **Arrange all** packs models by their real shape at every height, not just their shadow on the plate, so a wing can reach over a smaller model as long as they never come closer than the spacing. A shadow-only mode is there for the classic layout.
 
 **Fill bed** fills the free space with copies of the selected model, or a fair mix of several selected ones, and leaves everything else where it is.
+
+<span class="badge-next">Next build</span> A last pass pushes in what did not fit and moves its neighbours aside: on a pre-supported miniature, Fill bed fits 20 copies where it fitted 18. **Ctrl+G** groups models so they are arranged, supported and given one raft as one unit.

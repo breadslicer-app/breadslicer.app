@@ -2,17 +2,20 @@
 import Base from "../layouts/Base.astro";
 import PageHead from "../components/PageHead.astro";
 import data from "../data/printers.json";
+import release from "../data/release.json";
 import { formatDate } from "../lib/format";
 
 const brands = new Set(data.printers.map((p) => p.brand).filter((b) => b !== "Generic"));
 ---
 <Base title="Supported printers and formats" description="Every resin printer profile in Breadslicer, its panel, and the print files Breadslicer writes for it.">
-  <PageHead eyebrow="Printers and formats" lede={`${data.count} printer profiles from ${brands.size} brands. Breadslicer writes the print file for ${data.exporting} of them today; the others can be prepared and sliced, but their print file is not written yet.`}>
+  <PageHead eyebrow="Printers and formats" lede={`${data.count} printer profiles from ${brands.size} brands. Breadslicer writes the print file for ${data.exporting} of them; the others can be prepared and sliced, but their print file is not written yet.`}>
     Your printer, <em>pixel for pixel.</em>
   </PageHead>
-
   <section class="section section-plain" aria-label="Printers">
     <div class="wrap">
+      {data.count !== release.printers && (
+        <div class="callout" style="margin-bottom:clamp(32px,5vw,48px)"><p><span class="badge-next">Next build</span> This list comes from the development builds, which have {data.count} printers. The current download, {release.version}, has {release.printers}; the rest come with the next release.</p></div>
+      )}
       <div class="two-col" style="margin-bottom:clamp(40px,6vw,64px)">
         <div class="prose">
           <h2 style="margin-top:0;padding-top:0;border-top:0">How formats are checked</h2>

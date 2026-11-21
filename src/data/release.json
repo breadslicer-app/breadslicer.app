@@ -1,5 +1,5 @@
 {
- "_note": "The build the site offers. Update it with every release: the version, the zip on GitHub and its size as GitHub lists it (never rounded up), and the release post.",
+ "_note": "The build the site offers. Update it with every release: the version, the zip on GitHub and its size as GitHub lists it (never rounded up), and the release post. `printers` is how many printer profiles that build has, for the note on /printers/.",
  "version": "0.4.0-alpha.1",
  "date": "2026-11-16",
  "platform": "Windows",
@@ -7,5 +7,6 @@
  "size": "43 MB",
  "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.4.0-alpha.1",
  "all": "https://github.com/breadslicer-app/breadslicer/releases",
- "post": "/blog/v0.4.0-alpha.1-release/"
+ "post": "/blog/v0.4.0-alpha.1-release/",
+ "printers": 157
 }

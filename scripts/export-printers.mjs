@@ -47,6 +47,9 @@ function describe(format, version) {
       return { label: `.${v}`, writable: ANYCUBIC_ZIP.includes(v) };
     case "aff":
       return { label: `.${v}`, writable: ANYCUBIC_BINARY.includes(v) };
+    case "sl1":
+      if (v === "sl1" || v === "sl1s") return { label: `.${v}`, writable: true };
+      return { label: `.sl1 ${version ?? ""}`.trim(), writable: false };
     default:
       return { label: version ? `${format} ${version}` : format, writable: false };
   }
