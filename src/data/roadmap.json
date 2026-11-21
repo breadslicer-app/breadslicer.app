@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T02:22:48Z",
+ "generated": "2026-11-21T07:41:10Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 17,
+  "In progress": 1,
   "Next": 0,
   "Quick wins": 0,
-  "Backlog": 23,
+  "Backlog": 24,
   "Later": 3,
-  "Done": 358
+  "Done": 374
  },
  "items": [
   {
@@ -162,13 +162,13 @@
   },
   {
    "title": "Convert imported supports into editable supports",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Don't support what rests on the model; hand thin gaps to Review",
@@ -202,13 +202,13 @@
   },
   {
    "title": "Portable build and reproducible development releases",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: delivery",
     "roadmap"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Testers: Discord bot, triaged issues and PR-based fixes",
@@ -344,16 +344,6 @@
     "area: supports"
    ],
    "closed": "2026-11-20"
-  },
-  {
-   "title": "Merge island clusters and redundant tips",
-   "state": "open",
-   "column": "In progress",
-   "labels": [
-    "enhancement",
-    "area: supports"
-   ],
-   "closed": null
   },
   {
    "title": "Editor for zone support presets",
@@ -502,13 +492,13 @@
   },
   {
    "title": "Know model and support leaves in the slicing core",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: slicing"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Automatic XY and elephant-foot compensation from calibration",
@@ -801,15 +791,6 @@
    "closed": "2026-11-20"
   },
   {
-   "title": "Save support previews in .bread files",
-   "state": "closed",
-   "column": "In progress",
-   "labels": [
-    "area: file formats"
-   ],
-   "closed": "2026-11-20"
-  },
-  {
    "title": "Installer: Explorer thumbnails and the new file description",
    "state": "open",
    "column": "Backlog",
@@ -827,15 +808,6 @@
     "area: profiles"
    ],
    "closed": "2026-11-20"
-  },
-  {
-   "title": "Uniformation's published resin settings as material profiles",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "area: profiles"
-   ],
-   "closed": null
   },
   {
    "title": "Prusa's published resin settings as material profiles",
@@ -866,13 +838,13 @@
   },
   {
    "title": "Printer images for every printer",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: profiles"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Own profiles and import/export with provenance",
@@ -1255,7 +1227,7 @@
   {
    "title": "Adaptive layers and per-region profiles",
    "state": "open",
-   "column": "In progress",
+   "column": "Backlog",
    "labels": [
     "area: slicing",
     "roadmap"
@@ -2662,12 +2634,12 @@
   },
   {
    "title": "A better, faster support engine of our own",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Hollow records its engine version and stretch",
@@ -3398,12 +3370,12 @@
   },
   {
    "title": "Keep the META chunk of .bread files",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "First-run setup: pick a printer, a resin and a control layout",
@@ -3590,10 +3562,10 @@
   },
   {
    "title": "Profiles for network printers: names, printer and resin of their own",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Supports inside a hollow are placed one stick per point, unbraced",
@@ -3707,93 +3679,93 @@
   },
   {
    "title": "The keyboard shortcuts card lets the 3D view zoom behind it",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Measure tool styled like the rest of the app",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Tools close and clear themselves when the scene changes",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Lay on face shows which faces can be picked",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Say that dragging one model of a group moves it alone",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Stroke cut becomes a cutting surface the person can adjust",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: geometry"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Cutting a model with Breadslicer supports leaves the pieces without supports",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Drain arrows in the Hollow tab use the app's icons",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Line and Area supports take the picked preset, and their preview points are round",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Update the zip crate to 9.1 and check ZIP header consistency",
@@ -3801,6 +3773,46 @@
    "column": "Done",
    "labels": [],
    "closed": "2026-11-20"
+  },
+  {
+   "title": "One command that prepares models end to end (CLI)",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: tooling",
+    "idea"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Show a 3MF's own structure and pick its parts one by one",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "idea",
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "A dashboard of the network printers: layer, progress and time left",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: printing",
+    "idea"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Rebuild the Preferences window",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "area: ui",
+    "idea"
+   ],
+   "closed": null
   }
  ]
 }
