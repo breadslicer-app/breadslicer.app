@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-21T18:02:17Z",
+ "generated": "2026-11-21T23:24:16Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 1,
+  "In progress": 2,
   "Next": 1,
   "Quick wins": 0,
-  "Backlog": 35,
+  "Backlog": 30,
   "Later": 3,
-  "Done": 383
+  "Done": 387
  },
  "items": [
   {
@@ -3907,52 +3907,52 @@
   },
   {
    "title": "Engine rebuild 3: surface-analysis crate (overhangs and surface reading)",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: analysis",
     "area: architecture",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Engine rebuild 4: islands crate",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: analysis",
     "area: architecture",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Engine rebuild 5: support-model crate and SUPP v3",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: architecture",
     "area: persistence",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Engine rebuild 6: support-mesh crate (rafts and support tessellation)",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: architecture",
     "area: slicing",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-21"
   },
   {
    "title": "Engine rebuild 7: support-placement crate",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: architecture",
     "area: supports"
