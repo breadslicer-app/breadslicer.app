@@ -5,7 +5,7 @@
 // Reads the board with the GitHub CLI (`gh api graphql`), so it uses whatever
 // `gh` is signed in as, or GH_TOKEN when set (the workflow does that). The
 // slicer repository is private: only these public, number-less fields leave it:
-// the title (without its "BS-<n>: " prefix), open or closed, the board column,
+// the title (without its "BS-<n>: " or "BS: " prefix), open or closed, the board column,
 // the labels and the date it was closed. Never bodies, comments, numbers, links
 // or people.
 //
@@ -97,7 +97,7 @@ for (const node of nodes) {
   if (!issue || issue.__typename !== "Issue") continue;
   if (issue.repository?.nameWithOwner !== REPO) continue;
   const labels = (issue.labels?.nodes ?? []).map((l) => l.name);
-  const title = issue.title.replace(/^\s*BS-\d+\s*:\s*/i, "").trim();
+  const title = issue.title.replace(/^\s*BS(?:-\d+)?\s*:\s*/i, "").trim(); // "BS-12: ", and "BS: " with no number
   if (labels.some((l) => l.toLowerCase() === PRIVATE_LABEL) || blocked.test(title)) {
     skipped++;
     continue;

@@ -3706,7 +3706,7 @@
    "closed": "2026-11-20"
   },
   {
-   "title": "BS: The keyboard shortcuts card lets the 3D view zoom behind it",
+   "title": "The keyboard shortcuts card lets the 3D view zoom behind it",
    "state": "open",
    "column": "In progress",
    "labels": [
@@ -3716,7 +3716,7 @@
    "closed": null
   },
   {
-   "title": "BS: Measure tool styled like the rest of the app",
+   "title": "Measure tool styled like the rest of the app",
    "state": "open",
    "column": "In progress",
    "labels": [
@@ -3726,7 +3726,7 @@
    "closed": null
   },
   {
-   "title": "BS: Tools close and clear themselves when the scene changes",
+   "title": "Tools close and clear themselves when the scene changes",
    "state": "open",
    "column": "In progress",
    "labels": [
@@ -3736,7 +3736,7 @@
    "closed": null
   },
   {
-   "title": "BS: Lay on face shows which faces can be picked",
+   "title": "Lay on face shows which faces can be picked",
    "state": "open",
    "column": "In progress",
    "labels": [
@@ -3746,7 +3746,7 @@
    "closed": null
   },
   {
-   "title": "BS: Say that dragging one model of a group moves it alone",
+   "title": "Say that dragging one model of a group moves it alone",
    "state": "open",
    "column": "In progress",
    "labels": [
@@ -3756,7 +3756,7 @@
    "closed": null
   },
   {
-   "title": "BS: Stroke cut becomes a cutting surface the person can adjust",
+   "title": "Stroke cut becomes a cutting surface the person can adjust",
    "state": "open",
    "column": "In progress",
    "labels": [
@@ -3766,7 +3766,7 @@
    "closed": null
   },
   {
-   "title": "BS: Cutting a model with Breadslicer supports leaves the pieces without supports",
+   "title": "Cutting a model with Breadslicer supports leaves the pieces without supports",
    "state": "open",
    "column": "In progress",
    "labels": [
@@ -3776,7 +3776,7 @@
    "closed": null
   },
   {
-   "title": "BS: Drain arrows in the Hollow tab use the app's icons",
+   "title": "Drain arrows in the Hollow tab use the app's icons",
    "state": "open",
    "column": "In progress",
    "labels": [
@@ -3786,7 +3786,7 @@
    "closed": null
   },
   {
-   "title": "BS: Line and Area supports take the picked preset, and their preview points are round",
+   "title": "Line and Area supports take the picked preset, and their preview points are round",
    "state": "open",
    "column": "In progress",
    "labels": [
