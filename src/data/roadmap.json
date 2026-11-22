@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T06:57:00Z",
+ "generated": "2026-11-22T15:23:58Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 1,
-  "Next": 0,
+  "In progress": 0,
+  "Next": 1,
   "Quick wins": 0,
-  "Backlog": 28,
+  "Backlog": 27,
   "Later": 3,
-  "Done": 391
+  "Done": 392
  },
  "items": [
   {
@@ -223,7 +223,7 @@
   {
    "title": "Granular support editing: select and move any part of a support",
    "state": "open",
-   "column": "In progress",
+   "column": "Next",
    "labels": [
     "area: supports"
    ],
@@ -310,13 +310,13 @@
   },
   {
    "title": "Anycubic ZIP files carry the M7 Pro firmware timing constants for every printer",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-22"
   },
   {
    "title": "Keep brace and leaf ends inside their trunk",
