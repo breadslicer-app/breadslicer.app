@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T15:23:58Z",
+ "generated": "2026-11-22T21:50:48Z",
  "columns": [
   "In progress",
   "Next",
@@ -10,11 +10,11 @@
  ],
  "counts": {
   "In progress": 0,
-  "Next": 1,
+  "Next": 0,
   "Quick wins": 0,
-  "Backlog": 27,
+  "Backlog": 24,
   "Later": 3,
-  "Done": 392
+  "Done": 398
  },
  "items": [
   {
@@ -222,12 +222,12 @@
   },
   {
    "title": "Granular support editing: select and move any part of a support",
-   "state": "open",
-   "column": "Next",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-22"
   },
   {
    "title": "In-house test coupon suite: supports, structures and strength",
@@ -4002,33 +4002,47 @@
   },
   {
    "title": ".lys import 1: models in place, printer and resin",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "idea",
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-22"
   },
   {
    "title": ".lys import 2: supports become editable Breadslicer supports",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "idea",
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-22"
   },
   {
    "title": ".lys import 3: hollowing, drains and solid zones",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "idea",
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-22"
+  },
+  {
+   "title": "Our crates take the bread- prefix",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-22"
+  },
+  {
+   "title": "The engine crates take the bread- prefix too",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-22"
   }
  ]
 }
