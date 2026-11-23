@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T21:50:48Z",
+ "generated": "2026-11-23T02:51:24Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 0,
+  "In progress": 4,
   "Next": 0,
   "Quick wins": 0,
-  "Backlog": 24,
+  "Backlog": 19,
   "Later": 3,
-  "Done": 398
+  "Done": 399
  },
  "items": [
   {
@@ -613,7 +613,7 @@
   {
    "title": "Beam frame solver for support trees (faer)",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: analysis"
@@ -623,7 +623,7 @@
   {
    "title": "Support graph from the engine session for the frame solver",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: analysis",
@@ -634,7 +634,7 @@
   {
    "title": "Run the beam frame on critical layers in the background",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: analysis"
@@ -643,14 +643,14 @@
   },
   {
    "title": "Stress view in the Supports tab",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: analysis",
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-22"
   },
   {
    "title": "Calibrate peel and tip strength from test coupons",
@@ -666,7 +666,7 @@
   {
    "title": "Physics-based member limit and \"Reinforce weak spots\"",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: analysis",
