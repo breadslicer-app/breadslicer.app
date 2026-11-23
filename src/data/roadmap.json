@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T02:51:24Z",
+ "generated": "2026-11-23T12:56:47Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 4,
-  "Next": 0,
+  "In progress": 13,
+  "Next": 3,
   "Quick wins": 0,
-  "Backlog": 19,
+  "Backlog": 27,
   "Later": 3,
-  "Done": 399
+  "Done": 402
  },
  "items": [
   {
@@ -612,34 +612,34 @@
   },
   {
    "title": "Beam frame solver for support trees (faer)",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-23"
   },
   {
    "title": "Support graph from the engine session for the frame solver",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: analysis",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-23"
   },
   {
    "title": "Run the beam frame on critical layers in the background",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-23"
   },
   {
    "title": "Stress view in the Supports tab",
@@ -666,7 +666,7 @@
   {
    "title": "Physics-based member limit and \"Reinforce weak spots\"",
    "state": "open",
-   "column": "In progress",
+   "column": "Backlog",
    "labels": [
     "enhancement",
     "area: analysis",
@@ -4043,6 +4043,236 @@
    "column": "Done",
    "labels": [],
    "closed": "2026-11-22"
+  },
+  {
+   "title": "Reload a model from disk, everything made again",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Lean back: tilt minis by a fixed angle in one click",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Pick the support preset from each model's height",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Check that antialiasing never dims a support contact",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: slicing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "The plate as one model: supports shared between models under one raft",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Dead zones of a printer's screen",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Send a print file from disk to a network printer",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Hide picked supports to see behind them",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Remember the import and export folders apart",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: ux"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Template for the exported file name",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Keep the part names of an imported file",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: file formats"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Show a model's file in its folder",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: ux"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Scale to fit the plate",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Supports on the edge of a face, and in a circle",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Mirror supports across a plane",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Supports between parts of a model that come off easily",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "A raft under a model with no supports",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Maximum lean of a support, set by the person",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Print queue for network printers",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "A sheet for each plate",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Send to more network printers",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Wait before cure per layer",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: printing"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Keep the forecast raft steady when the pose changes a little",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "enhancement",
+    "area: supports"
+   ],
+   "closed": null
   }
  ]
 }
