@@ -4,15 +4,27 @@ import Latest from "../components/Latest.astro";
 import roadmap from "../data/roadmap.json";
 import release from "../data/release.json";
 import { organization, website, software } from "../lib/seo";
+import { formatDate } from "../lib/format";
 import { useTranslations } from "../i18n/ui";
 
 const jsonld = [website(), organization(), software(useTranslations("en")("site.description"))];
 
-// The roadmap section shows what is being worked on now, straight from the board.
-const now = [
+// The roadmap section, straight from the board: what just came out of the oven
+// (the last issues closed) and what is in it (in progress and next, then the
+// backlog's roadmap items, so the column is never empty after a release).
+const area = (i: { labels: string[] }) => i.labels.filter((l) => l.startsWith("area: ")).map((l) => l.slice(6)).join(" · ");
+const baked = roadmap.items
+  .filter((i) => i.column === "Done" && i.closed)
+  .sort((a, b) => (b.closed ?? "").localeCompare(a.closed ?? ""))
+  .slice(0, 5);
+const oven = [
   ...roadmap.items.filter((i) => i.column === "In progress"),
   ...roadmap.items.filter((i) => i.column === "Next"),
-].slice(0, 6);
+  ...roadmap.items.filter((i) => i.column === "Quick wins"),
+  ...roadmap.items.filter((i) => i.column === "Backlog" && i.labels.includes("roadmap")),
+].slice(0, 5);
+const counts = roadmap.counts as Record<string, number>;
+const open = Object.entries(counts).filter(([c]) => c !== "Done").reduce((s, [, n]) => s + n, 0);
 ---
 <Base bodyClass="home" jsonld={jsonld}>
   <Fragment slot="rail">
@@ -347,17 +359,31 @@ const now = [
     <section class="section" id="roadmap" data-section="roadmap" aria-labelledby="roadmap-title">
       <div class="section-bar">
         <span class="mono">04 / Roadmap</span>
-        <span class="mono section-bar-right">Straight from our board, no dates</span>
+        <span class="mono section-bar-right">Straight from our board</span>
       </div>
       <header class="section-head">
         <h2 id="roadmap-title">What's in the <em>oven.</em></h2>
+        <p class="section-lede">The project board as it is right now: <em>{counts.Done} issues done</em>, {open} still open.</p>
       </header>
-      <ol class="roadmap">
-        {now.map((item) => (
-          <li data-cell><span class="tag">{item.column}</span><div><h3>{item.title}</h3><p>{item.labels.filter((l) => l.startsWith("area: ")).map((l) => l.slice(6)).join(" · ") || " "}</p></div></li>
-        ))}
-      </ol>
-      <p class="wrap" style="margin-top:24px"><a class="button button-ghost" href="/roadmap/" data-magnetic>The whole board, as it is <span class="arrow" aria-hidden="true">→</span></a></p>
+      <div class="oven">
+        <section class="oven-col" aria-labelledby="oven-out">
+          <h3 class="oven-h mono" id="oven-out"><span class="oven-dot is-done" aria-hidden="true"></span>Just out of the oven</h3>
+          <ol class="oven-list">
+            {baked.map((item) => (
+              <li data-cell><span class="oven-when mono">{formatDate(item.closed!)}</span><span class="oven-t">{item.title}</span><span class="oven-a mono">{area(item)}</span></li>
+            ))}
+          </ol>
+        </section>
+        <section class="oven-col oven-col-now" aria-labelledby="oven-in">
+          <h3 class="oven-h mono" id="oven-in"><span class="oven-dot" aria-hidden="true"></span>In the oven</h3>
+          <ol class="oven-list">
+            {oven.map((item) => (
+              <li data-cell><span class="oven-when mono">{item.column}</span><span class="oven-t">{item.title}</span><span class="oven-a mono">{area(item)}</span></li>
+            ))}
+          </ol>
+        </section>
+      </div>
+      <p class="wrap" style="margin-top:28px"><a class="button button-ghost" href="/roadmap/" data-magnetic>The whole board, as it is <span class="arrow" aria-hidden="true">→</span></a></p>
     </section>
 
     <!-- ============ DOWNLOAD ============ -->

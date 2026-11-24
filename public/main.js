@@ -56,6 +56,7 @@
   var buildLayer = $("[data-build-layer]"), buildZ = $("[data-build-z]");
   var hero = $("#hero");
   var buildState = { p: -1, target: 0, sheet: null, edges: null, shown: -1 };
+  var ACCENT = "215,167,90";
   var canFilter = (function () { try { var c = doc.createElement("canvas").getContext("2d"); c.filter = "brightness(.5)"; return c.filter === "brightness(.5)"; } catch (e) { return false; } })();
 
   function sizeCanvas(c) {
@@ -73,34 +74,84 @@
     buildState.force = false;
     var d = sizeCanvas(buildCanvas), ctx = buildCanvas.getContext("2d");
     var W = d.w, H = d.h, S = BUILD.size, sheet = buildState.sheet, edges = buildState.edges;
-    var fs = W * 0.62;                                // frame edge on screen
+    var px = W / Math.max(1, buildCanvas.getBoundingClientRect().width);   // device pixels per CSS pixel
+    var A = -0.62, cA = Math.cos(A), sA = Math.sin(A);
+    var slabPx = 9 * px, ext = 0.25 * (Math.abs(cA) + Math.abs(sA));   // a square's half height on screen, per unit of edge
+    // The frame as large as fits: the plate at the bottom, the light sheet of the last layer at the top.
+    var fs = Math.min(W * 0.66, (H - slabPx - 16 * px) / (2 * ext + 0.9));   // frame edge on screen
     var dy = (fs * 0.9) / BUILD.frames;               // 91 mm tall over ~102 mm across
-    var baseY = H * 0.80;
+    var baseY = H - fs * ext - slabPx - 8 * px;
+    // A point of the frame (x, y from its centre) on layer n, on screen.
+    function pt(x, y, n) { return [W / 2 + x * cA - y * sA, baseY - n * dy + 0.5 * (x * sA + y * cA)]; }
+    function quad(h, n, lift) {                       // the frame's square, half-edge h, on layer n
+      var q = [pt(-h, -h, n), pt(h, -h, n), pt(h, h, n), pt(-h, h, n)];
+      ctx.beginPath(); ctx.moveTo(q[0][0], q[0][1] + (lift || 0));
+      for (var i = 1; i < 4; i++) ctx.lineTo(q[i][0], q[i][1] + (lift || 0));
+      ctx.closePath();
+      return q;
+    }
     ctx.setTransform(1, 0, 0, 1, 0, 0);
     ctx.clearRect(0, 0, W, H);
-    // Each layer done: a dim fill and a light outline, so the stack reads as
-    // contour lines. The layer being built is amber; the ones to come, a ghost.
+    var prog = top / (BUILD.frames - 1);
+
+    // The build plate: a graphite slab with a fine grid, warmed by the light above it.
+    var ph = fs * 0.5, slab = slabPx, pq = [pt(-ph, -ph, -1), pt(ph, -ph, -1), pt(ph, ph, -1), pt(-ph, ph, -1)];
+    var sh = ctx.createRadialGradient(W / 2, pq[0][1] * 0.5 + pq[2][1] * 0.5 + 30 * px, 0, W / 2, pq[0][1] * 0.5 + pq[2][1] * 0.5 + 30 * px, fs * 0.75);
+    sh.addColorStop(0, "rgba(0,0,0,.55)"); sh.addColorStop(1, "rgba(0,0,0,0)");
+    ctx.fillStyle = sh; ctx.fillRect(0, 0, W, H);
+    for (var e = 0; e < 4; e++) {                     // the slab's sides; the top covers the back ones
+      var a = pq[e], b = pq[(e + 1) % 4];
+      ctx.beginPath(); ctx.moveTo(a[0], a[1]); ctx.lineTo(b[0], b[1]); ctx.lineTo(b[0], b[1] + slab); ctx.lineTo(a[0], a[1] + slab); ctx.closePath();
+      ctx.fillStyle = e % 2 ? "#141617" : "#1d2022"; ctx.fill();
+    }
+    quad(ph, -1);
+    var pg = ctx.createLinearGradient(pq[0][0], pq[0][1], pq[2][0], pq[2][1]);
+    pg.addColorStop(0, "#2a2e31"); pg.addColorStop(1, "#1a1d1f");
+    ctx.fillStyle = pg; ctx.fill();
+    ctx.lineWidth = px; ctx.strokeStyle = "rgba(236,238,239,.14)"; ctx.stroke();
+    ctx.save(); quad(ph, -1); ctx.clip();
+    ctx.strokeStyle = "rgba(236,238,239,.05)";
+    for (var g = 1; g < 10; g++) {
+      var t = -ph + (2 * ph * g) / 10, u1 = pt(t, -ph, -1), u2 = pt(t, ph, -1), v1 = pt(-ph, t, -1), v2 = pt(ph, t, -1);
+      ctx.beginPath(); ctx.moveTo(u1[0], u1[1]); ctx.lineTo(u2[0], u2[1]); ctx.moveTo(v1[0], v1[1]); ctx.lineTo(v2[0], v2[1]); ctx.stroke();
+    }
+    var c0 = pt(0, 0, -1), glow = ctx.createRadialGradient(c0[0], c0[1], 0, c0[0], c0[1], fs * 0.5);
+    glow.addColorStop(0, "rgba(" + ACCENT + "," + (0.10 + 0.08 * prog).toFixed(3) + ")"); glow.addColorStop(1, "rgba(" + ACCENT + ",0)");
+    ctx.fillStyle = glow; ctx.fillRect(0, 0, W, H);
+    ctx.restore();
+
+    // Each layer done is cured resin: a warm fill and a lighter outline, darker
+    // at the bottom, so the stack reads as a solid lit from above. The layer
+    // being exposed glows amber on its light sheet; the ones to come, a ghost.
     function put(src, n, alpha, filter) {
       var xy = frameXY(n);
       ctx.save();
       ctx.translate(W / 2, baseY - n * dy);
       ctx.scale(1, 0.5);
-      ctx.rotate(-0.62);
+      ctx.rotate(A);
       ctx.globalAlpha = alpha;
       if (canFilter) ctx.filter = filter;
       ctx.drawImage(src, xy[0], xy[1], S, S, -fs / 2, -fs / 2, fs, fs);
       ctx.restore();
     }
+    var sheetT = buildState.sheetT || sheet, edgesT = buildState.edgesT || edges;
     for (var n = 0; n < BUILD.frames; n++) {
       if (n > top) {
-        put(edges, n, 0.07, "none");
+        put(edges, n, 0.06, "none");
       } else if (n === top) {
-        put(sheet, n, 0.9, "sepia(1) saturate(3.2) hue-rotate(-12deg) brightness(.9)");
-        put(edges, n, 1, "sepia(1) saturate(4) hue-rotate(-12deg) brightness(1.15)");
+        if (canFilter) ctx.filter = "none";
+        quad(fs * 0.5, n);                              // the light sheet, the screen's square at this height
+        ctx.fillStyle = "rgba(" + ACCENT + ",.045)"; ctx.fill();
+        ctx.lineWidth = px; ctx.strokeStyle = "rgba(" + ACCENT + ",.32)"; ctx.stroke();
+        put(sheetT, n, 0.95, "brightness(1.25) saturate(1.2)");
+        ctx.save();
+        ctx.shadowColor = "rgba(255,170,80,.95)"; ctx.shadowBlur = 16 * px;
+        put(edgesT, n, 1, "brightness(1.45)");
+        ctx.restore();
       } else {
         var k = n / Math.max(top, 1);
-        put(sheet, n, canFilter ? 1 : 0.25, "brightness(" + (0.14 + 0.16 * k).toFixed(3) + ")");
-        put(edges, n, canFilter ? 1 : 0.5 + 0.4 * k, "brightness(" + (0.42 + 0.5 * k).toFixed(3) + ")");
+        put(sheetT, n, canFilter ? 1 : 0.3, "brightness(" + (0.3 + 0.3 * k).toFixed(3) + ")");
+        put(edgesT, n, canFilter ? 0.9 : 0.45 + 0.4 * k, "brightness(" + (0.5 + 0.55 * k).toFixed(3) + ")");
       }
     }
     if (canFilter) ctx.filter = "none";
@@ -118,11 +169,31 @@
     buildState.shown = top;
   }
 
+  // The strips are white on transparent. Each frame is painted once in the colour
+  // of its height, crust at the plate to gold at the top (outlines lighter), so
+  // drawing only has to dim it: filters can't colour white.
+  function tint(img, edge) {
+    try {
+      var c = doc.createElement("canvas"); c.width = img.naturalWidth; c.height = img.naturalHeight;
+      var x = c.getContext("2d");
+      x.drawImage(img, 0, 0);
+      x.globalCompositeOperation = "source-atop";
+      for (var n = 0; n < BUILD.frames; n++) {
+        var h = n / (BUILD.frames - 1), xy = frameXY(n);
+        var r = 196 + 40 * h, g = 98 + 92 * h, b = 38 + 70 * h;
+        if (edge) { r += (250 - r) * 0.45; g += (236 - g) * 0.45; b += (205 - b) * 0.45; }
+        x.fillStyle = "rgb(" + (r | 0) + "," + (g | 0) + "," + (b | 0) + ")";
+        x.fillRect(xy[0], xy[1], BUILD.size, BUILD.size);
+      }
+      return c;
+    } catch (e) { return img; }
+  }
+
   if (build) {
     [["sheet", "assets/layers/wolverine-layers.png"], ["edges", "assets/layers/wolverine-edges.png"]].forEach(function (s) {
       var img = new Image();
       img.decoding = "async";
-      img.onload = function () { buildState[s[0]] = img; buildState.force = true; requestTick(); };
+      img.onload = function () { buildState[s[0]] = img; buildState[s[0] + "T"] = tint(img, s[0] === "edges"); buildState.force = true; requestTick(); };
       img.src = s[1];
     });
     win.addEventListener("resize", function () { buildState.force = true; });
