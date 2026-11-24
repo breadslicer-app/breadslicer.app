@@ -1,18 +1,27 @@
 {
  "_note": "The build the site offers. Update it with every release: the version, the installer and the zip on GitHub with their sizes as GitHub lists them in bytes (said in decimal MB, never rounded up) and SHA-256, the size of breadslicer.exe inside the zip, and the release post. `printers` is how many printer profiles that build has (without generic-machine). Then run `npm run data:printers`, which reads the profiles at the tag v<version>.",
- "version": "0.5.0-beta.1",
+ "version": "0.5.0-beta.2",
  "channel": "beta",
- "date": "2026-11-23",
+ "date": "2026-11-24",
  "platform": "Windows",
- "installer": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-beta.1/Breadslicer-0.5.0-beta.1-windows-x64-setup.exe",
+ "installer": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-beta.2/Breadslicer-0.5.0-beta.2-windows-x64-setup.exe",
  "installer_size": "42.5 MB",
- "installer_sha256": "3ee39686658fffdecb5754d897c751497a12a0d89bdf9212ef2f4344600882f1",
- "zip": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-beta.1/Breadslicer-0.5.0-beta.1-windows-x64.zip",
- "zip_size": "57.0 MB",
- "zip_sha256": "09f7fd14e78bfd3d15f1a3446882f6e826881ade1ecc5ebb008e891c36aff039",
+ "installer_sha256": "98273f91d457197c4bb018b4efbb2df868af7c87b3ae045a244cd86524957c28",
+ "zip": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-beta.2/Breadslicer-0.5.0-beta.2-windows-x64.zip",
+ "zip_size": "57.1 MB",
+ "zip_sha256": "58b17539fb86f3d4a614cf356b604062e9fd24bcdf3e91c1403b2fc7e8e9f7f7",
  "exe_size": "95 MB",
- "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.5.0-beta.1",
+ "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.5.0-beta.2",
  "all": "https://github.com/breadslicer-app/breadslicer/releases",
- "post": "/blog/v0.5.0-beta.1-release/",
- "printers": 171
+ "post": "/blog/v0.5.0-beta.2-release/",
+ "printers": 171,
+ "dev": {
+  "_note": "Breadslicer Dev, the pre-release channel: its own app beside the release. Update with every dev build the thread announces.",
+  "version": "0.5.0-dev.1",
+  "date": "2026-11-24",
+  "installer": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-dev.1/Breadslicer-0.5.0-dev.1-windows-x64-setup.exe",
+  "installer_size": "42.5 MB",
+  "installer_sha256": "db0e5296e93ae920d1ea65bf212d6cb17b7148d44a675b9075dcae05bba0b26c",
+  "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.5.0-dev.1"
+ }
 }

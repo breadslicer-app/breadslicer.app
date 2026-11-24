@@ -369,12 +369,18 @@ const now = [
       <div class="cta-grid">
         <div>
           <h2 id="download-title">First slices, <em>now.</em></h2>
-          <p class="section-lede">Breadslicer {release.version} is out: the first open beta, for {release.platform}. It works, we print with it, and it will still surprise you somewhere: tell us where.</p>
+          <p class="section-lede">Breadslicer {release.version} is out, an open beta for {release.platform}. It works, we print with it, and it will still surprise you somewhere: tell us where.</p>
           <div class="cta-row">
             <a class="button button-primary" href={release.installer} aria-describedby="download-note" data-magnetic>Download for {release.platform} <span class="button-sub">{release.installer_size}</span></a>
             <a class="button button-ghost" href={release.post} data-magnetic>What’s in it <span class="arrow" aria-hidden="true">→</span></a>
           </div>
-          <p id="download-note" class="small muted">That is the installer, and it needs no administrator rights; <code>.bread</code> files then open with Breadslicer and show their thumbnail in Explorer. Rather not install? Take the <a class="link" href={release.zip}>portable zip</a> ({release.zip_size}): unzip it anywhere and run <code>breadslicer.exe</code>. Neither is signed yet, so Windows may stop it: <em>More info</em>, then <em>Run anyway</em>. Read <a class="link" href={`${release.post}#before-you-print`}>Before you print</a> first. Every build and its source are on <a class="link" href={release.all} rel="noopener">GitHub</a>; help and news on our <a class="link" href="/community/">Discord</a>.</p>
+          {release.dev && (
+            <p class="dev-line">
+              <a class="dev-link" href={release.dev.installer}><span class="dev-tag mono">Dev</span> Breadslicer Dev {release.dev.version} <span class="dev-size mono">{release.dev.installer_size}</span></a>
+              <span class="small muted">The work in progress, before it reaches a release, rough edges included. It installs as its own app beside Breadslicer and updates on its own. <a class="link" href={release.dev.page} rel="noopener">Release notes</a>.</span>
+            </p>
+          )}
+          <p id="download-note" class="small muted"><em>Download for {release.platform}</em> gives you the installer, which needs no administrator rights; <code>.bread</code> files then open with Breadslicer and show their thumbnail in Explorer. Rather not install? Take the <a class="link" href={release.zip}>portable zip</a> ({release.zip_size}): unzip it anywhere and run <code>breadslicer.exe</code>. Neither is signed yet, so Windows may stop it: <em>More info</em>, then <em>Run anyway</em>. Read <a class="link" href={`${release.post}#before-you-print`}>Before you print</a> first. Every build and its source are on <a class="link" href={release.all} rel="noopener">GitHub</a>; help and news on our <a class="link" href="/community/">Discord</a>.</p>
           <p class="small muted sha">SHA-256 · installer <code>{release.installer_sha256}</code> · zip <code>{release.zip_sha256}</code></p>
         </div>
         <div class="cta-art" aria-hidden="true" data-parallax="0.12">
