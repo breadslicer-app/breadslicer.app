@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T10:59:57Z",
+ "generated": "2026-11-24T21:17:38Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 0,
+  "In progress": 1,
   "Next": 1,
   "Quick wins": 0,
-  "Backlog": 23,
+  "Backlog": 22,
   "Later": 3,
-  "Done": 434
+  "Done": 436
  },
  "items": [
   {
@@ -242,7 +242,7 @@
   {
    "title": "Guided resin calibrator (working curve, detail, base, XY)",
    "state": "open",
-   "column": "Backlog",
+   "column": "In progress",
    "labels": [
     "area: profiles",
     "roadmap"
@@ -4394,6 +4394,20 @@
    "labels": [
     "bug"
    ],
+   "closed": "2026-11-24"
+  },
+  {
+   "title": "Announce dev pre-releases on Discord",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-24"
+  },
+  {
+   "title": "Number fields take a click only where their digits are",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
    "closed": "2026-11-24"
   }
  ]
