@@ -7,7 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "data:printers": "node scripts/export-printers.mjs",
+    "data:printers": "node scripts/export-printers.mjs --ref breadslicer/main",
     "data:roadmap": "node scripts/export-roadmap.mjs"
   },
   "dependencies": {

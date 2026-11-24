@@ -1,6 +1,9 @@
 // Builds src/data/printers.json from the slicer's bundled printer profiles.
 //
-//   node scripts/export-printers.mjs [path/to/assets/profiles]
+//   node scripts/export-printers.mjs [path/to/assets/profiles] [--ref breadslicer/main]
+//
+// Use --ref: the slicer's checkout may be on a branch of work in progress, and the site shows
+// main. Fetch first (git -C ../SoulCrafted-Slicer fetch breadslicer).
 //
 // The path defaults to $PROFILES_DIR, then to ../SoulCrafted-Slicer/assets/profiles
 // (the slicer repository checked out next to this one). Only facts about the
@@ -9,17 +12,34 @@
 // the bundled material profiles hold for it (their makers' published figures), for
 // the printer's own page.
 
-import { readFileSync, readdirSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, readdirSync, writeFileSync, existsSync, mkdtempSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { join, resolve, dirname, relative } from "node:path";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { parse } from "smol-toml";
 
 const here = dirname(fileURLToPath(import.meta.url));
+const args = process.argv.slice(2);
+const refAt = args.indexOf("--ref");
+const ref = refAt >= 0 ? args.splice(refAt, 2)[1] : null;
 const profiles = resolve(
-  process.argv[2] ?? process.env.PROFILES_DIR ?? join(here, "..", "..", "SoulCrafted-Slicer", "assets", "profiles"),
+  args[0] ?? process.env.PROFILES_DIR ?? join(here, "..", "..", "SoulCrafted-Slicer", "assets", "profiles"),
 );
-const printersDir = join(profiles, "printers");
+// With --ref, the profiles are read as that commit has them (git archive into a temporary
+// folder), not from the working copy, which may be on a branch of work in progress.
+let data = profiles;
+if (ref) {
+  const top = execFileSync("git", ["-C", profiles, "rev-parse", "--show-toplevel"], { encoding: "utf8" }).trim();
+  const rel = relative(top, profiles).replaceAll("\\", "/");
+  const tmp = mkdtempSync(join(tmpdir(), "profiles-"));
+  const tar = join(tmp, "p.tar");
+  execFileSync("git", ["-C", top, "archive", "--format=tar", "-o", tar, ref, rel]);
+  execFileSync("tar", ["-xf", "p.tar"], { cwd: tmp }); // relative: GNU tar reads "C:\…" as a host
+  data = join(tmp, rel);
+  console.log(`Profiles as of ${ref} (${execFileSync("git", ["-C", top, "rev-parse", "--short", ref], { encoding: "utf8" }).trim()})`);
+}
+const printersDir = join(data, "printers");
 if (!existsSync(printersDir)) {
   console.error(`No printers folder at ${printersDir}. Pass the profiles folder as the first argument.`);
   process.exit(1);
@@ -82,7 +102,7 @@ try {
 }
 
 // Resin settings, by printer id: the [per_printer.<id>] blocks of every material profile.
-const materialsDir = join(profiles, "materials");
+const materialsDir = join(data, "materials");
 const resinsFor = new Map();
 for (const file of existsSync(materialsDir) ? readdirSync(materialsDir).filter((f) => f.endsWith(".toml")) : []) {
   const m = parse(readFileSync(join(materialsDir, file), "utf8"));

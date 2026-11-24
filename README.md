@@ -52,8 +52,13 @@ stays `enabled: false` until there is a published method for comparisons.
 Generated from the slicer's bundled printer profiles:
 
 ```sh
-npm run data:printers -- ../SoulCrafted-Slicer/assets/profiles
+git -C ../SoulCrafted-Slicer fetch breadslicer
+npm run data:printers
 ```
+
+It reads the profiles as `breadslicer/main` has them (`--ref`), not the slicer's working copy,
+which may be on a branch of work in progress. `generic-machine` gets no page, so there is one
+page fewer than profiles.
 
 The path defaults to `../SoulCrafted-Slicer/assets/profiles` (or `$PROFILES_DIR`). Only machine
 facts are copied (brand, name, panel, pixel size, build volume, file formats, capabilities), plus
