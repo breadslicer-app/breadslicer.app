@@ -47,13 +47,13 @@ const now = [
               Nothing in a browser tab, nothing waiting on a spinner.
             </p>
             <div class="cta-row">
-              <a class="button button-primary" href="#download" data-magnetic>Download the alpha</a>
+              <a class="button button-primary" href="#download" data-magnetic>Download the beta</a>
               <a class="button button-ghost" href="#workflow" data-magnetic>See the workflow <span class="arrow" aria-hidden="true">→</span></a>
             </div>
             <dl class="hero-facts">
               <div><dt>Runtime</dt><dd>Native Rust</dd></div>
               <div><dt>Viewport</dt><dd>Own wgpu renderer</dd></div>
-              <div><dt>Footprint</dt><dd>74 MB executable</dd></div>
+              <div><dt>Footprint</dt><dd>{release.exe_size} executable</dd></div>
             </dl>
           </div>
 
@@ -174,7 +174,7 @@ const now = [
         <p class="verify-kicker mono"><span class="verify-dot" aria-hidden="true"></span>Every number above is checkable</p>
         <h3 id="verify-title" class="verify-title">Don’t take our word for it.<br><em>Time it yourself.</em></h3>
         <p class="verify-lede">Benchmarks on a slicer’s own website are easy to fake. So here is the exact model from this run, and the app writes its own timings. Run it on your machine and compare.</p>
-        <p class="cta-row"><a class="button button-ghost" href="#download" data-magnetic>Get the alpha <span class="arrow" aria-hidden="true">→</span></a></p>
+        <p class="cta-row"><a class="button button-ghost" href="#download" data-magnetic>Get the beta <span class="arrow" aria-hidden="true">→</span></a></p>
 
         <ol class="verify-steps">
           <li>
@@ -313,7 +313,7 @@ const now = [
           <div class="why-row" role="row">
             <span role="rowheader">What ships</span>
             <span role="cell">Your app plus a full browser engine</span>
-            <span role="cell">One 74 MB executable and its profiles</span>
+            <span role="cell">One {release.exe_size} executable and its profiles</span>
           </div>
           <div class="why-row" role="row">
             <span role="rowheader">Path to the screen</span>
@@ -364,17 +364,18 @@ const now = [
     <section class="section section-cta" id="download" data-section="download" aria-labelledby="download-title">
       <div class="section-bar">
         <span class="mono">05 / Download</span>
-        <span class="mono section-bar-right">Alpha · {release.platform} · free software</span>
+        <span class="mono section-bar-right">Open beta · {release.platform} · free software</span>
       </div>
       <div class="cta-grid">
         <div>
           <h2 id="download-title">First slices, <em>now.</em></h2>
-          <p class="section-lede">Breadslicer {release.version} is out: the first build anyone can download, for {release.platform}. It is an alpha. It works, we print with it, and it will still surprise you somewhere.</p>
+          <p class="section-lede">Breadslicer {release.version} is out: the first open beta, for {release.platform}. It works, we print with it, and it will still surprise you somewhere: tell us where.</p>
           <div class="cta-row">
-            <a class="button button-primary" href={release.zip} aria-describedby="download-note" data-magnetic>Download for {release.platform} <span class="button-sub">{release.size} zip</span></a>
+            <a class="button button-primary" href={release.installer} aria-describedby="download-note" data-magnetic>Download for {release.platform} <span class="button-sub">{release.installer_size}</span></a>
             <a class="button button-ghost" href={release.post} data-magnetic>What’s in it <span class="arrow" aria-hidden="true">→</span></a>
           </div>
-          <p id="download-note" class="small muted">Unzip it anywhere and run <code>breadslicer.exe</code>: nothing to install. The exe is not signed yet, so Windows may stop it: <em>More info</em>, then <em>Run anyway</em>. Read <a class="link" href={`${release.post}#before-you-print`}>Before you print</a> first. Every build and its source are on <a class="link" href={release.all} rel="noopener">GitHub</a>; help and news on our <a class="link" href="/community/">Discord</a>.</p>
+          <p id="download-note" class="small muted">That is the installer, and it needs no administrator rights; <code>.bread</code> files then open with Breadslicer and show their thumbnail in Explorer. Rather not install? Take the <a class="link" href={release.zip}>portable zip</a> ({release.zip_size}): unzip it anywhere and run <code>breadslicer.exe</code>. Neither is signed yet, so Windows may stop it: <em>More info</em>, then <em>Run anyway</em>. Read <a class="link" href={`${release.post}#before-you-print`}>Before you print</a> first. Every build and its source are on <a class="link" href={release.all} rel="noopener">GitHub</a>; help and news on our <a class="link" href="/community/">Discord</a>.</p>
+          <p class="small muted sha">SHA-256 · installer <code>{release.installer_sha256}</code> · zip <code>{release.zip_sha256}</code></p>
         </div>
         <div class="cta-art" aria-hidden="true" data-parallax="0.12">
           <img src="/assets/loaf-640.webp" width="640" height="640" alt="" loading="lazy">

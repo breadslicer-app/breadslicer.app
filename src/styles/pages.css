@@ -340,3 +340,8 @@ details.board-col[open] summary h2::after { content: "−"; }
 .printer-others li { padding: 5px 0; break-inside: avoid; }
 .printer-others li a { color: var(--text); }
 .printer-others li a:hover { color: var(--accent); }
+
+/* SHA-256 lines: long hex strings break anywhere instead of widening the column. */
+.sha { overflow-wrap: anywhere; }
+.sha code { word-break: break-all; }
+.prose code { overflow-wrap: anywhere; }

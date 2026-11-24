@@ -6,7 +6,6 @@ date: 2026-11-20
 kind: paper
 tags: [supports, engine, rafts]
 draft: false
-next: true
 ---
 
 Every change to the support engine is measured on the same 13 scenes before it goes in: solid and hollow miniatures, plates of several models, a large hollow whale, a castle, a worm. For each scene the scorecard records how many islands the review still finds, how many supports stand on the model, how many could not be placed, braces, resin and time ([how the scorecard works](/blog/how-supports-are-placed/)).

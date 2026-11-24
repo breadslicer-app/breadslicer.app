@@ -6,7 +6,6 @@ date: 2026-11-20
 kind: note
 tags: [supports, editor]
 draft: false
-next: true
 ---
 
 Automatic supports get most of a model right. The rest is done by hand, and every hand tool in Breadslicer edits the supports as data, not as a mesh: each change is one Undo step and is saved in the `.bread` file.

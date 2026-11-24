@@ -6,7 +6,6 @@ date: 2026-11-18
 kind: note
 tags: [supports, review, workflow]
 draft: false
-next: true
 ---
 
 A tester showed us their routine for supporting a miniature by hand in another slicer, and it came down to two moves: put supports everywhere the general rules ask for, then look for the islands, the parts of a layer that start in the air, and give each one a support. Breadslicer had both pieces, but they were separate steps. You pressed Generate, then Slice, then read the review, then said yes to "Add supports?", then pressed Fix all.

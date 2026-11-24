@@ -14,4 +14,4 @@ The Slice tab reviews the sliced print and lists what would fail: islands withou
 
 **Fix all** applies every safe fix at once, in the background, as one undo step. The layer view shows the printer's own pixels, up to 32×, with no smoothing.
 
-<span class="badge-next">Next build</span> The review floats over the view, and Fix all ends by slicing again, so the list is about the scene as it is. Tips asked to carry more than they can are a new finding, and the layer view adds a chart of each layer's area and estimated peel force.
+The review floats over the view, and Fix all ends by slicing again, so the list is about the scene as it is. Tips asked to carry more than they can are a new finding, and the layer view adds a chart of each layer's area and estimated peel force.

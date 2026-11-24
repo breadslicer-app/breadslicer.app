@@ -12,4 +12,4 @@ facts:
 
 **Fill bed** fills the free space with copies of the selected model, or a fair mix of several selected ones, and leaves everything else where it is.
 
-<span class="badge-next">Next build</span> A last pass pushes in what did not fit and moves its neighbours aside: on a pre-supported miniature, Fill bed fits 20 copies where it fitted 18. **Ctrl+G** groups models so they are arranged, supported and given one raft as one unit.
+A last pass pushes in what did not fit and moves its neighbours aside: on a pre-supported miniature, Fill bed fits 20 copies where it fitted 18. **Ctrl+G** groups models so they are arranged, supported and given one raft as one unit.

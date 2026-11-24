@@ -1,12 +1,18 @@
 {
- "_note": "The build the site offers. Update it with every release: the version, the zip on GitHub and its size as GitHub lists it (never rounded up), and the release post. `printers` is how many printer profiles that build has, for the note on /printers/.",
- "version": "0.4.0-alpha.1",
- "date": "2026-11-16",
+ "_note": "The build the site offers. Update it with every release: the version, the installer and the zip on GitHub with their sizes as GitHub lists them in bytes (said in decimal MB, never rounded up) and SHA-256, the size of breadslicer.exe inside the zip, and the release post. `printers` is how many printer profiles that build has (without generic-machine). Then run `npm run data:printers`, which reads the profiles at the tag v<version>.",
+ "version": "0.5.0-beta.1",
+ "channel": "beta",
+ "date": "2026-11-23",
  "platform": "Windows",
- "zip": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.4.0-alpha.1/Breadslicer-0.4.0-alpha.1-windows-x64.zip",
- "size": "43 MB",
- "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.4.0-alpha.1",
+ "installer": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-beta.1/Breadslicer-0.5.0-beta.1-windows-x64-setup.exe",
+ "installer_size": "42.5 MB",
+ "installer_sha256": "3ee39686658fffdecb5754d897c751497a12a0d89bdf9212ef2f4344600882f1",
+ "zip": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-beta.1/Breadslicer-0.5.0-beta.1-windows-x64.zip",
+ "zip_size": "57.0 MB",
+ "zip_sha256": "09f7fd14e78bfd3d15f1a3446882f6e826881ade1ecc5ebb008e891c36aff039",
+ "exe_size": "95 MB",
+ "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.5.0-beta.1",
  "all": "https://github.com/breadslicer-app/breadslicer/releases",
- "post": "/blog/v0.4.0-alpha.1-release/",
- "printers": 157
+ "post": "/blog/v0.5.0-beta.1-release/",
+ "printers": 171
 }

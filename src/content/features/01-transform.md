@@ -15,4 +15,4 @@ Press **G**, **R** or **S** and drag, and lock any of them to **X**, **Y** or **
 
 The gizmo has plane handles for moving on two axes at once, and a press and drag on any model moves it without selecting it first. **Shift+click** or a **Shift+drag** box selects several models: they move, turn, scale, delete and arrange together. **R R** and **S S** turn or scale each one around its own centre instead of the group's.
 
-<span class="badge-next">Next build</span> Click a flat face and **Lay on face** stands the model on it. While you move, turn or scale, type the amount. **Mirror** flips the selection along X or Y, and **Measure** (**Q**) gives the distance between two points with its X, Y and Z parts.
+Click a flat face and **Lay on face** stands the model on it. While you move, turn or scale, type the amount. **Mirror** flips the selection along X or Y, and **Measure** (**Q**) gives the distance between two points with its X, Y and Z parts.

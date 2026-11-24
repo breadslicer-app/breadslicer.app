@@ -6,7 +6,6 @@ date: 2026-11-21
 kind: note
 tags: [cut, editor, placement]
 draft: false
-next: true
 ---
 
 ## Cutting

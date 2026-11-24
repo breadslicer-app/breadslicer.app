@@ -6,7 +6,6 @@ date: 2026-11-20
 kind: note
 tags: [interface]
 draft: false
-next: true
 ---
 
 ## One progress bar

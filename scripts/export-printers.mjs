@@ -168,8 +168,9 @@ const printers = readdirSync(printersDir)
 const out = {
   generated: new Date().toLocaleDateString("sv"), // local day, YYYY-MM-DD
   release: release.version,
-  count: printers.length,
-  exporting: printers.filter((p) => p.exports).length,
+  // generic-machine describes no product: not counted, no page, not in the table.
+  count: printers.filter((p) => p.id !== "generic-machine").length,
+  exporting: printers.filter((p) => p.exports && p.id !== "generic-machine").length,
   printers,
 };
 const target = join(here, "..", "src", "data", "printers.json");

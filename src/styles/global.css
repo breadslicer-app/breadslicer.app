@@ -488,7 +488,7 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   .story-steps { padding-top: 24px; }
   .story-step { min-height: 0; padding: 36px 0; opacity: 1; }
   .cells, .spec-grid { grid-template-columns: 1fr; }
-  .cta-grid { grid-template-columns: 1fr; }
+  .cta-grid { grid-template-columns: minmax(0, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .runlog { display: none; }
   .verify-steps { grid-template-columns: minmax(0, 1fr); }

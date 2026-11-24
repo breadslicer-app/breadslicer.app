@@ -6,7 +6,6 @@ date: 2026-11-19
 kind: note
 tags: [hollow, supports]
 draft: false
-next: true
 ---
 
 Hollowing in Breadslicer used to work in one direction only: you hollowed a solid model, and the drains were cut while hollowing. A model that came hollow from another program, or one hollowed here and saved, had no way to get a drain except hollowing it again, which drew a new cavity inside the old one.

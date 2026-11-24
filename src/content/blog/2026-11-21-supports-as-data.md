@@ -6,7 +6,6 @@ date: 2026-11-21
 kind: note
 tags: [bread, file-format, supports]
 draft: false
-next: true
 ---
 
 Breadslicer's `.bread` files keep supports as data, not as a mesh: where each tip touches the model, the trunks, the joints, the braces, the raft, and the sizes and settings they were made with. Opening a project rebuilds the supports from that, so they open editable, exactly as they were.

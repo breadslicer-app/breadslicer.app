@@ -6,7 +6,6 @@ date: 2026-11-20
 kind: note
 tags: [slicing, review, supports]
 draft: false
-next: true
 ---
 
 When a layer cures, it sticks to the film at the bottom of the vat, and the printer pulls it off before the next one. The bigger and the more closed the layer, the harder that pull. A part that breaks off mid-print usually broke on one of those pulls.

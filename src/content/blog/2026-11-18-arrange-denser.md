@@ -6,7 +6,6 @@ date: 2026-11-18
 kind: paper
 tags: [arrange, performance]
 draft: false
-next: true
 ---
 
 Arrange packs models by their real shape, height band by height band, so that an arm can reach over a shorter model as long as the two never come closer than the gap ([how it works](/blog/plates-arrange-one-raft/)). It searched for a place for each model in turn, from the biggest to the smallest, and stopped when one did not fit. That leaves holes a person would fill by hand.

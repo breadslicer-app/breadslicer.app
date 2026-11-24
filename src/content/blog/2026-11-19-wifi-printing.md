@@ -6,7 +6,6 @@ date: 2026-11-19
 kind: paper
 tags: [printing, network, camera]
 draft: false
-next: true
 ---
 
 Until this week, Breadslicer did not send anything over the network: you exported a file and carried it to the printer on a USB stick. Elegoo's network printers speak a documented protocol, SDCP, and other slicers already send to them, so the Slice tab now has a **Send to printer** card for any printer whose profile says it speaks SDCP.

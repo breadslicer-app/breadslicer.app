@@ -6,7 +6,6 @@ date: 2026-11-21
 kind: note
 tags: [printers, resins, profiles]
 draft: false
-next: true
 ---
 
 ## Printer and resin, in one card
