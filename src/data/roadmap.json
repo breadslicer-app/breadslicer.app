@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-23T12:56:47Z",
+ "generated": "2026-11-24T00:56:57Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,8 +9,8 @@
   "Done"
  ],
  "counts": {
-  "In progress": 13,
-  "Next": 3,
+  "In progress": 26,
+  "Next": 1,
   "Quick wins": 0,
   "Backlog": 27,
   "Later": 3,
@@ -4047,7 +4047,7 @@
   {
    "title": "Reload a model from disk, everything made again",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: editor"
@@ -4097,7 +4097,7 @@
   {
    "title": "Dead zones of a printer's screen",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: printing"
@@ -4267,10 +4267,122 @@
   {
    "title": "Keep the forecast raft steady when the pose changes a little",
    "state": "open",
-   "column": "Next",
+   "column": "In progress",
    "labels": [
     "enhancement",
     "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Show the creator, license and source from a .bread file's META",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "area: editor"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Resin cost fields lose what was typed when the tab changes; currency as a list",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: printing",
+    "area: ui"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Emptying the scene keeps the old file's name",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: project"
+   ],
+   "closed": null
+  },
+  {
+   "title": "The menu bar folded by default",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: ui"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Slice pressed while supports are being made again does nothing",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: slicing",
+    "area: supports"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Elegoo Mars 5 Ultra, Saturn 4 Ultra, Jupiter export .ctb by default; their format is .goo",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Elegoo's own resins for the Mars 5 Ultra and Saturn 4 Ultra",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "A drain wider than the model is shown although it is not drilled",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: hollow"
+   ],
+   "closed": null
+  },
+  {
+   "title": "\"Model inside the raft\" on a model standing well above it",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Forces painting shows on the models, not the supports",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug",
+    "area: analysis"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Moving a support is hard to find: M highlights, dragging removes",
+   "state": "open",
+   "column": "Next",
+   "labels": [
+    "bug",
+    "area: supports",
+    "area: ux"
    ],
    "closed": null
   }
