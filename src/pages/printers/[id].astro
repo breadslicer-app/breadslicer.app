@@ -1,0 +1,137 @@
+---
+// One page per printer profile: its panel, its print file, and the resin settings Breadslicer
+// ships for it. Everything comes from src/data/printers.json (scripts/export-printers.mjs).
+import { getEntry } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import PageHead from "../../components/PageHead.astro";
+import data from "../../data/printers.json";
+import release from "../../data/release.json";
+import { formatDate } from "../../lib/format";
+
+type Printer = (typeof data.printers)[number];
+
+export function getStaticPaths() {
+  return data.printers.filter((p) => p.id !== "generic-machine").map((p) => ({ params: { id: p.id }, props: { p } }));
+}
+
+const { p } = Astro.props as { p: Printer };
+const full = `${p.brand} ${p.name}`;
+const writable = p.formats.filter((f) => f.writable).map((f) => f.label);
+const other = p.formats.filter((f) => !f.writable).map((f) => f.label);
+const pixel = p.pixel_um ? (p.pixel_um[0] === p.pixel_um[1] ? `${p.pixel_um[0]} µm` : `${p.pixel_um[0]} × ${p.pixel_um[1]} µm`) : null;
+const panel = p.resolution ? `${p.resolution[0]} × ${p.resolution[1]}` : null;
+const volume = p.volume_mm ? `${p.volume_mm[0]} × ${p.volume_mm[1]} × ${p.volume_mm[2]} mm` : null;
+const resinBrands = [...new Set(p.resins.map((r) => r.brand))];
+const nextResins = p.resins.filter((r) => !r.in_release).length;
+const wifi = await getEntry("blog", "wifi-printing");
+const mirror = p.features.mirror[0] && p.features.mirror[1] ? "In X and Y" : p.features.mirror[0] ? "In X" : p.features.mirror[1] ? "In Y" : "No";
+const sec = (s: number | null) => (s == null ? "—" : `${s} s`);
+
+// Other printers: the same family first, then the same brand.
+const others = data.printers.filter((o) => o.id !== p.id && o.brand === p.brand);
+const family = others.filter((o) => o.family && o.family === p.family);
+const rest = others.filter((o) => !family.includes(o));
+
+const title = p.resins.length ? `${full}: slicer settings and resin exposures` : `${full}: slicer profile and print file`;
+const description =
+  `${full} in Breadslicer, a free resin slicer for Windows: ` +
+  [panel && `${panel} panel`, pixel && `${pixel} pixels`, volume && `${volume} build volume`].filter(Boolean).join(", ") +
+  (writable.length ? `, ${writable.join(" or ")} files` : "") +
+  (p.resins.length ? `, and exposure settings for ${p.resins.length} resins from ${resinBrands.length} ${resinBrands.length === 1 ? "maker" : "makers"}.` : ".");
+
+const jsonld = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Printers", item: "https://breadslicer.app/printers/" },
+    { "@type": "ListItem", position: 2, name: full, item: `https://breadslicer.app/printers/${p.id}/` },
+  ],
+};
+---
+<Base title={title} description={description} jsonld={jsonld}>
+  <PageHead eyebrow={`Printers · ${p.brand}`} lede={description}>
+    {p.brand}{" "}<em>{p.name}</em>
+  </PageHead>
+
+  <section class="section section-plain" aria-label={full}>
+    <div class="wrap printer-page">
+      {!p.in_release && (
+        <div class="callout"><p><span class="badge-next">Next build</span> The {full} is in Breadslicer's development builds, not in the current download, {release.version}. Its profile comes with the next release.</p></div>
+      )}
+
+      <div class="two-col">
+        <div class="prose">
+          <h2 style="margin-top:0;padding-top:0;border-top:0">Slicing for the {full}</h2>
+          {writable.length ? (
+            <p>Breadslicer writes the {full}'s print file, <strong>{writable.join(" or ")}</strong>: orient, support, hollow and slice your model, and the file goes on the printer's USB stick{p.features.network ? " or over Wi-Fi" : ""}. Every file Breadslicer writes is read back with UVtools and checked <a href="/printers/#how">pixel by pixel</a>.</p>
+          ) : (
+            <p>Breadslicer prepares and slices models for the {full}, on its own panel and build volume. It does not write its print file yet{other.length ? <>, <strong>{other.join(", ")}</strong></> : ""}: you can orient, support, hollow and check a model for it today, and export once that format is written.</p>
+          )}
+          {p.features.network && (
+            <p>
+              {wifi?.data.next && <><span class="badge-next">Next build</span>{" "}</>}
+              Breadslicer can send the file to it over your Wi-Fi network and start the print, with a look through its camera. <a href={`/blog/${wifi?.id ?? "wifi-printing"}/`}>How sending works</a>.
+            </p>
+          )}
+          <p>The panel, mirror and build height come from the printer's profile. We do not own most of these machines, so check your first print: text the right way round, the model where you placed it. If something is off, <a href="/community/#report">tell us</a>.</p>
+          <p class="cta-row"><a class="button button-primary" href="/#download">Get Breadslicer <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
+        <dl class="feature-facts">
+          {panel && <div><dt>Panel</dt><dd>{panel} pixels</dd></div>}
+          {pixel && <div><dt>Pixel</dt><dd>{pixel}</dd></div>}
+          {volume && <div><dt>Build volume</dt><dd>{volume}</dd></div>}
+          <div><dt>Print file</dt><dd>{p.formats.map((f) => <span class={f.writable ? "pill pill-ok" : "pill pill-muted"} title={f.writable ? "Breadslicer writes this file" : "Not written yet"}>{f.label}</span>)}</dd></div>
+          <div><dt>Mirror</dt><dd>{mirror}</dd></div>
+          <div><dt>Grey levels</dt><dd>{p.features.grayscale ? "Yes, anti-aliased edges" : "No"}</dd></div>
+          {p.features.two_stage && <div><dt>Lift</dt><dd>Two-stage platform move</dd></div>}
+          {p.features.tilting_vat && <div><dt>Vat</dt><dd>Tilting</dd></div>}
+          {p.features.camera && <div><dt>Camera</dt><dd>Yes</dd></div>}
+          {p.features.network && <div><dt>Network</dt><dd>Wi-Fi ({p.features.network.toUpperCase()})</dd></div>}
+        </dl>
+      </div>
+
+      {p.resins.length > 0 && (
+        <div class="printer-resins">
+          <h2 id="resins">Resin settings for the {full}</h2>
+          <p class="muted">The {p.resins.length} resin profiles Breadslicer ships for this printer, from {resinBrands.join(", ")}. Each one carries the figures its maker publishes for this printer. Start from them, then run an exposure test with your own bottle: temperature and the bottle's age change the right time.{nextResins > 0 && nextResins < p.resins.length && <> Rows marked <span class="badge-next">Next</span> come with the next release.</>}{nextResins > 0 && nextResins === p.resins.length && p.in_release && <> These resin settings come with the next release.</>}</p>
+          <div class="toolbar">
+            <input class="search" type="search" placeholder="Search a resin" aria-label="Search resins" data-filter="#resin-table" data-filter-count="#resin-count" />
+            <span class="count mono"><span id="resin-count">{p.resins.length}</span> shown</span>
+          </div>
+          <div class="table-wrap">
+            <table class="data-table" id="resin-table">
+              <thead>
+                <tr><th>Maker</th><th>Resin</th><th class="num">Layer</th><th class="num">Bottom exposure</th><th class="num">Exposure</th><th class="num">Lift</th></tr>
+              </thead>
+              <tbody>
+                {p.resins.map((r) => (
+                  <tr>
+                    <td class="dim">{r.brand}</td>
+                    <td>{r.name}{!r.in_release && p.in_release && <> <span class="badge-next">Next</span></>}</td>
+                    <td class="num">{r.layer_um ? `${r.layer_um} µm` : "—"}</td>
+                    <td class="num">{sec(r.bottom_s)}{r.bottom_layers ? <span class="dim"> × {r.bottom_layers}</span> : ""}</td>
+                    <td class="num">{sec(r.normal_s)}</td>
+                    <td class="num dim">{r.lift_mm != null ? `${r.lift_mm} mm${r.lift_mm_min ? ` at ${r.lift_mm_min} mm/min` : ""}` : "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p class="small muted" style="margin-top:14px">Bottom exposure × the number of bottom layers. Where each maker's figures come from is on the <a class="link" href="/credits/">credits page</a>. Profiles as of {formatDate(data.generated)}.</p>
+        </div>
+      )}
+
+      {others.length > 0 && (
+        <nav class="printer-others" aria-label={`Other ${p.brand} printers`}>
+          <h2>Other {p.brand} printers</h2>
+          <ul>
+            {[...family, ...rest].map((o) => (
+              <li><a href={`/printers/${o.id}/`}>{o.name}</a></li>
+            ))}
+          </ul>
+          <p><a class="link" href="/printers/">Every printer, by brand</a></p>
+        </nav>
+      )}
+    </div>
+  </section>
+</Base>

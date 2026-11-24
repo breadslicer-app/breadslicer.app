@@ -3,6 +3,7 @@ import { getCollection, render } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import PageHead from "../../components/PageHead.astro";
 import { formatDate } from "../../lib/format";
+import { article, firstImage } from "../../lib/seo";
 
 export async function getStaticPaths() {
   const reports = await getCollection("reports");
@@ -12,8 +13,10 @@ export async function getStaticPaths() {
 const { report } = Astro.props;
 const { Content, headings } = await render(report);
 const toc = headings.filter((h) => h.depth === 2);
+const image = firstImage(report.body);
+const jsonld = article("TechArticle", `/reports/${report.id}/`, report.data, image);
 ---
-<Base title={report.data.title} description={report.data.summary}>
+<Base title={report.data.title} description={report.data.summary} image={image} jsonld={jsonld} article={{ published: report.data.date, section: "Technical report" }}>
   <PageHead eyebrow={report.data.draft ? "Technical report · Draft" : "Technical report"} lede={report.data.summary}>
     {report.data.title}
   </PageHead>

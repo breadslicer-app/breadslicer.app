@@ -1,9 +1,9 @@
 ---
-import Base from "../layouts/Base.astro";
-import PageHead from "../components/PageHead.astro";
-import data from "../data/printers.json";
-import release from "../data/release.json";
-import { formatDate } from "../lib/format";
+import Base from "../../layouts/Base.astro";
+import PageHead from "../../components/PageHead.astro";
+import data from "../../data/printers.json";
+import release from "../../data/release.json";
+import { formatDate } from "../../lib/format";
 
 const brands = new Set(data.printers.map((p) => p.brand).filter((b) => b !== "Generic"));
 ---
@@ -14,11 +14,11 @@ const brands = new Set(data.printers.map((p) => p.brand).filter((b) => b !== "Ge
   <section class="section section-plain" aria-label="Printers">
     <div class="wrap">
       {data.count !== release.printers && (
-        <div class="callout" style="margin-bottom:clamp(32px,5vw,48px)"><p><span class="badge-next">Next build</span> This list comes from the development builds, which have {data.count} printers. The current download, {release.version}, has {release.printers}; the rest come with the next release.</p></div>
+        <div class="callout" style="margin-bottom:clamp(32px,5vw,48px)"><p><span class="badge-next">Next build</span> This list comes from the development builds, which have {data.count} printers. The current download, {release.version}, has {release.printers}; the ones marked <span class="badge-next">Next</span> come with the next release.</p></div>
       )}
       <div class="two-col" style="margin-bottom:clamp(40px,6vw,64px)">
         <div class="prose">
-          <h2 style="margin-top:0;padding-top:0;border-top:0">How formats are checked</h2>
+          <h2 id="how" style="margin-top:0;padding-top:0;border-top:0">How formats are checked</h2>
           <p>A print file is a container of layer images plus the numbers the printer needs: exposure, lift, timing. A wrong byte can stop a print halfway, so every format we write is checked the same way: we slice test models, write the file, and read it back with <a href="https://github.com/sn4k3/UVtools" rel="noopener">UVtools</a>, an open-source tool that reads and writes resin print files. Every layer must match ours <strong>pixel by pixel</strong>, and the header values must read back as we wrote them.</p>
           <p>The panel size, mirroring and build height of each printer come from UVtools' printer catalog. We do not own most of these machines, so the first print on each one deserves a careful look: text not mirrored, model where you placed it, exposure as expected. If something is off, <a href="/community/#report">tell us</a>.</p>
         </div>
@@ -51,7 +51,7 @@ const brands = new Set(data.printers.map((p) => p.brand).filter((b) => b !== "Ge
             {data.printers.map((p) => (
               <tr data-exports={p.exports ? "" : undefined}>
                 <td class="dim">{p.brand}</td>
-                <td>{p.name}</td>
+                <td>{p.id === "generic-machine" ? p.name : <a class="link" href={`/printers/${p.id}/`}>{p.name}</a>}{!p.in_release && <> <span class="badge-next">Next</span></>}</td>
                 <td class="num">{p.resolution ? `${p.resolution[0]} × ${p.resolution[1]}` : "—"}</td>
                 <td class="num dim">{p.pixel_um ? (p.pixel_um[0] === p.pixel_um[1] ? `${p.pixel_um[0]} µm` : `${p.pixel_um[0]} × ${p.pixel_um[1]} µm`) : "—"}</td>
                 <td class="num dim">{p.volume_mm ? `${p.volume_mm[0]} × ${p.volume_mm[1]} × ${p.volume_mm[2]} mm` : "—"}</td>

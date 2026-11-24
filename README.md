@@ -33,7 +33,8 @@ npm run preview   # serves dist/ as it will be published
 | The build the site offers | `src/data/release.json` (version, zip, size, release post): update it with every release |
 | Changelog | `src/data/changelog.json` (newest first; the home page shows the first 3) |
 | Performance tables | `src/data/performance.json` |
-| Printers and formats | `src/data/printers.json` (generated, see below) |
+| Printers and formats | `src/data/printers.json` (generated, see below); one page per printer at `/printers/<id>/` |
+| Search and AI | `src/lib/seo.ts` (JSON-LD), `src/pages/llms.txt.ts`, `public/robots.txt`, `scripts/indexnow.mjs` |
 | Roadmap | `src/data/roadmap.json` (generated, see below) |
 | Images, recordings, fonts, `CNAME` | `public/` (copied as they are) |
 | Home page scripts | `public/main.js` (scroll build, story), `public/site.js` (every page) |
@@ -55,9 +56,14 @@ npm run data:printers -- ../SoulCrafted-Slicer/assets/profiles
 ```
 
 The path defaults to `../SoulCrafted-Slicer/assets/profiles` (or `$PROFILES_DIR`). Only machine
-facts are copied (brand, name, panel, pixel size, build volume, file formats). Which formats
+facts are copied (brand, name, panel, pixel size, build volume, file formats, capabilities), plus
+the resin settings the material profiles hold for each printer, for its page. Which formats
 Breadslicer writes is listed in `scripts/export-printers.mjs`; update it when the slicer gains
 a writer.
+
+`in_release` (printers and resin rows) comes from the profiles at the tag `v<version>` of
+`release.json`, read from the slicer's git history; rows without it show a Next badge. So with
+every release: update `release.json` first, then run this again.
 
 ### Roadmap data
 

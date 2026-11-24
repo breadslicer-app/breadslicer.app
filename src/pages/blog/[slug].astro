@@ -5,6 +5,7 @@ import PageHead from "../../components/PageHead.astro";
 import { formatDate } from "../../lib/format";
 import { AUTHOR, getPosts, kindLine, type Post } from "../../lib/blog";
 import release from "../../data/release.json";
+import { article, firstImage } from "../../lib/seo";
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -18,8 +19,10 @@ const { post, newer, older } = Astro.props as { post: Post; newer?: Post; older?
 const { Content, headings } = await render(post);
 const toc = headings.filter((h) => h.depth === 2);
 const iso = post.data.date.toISOString().slice(0, 10);
+const image = firstImage(post.body);
+const jsonld = article("BlogPosting", `/blog/${post.id}/`, post.data, image);
 ---
-<Base title={post.data.title} description={post.data.summary}>
+<Base title={post.data.title} description={post.data.summary} image={image} jsonld={jsonld} article={{ published: post.data.date, section: kindLine(post) }}>
   <PageHead eyebrow={`Blog · ${kindLine(post)}`} lede={post.data.summary}>
     {post.data.title}
   </PageHead>

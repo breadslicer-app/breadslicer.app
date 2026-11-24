@@ -3,6 +3,10 @@ import Base from "../layouts/Base.astro";
 import Latest from "../components/Latest.astro";
 import roadmap from "../data/roadmap.json";
 import release from "../data/release.json";
+import { organization, website, software } from "../lib/seo";
+import { useTranslations } from "../i18n/ui";
+
+const jsonld = [website(), organization(), software(useTranslations("en")("site.description"))];
 
 // The roadmap section shows what is being worked on now, straight from the board.
 const now = [
@@ -10,7 +14,7 @@ const now = [
   ...roadmap.items.filter((i) => i.column === "Next"),
 ].slice(0, 6);
 ---
-<Base bodyClass="home">
+<Base bodyClass="home" jsonld={jsonld}>
   <Fragment slot="rail">
   <aside class="rail" aria-hidden="true">
       <div class="rail-ruler">

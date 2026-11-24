@@ -8,12 +8,22 @@ interface Props {
   description?: string;
   /** Extra class on <body>, e.g. "home". */
   bodyClass?: string;
+  /** Posts and reports: og:type article, with its dates. */
+  article?: { published: Date; modified?: Date; section?: string };
+  /** Structured data (schema.org) for this page, one object or several. */
+  jsonld?: object | object[];
+  /** Share image, a path on this site; the default card otherwise. */
+  image?: string;
 }
 
 const lang = Astro.currentLocale ?? "en";
 const t = useTranslations(lang);
-const { title, description = t("site.description"), bodyClass } = Astro.props;
-const fullTitle = title ? `${title} · Breadslicer` : "Breadslicer — native resin slicer";
+const { title, description = t("site.description"), bodyClass, article, jsonld, image } = Astro.props;
+const ogImage = new URL(image ?? "/assets/og-image.png", "https://breadslicer.app").toString();
+const ld = jsonld ? (Array.isArray(jsonld) ? jsonld : [jsonld]) : [];
+// Inside <script>, "</" would end the tag: escape it.
+const ldText = (o: object) => JSON.stringify(o).replace(/</g, "\\u003c");
+const fullTitle = title ? `${title} · Breadslicer` : "Breadslicer — native resin (MSLA) slicer for Windows";
 const canonical = new URL(Astro.url.pathname, Astro.site);
 const here = Astro.url.pathname.replace(/\/?$/, "/");
 const isHome = here === "/";
@@ -35,23 +45,29 @@ const brandHref = isHome ? "#top" : "/";
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="sitemap" href="/sitemap-index.xml">
 
-  <meta property="og:type" content="website">
+  <link rel="alternate" type="application/rss+xml" title="Breadslicer blog" href="/blog/rss.xml">
+  <meta property="og:type" content={article ? "article" : "website"}>
+  {article && <meta property="article:published_time" content={article.published.toISOString()}>}
+  {article?.modified && <meta property="article:modified_time" content={article.modified.toISOString()}>}
+  {article && <meta property="article:author" content="SynrgStudio">}
+  {article?.section && <meta property="article:section" content={article.section}>}
   <meta property="og:site_name" content="Breadslicer">
   <meta property="og:title" content={fullTitle}>
   <meta property="og:description" content={description}>
   <meta property="og:url" content={canonical}>
-  <meta property="og:image" content="https://breadslicer.app/assets/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="The Breadslicer loaf logo next to the words Breadslicer, native resin slicer, slice by slice.">
+  <meta property="og:image" content={ogImage}>
+  {!image && <meta property="og:image:width" content="1200">}
+  {!image && <meta property="og:image:height" content="630">}
+  {!image && <meta property="og:image:alt" content="The Breadslicer loaf logo next to the words Breadslicer, native resin slicer, slice by slice.">}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content={fullTitle}>
   <meta name="twitter:description" content={description}>
-  <meta name="twitter:image" content="https://breadslicer.app/assets/og-image.png">
+  <meta name="twitter:image" content={ogImage}>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap">
+  {ld.map((o) => <script type="application/ld+json" set:html={ldText(o)} />)}
   <slot name="head" />
 </head>
 <body class={bodyClass}>
