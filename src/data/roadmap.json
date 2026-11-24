@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T00:56:57Z",
+ "generated": "2026-11-24T10:59:57Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 26,
+  "In progress": 0,
   "Next": 1,
   "Quick wins": 0,
-  "Backlog": 27,
+  "Backlog": 23,
   "Later": 3,
-  "Done": 402
+  "Done": 434
  },
  "items": [
   {
@@ -792,13 +792,13 @@
   },
   {
    "title": "Installer: Explorer thumbnails and the new file description",
-   "state": "open",
-   "column": "Backlog",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: platform",
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Phrozen's published resin settings as material profiles",
@@ -4046,173 +4046,153 @@
   },
   {
    "title": "Reload a model from disk, everything made again",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Lean back: tilt minis by a fixed angle in one click",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Pick the support preset from each model's height",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Check that antialiasing never dims a support contact",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: slicing"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "The plate as one model: supports shared between models under one raft",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Dead zones of a printer's screen",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: printing"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Send a print file from disk to a network printer",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: printing"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Hide picked supports to see behind them",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Remember the import and export folders apart",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: ux"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Template for the exported file name",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: printing"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Keep the part names of an imported file",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: file formats"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Show a model's file in its folder",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: ux"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Scale to fit the plate",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Supports on the edge of a face, and in a circle",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Mirror supports across a plane",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
-  },
-  {
-   "title": "Supports between parts of a model that come off easily",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "enhancement",
-    "area: supports"
-   ],
-   "closed": null
-  },
-  {
-   "title": "A raft under a model with no supports",
-   "state": "open",
-   "column": "Backlog",
-   "labels": [
-    "enhancement",
-    "area: supports"
-   ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Maximum lean of a support, set by the person",
@@ -4235,14 +4215,14 @@
    "closed": null
   },
   {
-   "title": "A sheet for each plate",
-   "state": "open",
-   "column": "Backlog",
+   "title": "A printable checklist of the plates",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: printing"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Send to more network printers",
@@ -4266,114 +4246,114 @@
   },
   {
    "title": "Keep the forecast raft steady when the pose changes a little",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Show the creator, license and source from a .bread file's META",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "area: editor"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Resin cost fields lose what was typed when the tab changes; currency as a list",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: printing",
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Emptying the scene keeps the old file's name",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: project"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "The menu bar folded by default",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: ui"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Slice pressed while supports are being made again does nothing",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: slicing",
     "area: supports"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Elegoo Mars 5 Ultra, Saturn 4 Ultra, Jupiter export .ctb by default; their format is .goo",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: profiles"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Elegoo's own resins for the Mars 5 Ultra and Saturn 4 Ultra",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement",
     "area: profiles"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "A drain wider than the model is shown although it is not drilled",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: hollow"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "\"Model inside the raft\" on a model standing well above it",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Forces painting shows on the models, not the supports",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug",
     "area: analysis"
    ],
-   "closed": null
+   "closed": "2026-11-24"
   },
   {
    "title": "Moving a support is hard to find: M highlights, dragging removes",
@@ -4385,6 +4365,36 @@
     "area: ux"
    ],
    "closed": null
+  },
+  {
+   "title": "Update from the window, as Caliper does",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-24"
+  },
+  {
+   "title": "Cutting a pre-supported model leaves the piece cut off with no supports",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-24"
+  },
+  {
+   "title": "Dev builds that install and update beside the release",
+   "state": "closed",
+   "column": "Done",
+   "labels": [],
+   "closed": "2026-11-24"
+  },
+  {
+   "title": "Fill bed ignores a Max copies typed without Enter",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug"
+   ],
+   "closed": "2026-11-24"
   }
  ]
 }
