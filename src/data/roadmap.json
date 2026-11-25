@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T04:54:37Z",
+ "generated": "2026-11-25T15:41:27Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 2,
+  "In progress": 1,
   "Next": 1,
   "Quick wins": 0,
   "Backlog": 22,
   "Later": 3,
-  "Done": 436
+  "Done": 437
  },
  "items": [
   {
@@ -4412,12 +4412,12 @@
   },
   {
    "title": "Slice-view cap drawn from the layer's contours",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "bug"
    ],
-   "closed": null
+   "closed": "2026-11-25"
   }
  ]
 }
