@@ -17,11 +17,11 @@
  "printers": 171,
  "dev": {
   "_note": "Breadslicer Dev, the pre-release channel: its own app beside the release. Update with every dev build the thread announces.",
-  "version": "0.5.0-dev.2",
-  "date": "2026-11-24",
-  "installer": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-dev.2/Breadslicer-0.5.0-dev.2-windows-x64-setup.exe",
-  "installer_size": "44.0 MB",
-  "installer_sha256": "48552e0da1a273d95e3a7ccfabfa95c1da5bdb303393174d2dd03e8c421e680c",
-  "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.5.0-dev.2"
+  "version": "0.5.0-dev.3",
+  "date": "2026-11-25",
+  "installer": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-dev.3/Breadslicer-0.5.0-dev.3-windows-x64-setup.exe",
+  "installer_size": "44.1 MB",
+  "installer_sha256": "e7a36065691ceb3a052bd26a7caecd2071ea993ea19ca1336d0543c456c66bf7",
+  "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.5.0-dev.3"
  }
 }
