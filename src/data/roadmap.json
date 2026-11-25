@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T21:17:38Z",
+ "generated": "2026-11-25T04:54:37Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,7 +9,7 @@
   "Done"
  ],
  "counts": {
-  "In progress": 1,
+  "In progress": 2,
   "Next": 1,
   "Quick wins": 0,
   "Backlog": 22,
@@ -4409,6 +4409,15 @@
    "column": "Done",
    "labels": [],
    "closed": "2026-11-24"
+  },
+  {
+   "title": "Slice-view cap drawn from the layer's contours",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "bug"
+   ],
+   "closed": null
   }
  ]
 }
