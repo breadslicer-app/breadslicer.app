@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-25T15:41:27Z",
+ "generated": "2026-11-26T00:27:17Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 1,
+  "In progress": 3,
   "Next": 1,
   "Quick wins": 0,
   "Backlog": 22,
   "Later": 3,
-  "Done": 437
+  "Done": 438
  },
  "items": [
   {
@@ -4418,6 +4418,31 @@
     "bug"
    ],
    "closed": "2026-11-25"
+  },
+  {
+   "title": "Write every printer format UVtools writes",
+   "state": "open",
+   "column": "In progress",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Every printer ships at least one resin",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "enhancement"
+   ],
+   "closed": "2026-11-25"
+  },
+  {
+   "title": "Find dead pixels with a sheet printed at screen size, mark them by cells, refuse to slice over them",
+   "state": "open",
+   "column": "In progress",
+   "labels": [],
+   "closed": null
   }
  ]
 }
