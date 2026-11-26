@@ -346,18 +346,4 @@ details.board-col[open] summary h2::after { content: "−"; }
 .sha code { word-break: break-all; }
 .prose code { overflow-wrap: anywhere; }
 
-/* Breadslicer Dev, under the release's download button */
-.dev-line { display: grid; gap: 6px; margin: 14px 0 18px; max-width: 34em; }
-.dev-link { display: inline-flex; align-items: center; gap: 10px; width: fit-content; max-width: 100%; padding: 8px 14px; border: 1px dashed var(--line-strong); border-radius: 999px; color: var(--cream); font-size: .9rem; transition: border-color .2s ease, color .2s ease; }
-.dev-link:hover { border-color: var(--accent); color: var(--accent); }
-.dev-tag { font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); background: var(--text-dim); border-radius: 999px; padding: 2px 7px; }
-.dev-link:hover .dev-tag { background: var(--accent); }
-.dev-size { font-size: .66rem; color: var(--text-faint); }
-.dev-link { white-space: nowrap; }
-@media (max-width: 420px) { .dev-link { font-size: .82rem; gap: 8px; padding: 8px 12px; } }
 
-/* Breadslicer Dev on Linux: its downloads in a row under the Windows one */
-.dev-links { display: flex; flex-wrap: wrap; gap: 8px; }
-.dev-linux { margin-top: -6px; }
-.dev-line { grid-template-columns: minmax(0, 1fr); }
-@media (max-width: 480px) { .dev-link { white-space: normal; flex-wrap: wrap; row-gap: 2px; } }

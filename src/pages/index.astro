@@ -397,31 +397,59 @@ const open = Object.entries(counts).filter(([c]) => c !== "Done").reduce((s, [, 
           <h2 id="download-title">First slices, <em>now.</em></h2>
           <p class="section-lede">Breadslicer {release.version} is out, an open beta for {release.platform}. It works, we print with it, and it will still surprise you somewhere: tell us where.</p>
           <div class="cta-row">
-            <a class="button button-primary" href={release.installer} aria-describedby="download-note" data-magnetic>Download for {release.platform} <span class="button-sub">{release.installer_size}</span></a>
+            <a class="button button-primary" href={release.installer} data-magnetic>Download for {release.platform} <span class="button-sub">{release.installer_size}</span></a>
             <a class="button button-ghost" href={release.post} data-magnetic>What’s in it <span class="arrow" aria-hidden="true">→</span></a>
           </div>
-          {release.dev && (
-            <p class="dev-line">
-              <a class="dev-link" href={release.dev.installer}><span class="dev-tag mono">Dev</span> Breadslicer Dev {release.dev.version} <span class="dev-size mono">Windows · {release.dev.installer_size}</span></a>
-              <span class="small muted">The work in progress, before it reaches a release, rough edges included. It installs as its own app beside Breadslicer and updates on its own. <a class="link" href={release.dev.page} rel="noopener">Release notes</a>.</span>
-            </p>
-          )}
-          {release.dev?.linux && (
-            <div class="dev-line dev-linux">
-              <span class="dev-links">
-                <a class="dev-link" href={release.dev.linux.appimage}><span class="dev-tag mono">Linux</span> AppImage <span class="dev-size mono">{release.dev.linux.appimage_size}</span></a>
-                <a class="dev-link" href={release.dev.linux.tar}>tar.gz <span class="dev-size mono">{release.dev.linux.tar_size}</span></a>
-                <a class="dev-link" href={release.dev.linux.pkgbuild}>PKGBUILD <span class="dev-size mono">Arch</span></a>
-              </span>
-              <span class="small muted">The first Linux build, and an early one: Breadslicer Dev {release.dev.version} for x86_64, with glibc 2.35 or newer (Ubuntu 22.04 and later, Arch, Fedora 36 and later). So far it has only run in containers, not on a real desktop, so expect rough edges and <a class="link" href="/community/">tell us</a> what you find. There is no regular Linux release yet, and Linux builds don't update themselves: get the next one here. On Arch, put the PKGBUILD next to the tar.gz and run <code>makepkg -si</code>.</span>
-            </div>
-          )}
-          <p id="download-note" class="small muted"><em>Download for {release.platform}</em> gives you the installer, which needs no administrator rights; <code>.bread</code> files then open with Breadslicer and show their thumbnail in Explorer. Rather not install? Take the <a class="link" href={release.zip}>portable zip</a> ({release.zip_size}): unzip it anywhere and run <code>breadslicer.exe</code>. Neither is signed yet, so Windows may stop it: <em>More info</em>, then <em>Run anyway</em>. Read <a class="link" href={`${release.post}#before-you-print`}>Before you print</a> first. Every build and its source are on <a class="link" href={release.all} rel="noopener">GitHub</a>; help and news on our <a class="link" href="/community/">Discord</a>.</p>
-          <p class="small muted sha">SHA-256 · installer <code>{release.installer_sha256}</code> · zip <code>{release.zip_sha256}</code></p>
+          <p class="cta-fine small muted">Free, no administrator rights. Not signed yet, so Windows may stop it: <em>More info</em>, then <em>Run anyway</em>. Read <a class="link" href={`${release.post}#before-you-print`}>Before you print</a> first.</p>
         </div>
         <div class="cta-art" aria-hidden="true" data-parallax="0.12">
           <img src="/assets/loaf-640.webp" width="640" height="640" alt="" loading="lazy">
         </div>
+
+        <section class="dl" aria-labelledby="dl-title">
+          <div class="dl-head">
+            <h3 id="dl-title" class="mono">Every download</h3>
+            <a class="mono" href={release.all} rel="noopener">All builds and their source on GitHub ↗</a>
+          </div>
+          <div class="dl-row">
+            <p class="dl-what"><b>Windows</b><span class="dl-tag mono is-beta">Beta {release.version}</span></p>
+            <p class="dl-files">
+              <a class="dl-file" href={release.installer}>Installer <span class="mono">{release.installer_size}</span></a>
+              <a class="dl-file" href={release.zip}>Portable zip <span class="mono">{release.zip_size}</span></a>
+            </p>
+            <p class="dl-note">The installer puts <code>.bread</code> files and their thumbnails in Explorer. The zip runs from any folder: unzip it and open <code>breadslicer.exe</code>.</p>
+          </div>
+          {release.dev && (
+            <div class="dl-row">
+              <p class="dl-what"><b>Windows</b><span class="dl-tag mono">Dev {release.dev.version}</span></p>
+              <p class="dl-files">
+                <a class="dl-file" href={release.dev.installer}>Installer <span class="mono">{release.dev.installer_size}</span></a>
+              </p>
+              <p class="dl-note">The work in progress, rough edges included. It installs beside Breadslicer as an app of its own and updates itself. <a class="link" href={release.dev.page} rel="noopener">Release notes</a></p>
+            </div>
+          )}
+          {release.dev?.linux && (
+            <div class="dl-row">
+              <p class="dl-what"><b>Linux</b><span class="dl-tag mono">Dev {release.dev.version} · early</span></p>
+              <p class="dl-files">
+                <a class="dl-file" href={release.dev.linux.appimage}>AppImage <span class="mono">{release.dev.linux.appimage_size}</span></a>
+                <a class="dl-file" href={release.dev.linux.tar}>tar.gz <span class="mono">{release.dev.linux.tar_size}</span></a>
+                <a class="dl-file" href={release.dev.linux.pkgbuild}>PKGBUILD <span class="mono">Arch</span></a>
+              </p>
+              <p class="dl-note">The first Linux build, only tried in containers so far: <a class="link" href="/community/">tell us</a> how it runs on a real desktop. x86_64, glibc 2.35 or newer (Ubuntu 22.04+, Arch, Fedora 36+). No regular release yet, and it doesn't update itself. On Arch: the PKGBUILD next to the tar.gz, then <code>makepkg -si</code>.</p>
+            </div>
+          )}
+          <details class="dl-sums">
+            <summary class="mono">SHA-256 checksums</summary>
+            <dl>
+              <div><dt>{release.version} installer</dt><dd><code>{release.installer_sha256}</code></dd></div>
+              <div><dt>{release.version} zip</dt><dd><code>{release.zip_sha256}</code></dd></div>
+              {release.dev && <div><dt>{release.dev.version} installer</dt><dd><code>{release.dev.installer_sha256}</code></dd></div>}
+              {release.dev?.linux && <div><dt>{release.dev.version} AppImage</dt><dd><code>{release.dev.linux.appimage_sha256}</code></dd></div>}
+              {release.dev?.linux && <div><dt>{release.dev.version} tar.gz</dt><dd><code>{release.dev.linux.tar_sha256}</code></dd></div>}
+            </dl>
+          </details>
+        </section>
       </div>
     </section>
   

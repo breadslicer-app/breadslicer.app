@@ -514,6 +514,36 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   box-shadow: 0 1px 0 rgba(236,238,239,.05) inset, 0 60px 120px -60px rgba(0,0,0,.9);
 }
 .cta-grid h2 { font-size: clamp(2.5rem, 5vw, 4.3rem); letter-spacing: -0.04em; line-height: .98; }
+.cta-fine { margin: 16px 0 0; max-width: 34em; }
+
+/* Every download: one row per platform and channel, its files, one short note. */
+.dl { grid-column: 1 / -1; min-width: 0; display: grid; grid-template-columns: 170px auto minmax(0, 1fr); column-gap: 28px; }
+.dl > * { grid-column: 1 / -1; }
+.dl-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 20px; padding: 0 0 12px; border-bottom: 1px solid var(--line); }
+.dl-head h3 { margin: 0; font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); }
+.dl-head a { font-size: .7rem; letter-spacing: .04em; color: var(--text-faint); transition: color .2s; }
+.dl-head a:hover { color: var(--cream); }
+.dl-row { display: grid; grid-template-columns: subgrid; row-gap: 12px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.dl-what { margin: 0; display: grid; gap: 6px; justify-items: start; }
+.dl-what b { color: var(--cream); font-weight: 500; font-size: 1.02rem; }
+.dl-tag { font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--line-strong); border-radius: 999px; padding: 2px 8px; white-space: nowrap; }
+.dl-tag.is-beta { color: var(--accent); border-color: rgba(var(--accent-rgb), .45); }
+.dl-files { margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.dl-file { display: inline-flex; align-items: baseline; gap: 8px; padding: 8px 13px; border: 1px solid var(--line-strong); border-radius: 10px; background: rgba(22, 24, 26, .55); color: var(--cream); font-size: .9rem; white-space: nowrap; transition: border-color .2s, color .2s, background-color .2s; }
+.dl-file span { font-size: .66rem; color: var(--text-faint); transition: color .2s; }
+.dl-file:hover { border-color: var(--accent); color: var(--accent); background: rgba(var(--accent-rgb), .06); }
+.dl-file:hover span { color: var(--accent-deep); }
+.dl-note { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--text-dim); }
+.dl-note code, .cta-fine code { font-size: .92em; }
+.dl-sums { padding-top: 14px; }
+.dl-sums summary { cursor: pointer; width: fit-content; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); transition: color .2s; }
+.dl-sums summary:hover, .dl-sums[open] summary { color: var(--cream); }
+.dl-sums dl { display: grid; gap: 6px; margin: 12px 0 0; }
+.dl-sums dl div { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 4px 28px; }
+.dl-sums dt { font-size: .76rem; color: var(--text-dim); }
+.dl-sums dd { margin: 0; }
+.dl-sums code { font-size: .72rem; color: var(--text); word-break: break-all; }
+
 .cta-art { position: relative; }
 .cta-art::before { content: ""; position: absolute; inset: 10% 5% 0; z-index: -1; border-radius: 50%; background: radial-gradient(closest-side, rgba(var(--accent-rgb), .22), transparent); filter: blur(10px); }
 .cta-art img { width: min(100%, 400px); margin-inline: auto; filter: drop-shadow(0 40px 60px rgba(0,0,0,.55)); will-change: transform; }
@@ -571,6 +601,10 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   .stage-tabs { overflow-x: auto; scrollbar-width: none; }
   .oven { grid-template-columns: minmax(0, 1fr); }
   .cta-grid { padding: 24px 20px 28px; border-radius: 16px; }
+  .dl { grid-template-columns: minmax(0, 1fr); }
+  .dl-row { row-gap: 10px; }
+  .dl-what { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .dl-sums dl div { grid-template-columns: minmax(0, 1fr); }
   .footer-grid { grid-template-columns: 1fr; }
   .cta-art { order: -1; }
   .cta-art img { width: min(60%, 260px); }
@@ -587,4 +621,10 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   .story-step { opacity: 1; }
   .hero { height: auto; }
   .hero-pin { position: relative; height: auto; padding-top: 56px; padding-bottom: 56px; }
+}
+
+/* Between a phone and a laptop the note goes under the files. */
+@media (min-width: 721px) and (max-width: 1100px) {
+  .dl { grid-template-columns: 170px minmax(0, 1fr); }
+  .dl-note { grid-column: 2; }
 }
