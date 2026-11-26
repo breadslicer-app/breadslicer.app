@@ -22,6 +22,16 @@
   "installer": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-dev.4/Breadslicer-0.5.0-dev.4-windows-x64-setup.exe",
   "installer_size": "44.1 MB",
   "installer_sha256": "df834b945144c6d5eb95d9088b25df8dcc8a64eae4e31b7926da4e59afa9ec37",
-  "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.5.0-dev.4"
+  "page": "https://github.com/breadslicer-app/breadslicer/releases/tag/v0.5.0-dev.4",
+  "linux": {
+   "_note": "The Linux builds of Breadslicer Dev: x86_64, glibc 2.35 or newer. There is no regular Linux release yet, and they do not update themselves.",
+   "appimage": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-dev.4/Breadslicer-0.5.0-dev.4-x86_64.AppImage",
+   "appimage_size": "53.5 MB",
+   "appimage_sha256": "a19ead6768e8c2c8c86c45b4d9927895a6e06a8c6b7900c7aa58ff0f2844b252",
+   "tar": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-dev.4/Breadslicer-0.5.0-dev.4-linux-x86_64.tar.gz",
+   "tar_size": "59.0 MB",
+   "tar_sha256": "abfca8b3ec95ec642df96aa3328168d00acee370ce7c18a3f7d4531d9d596992",
+   "pkgbuild": "https://github.com/breadslicer-app/breadslicer/releases/download/v0.5.0-dev.4/PKGBUILD"
+  }
  }
 }

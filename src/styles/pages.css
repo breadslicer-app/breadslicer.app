@@ -355,3 +355,9 @@ details.board-col[open] summary h2::after { content: "−"; }
 .dev-size { font-size: .66rem; color: var(--text-faint); }
 .dev-link { white-space: nowrap; }
 @media (max-width: 420px) { .dev-link { font-size: .82rem; gap: 8px; padding: 8px 12px; } }
+
+/* Breadslicer Dev on Linux: its downloads in a row under the Windows one */
+.dev-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.dev-linux { margin-top: -6px; }
+.dev-line { grid-template-columns: minmax(0, 1fr); }
+@media (max-width: 480px) { .dev-link { white-space: normal; flex-wrap: wrap; row-gap: 2px; } }

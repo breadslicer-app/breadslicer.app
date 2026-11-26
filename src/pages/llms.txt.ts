@@ -21,10 +21,13 @@ export const GET: APIRoute = async () => {
   const lines = [
     "# Breadslicer",
     "",
-    `> Breadslicer is a free, native resin (MSLA/LCD) 3D printing slicer for ${release.platform}, written in Rust and published under the AGPL-3.0 by SynrgStudio. It orients, supports, hollows, repairs, arranges and slices models for resin printers and writes their print files. The current download is ${release.version} (${release.date}), the first open beta.`,
+    `> Breadslicer is a free, native resin (MSLA/LCD) 3D printing slicer for ${release.platform}, written in Rust and published under the AGPL-3.0 by SynrgStudio. It orients, supports, hollows, repairs, arranges and slices models for resin printers and writes their print files. The current download is ${release.version} (${release.date}), an open beta.`,
     "",
     `- Download: ${release.installer} (${release.installer_size} installer, no administrator rights needed)`,
     `- Portable: ${release.zip} (${release.zip_size} zip: unzip it and run breadslicer.exe)`,
+    ...(release.dev?.linux
+      ? [`- Linux (early, development build only): Breadslicer Dev ${release.dev.version} for x86_64 with glibc 2.35 or newer, as an AppImage (${release.dev.linux.appimage}, ${release.dev.linux.appimage_size}), a tar.gz (${release.dev.linux.tar}, ${release.dev.linux.tar_size}) and a PKGBUILD for Arch (${release.dev.linux.pkgbuild}). The first Linux build: tested only in containers so far, not on a real desktop. It does not update itself, and there is no regular Linux release yet.`]
+      : []),
     `- Release notes: ${base}${release.post}`,
     `- Source code: https://github.com/breadslicer-app/breadslicer`,
     `- Printers: ${release.printers} printer profiles in ${release.version}, from ${brands.length} brands (${brands.join(", ")}). Breadslicer writes the print file for ${writes} of them (.ctb, .goo, .cxdlp, Prusa .sl1 and .sl1s, and Anycubic ZIP and binary files such as .pwmx and .pm7); the others can be prepared and sliced. Each printer has a page with its panel and its print file, and ${withResins} of them list the resin settings their makers publish (exposure, bottom layers, lift): ${base}/printers/`,

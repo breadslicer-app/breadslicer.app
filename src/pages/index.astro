@@ -402,9 +402,19 @@ const open = Object.entries(counts).filter(([c]) => c !== "Done").reduce((s, [, 
           </div>
           {release.dev && (
             <p class="dev-line">
-              <a class="dev-link" href={release.dev.installer}><span class="dev-tag mono">Dev</span> Breadslicer Dev {release.dev.version} <span class="dev-size mono">{release.dev.installer_size}</span></a>
+              <a class="dev-link" href={release.dev.installer}><span class="dev-tag mono">Dev</span> Breadslicer Dev {release.dev.version} <span class="dev-size mono">Windows · {release.dev.installer_size}</span></a>
               <span class="small muted">The work in progress, before it reaches a release, rough edges included. It installs as its own app beside Breadslicer and updates on its own. <a class="link" href={release.dev.page} rel="noopener">Release notes</a>.</span>
             </p>
+          )}
+          {release.dev?.linux && (
+            <div class="dev-line dev-linux">
+              <span class="dev-links">
+                <a class="dev-link" href={release.dev.linux.appimage}><span class="dev-tag mono">Linux</span> AppImage <span class="dev-size mono">{release.dev.linux.appimage_size}</span></a>
+                <a class="dev-link" href={release.dev.linux.tar}>tar.gz <span class="dev-size mono">{release.dev.linux.tar_size}</span></a>
+                <a class="dev-link" href={release.dev.linux.pkgbuild}>PKGBUILD <span class="dev-size mono">Arch</span></a>
+              </span>
+              <span class="small muted">The first Linux build, and an early one: Breadslicer Dev {release.dev.version} for x86_64, with glibc 2.35 or newer (Ubuntu 22.04 and later, Arch, Fedora 36 and later). So far it has only run in containers, not on a real desktop, so expect rough edges and <a class="link" href="/community/">tell us</a> what you find. There is no regular Linux release yet, and Linux builds don't update themselves: get the next one here. On Arch, put the PKGBUILD next to the tar.gz and run <code>makepkg -si</code>.</span>
+            </div>
           )}
           <p id="download-note" class="small muted"><em>Download for {release.platform}</em> gives you the installer, which needs no administrator rights; <code>.bread</code> files then open with Breadslicer and show their thumbnail in Explorer. Rather not install? Take the <a class="link" href={release.zip}>portable zip</a> ({release.zip_size}): unzip it anywhere and run <code>breadslicer.exe</code>. Neither is signed yet, so Windows may stop it: <em>More info</em>, then <em>Run anyway</em>. Read <a class="link" href={`${release.post}#before-you-print`}>Before you print</a> first. Every build and its source are on <a class="link" href={release.all} rel="noopener">GitHub</a>; help and news on our <a class="link" href="/community/">Discord</a>.</p>
           <p class="small muted sha">SHA-256 · installer <code>{release.installer_sha256}</code> · zip <code>{release.zip_sha256}</code></p>
