@@ -523,17 +523,17 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
 .dl-head h3 { margin: 0; font-size: .7rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--text-dim); }
 .dl-head a { font-size: .7rem; letter-spacing: .04em; color: var(--text-faint); transition: color .2s; }
 .dl-head a:hover { color: var(--cream); }
-.dl-row { display: grid; grid-template-columns: subgrid; row-gap: 12px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line); }
-.dl-what { margin: 0; display: grid; gap: 6px; justify-items: start; }
-.dl-what b { color: var(--cream); font-weight: 500; font-size: 1.02rem; }
+.dl-row { display: grid; grid-template-columns: subgrid; row-gap: 12px; align-items: start; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.dl-what { margin: 0; padding-top: 7px; display: grid; gap: 8px; justify-items: start; }
+.dl-what b { color: var(--cream); font-weight: 500; font-size: 1.02rem; line-height: 26px; }
 .dl-tag { font-size: .6rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-dim); border: 1px solid var(--line-strong); border-radius: 999px; padding: 2px 8px; white-space: nowrap; }
 .dl-tag.is-beta { color: var(--accent); border-color: rgba(var(--accent-rgb), .45); }
 .dl-files { margin: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.dl-file { display: inline-flex; align-items: baseline; gap: 8px; padding: 8px 13px; border: 1px solid var(--line-strong); border-radius: 10px; background: rgba(22, 24, 26, .55); color: var(--cream); font-size: .9rem; white-space: nowrap; transition: border-color .2s, color .2s, background-color .2s; }
+.dl-file { display: inline-flex; align-items: baseline; gap: 8px; height: 40px; box-sizing: border-box; padding: 0 13px; line-height: 38px; border: 1px solid var(--line-strong); border-radius: 10px; background: rgba(22, 24, 26, .55); color: var(--cream); font-size: .9rem; white-space: nowrap; transition: border-color .2s, color .2s, background-color .2s; }
 .dl-file span { font-size: .66rem; color: var(--text-faint); transition: color .2s; }
 .dl-file:hover { border-color: var(--accent); color: var(--accent); background: rgba(var(--accent-rgb), .06); }
 .dl-file:hover span { color: var(--accent-deep); }
-.dl-note { margin: 0; font-size: .86rem; line-height: 1.55; color: var(--text-dim); }
+.dl-note { margin: 0; padding-top: 9px; font-size: .86rem; line-height: 22px; color: var(--text-dim); }
 .dl-note code, .cta-fine code { font-size: .92em; }
 .dl-sums { padding-top: 14px; }
 .dl-sums summary { cursor: pointer; width: fit-content; font-size: .7rem; letter-spacing: .08em; text-transform: uppercase; color: var(--text-faint); transition: color .2s; }
@@ -603,7 +603,8 @@ input[type="range"] { accent-color: var(--accent); flex: 1 1 120px; min-width: 1
   .cta-grid { padding: 24px 20px 28px; border-radius: 16px; }
   .dl { grid-template-columns: minmax(0, 1fr); }
   .dl-row { row-gap: 10px; }
-  .dl-what { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .dl-what { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 0; }
+  .dl-note { padding-top: 0; }
   .dl-sums dl div { grid-template-columns: minmax(0, 1fr); }
   .footer-grid { grid-template-columns: 1fr; }
   .cta-art { order: -1; }
