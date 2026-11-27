@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-26T09:36:16Z",
+ "generated": "2026-11-27T12:33:04Z",
  "columns": [
   "In progress",
   "Next",
@@ -9,12 +9,12 @@
   "Done"
  ],
  "counts": {
-  "In progress": 3,
+  "In progress": 2,
   "Next": 1,
   "Quick wins": 0,
   "Backlog": 21,
   "Later": 3,
-  "Done": 440
+  "Done": 441
  },
  "items": [
   {
@@ -4421,12 +4421,12 @@
   },
   {
    "title": "Write every printer format UVtools writes",
-   "state": "open",
-   "column": "In progress",
+   "state": "closed",
+   "column": "Done",
    "labels": [
     "enhancement"
    ],
-   "closed": null
+   "closed": "2026-11-27"
   },
   {
    "title": "Every printer ships at least one resin",
