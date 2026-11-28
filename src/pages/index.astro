@@ -430,7 +430,7 @@ const open = Object.entries(counts).filter(([c]) => c !== "Done").reduce((s, [, 
           )}
           {release.dev?.linux && (
             <div class="dl-row">
-              <p class="dl-what"><b>Linux</b><span class="dl-tag mono">Dev {release.dev.version} · early</span></p>
+              <p class="dl-what"><b>Linux</b><span class="dl-tag mono">Dev {release.dev.linux.version} · early</span></p>
               <p class="dl-files">
                 <a class="dl-file" href={release.dev.linux.appimage}>AppImage <span class="mono">{release.dev.linux.appimage_size}</span></a>
                 <a class="dl-file" href={release.dev.linux.tar}>tar.gz <span class="mono">{release.dev.linux.tar_size}</span></a>
@@ -445,8 +445,8 @@ const open = Object.entries(counts).filter(([c]) => c !== "Done").reduce((s, [, 
               <div><dt>{release.version} installer</dt><dd><code>{release.installer_sha256}</code></dd></div>
               <div><dt>{release.version} zip</dt><dd><code>{release.zip_sha256}</code></dd></div>
               {release.dev && <div><dt>{release.dev.version} installer</dt><dd><code>{release.dev.installer_sha256}</code></dd></div>}
-              {release.dev?.linux && <div><dt>{release.dev.version} AppImage</dt><dd><code>{release.dev.linux.appimage_sha256}</code></dd></div>}
-              {release.dev?.linux && <div><dt>{release.dev.version} tar.gz</dt><dd><code>{release.dev.linux.tar_sha256}</code></dd></div>}
+              {release.dev?.linux && <div><dt>{release.dev.linux.version} AppImage</dt><dd><code>{release.dev.linux.appimage_sha256}</code></dd></div>}
+              {release.dev?.linux && <div><dt>{release.dev.linux.version} tar.gz</dt><dd><code>{release.dev.linux.tar_sha256}</code></dd></div>}
             </dl>
           </details>
         </section>

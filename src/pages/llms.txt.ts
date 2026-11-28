@@ -26,7 +26,7 @@ export const GET: APIRoute = async () => {
     `- Download: ${release.installer} (${release.installer_size} installer, no administrator rights needed)`,
     `- Portable: ${release.zip} (${release.zip_size} zip: unzip it and run breadslicer.exe)`,
     ...(release.dev?.linux
-      ? [`- Linux (early, development build only): Breadslicer Dev ${release.dev.version} for x86_64 with glibc 2.35 or newer, as an AppImage (${release.dev.linux.appimage}, ${release.dev.linux.appimage_size}), a tar.gz (${release.dev.linux.tar}, ${release.dev.linux.tar_size}) and a PKGBUILD for Arch (${release.dev.linux.pkgbuild}). The first Linux build: tested only in containers so far, not on a real desktop. It does not update itself, and there is no regular Linux release yet.`]
+      ? [`- Linux (early, development build only): Breadslicer Dev ${release.dev.linux.version} for x86_64 with glibc 2.35 or newer, as an AppImage (${release.dev.linux.appimage}, ${release.dev.linux.appimage_size}), a tar.gz (${release.dev.linux.tar}, ${release.dev.linux.tar_size}) and a PKGBUILD for Arch (${release.dev.linux.pkgbuild}). The first Linux build: tested only in containers so far, not on a real desktop. It does not update itself, and there is no regular Linux release yet.`]
       : []),
     `- Release notes: ${base}${release.post}`,
     `- Source code: https://github.com/breadslicer-app/breadslicer`,
