@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T12:33:04Z",
+ "generated": "2026-11-28T20:58:33Z",
  "columns": [
   "In progress",
   "Next",
@@ -12,9 +12,9 @@
   "In progress": 2,
   "Next": 1,
   "Quick wins": 0,
-  "Backlog": 21,
+  "Backlog": 25,
   "Later": 3,
-  "Done": 441
+  "Done": 442
  },
  "items": [
   {
@@ -4450,6 +4450,56 @@
    "column": "Done",
    "labels": [],
    "closed": "2026-11-26"
+  },
+  {
+   "title": "Calibrator: separate scale from wall offset with blocks of very different sizes",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Calibrator: no exposure advice when walls and holes disagree",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Calibrator: count a slit open only if it is open end to end",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Calibrator: say nothing needs changing when the numbers are within caliper resolution",
+   "state": "open",
+   "column": "Backlog",
+   "labels": [
+    "enhancement",
+    "area: profiles"
+   ],
+   "closed": null
+  },
+  {
+   "title": "Startup got slow again: viewport pipelines and the profile catalog",
+   "state": "closed",
+   "column": "Done",
+   "labels": [
+    "bug",
+    "area: performance"
+   ],
+   "closed": "2026-11-28"
   }
  ]
 }
